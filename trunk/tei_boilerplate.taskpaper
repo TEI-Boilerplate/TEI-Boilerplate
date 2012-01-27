@@ -1,0 +1,9 @@
+Ideas:
+	- Two options:
+		- pure CSS
+		- Saxon/XSLT/CSS solution
+	- Problems with XSLT:
+		- Transforming hundreds of TEI tags to relatively small number of HTML tags.
+		- Loss of semantics in output document
+		- CSS styling applied to less semantically rich HTML output. Task become more complex.
+		

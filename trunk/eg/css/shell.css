@@ -1,0 +1,45 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+html > body {
+margin:0;
+padding:0;
+background: #EBEBEB;
+}
+
+html {
+margin:0;
+padding:0;
+}
+
+#footer {
+border-top: 5px solid #be5b31;
+background:#482313;
+padding-left:4em;
+padding-top:1em;
+padding-bottom: 1em;
+font-family:'Helvetica Neue', Helvetica, sans-serif;
+font-size:8pt;
+color:#FAEBD7;
+width:100%;
+}
+
+#footer a:link, #footer a:visited, #footer a:active  {
+color:#e3b8cb;
+text-decoration:none;
+}
+
+#footer a:hover {
+color:#e3b8cb;
+text-decoration:underline;
+}
+
+/* loading animation */
+#loading { 
+display:none; 
+position:fixed; 
+left:0; 
+top:0; 
+width:100%; 
+height:100%;
+background-image:url("../images/transparentbg.png"); 
+}
+

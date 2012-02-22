@@ -2,7 +2,8 @@
 <?xml-stylesheet type="text/css" href="css/style.css"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet type="text/xsl" href="xslt/tei_boilerplate.xsl"?>
-<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:html="http://www.w3.org/1999/xhtml">
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
@@ -226,8 +227,18 @@
 	<text>
 		<body>
 			<p>
+				<listBibl html:role="list">
+					<bibl html:role="listItem">Test</bibl>
+				</listBibl>
+				<table html:role="grid">
+					<head>Testing head</head>
+					<row role="label" html:role="row">
+						<cell role="data" html:role="columnheader" html:aria-describedby="tryme">Test data</cell>
+					</row>
+				</table>
 				Some text here.
 			</p>
 		</body>
+		<p html:id="tryme">If you hear me, this works.</p>
 	</text>
 </TEI>

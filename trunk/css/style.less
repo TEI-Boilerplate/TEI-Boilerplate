@@ -375,9 +375,16 @@ cRefPattern {
 }
 caesura {/* Empty Rule Set */}
 camera {/* Empty Rule Set */}
-caption {}
+caption {
+.block-margins
+}
 case {}
-castGroup {}
+case[value]{
+.label(attr(value) " ");
+}
+castGroup {
+.block-margins;
+}
 castItem {
 display:list-item;
 list-style-type:none;
@@ -387,10 +394,10 @@ castList {
 margin-left:2em;
 }
 
-catDesc {}
-catRef {}
-catchwords {}
-category {}
+catDesc {/* Empty Rule Set */}
+catRef {/* Empty Rule Set */}
+catchwords /* Empty Rule Set */{}
+category {/* Empty Rule Set */}
 
 cb {
 .block-margins;
@@ -404,45 +411,73 @@ display:table-cell;
 padding:.25em;
 }
 
-certainty {}
+certainty {/* Empty Rule Set */}
 
-change {}
-channel {}
-char {}
-charDecl {}
-charName {}
-charProp {}
+change {/* Empty Rule Set */}
+channel {/* Empty Rule Set */}
+char /* Empty Rule Set */{}
+charDecl {/* Empty Rule Set */}
+charName {/* Empty Rule Set */}
+charProp {/* Empty Rule Set */}
 
-choice {}
+choice {/* Empty Rule Set */}
 
-cit {}
-cl {}
-classCode {}
-classDecl {}
-classRef {}
-classSpec {}
-classes {}
-climate {}
-closer {}
+cit {/* Empty Rule Set */}
+cl {/* Empty Rule Set */}
+classCode {/* Empty Rule Set */}
+classDecl {/* Empty Rule Set */}
+classRef {/* Empty Rule Set */}
+classSpec {/* Empty Rule Set */}
+classes {/* Empty Rule Set */}
+climate {
+.block-margins;
+.label("Climate: ");
+}
+closer {/* Empty Rule Set */}
 code {
 .mono;
 }
-collation {}
-collection {}
-colloc {}
-colophon {}
-cond {}
-condition {}
-constitution {}
-constraint {}
-constraintSpec {}
-content {}
-corr {}
-correction {}
-country {}
-creation {}
-custEvent {}
-custodialHist {}
+/* jawalsh:
+For things like collation, condition, etc. that can have text or paragraphs as 
+children, we should use margins, when the content is text, and no margins when there 
+are child paragraphs (or other block elements). Otherwise we end up with double 
+margins. */
+collation {.block-margins;}
+collection {/* Empty Rule Set */}
+colloc {/* Empty Rule Set */}
+colophon {.block-margins;}
+cond {/* Empty Rule Set */}
+condition {.block-margins;}
+
+constitution {
+.block-margins;
+.label("Constitution: ");
+}
+constitution[type] {
+.block-margins;
+.label("Constitution (" attr(type) "): ");
+}
+constitution[type=frags] {
+.block-margins;
+.label("Constitution (fragments): ");
+}
+constraint {/* Empty Rule Set */}
+constraintSpec {/* Empty Rule Set */}
+content {/* Empty Rule Set */}
+
+/* jawalsh:
+Need to discuss and coordinate handling of sic/corr, abbr/expan, and orig/reg */
+corr {/* Empty Rule Set */}
+
+correction {/* Empty Rule Set */}
+country {/* Empty Rule Set */}
+creation {/* Empty Rule Set */}
+/*jawalsh:
+Need to handle attributes for custEvent. All the att.datable* attributes will be tricky. 
+custodialHist and custEvent may normally be hidden along with other header metadata, but
+we'll have other datable elements that may be tricky. */
+custEvent {display:list-item;}
+custodialHist {.block-margins;}
 /* d */
 damage {}
 damageSpan {}

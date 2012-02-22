@@ -1,0 +1,29 @@
+<h1>Less Documentation</h1>
+
+<h2>Classes/functions</h2>
+
+<h3>.block(@margins)</h3>
+
+<p>Displays the element as a block element. If the parameter <code>@margins</code> is passed in, the value is used for <code>margin-top</code> and <code>margin-bottom</code>. If no <code>@margins</code> is passed in, <code>.block</code> will default to zero top and bottom margins.</p>
+
+<h3>.label(@content)</h3>
+
+<p>Takes a string, <code>@content</code>, and displays this as a label before the element that contains that has the class.</p>
+
+<p>Thus, the following snippet:</p>
+
+<pre><code>availability{
+    .label("Availability: ");
+    font-weight: bold;
+}
+</code></pre>
+
+<p>will produce the following CSS rules:</p>
+
+<pre><code>availability {
+    font-weight: bold;
+}
+availability:before {
+    content: "Availability: ";
+}
+</code></pre>

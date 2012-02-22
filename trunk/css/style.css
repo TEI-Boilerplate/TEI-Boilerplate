@@ -19,9 +19,6 @@
 .mono {
   font-family: Courier,monospace;
 }
-.suppress {
-  display: none;
-}
 /* rend & rendition */
 [rendition~="#block"] {
   display: block;
@@ -128,7 +125,7 @@ acquisition {
   display: block;
 }
 acquisition:before {
-  content: "blahblah";
+  content: "acquisition";
 }
 /*
 acquisition:before {
@@ -266,19 +263,6 @@ availability:before {
 availability[status]:before {
   content: "Availability (" attr(status) "): ";
 }
-/*
-availability[status=restricted]{
-.label("Availability (" attr(status) "): ");
-}
-
-availability[status=free]:before {
-content: "Availability (" attr(status) "): ";
-}
-
-availability[status=restricted]:before {
-content: "Availability (" attr(status) "): ";
-}
-*/
 /* B */
 back {
   display: block;
@@ -392,6 +376,10 @@ epigraph {
 }
 /* f */
 /* g */
+gap {
+  /* Depending upon how we handle gap and lacuna, we may want to enclose in [] */
+
+}
 /* h */
 /* Need head with TEI ancestor to distinguish from HTML head */
 TEI head {
@@ -453,6 +441,9 @@ div div > head {
   margin-left: 0;
 }
 /* i */
+ident {
+  font-family: Courier,monospace;
+}
 item {
   display: list-item;
 }

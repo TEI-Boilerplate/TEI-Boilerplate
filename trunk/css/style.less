@@ -32,6 +32,13 @@ display:none;
 	}
 }
 
+.surround (@before, @after){
+	.label(@before);
+	&:after{
+		content: @after;
+	}
+}
+
 .mono {
 font-family: Courier,monospace;
 }
@@ -537,7 +544,9 @@ fw {}
 
 /* g */
 g {}
-gap {}
+gap {
+/* Depending upon how we handle gap and lacuna, we may want to enclose in [] */
+}
 gb {}
 gen {}
 genName {}
@@ -635,7 +644,9 @@ hyphenation {}
 /* i */
 iNode {}
 iType {}
-ident {}
+ident {
+	.mono;
+}
 idno {}
 if {}
 iff {}

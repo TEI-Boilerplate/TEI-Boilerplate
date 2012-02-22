@@ -8,16 +8,19 @@
   margin-top: 1em;
   margin-bottom: 1em;
 }
+.box-shadow {
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
 .hide {
   display: none;
 }
 .mono {
   font-family: Courier,monospace;
 }
-.box-shadow {
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+.suppress {
+  display: none;
 }
 /* rend & rendition */
 [rendition~="#block"] {
@@ -106,6 +109,9 @@ ab {
   margin-bottom: 1em;
 }
 /* abbr/expan */
+abbr {
+  /* Empty Rule Set */
+}
 expan:before {
   content: "(";
 }
@@ -122,13 +128,22 @@ acquisition {
   display: block;
 }
 acquisition:before {
-  content: "acquisition: ";
+  content: "blahblah";
 }
+/*
+acquisition:before {
+content: "acquisition: ";
+
+}
+*/
 activity {
   display: block;
 }
 activity:before {
   content: "activity: ";
+}
+actor {
+  /* Empty Rule Set */
 }
 /* add */
 /* Could add other [place=] variations */
@@ -137,6 +152,12 @@ add {
 }
 add[place=below] {
   vertical-align: sub;
+}
+addName {
+  /* Empty Rule Set */
+}
+addSpan {
+  /* Empty Rule Set */
 }
 additional {
   display: block;
@@ -150,17 +171,45 @@ additions:before {
 addrLine {
   display: block;
 }
-address[rend~="block"], addresss[rendition~="#block"] {
+address {
+  /* Empty Rule Set */
+}
+address[rend~="block"],
+addresss[rendition~="#block"] {
   display: block;
 }
 adminInfo {
   display: block;
+}
+affiliation {
+  /* Empty Rule Set */
+}
+age {
+  /* Empty Rule Set */
+}
+alt {
+  /* Empty Rule Set */
+}
+altGrp {
+  /* Empty Rule Set */
+}
+altIdent {
+  /* Empty Rule Set */
 }
 altIdentifier {
   display: block;
 }
 altIdentifier:before {
   content: "Alternate ID: ";
+}
+am {
+  /* Empty Rule Set */
+}
+analytic {
+  /* Empty Rule Set */
+}
+anchor {
+  /* Empty Rule Set */
 }
 app {
   display: block;
@@ -177,6 +226,9 @@ application {
 application:after {
   content: " " attr(version);
 }
+arc {
+  /* Empty Rule Set */
+}
 argument {
   display: block;
 }
@@ -186,34 +238,77 @@ att {
 att:before {
   content: "@";
 }
+attDef {
+  /* Empty Rule Set */
+}
+attList {
+  /* Empty Rule Set */
+}
+attRef {
+  /* Empty Rule Set */
+}
+author {
+  /* Empty Rule Set */
+}
 titleStmt > author {
   display: block;
   margin-bottom: 1em;
 }
+authority {
+  /* Empty Rule Set */
+}
 availability {
-  display: block;
+  font-weight: bold;
 }
 availability:before {
   content: "Availability: ";
-  font-weight: bold;
 }
+availability[status]:before {
+  content: "Availability (" attr(status) "): ";
+}
+/*
+availability[status=restricted]{
+.label("Availability (" attr(status) "): ");
+}
+
 availability[status=free]:before {
-  content: "Availability (" attr(status) "): ";
+content: "Availability (" attr(status) "): ";
 }
+
 availability[status=restricted]:before {
-  content: "Availability (" attr(status) "): ";
+content: "Availability (" attr(status) "): ";
 }
+*/
 /* B */
 back {
   display: block;
 }
-bibl[rend~="block"], bibl[rendition~="#block"] {
+bibl {
+  /* Empty Rule Set */
+}
+bibl[rend~="block"],
+bibl[rendition~="#block"] {
   display: block;
   padding-left: 2em;
   text-indent: -2em;
 }
 biblFull {
   display: block;
+}
+biblScope {
+  /* Empty Rule Set */
+}
+biblStruct {
+  /* Empty Rule Set */
+}
+bicond {
+  /* Empty Rule Set */
+}
+binary {
+  /* Empty Rule Set */
+}
+binaryObject {
+  /* Empty Rule Set */
 }
 binding {
   display: block;
@@ -238,9 +333,27 @@ birth {
 birth:before {
   content: "Birth: ";
 }
+bloc {
+  /* Empty Rule Set */
+}
+broadcast {
+  /* Empty Rule Set */
+}
+byline {
+  /* Empty Rule Set */
+}
 /* c */
+c {
+  /* Empty Rule Set */
+}
 cRefPattern {
   display: none;
+}
+caesura {
+  /* Empty Rule Set */
+}
+camera {
+  /* Empty Rule Set */
 }
 castItem {
   display: list-item;

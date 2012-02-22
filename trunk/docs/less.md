@@ -29,6 +29,10 @@ will produce the following CSS rules:
 	availability:before {
   		content: "Availability: ";
 	}
+	
+###.messageReplace(@message)
+Not yet implemented. When it is, it will replace the element with the text
+of `@message`.
 
 ###.mono
 Effects a monospaced font. For use with code snippets, etc.

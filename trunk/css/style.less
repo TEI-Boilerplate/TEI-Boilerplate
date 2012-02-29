@@ -790,18 +790,18 @@ locus {/* Empty Rule Set */}
 locusGrp {/* Empty Rule Set */}
 
 /* m */
-m {}
-macroRef {}
-macroSpec {}
-mapping {}
-material {}
-measure {}
-measureGrp {}
-meeting {}
-memberOf {}
-mentioned {}
-metDecl {}
-metSym {}
+m {/* Empty Rule Set */}
+macroRef {{/* Empty Rule Set NOT SURE WHAT EXACTLY*/}
+macroSpec {/* dunno */}
+mapping {/* not sure, maybe create rends for a few standard types, maybe hide */}
+material {/* Empty Rule Set */}
+measure {/* Empty Rule Set */}
+measureGrp {/* probably want to display attributes, at least units and type */}
+meeting {/*Block */}
+memberOf {/* Empty Rule Set */}
+mentioned {/* think do nothing, not real clear on function, maybe hide? */}
+metDecl {/* Empty Rule Set */}
+metSym {/* Empty Rule Set */}
 milestone {
 display:block;
 margin-left:auto;
@@ -812,26 +812,32 @@ milestone:before {
 content: "* * * * *";
 
 }
-moduleRef {}
-moduleSpec {}
-monogr {}
-mood {}
-move {}
-msContents {}
-msDesc {}
-msIdentifier {}
-msItem {}
-msItemStruct {}
-msName {}
-msPart {}
-musicNotation {}
+moduleRef {/* probably hide, not sure how we want to deal */}
+moduleSpec {/* probably hide, not sure how we want to deal */}
+monogr {/* block with space above, below */}
+mood {/* Empty Rule Set */}
+move {/* not sure, block, maybe just ital, maybe in parenths*/}
+msContents {.block-margins {
+.block(1em)
+}
+}
+msDesc {/* block with space above, below */}
+msIdentifier {/* block */}
+msItem {/* block */}
+msItemStruct {/* block */}
+msName {/* Empty Rule Set */}
+msPart {/* not sure, think block */}
+musicNotation {
+.label("Musical Notation: ");
+font-weight: bold;
+}
 /* n */
-name {}
-nameLink {}
-namespace {}
-nationality {}
-node {}
-normalization {}
+name {/* Empty Rule Set */}
+nameLink {/* Empty Rule Set */}
+namespace {/* not sure, hide? */}
+nationality {/* Empty Rule Set */}
+node {.hide}
+normalization {/* Empty Rule Set */}
 note {
 display:block;
 margin:1.5em auto 1.5em auto;
@@ -856,27 +862,30 @@ display: block;
 border-bottom: 1px solid #AAA;
 padding: .5em;
 }
-notesStmt {}
-num {}
-number {}
-numeric {}
-nym {}
+notesStmt {/* do we want to box each individual <note> if they're in a <notesStmt>? */}
+num {/* Empty Rule Set */}
+number {/* Empty Rule Set */}
+numeric {/* not sure, depends how we're dealing with <f>'s */}
+ nym {/* not really sure here */}
 /* o */
-oRef {}
-oVar {}
-objectDesc {}
-objectType {}
-occupation {}
-offset {}
-opener {}
-org {}
-orgName {}
+oRef {/* not sure, think do nothing */}
+oVar {font-style:italic;}
+objectDesc {/* Empty Rule Set */}
+objectType {/* Empty Rule Set */}
+occupation {/* Empty Rule Set */}
+offset {/* Empty Rule Set */}
+opener {/* Empty Rule Set */}
+org {/* Empty Rule Set */}
+orgName {/* Empty Rule Set */}
 orig {
 display:none;
 }
-origDate {}
-origPlace {}
-origin {}
+origDate {/* Empty Rule Set */}
+origPlace {
+.label("Place of Origin: ");
+font-weight: bold;
+}
+origin {/* Empty Rule Set */}
 orth {}
 /* p */
 p {
@@ -889,85 +898,100 @@ text-align:center;
 availability > p:first-child {
 	margin-top:0em;
 }
-pRef {}
-pVar {}
-particDesc {}
-pause {}
-pb {}
-pc {}
-per {}
-performance {}
-persName {}
-person {}
-personGrp {}
-phr {}
-physDesc {}
-place {}
-placeName {}
-population {}
-pos {}
-postBox {}
-postCode {}
-postscript {}
-precision {}
-preparedness {}
-principal {}
-profileDesc {}
-projectDesc {}
-prologue {}
-pron {}
-provenance {}
-ptr {}
-pubPlace {}
+pRef {/* rend attribute target */}
+pVar {/* rend attribute target */}
+particDesc {/* Empty Rule Set */}
+pause {/* Empty Rule Set/}
+pb {/* dunno, maybe treat like milestone, maybe just leave alone */}
+pc {/* Empty Rule Set */}
+per {/* don't know, check back */}
+performance {display:block-margins {
+.block(1em)
+}
+persName {/* Empty Rule Set */}
+person {display:block-margins {
+.block(1em)
+}
+personGrp {display:block-margins {
+.block(1em)
+}
+phr {/* Empty Rule Set */}
+physDesc {/* Empty Rule Set */}
+place {/* Empty Rule Set */}
+placeName {/* Empty Rule Set */}
+population {/* dunno with this one */}
+pos {/* Empty Rule Set */}
+postBox {/* Empty Rule Set */}
+postCode {/* Empty Rule Set */}
+postscript {display:block;
+margin-top:2em;}
+precision {/* Empty Rule Set */}
+preparedness {/* Empty Rule Set */}
+principal {
+.label("Principal: ");
+font-weight: bold;
+}
+profileDesc {.block-margins;}
+projectDesc {/* Empty Rule Set */}
+prologue {/* Empty Rule Set */}
+pron {/* Empty Rule Set */}
+provenance {.block;}
+ptr {/* dunno */}
+pubPlace {/* Empty Rule Set */}
 publicationStmt > pubPlace {
 .hide;
 }
-publicationStmt {}
-publisher {}
+publicationStmt {.block-margins;}
+publisher {.block;}
 publicationStmt > publisher {
 .hide;
 }
-purpose {}
+purpose {/* Empty Rule Set */}
 /* q */
 q {}
-quotation {}
-quote {}
+quotation {/* Empty Rule Set */}
+quote {/* Empty Rule Set */}
 /* r */
-rdg {}
-rdgGrp {}
-re {}
-recordHist {}
-recording {}
-recordingStmt {}
-ref {}
+rdg {/*perhaps choice */}
+rdgGrp {/* Empty Rule Set */}
+re {.block;}
+recordHist {.block-margins;}
+recording {/* not sure here, only in header? */}
+recordingStmt {/* Empty Rule Set */}
+ref {/*include link if target */}
 refState {}
 refsDecl {}
-reg {}
-region {}
-relatedItem {}
-relation {}
-relationGrp {}
-remarks {}
-rendition {}
-repository {}
-residence {}
-resp {}
-respStmt {}
+reg {/* do nothing if alone, choice with orig */}
+region {/* Empty Rule Set */}
+relatedItem {/* Empty Rule Set */}
+relation {/* Don't Know*/}
+relationGrp {/* Empty Rule Set */}
+remarks {
+.label("remarks: ");
+font-weight: bold;
+}
+rendition {/*Don't remember what we decided to do with this*/}
+repository {/* Empty Rule Set */}
+residence {/* Empty Rule Set */}
+resp {/* Empty Rule Set */}
+respStmt {/* Empty Rule Set */}
 respons {}
-restore {}
+/* hide */
+restore {/* footnote or sidenote perhaps*/}
 revisionDesc {
 .hide;
 }
-rhyme {}
-role {}
-roleDesc {}
-roleName {}
-root {}
+rhyme {/* Empty Rule Set */}
+role {/* put on same line as roledesc? */}
+roleDesc {/* put on same line as role */}
+roleName {/* Empty Rule Set */}
+root {/* don't know */}
 row {
 display:table-row;
 }
-rs {}
+rs {/* Empty Rule Set */}
 rubric {}
+/*label*/
 /* s */
 /* When TEI document is embedded in HTML page, 
    TEI's <s> element can be interpreted by
@@ -977,70 +1001,95 @@ rubric {}
 s {
 text-decoration:none;
 }
-said {}
-salute {}
-samplingDecl {}
-schemaSpec {}
-scriptDesc {}
-scriptNote {}
-scriptStmt {}
-seal {}
-sealDesc {}
-secFol {}
-seg {}
-segmentation {}
-sense {}
-series {}
+said {/* Empty Rule Set */}
+salute {.block-margins;}
+samplingDecl {.block;}
+schemaSpec {/*NOT SURE, talk over with group */}
+scriptDesc {/*NOT SURE, talk over with group */}
+scriptNote {.block-margins;}
+scriptStmt {/* not sure */}
+seal {
+.block;
+.label (Seal: );}
+sealDesc {
+{
+.block-margins;
+}
+secFol {
+.label (Second Folio: );
+}
+seg {/* Empty Set Rule */}
+segmentation {/* Empty Rule Set */}
+sense {
+.block;
+}
+series {/* treat same as seriesstmt? */}
 seriesStmt {
 .hide;
 }
-set {}
-setting {}
-settingDesc {}
-settlement {}
-sex {}
-shift {}
-sic {}
-signatures {}
-signed {}
-soCalled {}
-socecStatus {}
-sound {}
-source {}
+set {/* Empty Set Rule */}
+setting {
+.block;
+}
+settingDesc {/* Empty Set Rule */}
+settlement {/* Empty Set Rule */}
+sex {/* Empty Rule Set */}
+shift {/* seems a bit to complex to do anything with */}
+sic {/* rend as choice when contained within a choice tag, perhaps as label with parenthesis after when alone */}
+signatures {/* DON't KNOW, look again later */}
+signed {
+display:block;
+margin-top:2em;
+/*should make name a block when contained within  */}
+soCalled {/* Empty Set Rule */}
+socecStatus {/* Empty Set Rule */}
+sound {
+font-style:italic;
+}
+source {
+.block;
+}
 sourceDesc {
 .hide;
 }
-sp {}
-space {}
-span {}
-spanGrp {}
-speaker {}
-specDesc {}
-specGrp {}
-specGrpRef {}
-specList {}
-sponsor {}
-stage {}
-stamp {}
-state {}
-stdVals {}
-street {}
-stress {}
-string {}
-stringVal {}
-subc {}
-subst {}
-summary {}
-superEntry {}
-supplied {}
-support {}
-supportDesc {}
-surface {}
-surname {}
-surplus {}
-surrogates {}
-syll {}
-symbol {}
+sp {font-weight:bold; 
+margin-right:0;}
+space {
+.label ();
+}
+span {
+.hide;
+}
+spanGrp {/* NOT SURE, look back on */}
+speaker {/* rend bold and to the right */}
+specDesc {/* NOT SURE, look back on */}
+specGrp {/* NOT SURE, look back on */}
+specGrpRef {/* NOT SURE, look back on */}
+specList {/* Empty Set Rule */}
+sponsor {.block; .label (Sponsor:/* Block element, maybe labeled  */}
+stage {.block-margins; 
+font-style:italic;}
+stamp {.block-margins;
+.label (Stamped: );}
+state {/* Empty Set Rule */}
+stdVals {/* Empty Set Rule */}
+street {/* Empty Set Rule */}
+stress {/* Empty Set Rule */}
+string {/* Empty Set Rule */}
+stringVal {/* doesn't seem to be part of tei 5 */}
+subc {/* Empty Set Rule */}
+subst {/* Empty Set Rule */}
+summary {/* Empty Set Rule */}
+superEntry {/* Block with space above and below, maybe have no block and space for <entry> when contained by this element */}
+supplied {/* not sure on this one, seems like we should indicate somehow. Is there a standard way to do this? */}
+support {/* Empty Set Rule */}
+supportDesc {/* do nothing with or maybe block */}
+surface {/* choice */}
+surname {/* Empty Set Rule */}
+surplus {.hide}
+surrogates {/*Empty Rule Set */}
+syll {/* Empty Set Rule */}
+symbol {/* Empty Set Rule */}
 /* t */
 TEI {
 display:block;

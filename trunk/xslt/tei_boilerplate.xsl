@@ -18,6 +18,9 @@
 			which is copied, with some modification, into the HTML document.</xd:p>
 		</xd:desc>
 	</xd:doc>
+	
+	<xsl:key name="ids" match="//*" use="@xml:id"/>
+	
 	<xsl:template match="/">
 		<html>
 			<xsl:call-template name="htmlHead"/>
@@ -76,6 +79,15 @@
 	</xd:doc>
 	<xsl:template match="@rend">
 		<xsl:attribute name="style" namespace="http://www.w3.org/1999/xhtml">
+			<xsl:value-of select="."/>
+		</xsl:attribute>
+	</xsl:template>
+	
+	<xsl:template match="@xml:id">
+		<xsl:attribute name="xml:id">
+			<xsl:value-of select="."/>
+		</xsl:attribute>
+		<xsl:attribute name="id">
 			<xsl:value-of select="."/>
 		</xsl:attribute>
 	</xsl:template>
@@ -174,7 +186,7 @@
 		<head>
 			<meta charset="UTF-8" />
 
-			<link  rel="stylesheet" type="text/css" href="css/style.css" />
+			<link  rel="stylesheet" type="text/css" href="../css/style.css" />
 
 			<script type="text/javascript" src="js/jquery/jquery-1.7.min.js"></script>
 			<script type="text/javascript" src="js/tei_boilerplate.js"></script>

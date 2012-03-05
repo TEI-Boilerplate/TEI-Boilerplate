@@ -13,7 +13,7 @@ margin-bottom:@margins;
 }
 
 .block-margins {
-.block(1em)
+	.block(1em)
 }
 
 .box-shadow {
@@ -762,16 +762,18 @@ list {
 .block-margins;
 }
 
-list[type = "simple"] {
+/* Match only lists that are children or grandchildren of 
+text. Otherwise they show up in the header. */
+text list[type = "simple"], text * list[type = "simple"] {
 list-style-type:none;
 }
-list[type = "bulleted"] {
+text list[type = "bulleted"], text * list[type = "bulleted"] {
 list-style-type:disc;
 }
-list[type = "ordered"] {
+text list[type = "ordered"], text * list[type = "ordered"] {
 list-style-type:decimal;
 }
-list[type = "gloss"] {
+text list[type = "gloss"], text * list[type = "gloss"] {
 list-style-type: none;
 }
 

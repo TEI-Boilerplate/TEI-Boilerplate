@@ -28,6 +28,7 @@ display:none;
 
 .label (@content: "") {
 	&:before{
+		font-weight: bold;
 		content: @content;
 	}
 }
@@ -308,7 +309,6 @@ authority {/* Empty Rule Set */}
 
 availability{
 .label("Availability: ");
-font-weight: bold;
 }
 
 availability[status]{

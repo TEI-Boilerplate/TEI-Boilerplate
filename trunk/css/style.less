@@ -6,7 +6,7 @@
  
 
 /* Less variables */
-.block (@margins: 0) {
+.block(@margins: 0) {
 display:block;
 margin-top:@margins;
 margin-bottom:@margins;
@@ -26,7 +26,7 @@ box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
 display:none;
 }
 
-.label (@content) {
+.label (@content: "") {
 	&:before{
 		content: @content;
 	}
@@ -46,6 +46,7 @@ display:none;
 .mono {
 font-family: Courier,monospace;
 }
+
 
 /* rend & rendition */
 
@@ -173,24 +174,20 @@ content: ")"
 accMat {
 display:block;
 }
+
 accMat:before {
 content: "accompanying materials: ";
 }
 
 acquisition {
-display:block;
+	.block;
 	.label("acquisition");
-}  
-/*
-acquisition:before {
-content: "acquisition: ";
-
-}
-*/
+} 
 
 activity {
 display:block;
 }  
+
 activity:before {
 content: "activity: ";
 }
@@ -202,6 +199,7 @@ actor {/* Empty Rule Set */}
 add {
 vertical-align:super;
 }
+
 add[place=below] {
 vertical-align:sub;
 }
@@ -217,6 +215,7 @@ display:block;
 additions {
 display:block;
 }
+
 additions:before {
 content: "Significant additions within the document: ";
 } 
@@ -266,6 +265,7 @@ display:block;
 appInfo  {
 display:block;
 }
+
 appInfo:before {
 content: "Application information: ";
 }
@@ -273,6 +273,7 @@ content: "Application information: ";
 application  {
 display:block;
 }
+
 application:after {
 content: " " attr(version);
 }
@@ -314,7 +315,6 @@ availability[status]{
 .label("Availability (" attr(status) "): ");
 }
 
-
 /* B */
 
 back  {
@@ -338,20 +338,25 @@ biblStruct {/* Empty Rule Set */}
 bicond {/* Empty Rule Set */}
 binary {/* Empty Rule Set */}
 binaryObject {/* Empty Rule Set */}
+
 binding  {
 display:block;
 }
+
 binding:before {
 content: "Binding: \a";
 white-space: pre-wrap;
 }
+
 binding[contemporary]:before {
 content: "Binding: \A" "Contemporary: " attr(contemporary) "\A";
 white-space: pre-wrap;
 }
+
 bindingDesc  {
 display:block;
 } 
+
 bindngDesc:before {
 content: "Binding Description: \A";
 }
@@ -359,36 +364,51 @@ content: "Binding Description: \A";
 birth  {
 display:block;
 }
+
 birth:before {
 content: "Birth: ";
 }
+
 bloc {/* Empty Rule Set */}
+
 body {
 
 }
+
 broadcast {/* Empty Rule Set */}
+
 byline {/* Empty Rule Set */}
+
 /* c */
+
 c {/* Empty Rule Set */}
+
 cRefPattern {
 .hide;
 }
+
 caesura {/* Empty Rule Set */}
 camera {/* Empty Rule Set */}
+
 caption {
 .block-margins
 }
+
 case {}
+
 case[value]{
 .label(attr(value) " ");
 }
+
 castGroup {
 .block-margins;
 }
+
 castItem {
 display:list-item;
 list-style-type:none;
 }
+
 castList {
 .block-margins;
 margin-left:2em;
@@ -402,6 +422,7 @@ category {/* Empty Rule Set */}
 cb {
 .block-margins;
 }
+
 cb:before {
 content:"[column break]";
 }
@@ -429,19 +450,23 @@ classDecl {/* Empty Rule Set */}
 classRef {/* Empty Rule Set */}
 classSpec {/* Empty Rule Set */}
 classes {/* Empty Rule Set */}
+
 climate {
 .block-margins;
 .label("Climate: ");
 }
+
 closer {/* Empty Rule Set */}
 code {
 .mono;
 }
+
 /* jawalsh:
 For things like collation, condition, etc. that can have text or paragraphs as 
 children, we should use margins, when the content is text, and no margins when there 
 are child paragraphs (or other block elements). Otherwise we end up with double 
 margins. */
+
 collation {.block-margins;}
 collection {/* Empty Rule Set */}
 colloc {/* Empty Rule Set */}
@@ -453,14 +478,17 @@ constitution {
 .block-margins;
 .label("Constitution: ");
 }
+
 constitution[type] {
 .block-margins;
 .label("Constitution (" attr(type) "): ");
 }
+
 constitution[type=frags] {
 .block-margins;
 .label("Constitution (fragments): ");
 }
+
 constraint {/* Empty Rule Set */}
 constraintSpec {/* Empty Rule Set */}
 content {/* Empty Rule Set */}
@@ -472,12 +500,14 @@ corr {/* Empty Rule Set */}
 correction {/* Empty Rule Set */}
 country {/* Empty Rule Set */}
 creation {/* Empty Rule Set */}
+
 /*jawalsh:
 Need to handle attributes for custEvent. All the att.datable* attributes will be tricky. 
 custodialHist and custEvent may normally be hidden along with other header metadata, but
 we'll have other datable elements that may be tricky. */
 custEvent {display:list-item;}
 custodialHist {.block-margins;}
+
 /* d */
 damage {}
 damageSpan {}
@@ -516,6 +546,7 @@ docEdition {}
 docImprint {}
 docTitle {}
 domain {}
+
 /* e */
 eLeaf {}
 eTree {}
@@ -530,14 +561,18 @@ elementRef {}
 elementSpec {}
 email {}
 emph {}
+
 encodingDesc {
 .hide;
 }
+
 entry {}
 entryFree {}
+
 epigraph {
 	.block-margins;
 }
+
 epilogue {}
 equipment {}
 equiv {}
@@ -548,6 +583,7 @@ exemplum {}
 expan {}
 explicit {}
 extent {}
+
 /* f */
 f {}
 fDecl {}
@@ -593,19 +629,23 @@ geo {/* Empty Rule Set */}
 geoDecl {/* Empty Rule Set */}
 geogFeat {/* Empty Rule Set */}
 geogName {/* Empty Rule Set */}
+
 gi {
 	.mono;
 }
+
 gloss {/* Empty Rule Set */}
 glyph {/* Empty Rule Set */}
 glyphName {/* Empty Rule Set */}
 gram {/* Empty Rule Set */}
 gramGrp {/* Empty Rule Set */}
+
 graph {
 	.messageReplace("Message here.");
 }
+
 graphic {
-/* GLS: change to img? */
+
 }
 group {/* Empty Rule Set */}
 
@@ -614,7 +654,7 @@ handDesc {/* Empty Rule Set */}
 handNote {/* Empty Rule Set */}
 handNotes {/* Empty Rule Set */}
 handShift {/* Empty Rule Set */}
-/* Need head with TEI ancestor to distinguish from HTML head */
+/* Need head with TEI parent to distinguish from HTML head */
 head {}
 TEI head {
 display:block;
@@ -682,9 +722,11 @@ headItem {/* Empty Rule Set */}
 headLabel {/* Empty Rule Set */}
 height {/* Empty Rule Set */}
 heraldry {/* Empty Rule Set */}
+
 hi {
 /* GLS: do we want to bold this or change the background color? */
 }
+
 history {/* Empty Rule Set */}
 hom {/* Empty Rule Set */}
 hyph {/* Empty Rule Set */}
@@ -693,9 +735,11 @@ hyphenation {/* Empty Rule Set */}
 /* i */
 iNode {/* Empty Rule Set */}
 iType {/* Empty Rule Set */}
+
 ident {
 	.mono;
 }
+
 idno {/* Empty Rule Set */}
 if {/* Empty Rule Set */}
 iff {/* Empty Rule Set */}
@@ -727,16 +771,20 @@ keywords {/* Empty Rule Set */}
 kinesic {/* Empty Rule Set */}
 
 /* l */
+
 l {
 display:block;
 padding-left:2em;
 text-indent:-2em;
 }
+
 label {}
+
 list[type = "gloss"] > label {
 .block-margins;
 font-weight:bold;
 }
+
 lacunaEnd {/* Empty Rule Set */}
 lacunaStart {/* Empty Rule Set */}
 lang {/* Empty Rule Set */}
@@ -747,9 +795,11 @@ language {/* Empty Rule Set */}
 layout {/* Empty Rule Set */}
 layoutDesc {/* Empty Rule Set */}
 lb {/* Empty Rule Set */}
+
 lb:after {
 content: '\a' ; white-space: pre;
 }
+
 lbl {/* Empty Rule Set */}
 leaf {/* Empty Rule Set */}
 lem {/* Empty Rule Set */}
@@ -767,12 +817,15 @@ text. Otherwise they show up in the header. */
 text list[type = "simple"], text * list[type = "simple"] {
 list-style-type:none;
 }
+
 text list[type = "bulleted"], text * list[type = "bulleted"] {
 list-style-type:disc;
 }
+
 text list[type = "ordered"], text * list[type = "ordered"] {
 list-style-type:decimal;
 }
+
 text list[type = "gloss"], text * list[type = "gloss"] {
 list-style-type: none;
 }
@@ -791,9 +844,10 @@ location {/* Empty Rule Set */}
 locus {/* Empty Rule Set */}
 locusGrp {/* Empty Rule Set */}
 
+
 /* m */
 m {/* Empty Rule Set */}
-macroRef {{/* Empty Rule Set NOT SURE WHAT EXACTLY*/}
+macroRef {/* Empty Rule Set NOT SURE WHAT EXACTLY*/}
 macroSpec {/* dunno */}
 mapping {/* not sure, maybe create rends for a few standard types, maybe hide */}
 material {/* Empty Rule Set */}
@@ -869,6 +923,9 @@ num {/* Empty Rule Set */}
 number {/* Empty Rule Set */}
 numeric {/* not sure, depends how we're dealing with <f>'s */}
  nym {/* not really sure here */}
+ 
+
+
 /* o */
 oRef {/* not sure, think do nothing */}
 oVar {font-style:italic;}
@@ -889,17 +946,21 @@ font-weight: bold;
 }
 origin {/* Empty Rule Set */}
 orth {}
+
 /* p */
 p {
 .block-margins;
 text-align:justify;
 }
+
 *[rendition~="#center"] p {
 text-align:center;
 }
+
 availability > p:first-child {
 	margin-top:0em;
 }
+
 pRef {/* rend attribute target */}
 pVar {/* rend attribute target */}
 particDesc {/* Empty Rule Set */}
@@ -907,15 +968,15 @@ pause {/* Empty Rule Set/}
 pb {/* dunno, maybe treat like milestone, maybe just leave alone */}
 pc {/* Empty Rule Set */}
 per {/* don't know, check back */}
-performance {display:block-margins {
-.block(1em)
+performance {
+	.block-margins;
 }
 persName {/* Empty Rule Set */}
-person {display:block-margins {
-.block(1em)
+person {
+	.block-margins;
 }
-personGrp {display:block-margins {
-.block(1em)
+personGrp {
+	.block-margins;
 }
 phr {/* Empty Rule Set */}
 physDesc {/* Empty Rule Set */}
@@ -949,6 +1010,7 @@ publicationStmt > publisher {
 .hide;
 }
 purpose {/* Empty Rule Set */}
+
 /* q */
 q {}
 quotation {/* Empty Rule Set */}
@@ -994,6 +1056,7 @@ display:table-row;
 rs {/* Empty Rule Set */}
 rubric {}
 /*label*/
+
 /* s */
 /* When TEI document is embedded in HTML page, 
    TEI's <s> element can be interpreted by
@@ -1010,69 +1073,103 @@ schemaSpec {/*NOT SURE, talk over with group */}
 scriptDesc {/*NOT SURE, talk over with group */}
 scriptNote {.block-margins;}
 scriptStmt {/* not sure */}
+
 seal {
 .block;
-.label (Seal: );}
+.label("Seal: ");
+}
+
 sealDesc {
-{
 .block-margins;
 }
+
 secFol {
-.label (Second Folio: );
+.label ("Second Folio: ");
 }
+
 seg {/* Empty Set Rule */}
 segmentation {/* Empty Rule Set */}
+
 sense {
 .block;
 }
+
 series {/* treat same as seriesstmt? */}
+
 seriesStmt {
 .hide;
 }
+
 set {/* Empty Set Rule */}
+
 setting {
 .block;
 }
+
 settingDesc {/* Empty Set Rule */}
 settlement {/* Empty Set Rule */}
 sex {/* Empty Rule Set */}
 shift {/* seems a bit to complex to do anything with */}
 sic {/* rend as choice when contained within a choice tag, perhaps as label with parenthesis after when alone */}
 signatures {/* DON't KNOW, look again later */}
+
 signed {
 display:block;
 margin-top:2em;
-/*should make name a block when contained within  */}
+/*should make name a block when contained within  */
+}
+
 soCalled {/* Empty Set Rule */}
 socecStatus {/* Empty Set Rule */}
+
 sound {
 font-style:italic;
 }
+
 source {
 .block;
 }
+
 sourceDesc {
 .hide;
 }
-sp {font-weight:bold; 
-margin-right:0;}
-space {
-.label ();
+
+sp {
+font-weight:bold; 
+margin-right:0;
 }
+
+space {
+.label();
+}
+
 span {
 .hide;
 }
+
 spanGrp {/* NOT SURE, look back on */}
 speaker {/* rend bold and to the right */}
 specDesc {/* NOT SURE, look back on */}
 specGrp {/* NOT SURE, look back on */}
 specGrpRef {/* NOT SURE, look back on */}
 specList {/* Empty Set Rule */}
-sponsor {.block; .label (Sponsor:/* Block element, maybe labeled  */}
-stage {.block-margins; 
-font-style:italic;}
-stamp {.block-margins;
-.label (Stamped: );}
+
+sponsor {
+	.block; 
+	.label("Sponsor:");
+	/* Block element, maybe labeled  */
+}
+
+stage {
+.block-margins; 
+font-style:italic;
+}
+
+stamp {
+.block-margins;
+.label("Stamped: ");
+}
+
 state {/* Empty Set Rule */}
 stdVals {/* Empty Set Rule */}
 street {/* Empty Set Rule */}
@@ -1092,6 +1189,7 @@ surplus {.hide}
 surrogates {/*Empty Rule Set */}
 syll {/* Empty Set Rule */}
 symbol {/* Empty Set Rule */}
+
 /* t */
 TEI {
 display:block;
@@ -1100,16 +1198,20 @@ font-size:10pt;
 width:650px;
 background:#EBEBEB;
 }
+
 table {}
+
 TEI table {
 display:table;
 }
+
 tag {}
 tagUsage {}
 tagsDecl {}
 taxonomy {}
 tech {}
 teiCorpus {}
+
 teiHeader {
 display:block;
 border-radius: 15px;
@@ -1120,9 +1222,11 @@ margin-bottom:4em;
 margin-left:10em;
 padding:2.5em;
 }
+
 term {}
 terrain {}
 text {}
+
 TEI > text {
 display:block;
 border-radius: 15px;
@@ -1134,10 +1238,13 @@ margin-left:10em;
 padding:3.5em;
 line-height:1.5em;
 }
+
 textClass {}
+
 textDesc {
 .hide;
 }
+
 textLang {}
 then {}
 time {}
@@ -1147,10 +1254,12 @@ timeline {}
 /* Need TEI ancestor to distinguish TEI title from HTML title */
 title {}
 TEI title {display:inline;}
+
 titleStmt > title {
 display:block;
 font-weight:bold;
 }
+
 titlePage {}
 titlePart {}
 titleStmt {}
@@ -1159,10 +1268,13 @@ trailer {}
 trait {}
 tree {}
 triangle {}
+
 typeDesc {
 display:none;
 }
+
 typeNote {}
+
 /* u */
 u:before {
 content: "-";
@@ -1203,3 +1315,4 @@ writing {/* Empty Rule Set */}
 xr {/* Empty Rule Set */}
 /* z */
 zone {/* Empty Rule Set */}
+

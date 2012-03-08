@@ -965,7 +965,20 @@ pRef {/* rend attribute target */}
 pVar {/* rend attribute target */}
 particDesc {/* Empty Rule Set */}
 pause {/* Empty Rule Set/}
-pb {/* dunno, maybe treat like milestone, maybe just leave alone */}
+
+pb {
+  display: inline;
+ /* border: 1px solid black; */
+  width: 100%;
+  text-align: right;
+  color: gray;
+  margin: 2em 0 2em 0;
+}
+
+pb:before {
+	content: "[page:\a0" attr(n) "]";
+}
+
 pc {/* Empty Rule Set */}
 per {/* don't know, check back */}
 performance {
@@ -1038,7 +1051,10 @@ rendition {/*Don't remember what we decided to do with this*/}
 repository {/* Empty Rule Set */}
 residence {/* Empty Rule Set */}
 resp {/* Empty Rule Set */}
-respStmt {/* Empty Rule Set */}
+respStmt {
+.block;
+}
+
 respons {}
 /* hide */
 restore {/* footnote or sidenote perhaps*/}

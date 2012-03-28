@@ -19,6 +19,9 @@
 .mono {
   font-family: Courier,monospace;
 }
+.table-border {
+  border: 1px solid #eeeeee;
+}
 /* rend & rendition */
 [rendition~="#block"] {
   display: block;
@@ -376,7 +379,11 @@ cb:before {
 }
 cell {
   display: table-cell;
-  padding: .25em;
+  padding: 1em 1.5em 1em 1em;
+  border: 1px solid #eeeeee;
+}
+cell[role=label] {
+  font-weight: bold;
 }
 certainty {
   /* Empty Rule Set */
@@ -527,6 +534,9 @@ custodialHist {
   margin-bottom: 1em;
 }
 /* d */
+date[when]:empty:before {
+  content: attr(when);
+}
 /* e */
 encodingDesc {
   display: none;
@@ -739,6 +749,9 @@ interpretation {
 }
 item {
   display: list-item;
+}
+cell item {
+  margin-left: 1em;
 }
 list[type="gloss"] > item {
   margin-left: 2em;
@@ -1537,11 +1550,15 @@ TEI {
   display: block;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 10pt;
-  width: 650px;
   background: #EBEBEB;
 }
+/* Why is this selector "TEI table" instead of just "table"? */
 TEI table {
-  display: table;
+  display: block;
+  border: 1px solid #eeeeee;
+}
+table > head {
+  border: 1px solid #eeeeee;
 }
 teiHeader {
   display: block;
@@ -1550,7 +1567,8 @@ teiHeader {
   background: white;
   margin-top: 4em;
   margin-bottom: 4em;
-  margin-left: 10em;
+  margin-left: 8em;
+  margin-right: 8em;
   padding: 2.5em;
 }
 TEI > text {
@@ -1560,7 +1578,8 @@ TEI > text {
   background: white;
   margin-top: 4em;
   margin-bottom: 4em;
-  margin-left: 10em;
+  margin-left: 8em;
+  margin-right: 8em;
   padding: 3.5em;
   line-height: 1.5em;
 }

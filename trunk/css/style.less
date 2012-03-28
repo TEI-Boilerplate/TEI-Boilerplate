@@ -48,6 +48,9 @@ display:none;
 font-family: Courier,monospace;
 }
 
+.table-border {
+border: 1px solid #eeeeee;
+}
 
 /* rend & rendition */
 
@@ -429,7 +432,12 @@ content:"[column break]";
 
 cell {
 display:table-cell;
-padding:.25em;
+padding:1em 1.5em 1em 1em;
+.table-border;
+}
+
+cell[role=label] {
+font-weight:bold;
 }
 
 certainty {/* Empty Rule Set */}
@@ -513,6 +521,9 @@ damage {}
 damageSpan {}
 datatype {}
 date {}
+date[when]:empty:before {
+	content: attr(when);
+}
 dateline {}
 death {}
 decoDesc {}
@@ -756,6 +767,10 @@ interpretation {/* Empty Rule Set */}
 
 item {
 display:list-item;
+}
+
+cell item {
+margin-left:1em;
 }
 
 list[type = "gloss"] > item {
@@ -1211,14 +1226,19 @@ TEI {
 display:block;
 font-family: "Helvetica Neue", Helvetica, sans-serif;
 font-size:10pt;
-width:650px;
 background:#EBEBEB;
 }
 
 table {}
 
+/* Why is this selector "TEI table" instead of just "table"? */
 TEI table {
-display:table;
+display:block;
+.table-border;
+}
+
+table > head {
+.table-border;
 }
 
 tag {}
@@ -1235,7 +1255,8 @@ border: 1px solid black;
 background:white;
 margin-top:4em;
 margin-bottom:4em;
-margin-left:10em;
+margin-left:8em;
+margin-right:8em;
 padding:2.5em;
 }
 
@@ -1250,7 +1271,8 @@ border: 1px solid black;
 background:white;
 margin-top:4em;
 margin-bottom:4em;
-margin-left:10em;
+margin-left:8em;
+margin-right:8em;
 padding:3.5em;
 line-height:1.5em;
 }

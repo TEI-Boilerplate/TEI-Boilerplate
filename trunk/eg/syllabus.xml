@@ -1,4 +1,5 @@
 <?oxygen RNGSchema="http://www.slis.indiana.edu/faculty/jawalsh/teaching/modules/tei_xml_workshop/eg/swinburne.rnc" type="compact"?>
+<?xml-stylesheet type="text/css" href="../css/style.css"?>
 <?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?>
 <!DOCTYPE TEI [
 <!ENTITY title "Advanced XML: Electronic Publishing Standards and Systems">]>

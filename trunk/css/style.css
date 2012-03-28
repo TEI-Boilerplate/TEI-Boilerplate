@@ -168,8 +168,7 @@ addrLine {
 address {
   /* Empty Rule Set */
 }
-address[rend~="block"],
-addresss[rendition~="#block"] {
+address[rend~="block"], addresss[rendition~="#block"] {
   display: block;
 }
 adminInfo {
@@ -266,8 +265,7 @@ back {
 bibl {
   /* Empty Rule Set */
 }
-bibl[rend~="block"],
-bibl[rendition~="#block"] {
+bibl[rend~="block"], bibl[rendition~="#block"] {
   display: block;
   padding-left: 2em;
   text-indent: -2em;
@@ -832,20 +830,16 @@ list {
 }
 /* Match only lists that are children or grandchildren of 
 text. Otherwise they show up in the header. */
-text list[type="simple"],
-text * list[type="simple"] {
+text list[type="simple"], text * list[type="simple"] {
   list-style-type: none;
 }
-text list[type="bulleted"],
-text * list[type="bulleted"] {
+text list[type="bulleted"], text * list[type="bulleted"] {
   list-style-type: disc;
 }
-text list[type="ordered"],
-text * list[type="ordered"] {
+text list[type="ordered"], text * list[type="ordered"] {
   list-style-type: decimal;
 }
-text list[type="gloss"],
-text * list[type="gloss"] {
+text list[type="gloss"], text * list[type="gloss"] {
   list-style-type: none;
 }
 localName {
@@ -1082,11 +1076,11 @@ particDesc {
   /* Empty Rule Set */
 }
 pause {
-  /* Empty Rule Set/}
-
+  /* Empty Rule Set*/
+}
 pb {
-  display: inline;
- /* border: 1px solid black; */
+  display: block;
+  /* border: 1px solid black; */
 
   width: 100%;
   text-align: right;
@@ -1427,8 +1421,7 @@ sourceDesc {
   display: none;
 }
 sp {
-  font-weight: bold;
-  margin-right: 0;
+  /*empty rule set*/
 }
 space:before {
   font-weight: bold;
@@ -1441,7 +1434,8 @@ spanGrp {
   /* NOT SURE, look back on */
 }
 speaker {
-  /* rend bold and to the right */
+  font-weight: bold;
+  margin-right: 0;
 }
 specDesc {
   /* NOT SURE, look back on */

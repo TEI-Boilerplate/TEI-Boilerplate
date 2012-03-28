@@ -116,7 +116,7 @@
 			<xd:p>Transforms TEI figure element to html img element.</xd:p>
 		</xd:desc>
 	</xd:doc>
-	<xsl:template match="tei:figure[graphic[@url]]">
+	<xsl:template match="tei:figure[tei:graphic[@url]]">
 		<xsl:variable name="figDesc" select="normalize-space(tei:figDesc)"/>
 		<img alt="{$figDesc}" src="{tei:graphic/@url}"/>
 	</xsl:template>
@@ -210,7 +210,7 @@
 	</xd:doc>
 	<xsl:variable name="htmlFooter">
 		<div id="footer">
-			© 2011 John A. Walsh<br /><span>TEI Boilerplate</span> by <a href="teiboilerplate.slis.indiana.edu">John A. Walsh</a> is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. <a href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+			TEI Boilerplate is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. <a href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
 		</div>	
 	</xsl:variable>
 	

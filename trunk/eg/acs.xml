@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?oxygen RNGSchema="swinburne.rnc" type="compact"?>
+<?xml-stylesheet type="text/css" href="../css/style.css"?>
 <?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="acs0000001-01">
     <teiHeader>

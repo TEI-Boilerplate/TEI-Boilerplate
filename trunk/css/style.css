@@ -545,6 +545,7 @@ epigraph {
   display: block;
   margin-top: 1em;
   margin-bottom: 1em;
+  font-style: italic;
 }
 /* f */
 /* g */
@@ -749,6 +750,7 @@ interpretation {
 }
 item {
   display: list-item;
+  margin-left: 1em;
 }
 cell item {
   margin-left: 1em;

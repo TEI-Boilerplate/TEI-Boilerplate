@@ -174,15 +174,15 @@
     </teiHeader>
     <text>
         <front>
-            <pb n="[]" xml:id="VAB7399-001"></pb>
+            <pb xml:id="VAB7399-001"></pb>
             <div rend="center" type="half_title">
                 <head>NOTES <lb/><lb/> UPON SOME OF <lb/><lb/>
                 SHAKESPEARE'S PLAYS</head>
             </div>
 
 
-            <pb n="[]" xml:id="VAB7399-002"></pb>
-            <pb n="[]" xml:id="VAB7399-003"></pb>
+            <pb xml:id="VAB7399-002"></pb>
+            <pb xml:id="VAB7399-003"></pb>
             <titlePage rend="center">
                 <docTitle>
                     <titlePart type="main">
@@ -215,7 +215,7 @@
 
             </titlePage>
 
-                <pb n="[]" xml:id="VAB7399-004"></pb>
+                <pb xml:id="VAB7399-004"></pb>
 
                 
 
@@ -223,7 +223,7 @@
                     <pubPlace>Edinburgh.</pubPlace></docImprint></titlePage>
             
 
-            <pb n="[]" xml:id="VAB7399-005"></pb>
+            <pb xml:id="VAB7399-005"></pb>
             <div type="contents">
                 <head rend="center">LIST OF CONTENTS</head>
                 <list type="simple">
@@ -239,7 +239,7 @@
             </div>
 
 
-            <pb n="[]" xml:id="VAB7399-006"></pb>
+            <pb xml:id="VAB7399-006"></pb>
             
         </front>
 

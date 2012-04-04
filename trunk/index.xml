@@ -237,6 +237,7 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 					</row>
 				</table>
 				Some text here.
+				An <choice><abbr>abbr.</abbr><expan>abbreviation</expan></choice> can be marked thus.
 			</p>
 		</body>
 		<p html:id="tryme">If you hear me, this works.</p>

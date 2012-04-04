@@ -22,6 +22,24 @@
 .table-border {
   border: 1px solid #eeeeee;
 }
+/* Choice elements */
+choice abbr + expan:before,
+choice expan + abbr:before,
+choice sic + corr:before,
+choice corr + sic:before,
+choice orig + reg:before,
+choice reg + orig:before {
+  font-weight: bold;
+  content: " (";
+}
+choice abbr + expan:after,
+choice expan + abbr:after,
+choice sic + corr:after,
+choice corr + sic:after,
+choice orig + reg:after,
+choice reg + orig:after {
+  content: ")";
+}
 /* rend & rendition */
 [rendition~="#block"] {
   display: block;
@@ -108,16 +126,6 @@ ab {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-/* abbr/expan */
-abbr {
-  /* Empty Rule Set */
-}
-expan:before {
-  content: "(";
-}
-expan:after {
-  content: ")";
-}
 accMat {
   display: block;
 }
@@ -171,7 +179,8 @@ addrLine {
 address {
   /* Empty Rule Set */
 }
-address[rend~="block"], addresss[rendition~="#block"] {
+address[rend~="block"],
+addresss[rendition~="#block"] {
   display: block;
 }
 adminInfo {
@@ -268,7 +277,8 @@ back {
 bibl {
   /* Empty Rule Set */
 }
-bibl[rend~="block"], bibl[rendition~="#block"] {
+bibl[rend~="block"],
+bibl[rendition~="#block"] {
   display: block;
   padding-left: 2em;
   text-indent: -2em;
@@ -845,16 +855,20 @@ list {
 }
 /* Match only lists that are children or grandchildren of 
 text. Otherwise they show up in the header. */
-text list[type="simple"], text * list[type="simple"] {
+text list[type="simple"],
+text * list[type="simple"] {
   list-style-type: none;
 }
-text list[type="bulleted"], text * list[type="bulleted"] {
+text list[type="bulleted"],
+text * list[type="bulleted"] {
   list-style-type: disc;
 }
-text list[type="ordered"], text * list[type="ordered"] {
+text list[type="ordered"],
+text * list[type="ordered"] {
   list-style-type: decimal;
 }
-text list[type="gloss"], text * list[type="gloss"] {
+text list[type="gloss"],
+text * list[type="gloss"] {
   list-style-type: none;
 }
 localName {
@@ -1052,9 +1066,6 @@ org {
 orgName {
   /* Empty Rule Set */
 }
-orig {
-  display: none;
-}
 origDate {
   /* Empty Rule Set */
 }
@@ -1246,9 +1257,6 @@ recordingStmt {
 }
 ref {
   /*include link if target */
-}
-reg {
-  /* do nothing if alone, choice with orig */
 }
 region {
   /* Empty Rule Set */

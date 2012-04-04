@@ -52,6 +52,13 @@ font-family: Courier,monospace;
 border: 1px solid #eeeeee;
 }
 
+/* Choice elements */
+choice {
+	abbr + expan, expan + abbr, sic + corr, corr + sic, orig + reg, reg + orig{
+		.surround(" (", ")");
+	}
+}
+
 /* rend & rendition */
 
 [rendition~="#block"]  {
@@ -163,17 +170,6 @@ font-size:80%;
 ab {
 .block-margins;
 } 
-
-/* abbr/expan */
-abbr {/* Empty Rule Set */}
-
-expan:before {
-content: "("
-}
-
-expan:after {
-content: ")"
-}
 
 accMat {
 display:block;
@@ -952,9 +948,6 @@ offset {/* Empty Rule Set */}
 opener {/* Empty Rule Set */}
 org {/* Empty Rule Set */}
 orgName {/* Empty Rule Set */}
-orig {
-display:none;
-}
 origDate {/* Empty Rule Set */}
 origPlace {
 .label("Place of Origin: ");
@@ -1054,7 +1047,6 @@ recordingStmt {/* Empty Rule Set */}
 ref {/*include link if target */}
 refState {}
 refsDecl {}
-reg {/* do nothing if alone, choice with orig */}
 region {/* Empty Rule Set */}
 relatedItem {/* Empty Rule Set */}
 relation {/* Don't Know*/}

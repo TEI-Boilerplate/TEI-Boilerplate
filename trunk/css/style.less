@@ -1,8 +1,14 @@
 /* imports */
-@import url("shell.css");
+/* @import url("shell.css"); */
 
 /* namespaces */
-/* @namespace tei "http://www.tei-c.org/ns/1.0"; */
+/* @namespace "http://www.tei-c.org/ns/1.0"; */
+
+/* @namespace with prefix, as below, throws and error in less. */
+
+/* @namespace html "http://www.w3.org/1999/xhtml"; */
+
+
  
 
 /* Less variables */
@@ -12,6 +18,7 @@ margin-top:@margins;
 margin-bottom:@margins;
 }
 
+@border-color:#aaa;
 .block-margins {
 	.block(1em)
 }
@@ -48,8 +55,20 @@ display:none;
 font-family: Courier,monospace;
 }
 
+.page-setup {
+margin-left:8em;
+margin-right:8em;
+padding:2.5em;
+font-family: Cochin, Georgia, Serif;
+font-size:14pt;
+background:#EBEBEB;
+color:#292929;
+width:33em;
+}
+
 .table-border {
-border: 1px solid #eeeeee;
+border-left: 2px solid @border-color;
+border-top:2px solid @border-color;
 }
 
 /* Choice elements */
@@ -432,6 +451,15 @@ padding:1em 1.5em 1em 1em;
 .table-border;
 }
 
+cell:last-child {
+border-right:2px solid @border-color;
+}
+
+row:last-child > cell {
+border-bottom:2px solid @border-color;
+}
+
+
 cell[role=label] {
 font-weight:bold;
 }
@@ -669,7 +697,7 @@ display:block;
 
 /* "h1" */
 body > head {
-font-family: "Gill Sans", "Gill Sans Std", "Gill Sans MT", Georgia, serif;
+/*&font-family: "Gill Sans", "Gill Sans Std", "Gill Sans MT", Georgia, serif; */
 font-size: 1.55em;
 line-height: 1.5em;
 text-align: inherit;
@@ -698,7 +726,7 @@ div > head {
 /* h3 */
 
  div > div > head {
-	font-family: "Gill Sans", "Gill Sans Std", "Gill Sans MT", Verdana, 		"Bitstream Vera Sans", sans-serif;
+	/*font-family: "Gill Sans", "Gill Sans Std", "Gill Sans MT", Verdana, 		"Bitstream Vera Sans", sans-serif; */
 	font-size: .91em;
 	text-align: inherit;
 	font-weight: normal;
@@ -713,7 +741,7 @@ div > head {
 
 /* > h3 */
 div div > head {
-	font-family: Verdana, "Bitstream Vera Sans", sans-serif;
+/*	font-family: Verdana, "Bitstream Vera Sans", sans-serif; */
 	font-size: 1em;
 	text-align: inherit;
 	font-weight: bold;
@@ -1217,9 +1245,7 @@ symbol {/* Empty Set Rule */}
 /* t */
 TEI {
 display:block;
-font-family: "Helvetica Neue", Helvetica, sans-serif;
-font-size:10pt;
-background:#EBEBEB;
+.page-setup;
 }
 
 table {}
@@ -1227,11 +1253,13 @@ table {}
 /* Why is this selector "TEI table" instead of just "table"? */
 TEI table {
 display:block;
-.table-border;
+margin-top:2em;
+margin-bottom:2em;
+font-size:12pt;
 }
 
 table > head {
-.table-border;
+text-align:center;
 }
 
 tag {}
@@ -1243,14 +1271,14 @@ teiCorpus {}
 
 teiHeader {
 display:block;
+/*
 border-radius: 15px;
 border: 1px solid black;
 background:white;
+*/
 margin-top:4em;
 margin-bottom:4em;
-margin-left:8em;
-margin-right:8em;
-padding:2.5em;
+border-bottom:1px solid #999;
 }
 
 term {}
@@ -1259,15 +1287,12 @@ text {}
 
 TEI > text {
 display:block;
+/*
 border-radius: 15px;
 border: 1px solid black;
 background:white;
-margin-top:4em;
-margin-bottom:4em;
-margin-left:8em;
-margin-right:8em;
-padding:3.5em;
-line-height:1.5em;
+*/
+line-height:1.5;
 }
 
 textClass {}
@@ -1346,4 +1371,55 @@ writing {/* Empty Rule Set */}
 xr {/* Empty Rule Set */}
 /* z */
 zone {/* Empty Rule Set */}
+
+/* styles for html shell and html elements in TEI (e.g.,<a> and <img>) */
+html > body {
+margin:0;
+padding:0;
+background: #EBEBEB;
+}
+
+html {
+margin:0;
+padding:0;
+}
+
+
+#footer {
+/*
+border-top: 5px solid #be5b31;
+background:#482313;
+padding-left:4em;
+padding-top:1em;
+padding-bottom: 1em;
+font-family:'Helvetica Neue', Helvetica, sans-serif;
+font-size:8pt;
+color:#FAEBD7;
+width:100%;
+*/
+.page-setup;
+font-size:12pt;
+}
+
+
+a:link, #footer a:visited, #footer a:active  {
+color:#5F0000;
+text-decoration:none;
+}
+
+a:hover {
+color:#5F0000;
+text-decoration:underline;
+}
+
+/* loading animation */
+#loading { 
+display:none; 
+position:fixed; 
+left:0; 
+top:0; 
+width:100%; 
+height:100%;
+background-image:url("../images/transparentbg.png"); 
+}
 

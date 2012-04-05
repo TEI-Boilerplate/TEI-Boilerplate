@@ -1,7 +1,9 @@
-@import url("shell.css");
 /* imports */
+/* @import url("shell.css"); */
 /* namespaces */
-/* @namespace tei "http://www.tei-c.org/ns/1.0"; */
+/* @namespace "http://www.tei-c.org/ns/1.0"; */
+/* @namespace with prefix, as below, throws and error in less. */
+/* @namespace html "http://www.w3.org/1999/xhtml"; */
 /* Less variables */
 .block-margins {
   display: block;
@@ -19,8 +21,19 @@
 .mono {
   font-family: Courier,monospace;
 }
+.page-setup {
+  margin-left: 8em;
+  margin-right: 8em;
+  padding: 2.5em;
+  font-family: Cochin, Georgia, Serif;
+  font-size: 14pt;
+  background: #EBEBEB;
+  color: #292929;
+  width: 33em;
+}
 .table-border {
-  border: 1px solid #eeeeee;
+  border-left: 2px solid #aaaaaa;
+  border-top: 2px solid #aaaaaa;
 }
 /* Choice elements */
 choice abbr + expan:before,
@@ -179,8 +192,7 @@ addrLine {
 address {
   /* Empty Rule Set */
 }
-address[rend~="block"],
-addresss[rendition~="#block"] {
+address[rend~="block"], addresss[rendition~="#block"] {
   display: block;
 }
 adminInfo {
@@ -277,8 +289,7 @@ back {
 bibl {
   /* Empty Rule Set */
 }
-bibl[rend~="block"],
-bibl[rendition~="#block"] {
+bibl[rend~="block"], bibl[rendition~="#block"] {
   display: block;
   padding-left: 2em;
   text-indent: -2em;
@@ -390,7 +401,14 @@ cb:before {
 cell {
   display: table-cell;
   padding: 1em 1.5em 1em 1em;
-  border: 1px solid #eeeeee;
+  border-left: 2px solid #aaaaaa;
+  border-top: 2px solid #aaaaaa;
+}
+cell:last-child {
+  border-right: 2px solid #aaaaaa;
+}
+row:last-child > cell {
+  border-bottom: 2px solid #aaaaaa;
 }
 cell[role=label] {
   font-weight: bold;
@@ -631,7 +649,8 @@ TEI head {
 }
 /* "h1" */
 body > head {
-  font-family: "Gill Sans", "Gill Sans Std", "Gill Sans MT", Georgia, serif;
+  /*&font-family: "Gill Sans", "Gill Sans Std", "Gill Sans MT", Georgia, serif; */
+
   font-size: 1.55em;
   line-height: 1.5em;
   text-align: inherit;
@@ -659,7 +678,8 @@ div > head {
 }
 /* h3 */
 div > div > head {
-  font-family: "Gill Sans", "Gill Sans Std", "Gill Sans MT", Verdana, "Bitstream Vera Sans", sans-serif;
+  /*font-family: "Gill Sans", "Gill Sans Std", "Gill Sans MT", Verdana, 		"Bitstream Vera Sans", sans-serif; */
+
   font-size: .91em;
   text-align: inherit;
   font-weight: normal;
@@ -674,7 +694,8 @@ div > div > head {
 }
 /* > h3 */
 div div > head {
-  font-family: Verdana, "Bitstream Vera Sans", sans-serif;
+  /*	font-family: Verdana, "Bitstream Vera Sans", sans-serif; */
+
   font-size: 1em;
   text-align: inherit;
   font-weight: bold;
@@ -855,20 +876,16 @@ list {
 }
 /* Match only lists that are children or grandchildren of 
 text. Otherwise they show up in the header. */
-text list[type="simple"],
-text * list[type="simple"] {
+text list[type="simple"], text * list[type="simple"] {
   list-style-type: none;
 }
-text list[type="bulleted"],
-text * list[type="bulleted"] {
+text list[type="bulleted"], text * list[type="bulleted"] {
   list-style-type: disc;
 }
-text list[type="ordered"],
-text * list[type="ordered"] {
+text list[type="ordered"], text * list[type="ordered"] {
   list-style-type: decimal;
 }
-text list[type="gloss"],
-text * list[type="gloss"] {
+text list[type="gloss"], text * list[type="gloss"] {
   list-style-type: none;
 }
 localName {
@@ -1558,40 +1575,46 @@ symbol {
 /* t */
 TEI {
   display: block;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 10pt;
+  margin-left: 8em;
+  margin-right: 8em;
+  padding: 2.5em;
+  font-family: Cochin, Georgia, Serif;
+  font-size: 14pt;
   background: #EBEBEB;
+  color: #292929;
+  width: 33em;
 }
 /* Why is this selector "TEI table" instead of just "table"? */
 TEI table {
   display: block;
-  border: 1px solid #eeeeee;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 12pt;
 }
 table > head {
-  border: 1px solid #eeeeee;
+  text-align: center;
 }
 teiHeader {
   display: block;
-  border-radius: 15px;
-  border: 1px solid black;
-  background: white;
+  /*
+border-radius: 15px;
+border: 1px solid black;
+background:white;
+*/
+
   margin-top: 4em;
   margin-bottom: 4em;
-  margin-left: 8em;
-  margin-right: 8em;
-  padding: 2.5em;
+  border-bottom: 1px solid #999;
 }
 TEI > text {
   display: block;
-  border-radius: 15px;
-  border: 1px solid black;
-  background: white;
-  margin-top: 4em;
-  margin-bottom: 4em;
-  margin-left: 8em;
-  margin-right: 8em;
-  padding: 3.5em;
-  line-height: 1.5em;
+  /*
+border-radius: 15px;
+border: 1px solid black;
+background:white;
+*/
+
+  line-height: 1.5;
 }
 textDesc {
   display: none;
@@ -1702,4 +1725,55 @@ xr {
 /* z */
 zone {
   /* Empty Rule Set */
+}
+/* styles for html shell and html elements in TEI (e.g.,<a> and <img>) */
+html > body {
+  margin: 0;
+  padding: 0;
+  background: #EBEBEB;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+#footer {
+  /*
+border-top: 5px solid #be5b31;
+background:#482313;
+padding-left:4em;
+padding-top:1em;
+padding-bottom: 1em;
+font-family:'Helvetica Neue', Helvetica, sans-serif;
+font-size:8pt;
+color:#FAEBD7;
+width:100%;
+*/
+
+  margin-left: 8em;
+  margin-right: 8em;
+  padding: 2.5em;
+  font-family: Cochin, Georgia, Serif;
+  font-size: 14pt;
+  background: #EBEBEB;
+  color: #292929;
+  width: 33em;
+  font-size: 12pt;
+}
+a:link, #footer a:visited, #footer a:active {
+  color: #5F0000;
+  text-decoration: none;
+}
+a:hover {
+  color: #5F0000;
+  text-decoration: underline;
+}
+/* loading animation */
+#loading {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/transparentbg.png");
 }

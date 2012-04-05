@@ -67,8 +67,13 @@ width:33em;
 }
 
 .table-border {
+/*
 border-left: 2px solid @border-color;
 border-top:2px solid @border-color;
+*/
+
+border:1px solid black;
+
 }
 
 /* Choice elements */
@@ -449,14 +454,6 @@ cell {
 display:table-cell;
 padding:1em 1.5em 1em 1em;
 .table-border;
-}
-
-cell:last-child {
-border-right:2px solid @border-color;
-}
-
-row:last-child > cell {
-border-bottom:2px solid @border-color;
 }
 
 
@@ -1248,7 +1245,10 @@ display:block;
 .page-setup;
 }
 
-table {}
+table {
+border-collapse: separate;
+border-spacing: 2px;
+}
 
 /* Why is this selector "TEI table" instead of just "table"? */
 TEI table {

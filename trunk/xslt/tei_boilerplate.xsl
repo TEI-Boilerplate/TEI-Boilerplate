@@ -103,6 +103,15 @@
 	
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
+			<xd:p>Transforms TEI ptr element to html a (link) element.</xd:p>
+		</xd:desc>
+	</xd:doc>
+	<xsl:template match="tei:ptr[@target]">
+		<a href="{@target}"><xsl:value-of select="@target"/></a>
+	</xsl:template>
+	
+	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+		<xd:desc>
 			<xd:p>Transforms TEI ref element to html a (link) element.</xd:p>
 		</xd:desc>
 	</xd:doc>
@@ -188,8 +197,9 @@
 
 			<link  rel="stylesheet" type="text/css" href="../css/style.css" />
 
-			<script type="text/javascript" src="js/jquery/jquery-1.7.min.js"></script>
-			<script type="text/javascript" src="js/tei_boilerplate.js"></script>
+			<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
+			<script type="text/javascript" src="../js/jquery/plugins/jquery.blockUI.js" ></script>
+			<script type="text/javascript" src="../js/tei_boilerplate.js"></script>
 			<xsl:call-template name="rendition2style"/>
 			<title></title>
 		</head>
@@ -198,7 +208,7 @@
 	<xsl:template name="rendition2style">
 		<style>
             <xsl:for-each select="//tei:rendition[@scheme = 'css']">
-                <xsl:value-of select="concat('.',@xml:id,' { ',normalize-space(.),'}&#x000A;')"/>
+                <xsl:value-of select="concat('[rendition~=&quot;#',@xml:id,'&quot;] { ',normalize-space(.),'}&#x000A;')"/>
             </xsl:for-each>
         </style>
 	</xsl:template>
@@ -210,7 +220,9 @@
 	</xd:doc>
 	<xsl:variable name="htmlFooter">
 		<div id="footer">
-			TEI Boilerplate is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. <a href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+			Powered by TEI Boilerplate. TEI Boilerplate is licensed under a 
+			<a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. 
+			<a href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
 		</div>	
 	</xsl:variable>
 	

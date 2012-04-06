@@ -278,11 +278,14 @@ titleStmt > author {
 authority {
   /* Empty Rule Set */
 }
-availability:before {
+publicationStmt > availability {
+  font-size: 80%;
+}
+publicationStmt > availability:before {
   font-weight: bold;
   content: "Availability: ";
 }
-availability[status]:before {
+publicationStmt > availability[status]:before {
   font-weight: bold;
   content: "Availability (" attr(status) "): ";
 }
@@ -576,6 +579,9 @@ epigraph {
   margin-top: 1em;
   margin-bottom: 1em;
   font-style: italic;
+}
+fileDesc > extent {
+  display: none;
 }
 /* f */
 /* g */
@@ -1024,7 +1030,7 @@ note {
   width: 325px;
   position: relative;
   border: 1px solid #aaa;
-  background: #FFFF99;
+  background: #fafafa;
   /* reset text-indent for note with <l> ancestors. */
 
   text-indent: 0;
@@ -1044,6 +1050,8 @@ note::before {
 }
 notesStmt {
   /* do we want to box each individual <note> if they're in a <notesStmt>? */
+
+  display: none;
 }
 num {
   /* Empty Rule Set */
@@ -1201,9 +1209,7 @@ principal:before {
   content: "Principal: ";
 }
 profileDesc {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  display: none;
 }
 projectDesc {
   /* Empty Rule Set */
@@ -1225,7 +1231,7 @@ ptr {
 pubPlace {
   /* Empty Rule Set */
 }
-publicationStmt > pubPlace {
+publicationStmt > * {
   display: none;
 }
 publicationStmt {
@@ -1233,10 +1239,8 @@ publicationStmt {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-publisher {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 0;
+publicationStmt > date {
+  display: none;
 }
 publicationStmt > publisher {
   display: none;
@@ -1608,8 +1612,8 @@ border: 1px solid black;
 background:white;
 */
 
-  margin-top: 4em;
-  margin-bottom: 4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   border-bottom: 1px solid #999;
 }
 TEI > text {
@@ -1622,6 +1626,9 @@ background:white;
 
   line-height: 1.5;
 }
+textClass {
+  display: none;
+}
 textDesc {
   display: none;
 }
@@ -1633,6 +1640,9 @@ TEI title {
 titleStmt > title {
   display: block;
   font-weight: bold;
+}
+titleStmt > editor:before {
+  content: "Edited by ";
 }
 typeDesc {
   display: none;

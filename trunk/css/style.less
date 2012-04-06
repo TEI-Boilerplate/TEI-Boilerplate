@@ -330,11 +330,12 @@ margin-bottom:1em;
 
 authority {/* Empty Rule Set */} 
 
-availability{
+publicationStmt > availability{
+font-size:80%;
 .label("Availability: ");
 }
 
-availability[status]{
+publicationStmt > availability[status]{
 .label("Availability (" attr(status) "): ");
 }
 
@@ -614,7 +615,7 @@ ex {}
 exemplum {}
 expan {}
 explicit {}
-extent {}
+fileDesc > extent {.hide;}
 
 /* f */
 f {}
@@ -940,7 +941,7 @@ border-radius: 15px;
 width: 325px; 
 position: relative; 
 border: 1px solid #aaa;
-background: #FFFF99;
+background: #fafafa;
 /* reset text-indent for note with <l> ancestors. */
 text-indent:0;
 font-size:85%;
@@ -955,7 +956,9 @@ display: block;
 border-bottom: 1px solid #AAA;
 padding: .5em;
 }
-notesStmt {/* do we want to box each individual <note> if they're in a <notesStmt>? */}
+notesStmt {/* do we want to box each individual <note> if they're in a <notesStmt>? */
+.hide;
+}
 num {/* Empty Rule Set */}
 number {/* Empty Rule Set */}
 numeric {/* not sure, depends how we're dealing with <f>'s */}
@@ -1041,18 +1044,20 @@ principal {
 .label("Principal: ");
 font-weight: bold;
 }
-profileDesc {.block-margins;}
+profileDesc {.hide;}
 projectDesc {/* Empty Rule Set */}
 prologue {/* Empty Rule Set */}
 pron {/* Empty Rule Set */}
 provenance {.block;}
 ptr {/* dunno */}
 pubPlace {/* Empty Rule Set */}
-publicationStmt > pubPlace {
+publicationStmt > * {
 .hide;
 }
+
 publicationStmt {.block-margins;}
-publisher {.block;}
+publicationStmt > date {.hide;}
+publisher { }
 publicationStmt > publisher {
 .hide;
 }
@@ -1276,8 +1281,8 @@ border-radius: 15px;
 border: 1px solid black;
 background:white;
 */
-margin-top:4em;
-margin-bottom:4em;
+margin-top:2em;
+margin-bottom:2em;
 border-bottom:1px solid #999;
 }
 
@@ -1295,7 +1300,7 @@ background:white;
 line-height:1.5;
 }
 
-textClass {}
+textClass {.hide;}
 
 textDesc {
 .hide;
@@ -1314,6 +1319,10 @@ TEI title {display:inline;}
 titleStmt > title {
 display:block;
 font-weight:bold;
+}
+
+titleStmt > editor:before {
+content: "Edited by ";
 }
 
 titlePage {}

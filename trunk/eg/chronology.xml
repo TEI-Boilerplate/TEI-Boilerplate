@@ -144,9 +144,9 @@
     <!-- compound CSS -->
     <rendition n="hanging indent" xml:id="hang" scheme="css">margin-left: 2em; text-indent: -2em;
         padding: 0;</rendition>
-    <rendition n="inline" xml:id="inline" scheme="css">display: inline</rendition>
-    <rendition n="suppress" xml:id="suppress" scheme="css">display: none</rendition>
-    <rendition n="wide" xml:id="wide" scheme="css">width:100%</rendition>
+    <rendition n="inline" xml:id="inline" scheme="css">display: inline;</rendition>
+    <rendition n="suppress" xml:id="suppress" scheme="css">display: none;</rendition>
+    <rendition n="wide" xml:id="wide" scheme="css">width:100%;</rendition>
     
     <!-- non-CSS styles -->
     <rendition n="inline speaker" xml:id="inline-speaker" scheme="free">Name of speaker appears on same line as start of speech</rendition>
@@ -238,6 +238,7 @@
     <rendition xml:id="list-style-type_upper-alpha" n="list style: upper-alpha">list-style-type:upper-alpha;</rendition>
     <rendition xml:id="list-style-type_upper-roman" n="list style: upper-roman">list-style-type:upper-roman;</rendition>
     <rendition xml:id="list" n="list" scheme="free">Indicates a element such as <gi>castItem</gi> is rendered in list form.</rendition>
+                <rendition xml:id="suppress" scheme="css">display:none;</rendition>
     
     <rendition xml:id="asteriskDivider" scheme="free">
         Typically used on <gi>milestone</gi> elements. A string of asterisks representing some sort of division in the text. May be implemented in CSS as below:
@@ -1431,7 +1432,7 @@
                         <item>Befriends the painter Simeon Solomon</item>
                         <item><date when="1863-03" rendition="#suppress"/>Visits Paris with Whistler</item>
                         <item><label rendition="#suppress">Edith Dies</label>Swinburne's favorite sister, Edith, dies.</item>
-                        <item><label rendition="#suppress">Isle of Wight</label>Stays on the Isle of Wight with his cousin, Mary Gordon, and her family and begins <title><ref target="/swinburne/view#docId=swinburne/acs0000001-04-i002.xml">Atalanta in Calydon</ref></title>.</item>
+                        <item><label rendition="#suppress">Isle of Wight</label>Stays on the Isle of Wight with his cousin, Mary Gordon, and her family and begins <title><ref target="http://swinburneproject.indiana.edu/swinburne/view#docId=swinburne/acs0000001-04-i002.xml">Atalanta in Calydon</ref></title>.</item>
                     </list></cell>
                     <cell>
                         <list>
@@ -1515,7 +1516,7 @@
                             <item><date rendition="#suppress" when="1864-09-17"/>Landor dies.</item>
                         </list>
                     </cell>
-                    <cell><list> <item><label rendition="#suppress">Whistler: <title>Symphony in White No. 2: The Little White Girl</title>.</label><bibl><respStmt><resp n="artist"/><persName>Whistler</persName></respStmt>: <title>Symphony in White No. 2: The Little White Girl</title>.</bibl> Swinburne wrote the poem <title level="a"><ref target="/swinburne/view#docId=swinburne/acs0000001-01-i030.xml">Before the Mirror</ref></title> (1866) for Whistler's painting.</item><item>Gilbert Scott's Albert Memorial.</item>
+                    <cell><list> <item><label rendition="#suppress">Whistler: <title>Symphony in White No. 2: The Little White Girl</title>.</label><bibl><respStmt><resp n="artist"/><persName>Whistler</persName></respStmt>: <title>Symphony in White No. 2: The Little White Girl</title>.</bibl> Swinburne wrote the poem <title level="a"><ref target="http://swinburneproject.indiana.edu/swinburne/view#docId=swinburne/acs0000001-01-i030.xml">Before the Mirror</ref></title> (1866) for Whistler's painting.</item><item>Gilbert Scott's Albert Memorial.</item>
                         <item>
                             <bibl><respStmt>
                                 <resp n="artist"/>
@@ -1533,7 +1534,7 @@
                                 <title level="m">Letters</title>. <biblScope type="vol">1</biblScope>:<biblScope type="pp">130</biblScope></bibl></cit></note>
                         <list>
                             <item>
-                                <title><ref target="/swinburne/view#docId=swinburne/acs0000001-04-i002.xml">Atalanta in Calydon</ref></title>.
+                                <title><ref target="http://swinburneproject.indiana.edu/swinburne/view#docId=swinburne/acs0000001-04-i002.xml">Atalanta in Calydon</ref></title>.
                             </item>
                             <item>
                                 <title>Chastelard.</title>
@@ -1579,15 +1580,15 @@
                     <cell role="data" rows="1" cols="1">
                         <list>
                             <item>
-                                <title><title><ref target="/swinburne/search?f1-collection=Poems and Ballads, First Series">Poems and Ballads</ref></title></title>.
+                                <title><title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=Poems and Ballads, First Series">Poems and Ballads</ref></title></title>.
                             </item>
                             <item><date rendition="#suppress" when="1866-08-04"/>First reviews of
-                                    <title><ref target="/swinburne/search?f1-collection=Poems and Ballads, First Series">Poems and Ballads</ref></title> appear.</item>
+                                    <title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=Poems and Ballads, First Series">Poems and Ballads</ref></title> appear.</item>
                             <item><date rendition="#suppress" when="1866-08-05"/><label rendition="#suppress">Moxon withdraws
-                                    <title>Poems and Ballads,</title></label> Moxon decides he will no longer publish <title><ref target="/swinburne/search?f1-collection=Poems and Ballads, First Series">Poems and Ballads</ref></title>, and Swinburne agrees to publish with John Camden Hotton</item>
+                                    <title>Poems and Ballads,</title></label> Moxon decides he will no longer publish <title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=Poems and Ballads, First Series">Poems and Ballads</ref></title>, and Swinburne agrees to publish with John Camden Hotton</item>
                             <item><label rendition="#suppress">Advice from Lord Lytton</label><date rendition="#suppress" from="1866-08-17" to="1866-08-24"/>Visits
                                 his friend Lord Lytton at Kenbworth. Receives advice on the
-                                firestorm surrounding <title><ref target="/swinburne/search?f1-collection=Poems and Ballads, First Series">Poems and Ballads</ref></title>.
+                                firestorm surrounding <title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=Poems and Ballads, First Series">Poems and Ballads</ref></title>.
                                 <!-- Rooksby 138. --></item>
                             <item><label rendition="#suppress"><title>Notes on Poems and Reviews,</title></label> Swinburne writes Notes on Poems and Reviews as a response to his
                                 critics.</item>
@@ -1767,7 +1768,7 @@
                     <cell role="data" rows="1" cols="1">
                         <list>
                             <item>
-                                <title><ref target="/swinburne/search?f1-collection=Songs Before Sunrise">Songs before Sunrise</ref></title>.
+                                <title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=Songs Before Sunrise">Songs before Sunrise</ref></title>.
                             </item>
                             <item><label rendition="#suppress">Recovery at Holmwood</label>Swinburne is removed to Holmwood 
                             by his father to recover from severe illness due to alcoholism.</item>
@@ -1896,7 +1897,7 @@
                     <cell role="data" rows="1" cols="1">
                         <list>
                             <item>
-                                <title><ref target="/swinburne/search?f1-collection=Songs of Two Nations">Songs of Two Nations</ref></title>.
+                                <title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=Songs of Two Nations">Songs of Two Nations</ref></title>.
                             </item>
                             <item>
                                 <title>Essays and Studies.</title>
@@ -1904,7 +1905,7 @@
                             <item>
                                 <title>George Chapman: A Critical Essay.</title>
                             </item>
-                            <item><date when="1875-07" rendition="#suppress"/>Composes <title><ref target="/swinburne/view#docId=swinburne/acs0000001-04-i003.xml">Erechtheus</ref></title> in Suffolk.</item>
+                            <item><date when="1875-07" rendition="#suppress"/>Composes <title><ref target="http://swinburneproject.indiana.edu/swinburne/view#docId=swinburne/acs0000001-04-i003.xml">Erechtheus</ref></title> in Suffolk.</item>
                         </list>
                     </cell>
                     <cell>
@@ -1936,7 +1937,7 @@
                     </cell>
                     <cell role="data" rows="1" cols="1">
                         <list>
-                            <item><label rendition="#suppress"><title>Erechtheus.</title></label>Publishes <title><ref target="/swinburne/view#docId=swinburne/acs0000001-04-i003.xml">Erechtheus</ref></title>, the second of
+                            <item><label rendition="#suppress"><title>Erechtheus.</title></label>Publishes <title><ref target="http://swinburneproject.indiana.edu/swinburne/view#docId=swinburne/acs0000001-04-i003.xml">Erechtheus</ref></title>, the second of
                             Swinburne's two lyrical dramas based on Greek myth and modeled on Greek tragedy.</item>
                             <item><label rendition="#suppress">Controversy with Shakespeare Society.</label><date when="1876-01" rendition="#suppress"/> Letter to <title>Athenaeum</title> attacking Furnivall of the Shakespeare Society.</item>
                             <item><label rendition="#suppress">Buchanan sues Swinburne.</label> Swinburne in court because of Buchanan's suite over the publication of Swinburn'es <title level="a">Epitaph on a Slanderer</title> and <title level="a">The Devil's Due</title>. The court rules in Buchanan's favor.</item>
@@ -2008,7 +2009,7 @@
                     </cell>
                     <cell role="data" rows="1" cols="1">
                         <list>
-                            <item><title><ref target="/swinburne/search?f1-collection=Poems and Ballads, Second Series">Poems and Ballads,  Second
+                            <item><title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=Poems and Ballads, Second Series">Poems and Ballads,  Second
                             Series</ref></title>.</item>
                             <item><date when="1878-01" rendition="#suppress"/>Stay at Glasgow with Nichol.</item>
                         </list></cell>
@@ -2077,9 +2078,9 @@
                     <cell role="data" rows="1" cols="1">
                         <list>
                             <item><title>A Study of Shakespeare.</title></item>
-                            <item><title><ref target="/swinburne/search?f1-collection=Songs of the Springtides">Songs of the Springtides</ref></title>.</item>
-                            <item><title><ref target="/swinburne/search?f1-collection=Studies in Song">Studies in Song</ref></title>.</item>
-                            <item><title><ref target="/swinburne/search?f1-collection=The Heptalogia or The Seven Against Sense%3A A Cap with Seven Bells">The Heptalogia, or The Seven Against Sense</ref></title>.</item>
+                            <item><title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=Songs of the Springtides">Songs of the Springtides</ref></title>.</item>
+                            <item><title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=Studies in Song">Studies in Song</ref></title>.</item>
+                            <item><title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=The Heptalogia or The Seven Against Sense%3A A Cap with Seven Bells">The Heptalogia, or The Seven Against Sense</ref></title>.</item>
                         </list>
                     </cell>
                     <cell>
@@ -2137,7 +2138,7 @@
                     </cell>
                     <cell role="data" rows="1" cols="1">
                         <list>
-                            <item><title><ref target="/swinburne/search?f1-collection=Tristram of Lyonesse and Other Poems">Tristram of Lyonesse and Other Poems</ref></title>.</item>
+                            <item><title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=Tristram of Lyonesse and Other Poems">Tristram of Lyonesse and Other Poems</ref></title>.</item>
                             <item><label rendition="#suppress">Visits Hugo</label><date when="1872-11" rendition="#suppress"/>Swinburne and Watts visit Victor Hugo in Paris.</item>
                         </list>
                     </cell>
@@ -2164,7 +2165,7 @@
                     </cell>
                     <cell role="data" rows="1" cols="1">
                         <list>
-                            <item><title><ref target="/swinburne/search?f1-collection=A Century of Roundels">A Century of Roundels</ref></title>.</item>
+                            <item><title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=A Century of Roundels">A Century of Roundels</ref></title>.</item>
                             <item><date when="1883-07" rendition="#suppress"/>At Cromer with Watts.</item>
                         </list>
                     </cell>
@@ -2195,7 +2196,7 @@
                     </cell>
                     <cell role="data" rows="1" cols="1">
                         <list>
-                            <item><title><ref target="/swinburne/search?f1-collection=A Midsummer Holiday and Other Poems">A Midsummer Holiday and Other Poems</ref></title>.</item>
+                            <item><title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=A Midsummer Holiday and Other Poems">A Midsummer Holiday and Other Poems</ref></title>.</item>
                             <item><date when="1884-07" rendition="#suppress"/>With Watts in Norfolk.</item>
                         </list>
                     </cell>
@@ -2359,7 +2360,7 @@
                     <cell role="data" rows="1" cols="1">
                         <list>
                             <item><title>A Study of Ben Jonson.</title></item>
-                            <item><title><ref target="/swinburne/search?f1-collection=Poems and Ballads, Third Series">Poems and Ballads, Third Series</ref></title>.</item>
+                            <item><title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=Poems and Ballads, Third Series">Poems and Ballads, Third Series</ref></title>.</item>
                         </list>
                     </cell>
                     <cell>
@@ -2481,7 +2482,7 @@
                         <date when="1894"/>
                     </cell>
                     <cell role="data" rows="1" cols="1"><list>
-                        <item><title><ref target="/swinburne/search?f1-collection=Astrophel and Other Poems">Astrophel and Other Poems</ref></title>.</item>
+                        <item><title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=Astrophel and Other Poems">Astrophel and Other Poems</ref></title>.</item>
                         <item>
                         <title>Studies in Prose and Poetry</title>.</item></list></cell>
                     <cell/>
@@ -2510,7 +2511,7 @@
                     <cell rendition="#chronoTableDate" role="data" rows="1" cols="1">
                         <date when="1896"/>
                     </cell>
-                    <cell role="data" rows="1" cols="1"><list><item><title><ref target="/swinburne/view#docId=swinburne/acs0000001-04-i001.xml;query=;brand=swinburne">The Tale of Balen</ref></title>.</item><item>
+                    <cell role="data" rows="1" cols="1"><list><item><title><ref target="http://swinburneproject.indiana.edu/swinburne/view#docId=swinburne/acs0000001-04-i001.xml;query=;brand=swinburne">The Tale of Balen</ref></title>.</item><item>
                     Swinburne's mother, Lady Jane Swinburne, dies. </item>
                     <item><date rendition="#suppress" when="1896-10-03"/>William Morris dies.</item></list></cell>
                     <cell/>
@@ -2607,7 +2608,7 @@
                     <cell role="data" rows="1" cols="1">
                         <list>
                             <item>
-                                <title><ref target="/swinburne/search?f1-collection=A Channel Passage and Other Poems">A Channel Passage and Other Poems</ref></title>.
+                                <title><ref target="http://swinburneproject.indiana.edu/swinburne/search?f1-collection=A Channel Passage and Other Poems">A Channel Passage and Other Poems</ref></title>.
                             </item>
                             <item><title>The Poems of Algernon Charles Swinburne</title>, six volumes of Swinburne's collected poems.</item>
                            

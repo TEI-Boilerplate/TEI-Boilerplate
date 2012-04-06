@@ -84,8 +84,8 @@
             <div type="masthead">
 
                 <bibl>
-                    <publisher>Indiana University Law School Alumni Association</publisher>. <biblScope>
-                        <title>The I Witness</title>. </biblScope>
+                    <publisher>Indiana University Law School Alumni Association</publisher>. 
+                        <title>The I Witness</title>. 
                     <biblScope type="vol" n="#">1</biblScope>
                     <biblScope type="issue" n="#">May</biblScope>
                     <date>1959</date>. <pubPlace>Bloomington, Indiana</pubPlace>. </bibl>
@@ -109,7 +109,7 @@
                     our sincere desire by this publication to keep you in closer touch with Indiana
                     University, and its School of Law. With warmest regards to all of you, I am</p>
                 <closer>
-                    <salute>Sincerely yours</salute>, <signed>LEON H. WALLACE <lb/> Dean </signed>
+                    <salute>Sincerely yours,</salute> <signed>LEON H. WALLACE <lb/> Dean </signed>
                 </closer>
 
 

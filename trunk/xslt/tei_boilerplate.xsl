@@ -4,7 +4,7 @@
 		<xd:desc>
 			<xd:p><xd:b>Created on:</xd:b> Nov 17, 2011</xd:p>
 			<xd:p><xd:b>Author:</xd:b> John A. Walsh</xd:p>
-			<xd:p>TEI Boilerplate stylesheet: Copies TEI document, with a very few modificaations
+			<xd:p>TEI Boilerplate stylesheet: Copies TEI document, with a very few modifications
 			into an html shell, which provides access to javascript and other features from the
 			html/browser environment.</xd:p>
 		</xd:desc>
@@ -195,8 +195,9 @@
 		<head>
 			<meta charset="UTF-8" />
 
-			<link  rel="stylesheet" type="text/css" href="../css/style.css" />
-
+			<!--<link rel="stylesheet/less" type="text/css" href="../css/style.less"/>-->
+			<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+			<script type="text/javascript" src="../js/less.min.js" ></script>
 			<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
 			<script type="text/javascript" src="../js/jquery/plugins/jquery.blockUI.js" ></script>
 			<script type="text/javascript" src="../js/tei_boilerplate.js"></script>

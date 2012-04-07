@@ -87,7 +87,6 @@
     </teiHeader>
     <text>
         <front>
-            <pb n="[1]" xml:id="VAA8558-05-001"/>
             <titlePage rend="center">
                 <docTitle>
                     <titlePart type="main">BREVIER LEGISLATIVE REPORTS: EMBRACING SHORT-HAND
@@ -114,9 +113,7 @@
                     <docDate>1861.</docDate>
                 </docImprint>
             </titlePage>
-            <pb n="[2]" xml:id="VAA8558-05-002"/>
-
-            <pb n="[3]" xml:id="VAA8558-05-003"/>
+           
             <div type="preface">
                 <floatingText>
                     <body>
@@ -153,11 +150,8 @@
                 <p>Postoffice address of A. &amp; W. H. DRAPIER, South Bend, St Joseph County,
                     Indiana.</p>
             </div>
-            <pb n="[4]" xml:id="VAA8558-05-004"/>
         </front>
         <body>
-
-            <pb n="[5]" xml:id="VAA8558-05-005"/>
             <div type="volume" n="5">
                 <div type="issue" n="1">
                     <head rend="center">BREVIER LEGISLATIVE REPORTS.</head>
@@ -4662,7 +4656,7 @@
                                     </div>
                                 </body>
                             </floatingText>
-                            <pb n="[37]" xml:id="VAA8558-05-037"/>
+                            <pb n="37" xml:id="VAA8558-05-037"/>
                         </div>
                     </div>
                 </div>
@@ -8425,7 +8419,7 @@
                         </div>
                     </div>
                 </div>
-                <pb n="[69]" xml:id="VAA8558-05-069"/>
+                <pb n="69" xml:id="VAA8558-05-069"/>
                 <div type="issue" n="5">
 
                     <head rend="center">BREVIER LEGISLATIVE REPORTS,</head>
@@ -10358,7 +10352,7 @@
                         </div>
                     </div>
                 </div>
-                <pb n="[85]" xml:id="VAA8558-05-085"/>
+                <pb n="85" xml:id="VAA8558-05-085"/>
                 <div type="issue" n="6">
 
                     <head rend="center">BREVIER LEGISLATIVE REPORTS,</head>
@@ -12183,7 +12177,7 @@
                         </div>
                     </div>
                 </div>
-                <pb n="[101]" xml:id="VAA8558-05-101"/>
+                <pb n="101" xml:id="VAA8558-05-101"/>
                 <div type="issue" n="7">
 
                     <head rend="center">BREVIER LEGISLATIVE REPORTS,</head>
@@ -18341,7 +18335,7 @@
                         </div>
                     </div>
                 </div>
-                <pb n="[149]" xml:id="VAA8558-05-149"/>
+                <pb n="149" xml:id="VAA8558-05-149"/>
                 <div type="issue" n="10">
 
                     <head rend="center">BREVIER LEGISLATIVE REPORTS.</head>
@@ -20201,7 +20195,7 @@
                         </div>
                     </div>
                 </div>
-                <pb n="[165]" xml:id="VAA8558-05-165"/>
+                <pb n="165" xml:id="VAA8558-05-165"/>
                 <div type="issue" n="11">
 
                     <head rend="center">BREVIER LEGISLATIVE REPORTS.</head>
@@ -21932,7 +21926,7 @@
                         </div>
                     </div>
                 </div>
-                <pb n="[181]" xml:id="VAA8558-05-181"/>
+                <pb n="181" xml:id="VAA8558-05-181"/>
                 <div type="issue" n="12">
 
                     <head rend="center">BREVIER LEGISLATIVE REPORTS.</head>
@@ -23975,7 +23969,7 @@
                         </div>
                     </div>
                 </div>
-                <pb n="[197]" xml:id="VAA8558-05-197"/>
+                <pb n="197" xml:id="VAA8558-05-197"/>
                 <div type="issue" n="13">
 
                     <head rend="center">BREVIER LEGISLATIVE REPORTS.</head>
@@ -25819,7 +25813,7 @@
                         </div>
                     </div>
                 </div>
-                <pb n="[213]" xml:id="VAA8558-05-213"/>
+                <pb n="213" xml:id="VAA8558-05-213"/>
                 <div type="issue" n="14">
 
                     <head rend="center">BREVIER LEGISLATIVE REPORTS.</head>
@@ -27578,7 +27572,7 @@
                         </div>
                     </div>
                 </div>
-                <pb n="[229]" xml:id="VAA8558-05-229"/>
+                <pb n="229" xml:id="VAA8558-05-229"/>
                 <div type="issue" n="15">
 
                     <head rend="center">BREVIER LEGISLATIVE REPORTS.</head>
@@ -29603,7 +29597,7 @@
                         </div>
                     </div>
                 </div>
-                <pb n="[245]" xml:id="VAA8558-05-245"/>
+                <pb n="245" xml:id="VAA8558-05-245"/>
                 <div type="issue" n="16">
 
                     <head rend="center">BREVIER LEGISLATIVE REPORTS.</head>
@@ -31582,7 +31576,7 @@
                             </div>
                         </div>
                     </div>
-                    <pb n="[261]" xml:id="VAA8558-05-261"/>
+                    <pb n="261" xml:id="VAA8558-05-261"/>
                     <div type="issue" n="17">
 
                         <head rend="center">BREVIER LEGISLATIVE REPORTS.</head>
@@ -33253,319 +33247,6 @@
             </div>
         </body>
 
-        <pb n="[277]" xml:id="VAA8558-05-277"/>
-        <back>
-            <div type="index">
-                <head rend="center">INDEX.</head>
-                <ab>SENATE BILLS. No. PAGE PAGES WHERE CONSIDERED. 1 8 10, 29, 38, 51, 64, 67, 68,
-                    69, 70 71, 73, 74,75, 76, 77, 78, 79. 2 8 10, 63, 84, 99, 114, 115, 116, 120. 3
-                    8 10, 29. 4 8 10, 61, 62, 162. 5 8 10, 54, 55 56, 61, 76, 84, 93, 99. 6 8 10,
-                    16, 20, 51, 99, 114. 7 8 10. 8 22 27, 36, 84, 115, 117,118. 9 22 158.10 22 158.
-                    39, 52, 53, 84, y9. 11 23 12 23 34, 38, 51, 54, 63. 13 23 14 23 62. 15 36
-                    158,161. 16 42 52, 74,22, 229. 17 42 43, 44, 64, 72, 102, 103, 136, 137. 18 45
-                    53, 142. 19 101 116. 20 134 140, 146, 153. 21 135 142, 144, 161, 169, 197, 199.
-                    21 135 195, 211, 235, 236. 23 135 144. 203, 214, 235. 24 135 144, 233, 247. 25
-                    135 144, 190. 26 135 142, 144, 180, 247, 27 136 144, 180, 190, 219, 238, 239. 28
-                    136 150, 180, 190, 219, 220, 229. 29 136 144, 203, 237. 30 136 144, 146, 164,
-                    180, 181, 205, 206. 31 136 168, 203, 218, 229, 233, 237, 239,240, 248, 32 136
-                    168, 211, 235. 33 137 168, 182, 211, 236, 34 137 168, 211, 234. 35 137 168, 211,
-                    236 36 142 212, 235. 37 142 162, 212, 235. 38 150 118, 212, 236. 39 150 151,
-                    211, 236. 40 150 151, 202, 238. 41 150 151, 188, 218, 233. 42 150 151, 188, 218.
-                    43 151 188, 218, 237, 241, 246, 247, 249. 44 151 196, 212. 45 151 263. 46 151
-                    168, 183,195, 211 236. 47 162 168,188, 218, 222. 48 162 168, 212, 238, 250. 49
-                    162 169, 196, 212, 235. 50 163 169, 196, 213. 51 163 215, 230, 249. 52 169 182,
-                    183, 253. 53 169 183, 213, 236, 239. 54 169 183, 213, 214.215, 238. 55 169 183,
-                    195, 215, 238. 56 240 250. 57 250. 58 59 60 232. 61 62 63 64 65 66 67 68 SENATE
-                    JOINT RESOLUTIONS. No. PAGE PAGES WHERE CONSIDERED. 1 9 2 223 34 41, 46, 49.4
-                    535 62 116, 162.6 151 7 186 187.8 188 9 199 HOUSE BILLS No. PAGE. DISCUSSED OR
-                    AMENDED. 1 12 20, 110.2 123 12 18, 24. 45, 64.4 15 18, 19, 40, 41, 42.5 166 18
-                    32, 33, 36, 26, 64, 100.7 20 110 120, 189.8 20 17, 20, 45.9 20 37.10 20 26.11 21
-                    26, 111, 112.12 24 23, 27, 28, 33.13 26 40, 99, 109, 110.14 26 40.15 32 40, 99,
-                    108, 109, 156, 157.16 32 41, 110.17 32 33.18 33 41, 99, 114, 120.19 33 41.20 33
-                    38, 39, 84.21 33 57, 61, 62, 72, 80, 83, 89, 93, 100, 105, 110. (Printed on
-                    pages 123 and 131.)22 33 49, 50, 60, 62, 72, 101, 112, 113, 119 (Printed on
-                    pages 131 and 132.)23 38 68, 108. 109, 156. 157.24 38 110, 137, 139, 169, 196,
-                    212, 229, 248.25 3826 41 42.27 46 68, 108, 109, 156, 157.28 46 108, 109, 156,
-                    157, 158, 175, 204, 205, 215, 238, 241, 250.29 50 51, 68, 84.30 52 99, 114.31 79
-                    229.32 84 139, 180, 229, 233, 240, 249.33 84 99, 110, 114.34 88 141.35 99 140.36
-                    112 115, 139, 248.37 116 138, 164, 165, 169, 182, 186, 197, 199, 240.38 116 117,
-                    114, 122, 188, 215, 237, 239, 241.39 119 172, 175, 229, 231, 240, 241, 242, 250,
-                    251.40 120 122, 179, 180, 192, 140, 250.41 122 140 164, 168, 182, 196.42 138 43
-                    138 164, 168,182, 215.44 13945 139 190, 193, 194. 46 141 153, 154.47 152 189,
-                    190, 250.48 153 165, 167, 169, 182, 213, 228, 229,238.49 165 189, 212, 215, 219,
-                    229, 238.50 165 189, 250.51 167 222.52 167 189, 219. <pb n="278"
-                        xml:id="VAA8558-05-278"/> HOUSE BILLS - <hi rend="i">Continued.</hi> No.
-                    PAGE. DISCUSSED OR AMENDED. 53 167 189, 220 221, 229, 251. 54 167 189, 203, 215,
-                    241. 55 170 169, 182, 253.56 170 171, 172, 183, 240, 241.57 181 189, 215, 228,
-                    230. 58 194 59 194 210, 237. 60 206 207, 209, 215, 229, 230, 238, 239, 247.61
-                    209 238. 62 209 218, 222, 229, 241. 63 210 215, 229, 230. 64 216 215,287, 246.
-                    65 218 66 219 67 219 229, 241. No. PAGE. DISCUSSED OR AMENDED. 68 222 233, 237,
-                    241.69 222 230 990,231, 239, 241, 242, 246, 249, 256.70 232 229, 241, 242,
-                    251.71 248 248, 240, 241, 242. HOUSE JOINT RESOLUTIONS.No. PAGE. PAGES WHERE
-                    CONSIDERED.1 10 18, 24, 27.2 24 23, 29. 3 26 4 64 5 1386 152 7 154 155, 156,
-                    184,185, 186.</ab>
-            </div>
-            <div type="index">
-                <head rend="center">PERSONAL INDEX.</head>
-                <ab>ALLEN, CYRUS M., elected Speaker 7. His motions6, 31, 32, 49, 51, 59, 65, 67,
-                    63, 70, 71, 76, 77, 85, 95, 97, 107, 110, 111, 118, 139. 140, 141, 157, 158,
-                    167, 175, 193, 194, 208, 209, 210, 216, 217, 221, 223, 232, 233, 235, 236, 238,
-                    248.ANDERSON, NOAH, a Representative from Elkhart. His motions181, 189,
-                    219.ANTHONY, DEWITT C., a Sentor from Floyd. His motions17, 35, 36, 42, 45, 62,
-                    64, 72, 89, 91, 113, 114, 198, 223, 224, 225, 238, 240, 242.ATKISSON, GEORGE Y.,
-                    a Representative from Hancock and Shelby. His motions- 34, 78, 79, 111, 181,
-                    205, 207, 215, 216, 233, 235, 245, 246, 249, 256.BEARSS, DANIEL R., a Senator
-                    from Miami and Fulton, His motions240, 241,242.BEESON, OTHNIEL, a Senator from
-                    Wayne. His motions8, 23, 45, 52, 72, 114, 134, 150, 162, 163, 169, 199, 212,
-                    215, 223, 252.BERRY, E. H. M., a Senator from Rush. His motion5.BINGHAM, LUCIUS,
-                    a Representative from Jennings. His motions16, 21, 61, 68, 73, 88, 110, 111,
-                    112, 116, 120, 154, 222, 243, 244, 251.BLACK, A. M., a Representative from
-                    Orange. His motions20, 26, 33, 36, 38, 41, 60, 61, 73, 116, 117, 134, 165, 189,
-                    190, 206, 207, 208, 219, 222, 237, 238.BLAIR, SOLOMON, a Senator from Hendricks
-                    and Boone. His motions23, 45, 52, 53, 62, 63, 83, 105, 113, 121, 168, 211, 239,
-                    240, 252.BRANHAM, D. C.. a Representative from Jefferson. His motions217, 247,
-                    248.BRETT, M. L., a Representative from Daviess. His motions61, 70, 77, 153,
-                    165, 166, 167, 192, 193, 208, 215, 217, 234, 235, 236, 242, 245, 250.BREVIER
-                    LEGISLATIVE REPORTS31, 52, 53, 230, 252, 253.BROWNE THOMAS M., elected Secretary
-                    of the SenateBRUCKER, MAGNUS, a Representative from Perry. Hismotion210.BRYAN,
-                    WILLIAM H., a Representative from Tippecanoe. His motion6.BUNDY, M. L., a
-                    Representative from Henry. His motions7, 10, 11 15, 16, 17, 20, 22, 23, 50, 51
-                    57, 60, 61, 64, 69, 70, 71, 73, 74, 83, 84, 87, 88, 93, 94, 95, 98, 99, 105,
-                    106, 107, 110, 111, 115, 116, 117, 118, 119, 120, 138, 139, 164, 166, 167, 170,
-                    172, 193, 194, 203,204, 208, 209, 210, 215, 217, 218, 219, 220, 221, 222, 223,
-                    233, 235, 236, 237, 242, 243, 246, 249, 250, 253.BURGESS, JAMES, A
-                    Representative from Hendricks. His motion6. CAMERON, R. A., a Representative
-                    from Porter. His motions7, 15, 25, 27, 70, 71, 177.CAMPBELL, HENRY, a Senator
-                    from Fountain. His motions17, 113 CAMPBELL, JOSEPH, a Representative from
-                    Monroe. His motions36, 162, 230.CARNAHAN, M. T., a Senator from Posey and
-                    Vanderburg. His motions17, 29, 72, 82, 105 133, 134, 136, 144, 145, 146, 151,
-                    163, 169, 183, 196, 213, 228, 241. CASON, T. J., a Representative from Boone and
-                    Hendricks. His motions12,19, 21, 39, 52', 58, 61, 71, 74, 87, 94, 95, 96, 99,
-                    115, 122,156, 165, 167, 175, 176, 178, 179, 193, 293, 231, 232, ,250,
-                    251.CHAPMAN, CHARLES G., a Representative from Kosciusko. His motions7, 79,
-                    122.CLAYPOOL, BENJAMIN F., a Senator from Fayette and Union. His motions5, 6, 8,
-                    16,17, 22, 23, 28. 29, 30, 35, 36, 37, 42, 44, 53, 56, 63 64, 72, 73, 89, 90,
-                    92, 100, 102, 105 113, 114, 115, 144, 145, 150, 151, 158, 160, 187, 197, 198,
-                    200, 212, 214, 223, 225, 226, 228, 230, 238, 239, 241, 242.COBB, THOMAS R., a
-                    Senator from Lawrence and Martin. His motions8, 17 24. 27, 28, 29, 53, 62 63,
-                    72, 81, 90, 113, 115, 142, 146, 150, 162, 163, 168, 198,199, 200, 201, 211, 212,
-                    213, 215, 229, 230.COLLINS, E. M., a Representative from Adams. His motions15,
-                    41, 163 165, 210, 218.COLLINS, JAMES S., a Representative from Huntington and
-                    Whitley. His motions120, 175,180, 210. COMBES WILLIAM, a Representative from
-                    Owen. His motion210.COMMITTEES. Senate9. House17. CONLEY, JASON N., a Senator
-                    from Greene and Owen. His motions17, 72,93, 133,135,145,182, 183,198,199, 211,
-                    229, 230, 231, 239, 241.CONNER, JAMES D., a Senator from Wabash and Kosciusko.
-                    His motions5, 7, 9, 17, 23, 30, 36, 42, 45, 54, 55, 57, 63, 64, 72, 100,
-                    105,113, 114, 120, 134,137,150, 151, 161, 162, 181, 183, 195, 196, 211, 230,
-                    239, 240, 241, 242, 251. COOPRIDER, ELIAS, a Representative from Clay. His
-                    motion61.CRAIN, JOHN G., a Representative from Parke. His motions10, 12, 16, 18,
-                    20, 21, 24, 33, 37, 38, 40, 49, 50, 51, 60 61, 67, 68, 71, 76, 78, 84, 85, 97,
-                    107, 110, 111, 112, 116, 117, 119, 139, 140, 152, 154, 155, 156, 170, 171, 173,
-                    189, 190, 204, 207, 210, 221, 222. <pb n="279" xml:id="VAA8558-05-279"/> CRAVEN,
-                    HERVEY, a Senator from Madison and Grant His motions43, 89, 201, 211,
-                    240.CRAVENS, JOHN R., a Senator from Jefferson. (President of the Senate.) His
-                    motions5, 8, 17, 28, 56, 101, 103, 104, 105, 113, 162, 183, 186, 187, 201, 202,
-                    213.CULVER, MOSES C., a Senator from Tippecanoe. His motions89, 240,
-                    252.DASHIEL, JOHN L., a Representative from Ripley. His motion6.DAVIS, SAMUEL, a
-                    Representative from Scott. His motions11, 15, 26, 32, 36, 38, 40, 61, 119, 120,
-                    141, 156, 170, 175, 189, 193, 203, 206, 218, 222, 232, 234, 246.DEHART, RICHARD
-                    P., a Senator from Cass, Howard and Pulaski. His motions9, 23, 30, 34,
-                    35,135,145, 150, 151, 160, 163, 181, 186, 187, 195, 197, 201, 214, 215, 228
-                    230.DICKINSON, TIMOTHY R., a Senator from De Kalb, Noble and Steuben. His
-                    motions9, 36, 81, 151.DOBBINS, CUTLER S., a Representative from Martin. His
-                    motions7, 11, 21, 31, 32, 38, 41. 46,- 57. 58, 59. 60, 61. 66, 68, 73, 76, 77,
-                    83. 86, 98, 99, 105, 108, 117, 137, 152, 154, 156, 157,170, 180, 189.DRAPIER,
-                    ARIEL &amp; W. B., authorized Reporters1, 3, 231.DRAPIER, W. H., elected
-                    Secretary of the Senate5.EDSON, JOSEPH P., a Representative from Vanderburg and
-                    Posey. His motions17, 18. 19, 21, 24, 25, 27, 33, 68 69, 76, 79, 96, 139 152,
-                    156, 164. 170, 180. 188, 189, 190, 204, 205, 206, 210, 217, 234, 236, 246. 247,
-                    249.EPPERSON. RICHARD, a Representative from Montgomery. His motion210.ERWIN.
-                    HUGH, a Representative from Lawrence. His motions73, 138,210.FEAGLER, HENRY, a
-                    Representative from De Kalb. His motionsFERGUSON, CHARLES P. a Senator from
-                    Clark and Scott. His motions16, 17, 22, 23, 53, 92, 100, 182, 239, 240, 241.
-                    242.FERGUSON, JOHN W., a Representative from Morgan. His motion,11, 68, 189.
-                    190, 217, 220, 221, 231.FISHER, STEARNS, a Representative from Wabash. His
-                    motions7, 12, 15, 17, 22 31, 33, 36, 49, 50,51, 57,58, 59, 60. 67, 68, 69, 71,
-                    73, 74, 75, 76, 84. 86, 88,' 97, 99, 105, 109, 110. Ill 112, 116, 119, 122, 140,
-                    141, 152, 153, 154, 156, 157, 165, 170, 172, 174. 175, 188, 189, 190, 206, 207,
-                    208, 209, 210, 217, 220, 222, 223, 231, 232, 233, 234,236, 237,238, 244. 246,
-                    247, 248,249, 250, 253, 256.FLEMIMG. A. F., a Representative fromDubois. His
-                    motion188.FORD. JOHN L., a Representative from Jackson. His motions30 41, 51,
-                    60, 61, 73 74, 88, 89, 99, 118, 140, 157, 210.FORDYCE, NELSON, a Representative
-                    from Boone. His motion6.FRALEY, JAMES F., a Representative from Fountain. His
-                    motionsFRASIER, GEORGE W.. a Representative fromKosciusko and Wabash. His
-                    motions7, 11, 12. 16, US, 19. 22, 24, 25, 26, 27, 31, 32, 33, 34, 37, 38, 39,
-                    41, 47, 51 59, 60, 61, 67, 63, 73, 75, 76 77, 79,140, 152,153, 156,157, 166,
-                    175, 178, 379, 189, 191, 192, 193, 194, 209, 210, 219, 222, 223, 232, 233, 234,
-                    235, 236, 238, 243, 244, 246, 247, 248, 249, 250, 256.GIFFORD. THOMAS a
-                    Representative from Franklin. His motions59, 64, 93, 138, 154, 169, 210, 242,
-                    256.GORE, JOSEPH, a Representative from Hamilton and Tipton. Hi&amp; motions33,
-                    210.GOVERNOR'S MESSAGES12,13,14. 15.GRESHAM. WALTER Q., a Representative from
-                    Harrison. His motions7, 15,19. 31, 33, 37 38, 40, 41, 52, 57, 58, 60, 61, 66,
-                    67, 70 71, 73, 77, 78, 79, 95, 97, 98, 107, 110, 111, 136, 120, 138, 152, 153,
-                    156, 157, 164, 204, 205, 210, 217, 219, 332, 235, 236, 246, 249.GROVER, IRA G.,
-                    a Representative from Decatur. His motions34, 38.GRUBB. G. B. a Senator from
-                    Hamilton and Tipton. His motion80.HALL, WILLIAM, a Representative from Grant.
-                    His motions210, 235, 236.HAMILTON, ALLEN. a Senator from Alien. His motions 8.
-                    10, 17, 23, 28, 52, 56, 61, 64, 72 104, 112, 151, 161, 183, 200, 230, 239, 240.
-                    241.HARVEY, SAMUEL, a Representative from Laporte. His motion6.HAWORTH, R. W., a
-                    Representative from Fayette and Union. His motions99, 237.HAYES, JOHN, a
-                    Representative from Madison. His motions10, 37, 46, 73, 110, 115, 122, 138, 140,
-                    151, 152, 188, 190, 247, 251.HEFFREN, HORACE, a Representative from Washington
-                    and Harrison. His motions6, 10, 11, 12, 15, 16, 19, 21, 40, 50, 51, 52, 57, 58.
-                    59, 60, 61, 66, 67, 68, 69, 70, 73, 74, 76, 77, 78, 79, 139, 140, 141, 142, 152,
-                    153, 154, 155, 156, 157 167, 170, 171, 175, 176, 177, 178, 179, 205, 206, 232,
-                    234, 235, 243, 244, 245, 246, 248, 249.HENRICKS, JOHN A., a Representative from
-                    St. Joseph. His motions33, 38, 39, 41, 138, 139, 180, 206, 217, 233, 234,
-                    249.HOLCOMB, SILAS L., a Representative from Gibson. His motions- 12, 20, 31,
-                    32, 37, 38, 49, 50, 51 59, 66, 68, 111,117, 139, 152, 203, 208, 209, 216, 219,
-                    221, 237, 238, 247.HOPKINS S., a Representative from Vanderburg. His motions96,
-                    209, 210, 221, 235.HORTON, THEODORE, a Representative from Blackford and Wells.
-                    His motions21, 24, 60, 84, 210.HOWARD, T. J., a Representative from Clark. His
-                    motions32, 250.HUDSON, SAMUEL, a Representative from Lagrange. His motion6.HULL.
-                    JAMES S., a Senator from Ripley. His motions 10, 17, 28, 72, 112, 136, 148, 151,
-                    163, 200, 201, 242, 252.HURD, ANSON, a Representative from Benton and White. His
-                    motion219.JENKINSON. M., a Representative from Allen. His motions50, 57, 58, 61,
-                    64, 65, 66, 59, 70, 71, 75, 77, 78, 79, 97, 109, 110, 115, 139, 140, 153, 163,
-                    193 194, 203, 204, 209, 217, 221, 222, 223, 231, 238, 247, 248, 250,
-                    251.JOIINSTON, ARCHIBALD, a Senator from Putnam. Ilia motions23, 35, 36, 42, 45,
-                    62, 63, 83, 89, 100, 134, 135, 136. 144, 145. 158, 161, 163. 168, 169, 183, 18.%
-                    198, 199, 203, 212, 225, 231, 138, 241, 242, 252.JONES, SMITH, a Senator from
-                    Bartholomew. His motions8, 9, 45, 115, 120.JONES, D. M., a Representative from
-                    Vermillion. His motions26, 27, 40, 109, 210, 218.JONES. JARVIS J., a
-                    Representative from Tippecanoe.His motions112, 119, 120, 152, 222, 247,
-                    249,JONES, OLIVER T., a Representative from Wayne. Hismotions138, 139, 235.
-                    KENDRICK. W. H., a Representative from Marion. Hismotions39, 46, 52, 88, 99,
-                    122, 142, 153,181, 190, 219, 242, 243. KITCHEN, DENNIS B., a Representative from
-                    Warrick.His motions57, 71, 138, 194. KNOWLTON, C. B., a Representative from
-                    Cass. His motions22, 37, 38, 41, 51, 57, 58, 60, 61, 67, 68, 70, 73, 74, 83,
-                    110, 111, 119, 141, 210, 217, 220, 232, 234, 235, 236 248, 249, 250. LANDERS,
-                    FRANKLIN, a Senator from Morgan and Johnson. His motions43, 56, 57, 61, 62,
-                    72,103. LANE, HIGGINS, a Representative from Putnam. His motions10, 20. 24, 38,
-                    46, 71, 171, 172, 179, 189, 194, 206, 217, 220, 231, 232, 237, 249. LEE,
-                    NATHANIEL, a Representative from Vigo. His motions176, 178. LIGMTNER, D. D., a
-                    Representative from Howard. His motion6. LINE, AARON B., a Senator from
-                    Franklin. His motions 5, 6, 7. 8, 10. 16, 17, 24, 30, 34, 42, 45, 62, 64, 72,
-                    82, 100, 103, 105, 114, 124, 133, 134,135, 136,142, 146, 158, 161, 169, 188,
-                    195,196, 200, 226, 230, 239, 241, 242. <pb n="280" xml:id="VAA8558-05-280"/> 280
-                    BREVIER LEGISLATIVE REPORTS.LODS, CHARLES, a Representative from Dearborn. His
-                    motion6.LOMAX, QUINTON, a Senator from Orange and Crawford. His motion5.MARCH,
-                    WALTER, a Senator from Delaware and Blackford. His motions8, 16 23 28, 29, 35,
-                    42, 43, 52, 54, 55, 63, 89, 93, 103, 105, 112, 113, 114, 115, 133, 136, 145,
-                    150, 151, 161, 163, 168, 169, 182, 183, 184, 188, 211, 212, 213, 214, 215, 226,
-                    228, 230, 231, 238, 239, 240, 252, 253.McCLURG, LEANDER, a Representative from
-                    Clinton. His motions87, 219.McLEAN, WILLIAM E., a Representative from Vigo. His
-                    motions7, 12, 18, 20, 25, 33, 37, 38, 41, 49. 50, 59. 60, 61. 68 69, 107,110.
-                    112 115, 117,118, 119,122, 138, 152, 153, 170, 171, 203, 207, 208, 210, 217,
-                    218, 235, 248, 251.MELLETT, JOSHUA H., a Senator from Henry. His motions8, 16,
-                    17, 22, 27, 29, 30, 52, 57, 61, 62, 63, 72, 90, 81, 93, 100, 105, 113, 142, 146,
-                    150, 182, 185, 195, 211, 215, 223, 225, 229, 240.MILLER, JOHN F., a Senator from
-                    St. Joseph and Marshall. His motions8, 29, 35, 46, 56, 72, 81, 100, 101, 113,
-                    114, 115, 135, 136, 137, 142, 143, 144, 145, 146, 151, 160, 163, 181, 184, 188,
-                    196, 198, 199, 211, 213, 214, 224, 225, 226, 227, 230, 239, 240, 241.MOODY, G.
-                    C., a Representative from Jasper and Pulaski. His motions MOORMAN, J. A., a
-                    Representative from Randolph. His motions16, 18, 20, 31, 61, 73, 189, 210. MOSS.
-                    W. E., a Representative from Greene. His motions31, 32, 61, 111, 192, 193.
-                    MURRAY. CHARLES L., a Senator from Elkhart and Lagrange. His motions8, 9, 10,
-                    17, 24, 35. 36, 46, 80, 89, 93, 104, 112, 113, 114, 134, 137, 142, 145, 146,
-                    160, 162, 169, 181, 184, 187, 197, 198, 199, 200, 202. MUTZ, JACOB, a
-                    Representative from Shelby. His motions112. NEBEKER, R. M., a Representative
-                    from Warren. His motion,12, 19, 20, 21, 26. 32, 33, 34, 37, 41, 46, 60, 61, 73
-                    76, 78, 83, 93. 105, 108 109, 116, 140, 141, 153, 154, 170,171, 175, 177,178,
-                    179, 180. 188 189 193, 194, 203 210, 234, 236, 246.NEWCOMB, HORATIO C., a
-                    Senator from Marion. Hismorions17, 22 27, 36 42 43, 72, 80. 81. 83. 89. 90, 92,
-                    101, 103, 104, 113, 124, 136, 137, 146, 150 163, 182, 185, 202, 215, 225, 227,
-                    229, 230, 240, 241.NEWMAN, E. T., a Representative from Wayne. His motions31,
-                    38. 47, 48, 61, 164, 210.O'BRIEN, CORNELIUS, a Senator from Dearborn. His
-                    motion30.ODELL, JAMES, a Senator from Carroll and Clinton. His motions62, 72,
-                    73, 142, 181, 196, 212, 228.ORE, JAMES, a Representative from Delaware. His
-                    motions7, 11, 16, 17, 18 19, 21, 24, 32 37, 38, 49, 51, 52, 60, 61, 65, 88. 105.
-                    110 111, 120. 138, 139, 141,142, 151, 152, 153, 170, 174, 177, 178, 180 181,188,
-                    190, 193, 203, 206, 232, 234.OWENS, W. W., a Representative from Sullivan. His
-                    motions31, 32, 94. 110, 216.PACKARD, MARCUS A. O., a Representative from
-                    Marshall and Starke. His motions11, 22, 31, 39, 49. 58, 59, 60, 61, 78 84, 87,
-                    96, 109. 156, 157, 192, 209, 210, 218, 231, 232, 236, 237, 238, 248 250.PARRETT,
-                    ROBERT, a Representative from Lasrange and Elkhart. His motions11, 15, 18, 19,
-                    34, 36, 37, 41, 46, 50, 52, 61, 65. 66, 69, 71, 88, 94, 109, 110, 111, 122, 139,
-                    140, 141, 170, 174, 191, 192, 193, 208, 218, 219, 220, 222, 236, 242, 249, 250,
-                    256.PITTS, WILLIAM C., a Representative from Posey. His motion6.POLK, JOHN A., a
-                    Representative from Johnson. His motions33 83,105,106, 107,108.PROSSER. LEWIS, a
-                    Representative from Brown. His motions11, 67, 69, 73, 76, 84, 96, 97, 105 108,
-                    152, 153, 154, 155, 172, 178, 179, 188, 189, 203, 206, 217, 235 237, 238, 242,
-                    256. PROW, C., a Representative from Washington. His motions83,139. RAGAN, R.
-                    S., a Representative from Putnam. His motions11, 12, 15, 20, 26, 51, 59, 61, 75,
-                    110, 111, 118, 203, 207, 209, 210, 216, 217, 220, 221, 237, 247, 248.RANDALL, J.
-                    R., a Representative from Noble. His motions210, 233, 234.RAY, MARTIN M., a
-                    Senator from Slielby and Hancock.His motions-16, 17, 29, 30, 35, 36, 43, 44, 52,
-                    55, 63, 80, 83, 89, 92, 93, 100, 103, 105, 112, 113, 115, 120, 146, 158, 159,
-                    184, 201, 202, 213, 223, 224, 225, 226, 228, 230 231,238,239,241, 242, 252,
-                    253.ROBBINS, A. H., a Representative from Fulton. His motions11, 12, 26, 60, 88,
-                    98, 105, 107, 108, 109, 110, 111, 157, 166, 188, 199, 205, 210, 247.ROBBINS,
-                    RICHARD, (deceased,) a Senator from Decatur. His motions23, 30.ROBERTS. OMAR F.,
-                    a Representative from Dearborn His motions10, 18, 47, 48, 49, 50, 75, 96, 105,
-                    107, 109, 154, 155, 170, 219, 235, 245, 249.ROBINSON, BENJAMIN L., a Senator
-                    from Switzerland and Ohio. His motions17, 63,135, 169,182, 228, 240.SHERMAN, M.
-                    G., a Representative from Laporte. His motions24, 57, 71, 84, 97, 110, 117, 153,
-                    171, 172, 173, 174, 188, 210, 232, 246, 247, 251. SHIELDS, MEDY W., a Senator
-                    from Jennings and Jackson. His motion90.SHOEMAKER, JOHN C., a Senator from
-                    Perry. Spencer and Warrick. His motions136, 144, 151, 162, 163, 182, 183, 195,
-                    196, 211, 213, 239, 240.SHOULDERS, THOMAS, a Senator from Gibson, Pike and
-                    Dubois. His motion133.SLACK, JAMES R., a Senator from Huntington and Whitley.
-                    His motions5 7. 8, 9, 17 29, 42, 61, 62, 63, 89, 91, 104, 105, 134, 135, 145,
-                    146, 151, 158, 159, 161, 186, 187, 188, 199, 211, 213, 223, 224, 227, 239, 240,
-                    242.SLOAN, W. W., a Representative from Crawford. His motions154, 219.SMITH.
-                    FRANCIS P., a Representative from Bartholomew. His motions20, 21, 25, 28, 38,
-                    40, 41, 49, 50, 52, 57, 60, 61, 65, 71, 77, 78, 83, 87, 111, 141, 155, 156, 157,
-                    171, 173, 176, 180, 248, 249, 250, 256.SMITH, WILLIAM, a Representative from
-                    Miami. His motion6.STEELE, GEORGE K., a Senator from Parke and Ver-million. His
-                    motions5, 6,7, 8, 10, 16, 17, 23, 27, 29, 30, 34, 35, 44, 62, 63, 64, 72, 91,
-                    302, 103, 146, 187, 226, 227.STEVENSON, JOHN, a Representative from Johnson and
-                    Morgan. His motions38, 190, 247.STONE, ASAHEL, a Senator from Randolph. His
-                    motions23, 34, 42, 133, 139, 199.STOTSENBERG, JOHN H., a Representative from
-                    Floyd. His motions10, 11, 18, 19, 20, 21, 22, 36, 37, 38, 46, 48, 49, 51, 58,
-                    60, 65, 66, 67, 68, 98, 99, 109, 110, 111, 141, 155, 156, 157, 158, 172, 175,
-                    177, 178, 180, 209, 210, 218, 219, 220, 221, 222, 223, 232, 233, 236, 237, 245,
-                    246, 248, 249, 250, 254, 256.STUDABAKER, DAVID, a Senator from Adams, Jay and
-                    Wells. His motions5, 8, 9, 17, 22, 27, 28, 34, 42, 45, 52, 56, 57, 62, 64, 72,
-                    102, 103, 104, 113, 114, 115, 138, 135,136, 158, 181, 183, 184, 186, 188, 199,
-                    202, 213, 215, 227, 228, 229, 230, 231, 238, 239, 240, 241.TARKINGTON, WILLIAM
-                    C,, a Senator from Monroe and Brown His motions7, 17, 29, 53, 92, 100, 101, 113,
-                    135, 137, 62, 196, 199, 201, 211, 212, 213, 226, 229, 238, 241.TEEGARDEN,
-                    ABRAHAM, a Senator from Laporte and Starke. His motions 133, 182, 239,
-                    240.THOMAS, GEORGE, a Representative from Rush. Hia motions31, 38, 60, 83, 118,
-                    155, 165, 189, 193, 236.THOURSON, SAMUEL J , elected Doorkeeper of the
-                    Senate5.THOMPSON. J., a Representative from Carroll. His motion236.TRIER,
-                    CONRAD, a Representative from Alien. His motion6.TURNER, DAVID, a Senator from
-                    Lake, Porter and Jasper. His motions10, 17, 54, 120, 134, 163, 168, 252, 253.
-                        <pb n="281" xml:id="VAA8558-05-281"/> TURNER, J. H. a Representative from
-                    Marion. His motions31, 73, 96, 88, 220, 246.UNDERWOOD, ISAAC A., a
-                    Representative from Jay. His motions-79, 109, 111, 140, 189, 237,
-                    256.VANDEGRIFT, HENRY, elected Doorkeeper of the Senate-5.VEATCH, JAMES C., a
-                    Representative from Spencer. fiis motions12. 18, 24, 26, 27, 31, 32, 34, 38, 40,
-                    51, 60, 66, 71, 74, 75, 76, 78, 79, 88 93, 94, 95, 96, 97, 99, 108. 109,110,
-                    111, 115, 116, 164, 175, 204, 216, 217, 219, 234, 235, 236, 238, 244, 248, 249,
-                    250.WAGNER, GEORGE D., a Senator from Warren, Benton and White. His motions6, 7,
-                    8, 9, 10, 16, 17, 22, 23, 44, 45, 52, 53, 64, 57, 61, 62, 63, 72, 73, 112,
-                    114.WARRUM, NOBLE, a Representive from Hancock, His motions152, 242.WELLS, A.
-                    J., a Representative from Pike. His motions210, 219.WHITE, MICHAEL D., a Senator
-                    from Montgomery. His motions-17, 158,168, 230, 239.WILLIAMS, H. T., a
-                    Representative from Ohio and Switzerland. His motions20, 46, 74, 96, 154, 194,
-                    210.WILLIAMS, J. D., a Senator from Knox and Daviess. His motions17, 30, 55, 63,
-                    100, 101, 136, 151, 183, 187, 211, 233, 227, 228, 229, 240, 252.WILSON, HENRY
-                    K., a Senator from Sullivan and Vigo. His motion256.WILSON, J. C., a
-                    Representative from Jefferson. His motion74.WOLFE, SIMEON K., a Senator from
-                    Harrison and Washington. His motions8, 16 23, 24, 27, 28, 29, 36, 45, 54, 55,
-                    56, 61, 62, 64, 72, 80, 82, 83, 92, 93, 100, 104, 113, 114, 134, 135, 236, 137,
-                    142, 143, 144, 145, 146, 159, 169, 186, 195, 197, 198, 199, 202, 215, 227, 228,
-                    229, 330, 238, 240, 241, 242.WOODKULL, JOSEPH A., a Representative from Steu-ben
-                    His motions20, 31, 38, 49,73, 74, 77, 84, 94, 97, 99, 105, 116, 118. 138, 139,
-                    141, 142, 152, 157, 179, 180, 189, 190, 192, 206, 210, 217, 218, 219, 222, 236,
-                    237, 249, 250, 256.WOODRUFF, ISRAEL, a Representative from Wayne-His
-                    motions.WOODS, BARTLETT, a Representative from Lake. His motions38, 39, 88, 157,
-                    170, 206.YEAS AND NAYS. SENATE53, 56, 63, 64, 72, 93, 93, 103, 104,105, 135,
-                    146, 161, 162, 196, 199, 202, 233, 228, 230.YEAS AND NAYS. HOUSE40, 49, 58, 60,
-                    71, 79, 99, 118, 119, 157, 170, 194, 203, 204, 205, 206, 209, 218. </ab>
-            </div>
-        </back>
+        <pb n="277" xml:id="VAA8558-05-277"/>
     </text>
 </TEI>

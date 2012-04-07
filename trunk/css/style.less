@@ -624,7 +624,8 @@ factuality {}
 faith {}
 figDesc {}
 figure {}
-fileDesc {}
+fileDesc {
+}
 filiation {}
 finalRubric {}
 floatingText {}
@@ -1010,12 +1011,12 @@ pb {
   margin: 2em 0 2em 0;
 }
 
-pb:before {
-	content: "[page:\a0" attr(n) "]";
+pb pb{
+	display: block;
 }
 
-l + pb{
-	float: right;
+pb:before {
+	content: "[page:\a0" attr(n) "]";
 }
 
 pc {/* Empty Rule Set */}
@@ -1278,6 +1279,7 @@ teiCorpus {}
 
 teiHeader {
 display:block;
+background-color: red;
 /*
 border-radius: 15px;
 border: 1px solid black;

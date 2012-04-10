@@ -10,7 +10,7 @@
 		</xd:desc>
 	</xd:doc>
 
-	<xsl:output encoding="UTF-8" method="xml" doctype-system="about:legacy-compat"/>
+	<xsl:output encoding="UTF-8" method="html" doctype-system="about:legacy-compat"/>
 	
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
@@ -145,12 +145,7 @@
 				</xsl:attribute>
 			</xsl:if>
 			<xsl:apply-templates select="@*|node()"/>
-			<script type="text/javascript">
-				$(document).ready(function() {
-					$("html > head > title").text($("TEI > teiHeader > fileDesc > titleStmt > title:first").text());
-					$.unblockUI();				
-				});
-			</script>
+			
 		</xsl:copy>
 	</xsl:template>
 
@@ -201,6 +196,17 @@
 			<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
 			<script type="text/javascript" src="../js/jquery/plugins/jquery.blockUI.js" ></script>
 			<script type="text/javascript" src="../js/tei_boilerplate.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$("html > head > title").text($("TEI > teiHeader > fileDesc > titleStmt > title:first").text());
+					$('pb').each(function(index) {
+						$(this).text("[page: " + $(this).attr('n') + "]");
+					});
+					//line below will "hide" pb elements.
+					//$('pb').text("");
+					$.unblockUI();				
+				});
+			</script>
 			<xsl:call-template name="rendition2style"/>
 			<title></title>
 		</head>

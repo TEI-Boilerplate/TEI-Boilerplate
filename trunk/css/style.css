@@ -196,8 +196,7 @@ addrLine {
 address {
   /* Empty Rule Set */
 }
-address[rend~="block"],
-addresss[rendition~="#block"] {
+address[rend~="block"], addresss[rendition~="#block"] {
   display: block;
 }
 adminInfo {
@@ -297,8 +296,7 @@ back {
 bibl {
   /* Empty Rule Set */
 }
-bibl[rend~="block"],
-bibl[rendition~="#block"] {
+bibl[rend~="block"], bibl[rendition~="#block"] {
   display: block;
   padding-left: 2em;
   text-indent: -2em;
@@ -886,20 +884,16 @@ list {
 }
 /* Match only lists that are children or grandchildren of 
 text. Otherwise they show up in the header. */
-text list[type="simple"],
-text * list[type="simple"] {
+text list[type="simple"], text * list[type="simple"] {
   list-style-type: none;
 }
-text list[type="bulleted"],
-text * list[type="bulleted"] {
+text list[type="bulleted"], text * list[type="bulleted"] {
   list-style-type: disc;
 }
-text list[type="ordered"],
-text * list[type="ordered"] {
+text list[type="ordered"], text * list[type="ordered"] {
   list-style-type: decimal;
 }
-text list[type="gloss"],
-text * list[type="gloss"] {
+text list[type="gloss"], text * list[type="gloss"] {
   list-style-type: none;
 }
 localName {
@@ -1148,12 +1142,11 @@ pb {
   color: gray;
   margin: 2em 0 2em 0;
 }
+/*
 pb:before {
-  content: "[page:\a0" attr(n) "]";
+	content: "[page:\a0" attr(n) "]";
 }
-pb.hide:before {
-  content: "";
-}
+*/
 pc {
   /* Empty Rule Set */
 }
@@ -1786,9 +1779,7 @@ width:100%;
   width: 33em;
   font-size: 12pt;
 }
-a:link,
-#footer a:visited,
-#footer a:active {
+a:link, #footer a:visited, #footer a:active {
   color: #5F0000;
   text-decoration: none;
 }

@@ -1022,6 +1022,9 @@ normalization {
   /* Empty Rule Set */
 }
 note {
+  font-size: 0ppx;
+}
+note:hover {
   display: block;
   margin: 1.5em auto 1.5em auto;
   padding: .5em 1.5em 1.5em 1.5em;
@@ -1041,12 +1044,9 @@ note {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 note::before {
-  content: "[Note]";
+  content: "*";
   font-weight: bold;
-  margin-bottom: 1em;
-  display: block;
-  border-bottom: 1px solid #AAA;
-  padding: .5em;
+  vertical-align: top;
 }
 notesStmt {
   /* do we want to box each individual <note> if they're in a <notesStmt>? */

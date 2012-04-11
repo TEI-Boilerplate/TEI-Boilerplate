@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT"
-	xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml"
-	exclude-result-prefixes="html">
+	xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml">
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
 		<xd:desc>
 			<xd:p><xd:b>Created on:</xd:b> Nov 17, 2011</xd:p>
@@ -13,7 +12,7 @@
 		</xd:desc>
 	</xd:doc>
 
-	<xsl:output encoding="UTF-8" method="html" doctype-system="about:legacy-compat"/>
+	<xsl:output encoding="UTF-8" method="xml" doctype-system="about:legacy-compat"/>
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
@@ -103,7 +102,7 @@
 			<xd:p>Transforms TEI ref element to html a (link) element.</xd:p>
 		</xd:desc>
 	</xd:doc>
-	<xsl:template match="tei:ref[@target]">
+	<xsl:template match="tei:ref[@target]" priority="99">
 		<a href="{@target}">
 			<xsl:apply-templates/>
 		</a>
@@ -114,22 +113,12 @@
 			<xd:p>Transforms TEI ptr element to html a (link) element.</xd:p>
 		</xd:desc>
 	</xd:doc>
-	<xsl:template match="tei:ptr[@target]">
-		<a href="{@target}">
-			<xsl:value-of select="@target"/>
-		</a>
-	</xsl:template>
-
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
-		<xd:desc>
-			<xd:p>Transforms TEI ref element to html a (link) element.</xd:p>
-		</xd:desc>
-	</xd:doc>
-	<xsl:template match="tei:prt[@target]">
+	<xsl:template match="tei:ptr[@target]" priority="99">
 		<a href="{@target}">
 			<xsl:value-of select="normalize-space(@target)"/>
 		</a>
 	</xsl:template>
+
 
 	<!-- need something else for images with captions -->
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
@@ -137,7 +126,7 @@
 			<xd:p>Transforms TEI figure element to html img element.</xd:p>
 		</xd:desc>
 	</xd:doc>
-	<xsl:template match="tei:figure[tei:graphic[@url]]">
+	<xsl:template match="tei:figure[tei:graphic[@url]]" priority="99">
 		<xsl:variable name="figDesc" select="normalize-space(tei:figDesc)"/>
 		<img alt="{$figDesc}" src="{tei:graphic/@url}"/>
 	</xsl:template>
@@ -150,7 +139,7 @@
 				javascript, using JQuery, to manipulate the DOM containing both html and TEI.</xd:p>
 		</xd:desc>
 	</xd:doc>
-	<xsl:template match="tei:TEI">
+	<xsl:template match="tei:TEI" priority="99">
 		<xsl:copy>
 			<xsl:if test="not(@xml:id)">
 				<xsl:attribute name="xml:id">

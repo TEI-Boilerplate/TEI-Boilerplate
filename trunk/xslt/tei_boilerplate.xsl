@@ -56,10 +56,11 @@
 				attributes are retained unchanged.</xd:p>
 		</xd:desc>
 	</xd:doc>
-	<xsl:template match="*">
+
+	<xsl:template match="*" priority="10"> 
 		<xsl:copy>
 			<xsl:if test="not(@xml:id)">
-				<xsl:attribute name="xml:id">
+				<xsl:attribute name="id">
 					<xsl:call-template name="generate-unique-id">
 						<xsl:with-param name="root" select="generate-id()"/>
 					</xsl:call-template>

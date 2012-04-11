@@ -1,41 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="html">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT"
+	xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml"
+	exclude-result-prefixes="html">
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
 		<xd:desc>
 			<xd:p><xd:b>Created on:</xd:b> Nov 17, 2011</xd:p>
 			<xd:p><xd:b>Author:</xd:b> John A. Walsh</xd:p>
 			<xd:p>TEI Boilerplate stylesheet: Copies TEI document, with a very few modifications
-			into an html shell, which provides access to javascript and other features from the
-			html/browser environment.</xd:p>
+				into an html shell, which provides access to javascript and other features from the
+				html/browser environment.</xd:p>
 		</xd:desc>
 	</xd:doc>
 
 	<xsl:output encoding="UTF-8" method="html" doctype-system="about:legacy-compat"/>
-	
+
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
-			<xd:p>Match document root and create and html5 wrapper for the TEI document, 
-			which is copied, with some modification, into the HTML document.</xd:p>
+			<xd:p>Match document root and create and html5 wrapper for the TEI document, which is
+				copied, with some modification, into the HTML document.</xd:p>
 		</xd:desc>
 	</xd:doc>
-	
+
 	<xsl:key name="ids" match="//*" use="@xml:id"/>
-	
+
 	<xsl:template match="/">
 		<html>
 			<xsl:call-template name="htmlHead"/>
 			<body>
+				<xsl:call-template name="pbToggleBox"/>
 				<div id="tei_wrapper">
-						<xsl:apply-templates/>
+					<xsl:apply-templates/>
 				</div>
 				<xsl:copy-of select="$htmlFooter"/>
 			</body>
 		</html>
 	</xsl:template>
-	
+
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
-			<xd:p>Basic copy template, copies all nodes from source XML tree to output document.</xd:p>
+			<xd:p>Basic copy template, copies all nodes from source XML tree to output
+				document.</xd:p>
 		</xd:desc>
 	</xd:doc>
 	<xsl:template match="@*|node()">
@@ -44,14 +49,14 @@
 			<xsl:apply-templates select="@*|node()"/>
 		</xsl:copy>
 	</xsl:template>
-	
+
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
-			<xd:p>Template for elements, which adds an @xml:id to every element. 
-			Existing @xml:id attributes are retained unchanged.</xd:p>
+			<xd:p>Template for elements, which adds an @xml:id to every element. Existing @xml:id
+				attributes are retained unchanged.</xd:p>
 		</xd:desc>
 	</xd:doc>
-	<xsl:template match="*"> 
+	<xsl:template match="*">
 		<xsl:copy>
 			<xsl:if test="not(@xml:id)">
 				<xsl:attribute name="xml:id">
@@ -63,18 +68,18 @@
 			<xsl:apply-templates select="@*|node()"/>
 		</xsl:copy>
 	</xsl:template>
-	
+
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
 			<xd:p>Template to omit processing instructions from output.</xd:p>
 		</xd:desc>
 	</xd:doc>
 	<xsl:template match="processing-instruction()" priority="10"/>
-	
+
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
 			<xd:p>Template moves value of @rend into an html @style attribute. Stylesheet assumes
-			CSS is used in @rend to describe renditions, i.e., styles.</xd:p>
+				CSS is used in @rend to describe renditions, i.e., styles.</xd:p>
 		</xd:desc>
 	</xd:doc>
 	<xsl:template match="@rend">
@@ -82,7 +87,7 @@
 			<xsl:value-of select="."/>
 		</xsl:attribute>
 	</xsl:template>
-	
+
 	<xsl:template match="@xml:id">
 		<xsl:attribute name="xml:id">
 			<xsl:value-of select="."/>
@@ -91,34 +96,40 @@
 			<xsl:value-of select="."/>
 		</xsl:attribute>
 	</xsl:template>
-	
+
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
 			<xd:p>Transforms TEI ref element to html a (link) element.</xd:p>
 		</xd:desc>
 	</xd:doc>
 	<xsl:template match="tei:ref[@target]">
-		<a href="{@target}"><xsl:apply-templates/></a>
+		<a href="{@target}">
+			<xsl:apply-templates/>
+		</a>
 	</xsl:template>
-	
+
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
 			<xd:p>Transforms TEI ptr element to html a (link) element.</xd:p>
 		</xd:desc>
 	</xd:doc>
 	<xsl:template match="tei:ptr[@target]">
-		<a href="{@target}"><xsl:value-of select="@target"/></a>
+		<a href="{@target}">
+			<xsl:value-of select="@target"/>
+		</a>
 	</xsl:template>
-	
+
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
 			<xd:p>Transforms TEI ref element to html a (link) element.</xd:p>
 		</xd:desc>
 	</xd:doc>
 	<xsl:template match="tei:prt[@target]">
-		<a href="{@target}"><xsl:value-of select="normalize-space(@target)"/></a>
+		<a href="{@target}">
+			<xsl:value-of select="normalize-space(@target)"/>
+		</a>
 	</xsl:template>
-	
+
 	<!-- need something else for images with captions -->
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
@@ -129,10 +140,13 @@
 		<xsl:variable name="figDesc" select="normalize-space(tei:figDesc)"/>
 		<img alt="{$figDesc}" src="{tei:graphic/@url}"/>
 	</xsl:template>
-	
+
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
-			<xd:p>Adds some javascript just before end of root tei element. Javascript sets the /html/head/title element to an appropriate title selected from the TEI document. This could also be achieved through XSLT but is here to demonstrate some simple javascript, using JQuery, to manipulate the DOM containing both html and TEI.</xd:p>
+			<xd:p>Adds some javascript just before end of root tei element. Javascript sets the
+				/html/head/title element to an appropriate title selected from the TEI document.
+				This could also be achieved through XSLT but is here to demonstrate some simple
+				javascript, using JQuery, to manipulate the DOM containing both html and TEI.</xd:p>
 		</xd:desc>
 	</xd:doc>
 	<xsl:template match="tei:TEI">
@@ -145,23 +159,24 @@
 				</xsl:attribute>
 			</xsl:if>
 			<xsl:apply-templates select="@*|node()"/>
-			
+
 		</xsl:copy>
 	</xsl:template>
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
-			<xd:p>The generate-id() function does not guarantee the generated id will not conflict 
-			with existing ids in the document. This template checks for conflicts and appends a 
-			number (hexedecimal 'f') to the id. The template is recursive and continues until no 
-			conflict is found</xd:p>
+			<xd:p>The generate-id() function does not guarantee the generated id will not conflict
+				with existing ids in the document. This template checks for conflicts and appends a
+				number (hexedecimal 'f') to the id. The template is recursive and continues until no
+				conflict is found</xd:p>
 		</xd:desc>
 		<xd:param name="root">The root, or base, id used to check for conflicts</xd:param>
-		<xd:param name="suffix">The suffix added to the root id if a conflict is detected.</xd:param>
+		<xd:param name="suffix">The suffix added to the root id if a conflict is
+			detected.</xd:param>
 	</xd:doc>
 	<xsl:template name="generate-unique-id">
 		<xsl:param name="root"/>
-		<xsl:param name="suffix"></xsl:param>
+		<xsl:param name="suffix"/>
 		<xsl:variable name="id" select="concat($root,$suffix)"/>
 		<xsl:choose>
 			<xsl:when test="key('ids',$id)">
@@ -180,7 +195,7 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-	
+
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
 			<xd:p>Template for adding /html/head content.</xd:p>
@@ -188,14 +203,15 @@
 	</xd:doc>
 	<xsl:template name="htmlHead">
 		<head>
-			<meta charset="UTF-8" />
+			<meta charset="UTF-8"/>
 
 			<!--<link rel="stylesheet/less" type="text/css" href="../css/style.less"/>-->
 			<link rel="stylesheet" type="text/css" href="../css/style.css"/>
-			<script type="text/javascript" src="../js/less.min.js" ></script>
-			<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
-			<script type="text/javascript" src="../js/jquery/plugins/jquery.blockUI.js" ></script>
-			<script type="text/javascript" src="../js/tei_boilerplate.js"></script>
+			<script type="text/javascript" src="../js/less.min.js"/>
+			<script type="text/javascript" src="../js/jquery/jquery.min.js"/>
+			<script type="text/javascript" src="../js/jquery/plugins/jquery.blockUI.js"/>
+			<script type="text/javascript" src="../js/tei_boilerplate.js"/>
+			
 			<script type="text/javascript">
 				$(document).ready(function() {
 					$("html > head > title").text($("TEI > teiHeader > fileDesc > titleStmt > title:first").text());
@@ -208,10 +224,10 @@
 				});
 			</script>
 			<xsl:call-template name="rendition2style"/>
-			<title></title>
+			<title/>
 		</head>
 	</xsl:template>
-	
+
 	<xsl:template name="rendition2style">
 		<style>
             <xsl:for-each select="//tei:rendition[@scheme = 'css']">
@@ -226,11 +242,30 @@
 		</xd:desc>
 	</xd:doc>
 	<xsl:variable name="htmlFooter">
-		<div id="footer">
-			Powered by TEI Boilerplate. TEI Boilerplate is licensed under a 
-			<a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. 
-			<a href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
-		</div>	
+		<div id="footer"> Powered by TEI Boilerplate. TEI Boilerplate is licensed under a <a
+				href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0
+				Unported License</a>. <a href="http://creativecommons.org/licenses/by/3.0/"><img
+					alt="Creative Commons License" style="border-width:0;"
+					src="http://i.creativecommons.org/l/by/3.0/80x15.png"/></a>
+		</div>
 	</xsl:variable>
-	
+
+	<xsl:template name="pbToggleBox">
+		<div id="pbToggler" style="left: 25px; top: 25px; position: fixed; font-size: small">
+			<label for="pbToggle">Hide page breaks</label>
+			<input type="checkbox" id="pbToggle" /> 
+			<script type="text/javascript">
+				$('#pbToggle').click(function(){
+					var checked = $(this).attr('checked');
+					if (checked) {
+						$('pb').text("");
+					} else {
+						$('pb').each(function(index) {
+							$(this).text("[page: " + $(this).attr('n') + "]");
+						})
+					}
+				});
+			</script>
+		</div>
+	</xsl:template>
 </xsl:stylesheet>

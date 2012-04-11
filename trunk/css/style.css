@@ -1047,6 +1047,7 @@ note::before {
   content: "*";
   font-weight: bold;
   vertical-align: top;
+  font-size: medium;
 }
 notesStmt {
   /* do we want to box each individual <note> if they're in a <notesStmt>? */

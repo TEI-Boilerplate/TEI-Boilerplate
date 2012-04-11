@@ -1022,7 +1022,7 @@ normalization {
   /* Empty Rule Set */
 }
 note {
-  font-size: 0ppx;
+  font-size: 0px;
 }
 note:hover {
   display: block;

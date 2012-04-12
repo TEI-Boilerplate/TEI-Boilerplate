@@ -12,7 +12,7 @@
 		</xd:desc>
 	</xd:doc>
 
-	<xsl:output encoding="UTF-8" method="xml" doctype-system="about:legacy-compat"/>
+	<xsl:output encoding="UTF-8" method="xml" omit-xml-declaration="yes"/>
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>

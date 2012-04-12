@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT"
-	xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml">
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
+	xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT"
+	xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="xsl ixsl tei xd #default">
+	<xd:doc  scope="stylesheet">
 		<xd:desc>
 			<xd:p><xd:b>Created on:</xd:b> Nov 17, 2011</xd:p>
 			<xd:p><xd:b>Author:</xd:b> John A. Walsh</xd:p>
@@ -42,7 +42,8 @@
 				document.</xd:p>
 		</xd:desc>
 	</xd:doc>
-	<xsl:template match="@*|node()">
+	
+	<xsl:template match="@*">
 		<!-- copy select elements -->
 		<xsl:copy>
 			<xsl:apply-templates select="@*|node()"/>
@@ -56,8 +57,8 @@
 		</xd:desc>
 	</xd:doc>
 
-	<xsl:template match="*" priority="10"> 
-		<xsl:copy>
+	<xsl:template match="*"> 
+		<xsl:element name="{local-name()}">
 			<xsl:if test="not(@xml:id)">
 				<xsl:attribute name="id">
 					<xsl:call-template name="generate-unique-id">
@@ -66,7 +67,7 @@
 				</xsl:attribute>
 			</xsl:if>
 			<xsl:apply-templates select="@*|node()"/>
-		</xsl:copy>
+		</xsl:element>
 	</xsl:template>
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
@@ -83,7 +84,7 @@
 		</xd:desc>
 	</xd:doc>
 	<xsl:template match="@rend">
-		<xsl:attribute name="style" namespace="http://www.w3.org/1999/xhtml">
+		<xsl:attribute name="style">
 			<xsl:value-of select="."/>
 		</xsl:attribute>
 	</xsl:template>
@@ -140,7 +141,7 @@
 		</xd:desc>
 	</xd:doc>
 	<xsl:template match="tei:TEI" priority="99">
-		<xsl:copy>
+		<xsl:element name="{local-name()}">
 			<xsl:if test="not(@xml:id)">
 				<xsl:attribute name="xml:id">
 					<xsl:call-template name="generate-unique-id">
@@ -149,8 +150,7 @@
 				</xsl:attribute>
 			</xsl:if>
 			<xsl:apply-templates select="@*|node()"/>
-
-		</xsl:copy>
+		</xsl:element>
 	</xsl:template>
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">

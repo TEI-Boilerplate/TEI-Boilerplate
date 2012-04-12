@@ -23,8 +23,7 @@ margin-bottom:@margins;
 }
 
 .headFont {
-	font-family: Cochin, Georgia, Serif;
-	font-size: 115%;
+	font-family: Arvo, sans-serif;
 	font-weight: normal;
 }
 
@@ -673,6 +672,14 @@ gi {
 	.mono;
 }
 
+gi:before {
+	content:"<";
+}
+
+gi:after {
+	content:">";
+}
+
 gloss {/* Empty Rule Set */}
 glyph {/* Empty Rule Set */}
 glyphName {/* Empty Rule Set */}
@@ -699,6 +706,30 @@ head {}
 TEI head {
 display:block;
 .headFont;
+}
+
+div > head {
+font-size: 150%
+}
+
+div > div > head {
+font-size: 140%;
+}
+
+div > div > div > head {
+font-size: 130%;
+}
+
+div > div > div > div > head, list > head {
+font-size: 120%;
+}
+
+div > div > div > div > div > head {
+font-size: 115%;
+}
+
+div > div > div > div > div > div head {
+font-size: 110%;
 }
 
 headItem {/* Empty Rule Set */}
@@ -769,7 +800,7 @@ text-indent:-2em;
 label {}
 
 list[type = "gloss"] > label {
-.block-margins;
+.block(.25em);
 font-weight:bold;
 }
 
@@ -798,6 +829,10 @@ link {/* Empty Rule Set */}
 linkGrp {/* Empty Rule Set */}
 list {
 .block-margins;
+}
+
+item > list {
+	margin-top:0;
 }
 
 /* Match only lists that are children or grandchildren of 

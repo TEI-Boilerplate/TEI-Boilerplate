@@ -12,8 +12,7 @@
   margin-bottom: 1em;
 }
 .headFont {
-  font-family: Cochin, Georgia, Serif;
-  font-size: 115%;
+  font-family: Arvo, sans-serif;
   font-weight: normal;
 }
 .box-shadow {
@@ -622,6 +621,12 @@ geogName {
 gi {
   font-family: Courier,monospace;
 }
+gi:before {
+  content: "<";
+}
+gi:after {
+  content: ">";
+}
 gloss {
   /* Empty Rule Set */
 }
@@ -660,9 +665,26 @@ handShift {
 /* Need head with TEI parent to distinguish from HTML head */
 TEI head {
   display: block;
-  font-family: Cochin, Georgia, Serif;
-  font-size: 115%;
+  font-family: Arvo, sans-serif;
   font-weight: normal;
+}
+div > head {
+  font-size: 150%;
+}
+div > div > head {
+  font-size: 140%;
+}
+div > div > div > head {
+  font-size: 130%;
+}
+div > div > div > div > head, list > head {
+  font-size: 120%;
+}
+div > div > div > div > div > head {
+  font-size: 115%;
+}
+div > div > div > div > div > div head {
+  font-size: 110%;
 }
 headItem {
   /* Empty Rule Set */
@@ -770,8 +792,8 @@ l {
 }
 list[type="gloss"] > label {
   display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
   font-weight: bold;
 }
 lacunaEnd {
@@ -832,6 +854,9 @@ list {
   display: block;
   margin-top: 1em;
   margin-bottom: 1em;
+}
+item > list {
+  margin-top: 0;
 }
 /* Match only lists that are children or grandchildren of 
 text. Otherwise they show up in the header. */

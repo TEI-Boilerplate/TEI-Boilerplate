@@ -17,8 +17,15 @@ margin-bottom:@margins;
 }
 
 @border-color:#aaa;
+
 .block-margins {
 	.block(1em)
+}
+
+.headFont {
+	font-family: Cochin, Georgia, Serif;
+	font-size: 115%;
+	font-weight: normal;
 }
 
 .box-shadow {
@@ -688,67 +695,11 @@ handNotes {/* Empty Rule Set */}
 handShift {/* Empty Rule Set */}
 /* Need head with TEI parent to distinguish from HTML head */
 head {}
+
 TEI head {
 display:block;
+.headFont;
 }
-
-/* "h1" */
-body > head {
-/*&font-family: "Gill Sans", "Gill Sans Std", "Gill Sans MT", Georgia, serif; */
-font-size: 1.55em;
-line-height: 1.5em;
-text-align: inherit;
-font-weight: normal;
-margin-top: 1em;
-margin-right: 0;
-margin-bottom: 0;
-margin-left: 0;
-}
-
-/* h2 */
-div > head {
-	font-size: 1.1em;
-	/* 1 */
-	text-align: inherit;
-	font-weight: normal;
-	line-height: 1.8em;
-	letter-spacing: .2em;
-	margin-top: 1em;
-	margin-right: 0;
-	margin-bottom: 0;
-	margin-left: 0;
-	/* text-transform: uppercase; */
-}
-
-/* h3 */
-
- div > div > head {
-	/*font-family: "Gill Sans", "Gill Sans Std", "Gill Sans MT", Verdana, 		"Bitstream Vera Sans", sans-serif; */
-	font-size: .91em;
-	text-align: inherit;
-	font-weight: normal;
-	line-height: 1.8em;
-	letter-spacing: .2em;
-	margin-top: 3em;
-	margin-right: 0;
-	margin-bottom: 1em;
-	margin-left: 0;
-	/* text-transform: uppercase; */
-}
-
-/* > h3 */
-div div > head {
-/*	font-family: Verdana, "Bitstream Vera Sans", sans-serif; */
-	font-size: 1em;
-	text-align: inherit;
-	font-weight: bold;
-	line-height: 1.8em;
-	margin-top: 2em;
-	margin-right: 0;
-	margin-bottom: 0;
-	margin-left: 0;
-}
-
 
 headItem {/* Empty Rule Set */}
 headLabel {/* Empty Rule Set */}
@@ -1249,7 +1200,6 @@ symbol {/* Empty Set Rule */}
 /* t */
 TEI {
 display:block;
-.page-setup;
 }
 
 table {
@@ -1387,12 +1337,12 @@ zone {/* Empty Rule Set */}
 html > body {
 margin:0;
 padding:0;
-background: #EBEBEB;
 }
 
 html {
 margin:0;
 padding:0;
+.page-setup;
 }
 
 
@@ -1408,7 +1358,6 @@ font-size:8pt;
 color:#FAEBD7;
 width:100%;
 */
-.page-setup;
 font-size:12pt;
 }
 

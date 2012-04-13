@@ -19,6 +19,124 @@
         <p>Information about the source</p>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <tagsDecl>
+        <rendition xml:id="block" scheme="css">
+          display:block;
+        </rendition> 
+        
+        <rendition xml:id="blockquote" scheme="css">
+          display:block;
+          font-size:90%;
+          margin-left:3em;
+          padding-left:1em;
+          border-left: 1px solid gray;
+          margin-top:1em;
+          margin-bottom:1em;
+        </rendition>
+        
+        <rendition xml:id="b" scheme="css">
+          font-weight:bold;
+        </rendition> 
+        
+        <rendition xml:id="u" scheme="css">
+          text-decoration:underline;
+        </rendition> 
+        
+        <rendition xml:id="i" scheme="css">
+          font-style:italic;
+        </rendition> 
+        
+        <rendition xml:id="mono" scheme="css">
+          
+        </rendition>
+        
+        <rendition xml:id="center" scheme="css">
+          display:block;
+          text-align:center;
+          margin-left:auto;
+          margin-right:auto;
+        </rendition>
+        
+        <rendition xml:id="center-block" scheme="css">
+          display:block;
+          margin-left:auto;
+          margin-right:auto;
+        </rendition>
+        
+        <rendition xml:id="l-indent-01" scheme="css">
+          padding-left:4em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-02" scheme="css">
+          padding-left:6em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-03" scheme="css">
+          padding-left:6em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-04" scheme="css">
+          padding-left:8em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-05" scheme="css">
+          padding-left:10em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-06" scheme="css">
+          padding-left:12em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-07" scheme="css">
+          padding-left:14em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-08" scheme="css">
+          padding-left:4em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="sub" scheme="css">
+          vertical-align:sub;
+          font-size:80%;
+        </rendition>
+        
+        <rendition xml:id="super" scheme="css">
+          vertical-align:super;
+          font-size:80%;
+        </rendition>
+        
+        <rendition xml:id="upper-case" scheme="css">
+          text-transform:uppercase;
+        </rendition>
+        
+        <rendition xml:id="small-caps" scheme="css">
+          font-variant:small-caps;
+        </rendition>
+        
+        <!-- font sizes -->
+        
+        <rendition xml:id="small" scheme="css">
+          font-size:90%;
+        </rendition>
+        
+        <rendition xml:id="x-small" scheme="css">
+          font-size:85%;
+        </rendition>
+        
+        <rendition xml:id="xx-small" scheme="css">
+          font-size:80%;
+        </rendition>
+      </tagsDecl>
+    </encodingDesc>
   </teiHeader>
   <text>
     <body>
@@ -50,6 +168,7 @@
         </div>
       </div>
       <div>
+        <head>Lists</head>
         <list>
           <head><soCalled>Untyped</soCalled> or bulleted</head>
           <item>John</item>
@@ -102,6 +221,15 @@
             </list>
           </item>
         </list>
+      </div>
+      <div>
+        <head><gi>choice</gi> and the <soCalled>Janus-Faced</soCalled> elements</head>
+        <p><gi>choice</gi> is commonly used to group a pair of the so-called <soCalled>Janus-Faced</soCalled> elements, e.g., <gi>orig</gi> &amp; <gi>reg</gi>, <gi>abbr</gi> &amp; <gi>expan</gi>, or <gi>sic</gi> &amp; <gi>corr</gi>.</p>
+        <p>The default behavior of TEI Boilerplate is to display both items in the the <gi>choice</gi>, with the second item enclosed in parentheses.</p>
+        <p>For instance:
+          <quote rendition="#blockquote">
+            The <title><choice><abbr>TEI</abbr><expan>Text Encoding Initiative</expan></choice> Guidelines</title> may be used to encode a wide <choice><sic>vareity</sic><corr>variety</corr></choice> of document types and genres.</quote>
+        </p>
       </div>
     </body>
   </text>

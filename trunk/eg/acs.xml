@@ -105,28 +105,19 @@
     
 
     <!-- text-indent: hanging indents for verse-->
-    <rendition n="indent 1 level" xml:id="ti-1" scheme="css">text-indent: 1em;</rendition>
-    <rendition n="indent 2 levels" xml:id="ti-2" scheme="css">text-indent: 2em;</rendition>
-    <rendition n="indent 3 levels" xml:id="ti-3" scheme="css">text-indent: 3em;</rendition>
-    <rendition n="indent 4 levels" xml:id="ti-4" scheme="css">text-indent: 4em;</rendition>
-    <rendition n="indent 5 levels" xml:id="ti-5" scheme="css">text-indent: 5em;</rendition>
-    <rendition n="indent 6 levels" xml:id="ti-6" scheme="css">text-indent: 6em;</rendition>
-    <rendition n="indent 7 levels" xml:id="ti-7" scheme="css">text-indent: 7em;</rendition>
-    <rendition n="indent 8 levels" xml:id="ti-8" scheme="css">text-indent: 8em;</rendition>
-    <rendition n="indent 9 levels" xml:id="ti-9" scheme="css">text-indent: 9em;</rendition>
-    <rendition n="indent 10 levels" xml:id="ti-10" scheme="css">text-indent: 10em;</rendition>
-    <rendition n="indent 10 levels" xml:id="ti-11" scheme="css">text-indent: 11em;</rendition>
-    <rendition n="indent 12 levels" xml:id="ti-12" scheme="css">text-indent: 12em;</rendition>
-    <rendition n="indent 13 levels" xml:id="ti-13" scheme="css">text-indent: 13em;</rendition>
-    <rendition n="indent 14 levels" xml:id="ti-14" scheme="css">text-indent: 14em;</rendition>
-    <rendition n="indent 15 levels" xml:id="ti-15" scheme="css">text-indent: 15em;</rendition>
-    <rendition n="indent 16 levels" xml:id="ti-16" scheme="css">text-indent: 16em;</rendition>
-    <rendition n="indent 17 levels" xml:id="ti-17" scheme="css">text-indent: 17em;</rendition>
-    <rendition n="indent 18 levels" xml:id="ti-18" scheme="css">text-indent: 18em;</rendition>
-    <rendition n="indent 19 levels" xml:id="ti-19" scheme="css">text-indent: 19em;</rendition>
-    <rendition n="indent 20 levels" xml:id="ti-20" scheme="css">text-indent: 20em;</rendition>
-    <rendition n="indent 21 levels" xml:id="ti-21" scheme="css">text-indent: 21em;</rendition>
-    <rendition n="indent 22 levels" xml:id="ti-22" scheme="css">text-indent: 22em;</rendition>
+                <rendition n="indent 1 level" xml:id="l-indent-01" scheme="css"> padding-left:2em; text-indent:-1em;</rendition>
+                <rendition n="indent 2 levels" xml:id="l-indent-02" scheme="css">padding-left:3em; text-indent:-1em;</rendition>
+                <rendition n="indent 3 levels" xml:id="l-indent-03" scheme="css">padding-left:4em; text-indent:-1em;</rendition>
+                <rendition n="indent 4 levels" xml:id="l-indent-04" scheme="css">padding-left:5em; text-indent:-1em;</rendition>
+                <rendition n="indent 5 levels" xml:id="l-indent-05" scheme="css">padding-left:6em; text-indent:-1em;</rendition>
+                <rendition n="indent 6 levels" xml:id="l-indent-06" scheme="css">padding-left:7em; text-indent:-1em;</rendition>
+                <rendition n="indent 7 levels" xml:id="l-indent-07" scheme="css">padding-left:8em; text-indent:-1em;</rendition>
+                <rendition n="indent 8 levels" xml:id="l-indent-08" scheme="css">padding-left:9em; text-indent:-1em;</rendition>
+                <rendition n="indent 9 levels" xml:id="l-indent-09" scheme="css">padding-left:10em; text-indent:-1em;</rendition>
+                <rendition n="indent 10 levels" xml:id="l-indent-10" scheme="css">padding-left:11em; text-indent:-1em;</rendition>
+                <rendition n="indent 10 levels" xml:id="l-indent-11" scheme="css">padding-left:12em; text-indent:-1em;</rendition>
+                <rendition n="indent 12 levels" xml:id="l-indent-12" scheme="css">padding-left:13em; text-indent:-1em;</rendition>
+                
     
 
     <!-- vertical-align -->

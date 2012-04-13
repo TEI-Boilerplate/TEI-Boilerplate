@@ -502,7 +502,6 @@ epigraph {
   display: block;
   margin-top: 1em;
   margin-bottom: 1em;
-  font-style: italic;
 }
 fileDesc > extent {
   display: none;
@@ -706,8 +705,8 @@ kinesic {
 /* l */
 l {
   display: block;
-  padding-left: 1em;
-  text-indent: -1em;
+  padding-left: 2em;
+  text-indent: -2em;
 }
 list[type="gloss"] > label {
   display: block;

@@ -75,32 +75,32 @@
         </rendition>
         
         <rendition xml:id="l-indent-03" scheme="css">
-          padding-left:6em;
-          text-indent:-2em;
-        </rendition>
-        
-        <rendition xml:id="l-indent-04" scheme="css">
           padding-left:8em;
           text-indent:-2em;
         </rendition>
         
-        <rendition xml:id="l-indent-05" scheme="css">
+        <rendition xml:id="l-indent-04" scheme="css">
           padding-left:10em;
           text-indent:-2em;
         </rendition>
         
-        <rendition xml:id="l-indent-06" scheme="css">
+        <rendition xml:id="l-indent-05" scheme="css">
           padding-left:12em;
           text-indent:-2em;
         </rendition>
         
-        <rendition xml:id="l-indent-07" scheme="css">
+        <rendition xml:id="l-indent-06" scheme="css">
           padding-left:14em;
           text-indent:-2em;
         </rendition>
         
+        <rendition xml:id="l-indent-07" scheme="css">
+          padding-left:16em;
+          text-indent:-2em;
+        </rendition>
+        
         <rendition xml:id="l-indent-08" scheme="css">
-          padding-left:4em;
+          padding-left:18em;
           text-indent:-2em;
         </rendition>
         
@@ -122,6 +122,10 @@
           font-variant:small-caps;
         </rendition>
         
+        <rendition xml:id="indent" scheme="css" scope="before">
+          content:"\A0\A0\A0\A0\A0\A0";
+        </rendition>
+        
         <!-- font sizes -->
         
         <rendition xml:id="small" scheme="css">
@@ -135,6 +139,7 @@
         <rendition xml:id="xx-small" scheme="css">
           font-size:80%;
         </rendition>
+        
       </tagsDecl>
     </encodingDesc>
   </teiHeader>
@@ -230,6 +235,151 @@
           <quote rendition="#blockquote">
             The <title><choice><abbr>TEI</abbr><expan>Text Encoding Initiative</expan></choice> Guidelines</title> may be used to encode a wide <choice><sic>vareity</sic><corr>variety</corr></choice> of document types and genres.</quote>
         </p>
+      </div>
+      <div>
+        <floatingText xml:id="acs0000001-05-i002-content" n="Grand Chorus of Birds from Aristophanes" type="poem">
+          <index corresp="acs0000001-05-i002-md.xml" indexName="text"/>
+          
+          
+          <front xml:id="front002">
+            <pb n="40" facs="acs0000001-05-055"/>
+            <titlePage type="full">
+              <pb n="41" facs="acs0000001-05-056"/>
+              <docTitle>
+                <titlePart rendition="#center #uc" type="main">Grand Chorus of Birds <lb/><hi rendition="#small">from</hi>
+                  <lb/><persName key="aristophanes">Aristophanes</persName></titlePart>
+                <lb/>
+                <titlePart rendition="#center #small #i" type="sub">Attempted in English verse after the original
+                  metre</titlePart>
+              </docTitle>
+            </titlePage>
+            <pb n="42" facs="acs0000001-05-057"/>
+            <div xml:id="preface002" rendition="#small #justify" rend="width:30em;" type="preface">
+              <p> I <hi rendition="#sc">was</hi> allured into the audacity of this experiment by
+                consideration of a fact which hitherto does not seem to have been taken into consideration
+                by any translator of the half divine humourist in whose incomparable genius the highest
+                qualities of Rabelais were fused and harmonized with the supremest gifts of <persName key="shelley">Shelley</persName>:
+                namely, that his marvellous metrical invention of the anapæstic heptameter was almost
+                exactly reproducible in a language to which all variations and combinations of anapæstic, 
+                iambic, or trochaic metre are as natural and pliable as all dactylic and spondaic forms of
+                verse are unnatural and abhorrent. As it happens, this highest central interlude of a most
+                adorable masterpiece is as easy to detach from its dramatic setting, and even from its
+                lyrical context, as it was easy to give line for line of it in English. In two metrical
+                points only does my version vary from the verbal pattern of the original. I have of course
+                added rhymes, and double rhymes, as necessary makeweights for the imperfection of an
+                otherwise inadequate language; and equally of course I have not attempted the impossible
+                and undesirable task of reproducing the rare exceptional effect of a line overcharged on
+                purpose with a preponderance of heavy-footed spondees: and this for the obvious reason
+                that even if such a line—which I doubt—could be exactly represented, foot by foot and
+                pause for pause, in English, this English line would no more be a verse in any proper
+                sense of the word than is the line I am writing at this moment. And my main intention, or
+                at least my main desire, in the undertaking of this brief adventure, was to renew as far
+                as possible for English ears the music of this resonant and triumphant metre, which goes
+                ringing at full gallop as of horses who <cit rendition="#block">
+                  <quote rendition="#block" rend="margin-left:5em;">
+                    <lg>
+                      <l part="F" rendition="#l-indent-06"><q next="#e171f002" rendition="#dq">dance as ’twere to the music</q></l>
+                      <l part="I"><q prev="#e170f002" rendition="#dq">Their own hoofs make.</q></l>
+                    </lg>
+                  </quote>
+                </cit> I would not seem over curious in search of an apt or inapt quotation: but nothing
+                can be fitter than a verse of <persName key="shakespeare">Shakespeare's</persName> to praise at once and to describe the most
+                typical verse of <persName key="aristophanes">Aristophanes</persName>. </p>
+            </div>
+            <pb n="43" facs="acs0000001-05-058"/>
+          </front>
+          <body>
+            <head rendition="#center">THE BIRDS
+              <lb/>
+              <cit rendition="#small">
+                <bibl><biblScope type="ll">(685-723)</biblScope></bibl>
+              </cit>
+            </head>
+            <lg>
+              <l n="1">Come on then, ye dwellers by nature in darkness, and like to the leaves'
+                generations,</l>
+              <l n="2">That are little of might, that are moulded of mire, unenduring and shadowlike
+                nations,</l>
+              <l n="3">Poor plumeless ephemerals, comfortless mortals, as visions of creatures fast
+                fleeing,</l>
+              <l n="4">Lift up your mind unto us that are deathless, and dateless the date of our
+                being:</l>
+              <l n="5">Us, children of heaven, us, ageless for aye, us, all of whose thoughts are
+                eternal;</l>
+              <l n="6">That ye may from henceforth, having heard of us all things aright as to matters
+                supernal,</l>
+              <l n="7">Of the being of birds and beginning of gods, and of streams, and the dark beyond
+                reaching,</l>
+              <l n="8">Truthfully knowing aright, in my name bid <persName key="prodicus">Prodicus</persName> pack with his preaching.</l>
+            </lg>
+            <lg>
+              <l n="9">It was Chaos and Night at the first, and the blackness of darkness, and hell's
+                broad border,</l>
+              <l n="10">Earth was not, nor air, neither heaven; when in depths of the womb of the dark
+                without order</l>
+              <l n="11">First thing first-born of the black-plumed Night was a wind-egg hatched in her
+                bosom,</l>
+              <l n="12">Whence timely with seasons revolving again sweet Love burst out as a blossom,</l>
+              <pb n="44" facs="acs0000001-05-059"/>
+              <l n="13">Gold wings glittering forth of his back, like whirlwinds gustily turning.</l>
+              <l n="14">He, after his wedlock with Chaos, whose wings are of darkness, in hell
+                broad-burning,</l>
+              <l n="15">For his nestlings begat him the race of us first, and upraised us to light
+                new-lighted.</l>
+              <l n="16">And before this was not the race of the gods, until all things by Love were
+                united;</l>
+              <l n="17">And of kind united with kind in communion of nature the sky and the sea are</l>
+              <l n="18">Brought forth, and the earth, and the race of the gods everlasting and blest. So
+                that we are</l>
+              <l n="19">Far away the most ancient of all things blest. And that we are of Love's
+                generation</l>
+              <l n="20">There are manifest manifold signs. We have wings, and with us have the Loves
+                habitation;</l>
+              <l n="21">And manifold fair young folk that forswore love once, ere the bloom of them
+                ended,</l>
+              <l n="22">Have the men that pursued and desired them subdued, by the help of us only
+                befriended,</l>
+              <l n="23">With such baits as a quail, a flamingo, a goose, or a cock's comb staring and
+                splendid.</l>
+            </lg>
+            <lg>
+              <l n="24">All best good things that befall men come from us birds, as is plain to all
+                reason:</l>
+              <l n="25">For first we proclaim and make known to them spring, and the winter and autumn in
+                season;</l>
+              <l n="26">Bid sow, when the crane starts clanging for <placeName><bloc key="africa">Afric</bloc></placeName>, in shrill-voiced emigrant
+                number,</l>
+              <l n="27">And calls to the pilot to hang up his rudder again for the season, and
+                slumber;</l>
+              <l n="28">And then weave cloak for <persName key="orestes">Orestes</persName> the thief, lest he strip men of theirs if it
+                freezes.</l>
+              <l n="29">And again thereafter the kite reappearing announces a change in the breezes,</l>
+              <pb n="45" facs="acs0000001-05-060"/>
+              <l n="30">And that here is the season for shearing your sheep of their spring wool. Then
+                does the swallow</l>
+              <l n="31">Give you notice to sell your greatcoat, and provide something light for the heat
+                that's to follow.</l>
+              <l n="32">Thus are we as <persName key="ammon">Ammon</persName> or <rs key="delphic_oracle">
+                <placeName key="delphi"><settlement type="town">Delphi</settlement></placeName></rs> unto you, 
+                <persName key="dodona">Dodona</persName>, nay, <persName key="apollo">Phoebus Apollo</persName>.</l>
+              <l n="33"> For, as first ye come all to get auguries of birds, even such is in all things
+                your carriage,</l>
+              <l n="34">Be the matter a matter of trade, or of earning your bread, or of any one's
+                marriage.</l>
+              <l n="35">And all things ye lay to the charge of a bird that belong to discerning
+                prediction:</l>
+              <l n="36">Winged fame is a bird, as you reckon: you sneeze, and the sign's as a bird for
+                conviction:</l>
+              <l n="37">All tokens are <q>birds</q> with you—sounds too, and lackeys, and donkeys. Then
+                must it not follow</l>
+              <l n="38">That we <hi rendition="#sc">are</hi> to you all as the manifest godhead that speaks in prophetic
+                <persName key="apollo">Apollo</persName>?</l>
+            </lg>
+            <signed rendition="#indent #small #i">
+              <date when="1880-10-19">October <hi rendition="#n">19, 1880</hi>.</date>
+            </signed>
+          </body>
+          <back><div n="[notes]"/></back></floatingText>
       </div>
     </body>
   </text>

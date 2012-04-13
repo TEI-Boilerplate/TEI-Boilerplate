@@ -205,11 +205,6 @@
 			<script type="text/javascript">
 				$(document).ready(function() {
 					$("html > head > title").text($("TEI > teiHeader > fileDesc > titleStmt > title:first").text());
-					$('pb').each(function(index) {
-						$(this).text("[page: " + $(this).attr('n') + "]");
-					});
-					//line below will "hide" pb elements.
-					//$('pb').text("");
 					$.unblockUI();				
 				});
 			</script>
@@ -244,18 +239,6 @@
 		<div id="pbToggler" style="left: 25px; top: 25px; position: fixed; font-size: small">
 			<label for="pbToggle">Hide page breaks</label>
 			<input type="checkbox" id="pbToggle" /> 
-			<script type="text/javascript">
-				$('#pbToggle').click(function(){
-					var checked = $(this).attr('checked');
-					if (checked) {
-						$('pb').text("");
-					} else {
-						$('pb').each(function(index) {
-							$(this).text("[page: " + $(this).attr('n') + "]");
-						})
-					}
-				});
-			</script>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

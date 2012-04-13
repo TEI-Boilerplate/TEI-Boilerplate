@@ -195,9 +195,8 @@
 		<head>
 			<meta charset="UTF-8"/>
 
-			<!--<link rel="stylesheet/less" type="text/css" href="../css/style.less"/>-->
 			<link rel="stylesheet" type="text/css" href="../css/style.css"/>
-			<script type="text/javascript" src="../js/less.min.js"/>
+			<link rel="stylesheet" type="text/css" href="../css/custom.css"/>
 			<script type="text/javascript" src="../js/jquery/jquery.min.js"/>
 			<script type="text/javascript" src="../js/jquery/plugins/jquery.blockUI.js"/>
 			<script type="text/javascript" src="../js/tei_boilerplate.js"/>

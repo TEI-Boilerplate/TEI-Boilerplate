@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/teilite.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/css" href="../css/style.css"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Lists</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Publication information</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Information about the source</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Some text here.</p>
+      <figure>
+        <graphic url="http://www.tei-c.org/logos/TEI-glow.png"/>
+      </figure>
+      <list>
+        <item>John</item>
+        <item>George</item>
+        <item>Paul</item>
+        <item>Ringo</item>
+      </list>
+      <list type="bulleted">
+        <item>John</item>
+        <item>George</item>
+        <item>Paul</item>
+        <item>Ringo</item>
+      </list>
+      <list type="ordered">
+        <item>John</item>
+        <item>George</item>
+        <item>Paul</item>
+        <item>Ringo</item>
+      </list>
+      <list type="simple">
+        <item>John</item>
+        <item>George</item>
+        <item>Paul</item>
+        <item>Ringo</item>
+      </list>
+      <list type="gloss">
+        <label>rhythm guitar</label>
+        <item>John</item>
+        <label>lead guitar</label>
+        <item>George</item>
+        <label>bass</label>
+        <item>Paul</item>
+        <label>drums</label>
+        <item><list>
+            <item>Ringo</item>
+            <item>Richard</item>
+          </list></item>
+      </list>
+    </body>
+  </text>
+</TEI>

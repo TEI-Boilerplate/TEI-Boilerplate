@@ -1,0 +1,497 @@
+<?oxygen RNGSchema="http://www.slis.indiana.edu/faculty/jawalsh/teaching/modules/tei_xml_workshop/eg/swinburne.rnc" type="compact"?>
+<?xml-stylesheet type="text/css" href="../css/style.css"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?>
+<!DOCTYPE TEI [
+<!ENTITY title "Advanced XML: Electronic Publishing Standards and Systems">]>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="acs0000056">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>S656: &title;: Fall 2011</title>
+				<author> John A. Walsh </author>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>John A. Walsh </publisher>
+				<pubPlace>Bloomington, IN</pubPlace>
+				<date when="2011"/>
+				<availability>
+					<p> Copyright © 2011 John A. Walsh. </p>
+					<p>
+						<!--Creative Commons License-->This work is licensed under a <ref
+							target="http://creativecommons.org/licenses/by-nc-sa/3.0/"
+							>Attribution-Noncommercial-Share Alike 3.0 Unsupported License</ref>.
+					</p>
+				</availability>
+			</publicationStmt>
+			<sourceDesc>
+				<p> This TEI XML document is the original source. </p>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<tagsDecl xmlns="http://www.tei-c.org/ns/1.0">
+				<rendition n="mono" xml:id="mono" scheme="css">font-family: Courier,
+					monospace</rendition>
+				<!-- font-size -->
+				<rendition n="small" xml:id="small" scheme="css">font-size: small;</rendition>
+				<rendition n="x-small" xml:id="x-small" scheme="css">font-size: x-small;</rendition>
+				<rendition n="xx-small" xml:id="xx-small" scheme="css">font-size:
+					xx-small;</rendition>
+				<rendition n="large" xml:id="large" scheme="css">font-size: large;</rendition>
+				<rendition n="x-large" xml:id="x-large" scheme="css">font-size: x-large;</rendition>
+				<rendition n="xx-large" xml:id="xx-large" scheme="css">font-size:
+					xx-large</rendition>
+				<!-- font-style -->
+				<rendition n="i" xml:id="i" scheme="css">font-style: italic;</rendition>
+				<rendition n="normal" xml:id="n" scheme="css">font-style: normal;</rendition>
+				<!-- font-variant -->
+				<rendition n="sc" xml:id="sc" scheme="css">font-variant: small-caps;</rendition>
+				<!-- font-weight -->
+				<rendition n="bold" xml:id="b" scheme="css">font-weight: bold;</rendition>
+				<!-- text-decoration -->
+				<rendition n="strike through" xml:id="strike" scheme="css">text-decoration:
+					line-through;</rendition>
+				<rendition n="underline" xml:id="u" scheme="css">text-decoration:
+					underline;</rendition>
+				<rendition xml:id="block" scheme="css">margin: 4em;</rendition>
+				<!-- text-align -->
+				<rendition n="center" xml:id="center" scheme="css">text-align: center;</rendition>
+				<rendition n="right" xml:id="right" scheme="css">text-align: right;</rendition>
+				<rendition n="right" xml:id="left" scheme="css">text-align: right;</rendition>
+				<!-- text-indent -->
+				<rendition n="indent 1 level" xml:id="ti-1" scheme="css">text-indent:
+					1em;</rendition>
+				<rendition n="indent 2 levels" xml:id="ti-2" scheme="css">text-indent:
+					2em;</rendition>
+				<rendition n="indent 3 levels" xml:id="ti-3" scheme="css">text-indent:
+					3em;</rendition>
+				<rendition n="indent 4 levels" xml:id="ti-4" scheme="css">text-indent:
+					4em;</rendition>
+				<rendition n="indent 5 levels" xml:id="ti-5" scheme="css">text-indent:
+					5em;</rendition>
+				<rendition n="indent 6 levels" xml:id="ti-6" scheme="css">text-indent:
+					6em;</rendition>
+				<rendition n="indent 7 levels" xml:id="ti-7" scheme="css">text-indent:
+					7em;</rendition>
+				<rendition n="indent 8 levels" xml:id="ti-8" scheme="css">text-indent:
+					8em;</rendition>
+				<rendition n="indent 9 levels" xml:id="ti-9" scheme="css">text-indent:
+					9em;</rendition>
+				<rendition n="indent 10 levels" xml:id="ti-10" scheme="css">text-indent:
+					10em;</rendition>
+				<!-- vertical-align -->
+				<rendition n="subscript" xml:id="sub" scheme="css">vertical-align: sub;</rendition>
+				<rendition n="superscript" xml:id="super" scheme="css">vertical-align:
+					super;</rendition>
+
+				<!-- color -->
+				<rendition n="red" xml:id="red" scheme="css">color: red;</rendition>
+				<rendition n="blue" xml:id="blue" scheme="css">color: blue;</rendition>
+				<!-- compound CSS -->
+				<rendition n="hanging indent" xml:id="hang" scheme="css">margin-left: 2em;
+					text-indent: -2em; padding: 0;</rendition>
+				<rendition n="inline" xml:id="inline" scheme="css">display: inline</rendition>
+				<!-- non-CSS styles -->
+				<rendition n="graphic" xml:id="graphic" scheme="free">Graphically rendered element;
+					currently used for tables that should be graphically highlighted with
+					color.</rendition>
+				<rendition n="bracket" xml:id="bracket" scheme="free">curly bracket</rendition>
+				<rendition n="suppress" xml:id="suppress" scheme="css">display: none</rendition>
+				<rendition n="justify" xml:id="justify" scheme="css">text-align:
+					justify;</rendition>
+				<rendition n="quotes" xml:id="quotes" scheme="css"/>
+			</tagsDecl>
+		</encodingDesc>
+	</teiHeader>
+	<text xml:id="acs0000056-content">
+		<body>
+			<div>
+				<head>Contact Information</head>
+				<list type="simple">
+					<item><label>Office: </label> LI 027</item>
+					<item><label>Office Hours: </label>Tue. &amp; Wed., 3:30-4:45pm. Use <ptr
+							rendition="#bracket" target="https://tungle.me/jawalsh/"/> to schedule
+						appointments (in 15-minute increments).</item>
+					<item><label>Phone: </label>856-0707</item>
+					<item>
+						<label>email: </label>
+						<ref target="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</ref>
+					</item>
+					<item><label>Web:</label>
+						<ptr rendition="#bracket"
+							target="http://www.slis.indiana.edu/faculty/jawalsh/"/></item>
+					<item><label>Blog:</label>
+						<ptr rendition="#bracket" target="http://www.biblicon.org/"/></item>
+					<item><label>Twitter:</label>
+						<ref target="twitter.com/jawalsh">@jawalsh</ref></item>
+				</list>
+			</div>
+			<div>
+				<head> Course Description </head>
+				<p> This course will explore advanced topics in XML and related technologies,
+					particularly in the context of XML as a document publishing format. Topics
+					include: <list>
+						<item>separation of content from presentation</item>
+						<item>repurposing of digital content</item>
+						<item>common standards and systems used to publish electronic
+							documents</item>
+						<item>fundamental technologies underlying digital publishing, including: <list>
+								<item>XML</item>
+								<item>XSLT</item>
+								<item>XPath</item>
+								<item>XSL-FO</item>
+								<item>SVG</item>
+								<item>XHTML</item>
+								<item>CSS</item>
+								<item>JavaScript</item>
+								<item>PostScript and PDF</item>
+							</list>
+						</item>
+						<item>Common XML document formats, including: <list>
+								<item>XHTML</item>
+								<item>TEI</item>
+								<item>DocBook</item>
+								<item>Open Publication Structure </item>
+							</list>
+						</item>
+						<item>digital publishing systems, including Cocoon <ref
+								target="http://http://cocoon.apache.org">Cocoon</ref> and <ref
+								target="http://xtf.sourceforge.net">XTF</ref></item>
+					</list>
+				</p>
+				<p> Prerequisites: L571 "Information Architecture for the Web" (or substantial Web
+					development experience). </p>
+			</div>
+			<div>
+				<head> Texts </head>
+				<listBibl>
+					<bibl> DuCharme, Bob. <title>XSLT Quickly</title>. Manning: Greenwich, 2001.
+						(referred to as <emph rendition="#i b">DuCharme</emph> below.)</bibl>
+					<bibl> Harold, Elliotte Rusty and W. Scott Means. <title>XML in a
+							Nutshell</title>. 3rd ed. Sebastopol: O'Reilly, 2004. (referred to as
+							<emph rendition="#i #b">Harold</emph> below.) </bibl>
+				</listBibl>
+				<p>The above texts will be supplemented by online and reserve readings. </p>
+			</div>
+			<div>
+
+				<head> Assignments &amp; Participation </head>
+				<p><emph rendition="#b #i">Unless otherwise stated, assignments will be submitted
+						through <ref target="http://oncourse.iu.edu/">Oncourse</ref></emph>.</p>
+				<div>
+					<head>Lab Assignments (50%)</head>
+					<p>Most weeks we will have lab assignments related to the topic and readings for
+						that week. You will have time to work on the assignment in class, and you
+						will submit the finished assignment anytime before the next class
+						meeting.</p>
+				</div>
+				<div>
+					<head>Quizzes (15%)</head>
+					<p>We will have three quizzes throughout the semester. Quizzes will test basic
+						knowledge about XML and related technologies (e.g. DTDs, schemas, XSLT,
+						XPath).</p>
+				</div>
+				<div>
+					<head>Final Project (35%)</head>
+					<p>For your final project, you will build an XML-based web site using the <ref
+							target="http://cocoon.apache.org/">Apache Cocoon</ref> publishing
+						platform. See the online journal <ref target="http://digitalhumanities.org/dhq/">Digital Humanities Quarterly</ref> (DHQ) for an example of a Cocoon-based web site. There will a couple of preliminary assignments, such as a project proposal and wireframing, designed to get you thinking about and planning the final product. You will present your final project to the class during the final class meeting of the semester.</p>
+				</div>
+
+
+				<!--
+				<table rendition="#graphic">
+					<head>Final Project</head>
+					<row>
+						<cell role="label"> Assignment </cell>
+						<cell role="label"> points/percentage </cell>
+						<cell role="label"> Due Date </cell>
+					</row>
+					<row>
+						<cell> Preliminary Proposal </cell>
+						<cell> 50/5% </cell>
+						<cell> 2007-02-26 </cell>
+					</row>
+					<row>
+						<cell> Final project presentation </cell>
+						<cell> 100/10% </cell>
+						<cell> 2007-04-16 </cell>
+					</row>
+					<row>
+						<cell> Final project (working system and written overview) </cell>
+						<cell> 250/25% </cell>
+						<cell> 2007-04-23 </cell>
+					</row>
+				</table>
+				<list>
+					<item> Participation (100 pts., 10%) <p> Students are expected to attend, to be
+							prepared for, and to participate in all class meetings. </p>
+					</item>
+				</list>
+				-->
+			</div>
+			<div>
+				<head> Letter Grade Definitions </head>
+				<p> All grades will be assigned according to the <ref
+						target="http://www.slis.indiana.edu/courses/forms/grades.html"> Indiana
+						University School of Library and Information Science Definitions of Letter
+						Grades </ref> . </p>
+			</div>
+			<div>
+				<head> Schedule </head>
+				<table rendition="#graphic">
+					<row>
+						<cell> Date </cell>
+						<cell> Topics </cell>
+						<cell> Readings </cell>
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-09-02"/></cell>
+						<cell>
+							<list>
+								<item> Introductions</item>
+								<item> Overview of syllabus</item>
+								<item> Intro to XML</item>
+							</list>
+						</cell>
+						<cell/>
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-09-09"/>
+						</cell>
+						<cell>
+							<list>
+								<item>Document Type Definitions (DTDs)</item>
+							</list>
+						</cell>
+						<cell>
+							<list>
+								<item>Harold. pp. xiii-59</item>
+								<item> Sperberg-McQueen, Michael and Lou Burnard. “<ref
+										target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html"
+										>A Gentle Introduction to XML</ref>.” from the <ref
+										target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html"
+										>TEI Guidelines</ref>.</item>
+								<item>
+									<bibl><abbr>Mulberry Technologies</abbr>. <title level="a">XML
+											Syntax Quick Reference.</title>
+										<ptr rendition="#bracket"
+											target="http://www.mulberrytech.com/quickref/XMLquickref.pdf"
+										/></bibl>
+								</item>
+							</list>
+						</cell>
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-09-16"/>
+						</cell>
+						<cell>
+							<list>
+								<item> XML Namespaces </item>
+								<item> Unicode and Character Sets</item>
+								<item> Schema recap</item>
+							</list>
+						</cell>
+						<cell>
+							<list>
+								<item>Harold. pp. 60-85.</item>
+							</list></cell>
+						
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-09-23"/>
+						</cell>
+						<cell>
+							<list>
+								<item>XML as a Document Format (TEI, DocBook, EPUB, OpenDocument,
+									Office Open XML, EAD, XHTML, etc.)</item>
+								<item>XML on the Web</item>
+								<item>XML + CSS</item>
+							</list>
+						</cell>
+						<cell><list>
+							<item>Harold. pp. 89-143, 219-233.</item>
+							<item>Romanato, Gabriele. “CSS Zibaldone.” <ptr rendition="#bracket"
+								target="http://www.css-zibaldone.com/articles/xml/cssxml.html"
+							/>.</item>
+						</list>
+						</cell>
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-09-30"/>
+						</cell>
+						<cell><list>
+							<item>Relax NG Schema</item>
+						</list></cell>
+						<cell><list>
+							<item>Clark, James and Murata Makoto. <title><ref
+								target="http://relaxng.org/tutorial-20011203.html">RELAX
+								NG Tutorial</ref></title>. <ptr rendition="#bracket"
+									target="http://relaxng.org/tutorial-20011203.html"/>.</item>
+						</list></cell>
+						
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-10-07"/></cell>
+						<cell>
+							<list>
+								<item> W3C Schema</item>
+								
+							</list>
+						</cell>
+						<cell>
+							<list>
+								<item> Harold. pp. 278-309.</item>
+								
+							</list>
+						</cell>
+
+
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-10-14"/>
+						</cell>
+						<cell><list><item>Schematron</item></list></cell>
+						<cell><list><item><bibl>Costello, Roger. <ref target="http://www.xfront.com/schematron/">Tutorials on Schematron</ref>.</bibl></item>
+							<item><bibl>Pawson, Dave, et al. <ref target="http://www.dpawson.co.uk/schematron/">ISO Schematron Tutorial</ref>.</bibl></item></list></cell>
+						
+
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-10-21"/>
+						</cell>
+						<cell>
+							<list>
+								<item>XSLT/XPath</item>
+							</list></cell>
+						<cell>
+							<list>
+								<item> DuCharme. pp. ix-19.</item>
+								<item> Harold. pp. 144-161.</item>
+								<item>
+									<bibl><author>Lapeyre, Deborah Aleyne</author> and <author>B.
+											Tommie Usdin</author>.<title level="a">Introduction to
+											XSLT Concepts.</title>
+										<ptr rendition="#bracket"
+											target="http://mulberrytech.com/papers/Intro2XSLT/index.html"/>
+										<ptr rendition="#bracket"
+											target="http://mulberrytech.com/papers/Intro2XSLT/Intro2XSLT.pdf"
+										/>.</bibl>
+								</item>
+								<item>
+									<bibl><abbr>Mulberry Technologies</abbr>. <title level="a">XSLT
+											1.0 and XPath 1.0 Quick Reference.</title>
+										<ptr rendition="#bracket"
+											target="http://www.mulberrytech.com/quickref/XSLT_1quickref-v2.pdf"
+										/></bibl>
+								</item>
+								<item>
+									<ref
+										target="http://ella.slis.indiana.edu/~jawalsh/share/templates/xslt_1.0.xsl"
+										>XSLT 1.0 template</ref>
+								</item>
+							</list>
+						</cell>
+
+
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-10-28"/>
+							<lb/><hi rendition="#red"/>
+						</cell>
+						<cell>
+							<list>
+								<item>XSLT/XPath</item>
+							</list>
+						</cell>
+						<cell>
+							<list>
+								<item>DuCharme. pp. 21-46.</item>
+							</list></cell>
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-11-04"/>
+						</cell>
+						<cell>
+							<list>
+								<item>Cocoon</item>
+							</list>
+						</cell>
+						<cell/>
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-11-11"/>
+						</cell>
+						<cell>
+							<list>
+								<item>XSLT/XPath</item>
+							</list></cell>
+						<cell><list>
+								<item>DuCharme. pp. 47-109.</item>
+							</list></cell>
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-11-18"/>
+						</cell>
+						<cell>
+							<list>
+								<item>XSLT/XPath</item>
+							</list>
+						</cell>
+						<cell>
+							<list>
+								<item>DuCharme. pp. 110-186 </item>
+							</list></cell>
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-11-25"/>
+						</cell>
+						<cell>
+							<list>
+								<item><emph>Thanksgiving Recess</emph></item>
+							</list></cell>
+						<cell> </cell>
+
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-12-02"/>
+						</cell>
+						<cell>
+							<list>
+								<item>XSLT/XPath</item>
+							</list>
+						</cell>
+						<cell>
+							<list>
+								<item>DuCharme. pp. 187-255</item>
+							</list></cell>
+					</row>
+					<row>
+						<cell rend="width:8em;"><date when="2011-12-09"/>
+						</cell>
+						<cell>
+							<list>
+								<item>Final project presentations.</item>
+							</list>
+						</cell>
+						<cell/>
+
+					</row>
+				</table>
+			</div>
+			<div>
+				<head>Resources</head>
+				<list>
+					<item><ref target="http://unicode.org/">The Unicode Consortium</ref></item>
+					<item><ref target="http://earthlingsoft.net/UnicodeChecker/">Unicode Checker</ref></item>
+					<item>XML-Related <ref rendition="#quotes"
+							target="http://www.mulberrytech.com/quickref/index.html">Quick Reference
+							Cards</ref> from <ref target="http://www.mulberrytech.com/">Mulberry
+							Technologies</ref></item>
+					<item><ref target="http://www.mulberrytech.com/xsl/xsl-list/index.html"
+							>XSL-List</ref>: Email forum for XSL discussion/help. <emph
+							rendition="#i #b">Search the list archives for similar questions/answers before you ask!</emph></item>
+				</list>
+			</div>
+		</body>
+	</text>
+</TEI>

@@ -215,7 +215,11 @@
 	<xsl:template name="rendition2style">
 		<style>
             <xsl:for-each select="//tei:rendition[@scheme = 'css']">
-                <xsl:value-of select="concat('[rendition~=&quot;#',@xml:id,'&quot;] { ',normalize-space(.),'}&#x000A;')"/>
+                <xsl:value-of select="concat('[rendition~=&quot;#',@xml:id,'&quot;]')"/>
+                <xsl:if test="@scope">
+                	<xsl:value-of select="concat(':',@scope)"/>
+                </xsl:if>
+               	<xsl:value-of select="concat('{ ',normalize-space(.),'}&#x000A;')"/>
             </xsl:for-each>
         </style>
 	</xsl:template>

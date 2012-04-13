@@ -31,12 +31,6 @@ function addPageBreaks(){
 	}
 }
 
-/*
-while(document.readyState != 'interactive' && document.readyState != 'complete'){
-	//Do nothing. We're waiting for the document to be available.
-}
-*/
-
 document.getElementById('pbToggle').onclick = function(){
 	if(document.getElementById('pbToggle').checked){
 		clearPageBreaks();
@@ -47,6 +41,3 @@ document.getElementById('pbToggle').onclick = function(){
 
 addPageBreaks();
 document.getElementById('pbToggle').checked = false;
-
-
-

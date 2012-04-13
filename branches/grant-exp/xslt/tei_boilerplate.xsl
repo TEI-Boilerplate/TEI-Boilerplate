@@ -200,7 +200,14 @@
 			<script type="text/javascript" src="../js/less.min.js"/>
 			<script type="text/javascript" src="../js/jquery/jquery.min.js"/>
 			<script type="text/javascript" src="../js/jquery/plugins/jquery.blockUI.js"/>
+			<script type="text/javascript" src="../js/tei_boilerplate.js"/>
 			
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$("html > head > title").text($("TEI > teiHeader > fileDesc > titleStmt > title:first").text());
+					$.unblockUI();				
+				});
+			</script>
 			<xsl:call-template name="rendition2style"/>
 			<title/>
 		</head>
@@ -226,26 +233,12 @@
 					alt="Creative Commons License" style="border-width:0;"
 					src="http://i.creativecommons.org/l/by/3.0/80x15.png"/></a>
 		</div>
-		<script type="text/javascript" src="../js/tei_boilerplate.js"></script>
 	</xsl:variable>
 
 	<xsl:template name="pbToggleBox">
 		<div id="pbToggler" style="left: 25px; top: 25px; position: fixed; font-size: small">
 			<label for="pbToggle">Hide page breaks</label>
 			<input type="checkbox" id="pbToggle" /> 
-			<script type="text/javascript">
-				/*
-				$('#pbToggle').click(function(){
-					var checked = $(this).attr('checked');
-					if (checked) {
-						$('pb').text("");
-					} else {
-						$('pb').each(function(index) {
-							$(this).text("[page: " + $(this).attr('n') + "]");
-						})
-					}
-				});*/
-			</script>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

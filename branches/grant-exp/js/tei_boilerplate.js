@@ -16,37 +16,37 @@ function getPageBreaks(){
 function clearPageBreaks(){
 	var pageBreaks = getPageBreaks();
 	for(pageBreak in pageBreaks){
-		pageBreak.textContent = '';
+		pageBreaks[pageBreak].textContent = '';
 	}
 }
 
 function addPageBreaks(){
 	var pageBreaks = getPageBreaks();
-	alert(pageBreaks);
-	var attrs;
 	for(pageBreak in pageBreaks){
-		//alert(pageBreak.attributes);
 		if(null != pageBreaks[pageBreak].attributes.getNamedItem('n')){
-			pageBreaks[pageBreak].textContent = pageBreaks[pageBreak].attributes.getNamedItem('n').value;
+			pageBreaks[pageBreak].textContent = "[page: " 
+				+ pageBreaks[pageBreak].attributes.getNamedItem('n').value
+				+ "]";
 		}
 	}
 }
 
+/*
 while(document.readyState != 'interactive' && document.readyState != 'complete'){
 	//Do nothing. We're waiting for the document to be available.
 }
+*/
 
 document.getElementById('pbToggle').onclick = function(){
 	if(document.getElementById('pbToggle').checked){
-		addPageBreaks();
-		//alert('checked');	
-	}else{
 		clearPageBreaks();
-		//alert('cleared');
+	}else{
+		addPageBreaks();
 	}
 };
 
 addPageBreaks();
+document.getElementById('pbToggle').checked = false;
 
 
 

@@ -5,6 +5,9 @@
 /* @namespace with prefix, as below, throws and error in less. */
 /* @namespace html "http://www.w3.org/1999/xhtml"; */
 /* Less variables */
+.quotes-us {
+  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+}
 .block-margins {
   display: block;
   margin-top: 1em;
@@ -1148,11 +1151,26 @@ purpose {
   /* Empty Rule Set */
 }
 /* q */
+q {
+  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+}
+q:before {
+  content: open-quote;
+}
+q:after {
+  content: close-quote;
+}
 quotation {
   /* Empty Rule Set */
 }
 quote {
-  /* Empty Rule Set */
+  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+}
+quote:before {
+  content: open-quote;
+}
+quote:after {
+  content: close-quote;
 }
 /* r */
 rdg {
@@ -1349,7 +1367,13 @@ signed {
 
 }
 soCalled {
-  /* Empty Set Rule */
+  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+}
+soCalled:before {
+  content: open-quote;
+}
+soCalled:after {
+  content: close-quote;
 }
 socecStatus {
   /* Empty Set Rule */

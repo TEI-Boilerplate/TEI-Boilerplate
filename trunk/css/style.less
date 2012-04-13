@@ -15,6 +15,10 @@ margin-top:@margins;
 margin-bottom:@margins;
 }
 
+.quotes-us {
+quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+}
+
 @border-color:#aaa;
 
 .block-margins {
@@ -948,9 +952,19 @@ publicationStmt > publisher {
 purpose {/* Empty Rule Set */}
 
 /* q */
-q {}
+q {
+  .quotes-us;
+}
+q:before {content: open-quote;}
+q:after {content: close-quote;}
+
 quotation {/* Empty Rule Set */}
-quote {/* Empty Rule Set */}
+quote {
+	.quotes-us;
+}
+quote:before {content: open-quote;}
+quote:after {content: close-quote;}
+
 /* r */
 rdg {/*perhaps choice */}
 rdgGrp {/* Empty Rule Set */}
@@ -1057,7 +1071,10 @@ margin-top:2em;
 /*should make name a block when contained within  */
 }
 
-soCalled {/* Empty Set Rule */}
+soCalled {.quotes-us;}
+soCalled:before {content: open-quote;}
+soCalled:after {content: close-quote;}
+
 socecStatus {/* Empty Set Rule */}
 
 sound {

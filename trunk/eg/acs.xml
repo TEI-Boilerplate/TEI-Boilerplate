@@ -91,7 +91,7 @@
     <!-- text-transform -->
     <rendition n="uppercase" xml:id="uc" scheme="css">text-transform: uppercase;</rendition>
     <!-- text-align -->
-    <rendition n="align center" xml:id="center" scheme="css">text-align: center;</rendition>
+    <rendition n="align center" xml:id="center" scheme="css">text-align: center; display:block;</rendition>
     <rendition n="align right" xml:id="right" scheme="css">text-align: right;</rendition>
     <rendition n="align left" xml:id="left" scheme="css">text-align: right;</rendition>
     

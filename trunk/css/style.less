@@ -59,14 +59,17 @@ display:none;
 font-family: Courier,monospace;
 }
 
+@background-color:#EBEBEB;
+@color:#292929;
+
 .page-setup {
 margin-left:8em;
 margin-right:8em;
 padding:2.5em;
 font-family: Cochin, Georgia, Serif;
 font-size:14pt;
-background:#EBEBEB;
-color:#292929;
+background-color:@background-color;
+color:@color;
 width:33em;
 }
 
@@ -1276,28 +1279,19 @@ padding:0;
 
 
 #footer {
-/*
-border-top: 5px solid #be5b31;
-background:#482313;
-padding-left:4em;
-padding-top:1em;
-padding-bottom: 1em;
-font-family:'Helvetica Neue', Helvetica, sans-serif;
-font-size:8pt;
-color:#FAEBD7;
-width:100%;
-*/
+border-top: 1px solid @color;
+padding-top:.5em;
 font-size:12pt;
 }
 
-
+@link-color:#5f0000;
 a:link, #footer a:visited, #footer a:active  {
-color:#5F0000;
+color:@link-color;
 text-decoration:none;
 }
 
 a:hover {
-color:#5F0000;
+color:@link-color;
 text-decoration:underline;
 }
 

@@ -32,7 +32,7 @@
   padding: 2.5em;
   font-family: Cochin, Georgia, Serif;
   font-size: 14pt;
-  background: #EBEBEB;
+  background-color: #ebebeb;
   color: #292929;
   width: 33em;
 }
@@ -1648,31 +1648,21 @@ html {
   padding: 2.5em;
   font-family: Cochin, Georgia, Serif;
   font-size: 14pt;
-  background: #EBEBEB;
+  background-color: #ebebeb;
   color: #292929;
   width: 33em;
 }
 #footer {
-  /*
-border-top: 5px solid #be5b31;
-background:#482313;
-padding-left:4em;
-padding-top:1em;
-padding-bottom: 1em;
-font-family:'Helvetica Neue', Helvetica, sans-serif;
-font-size:8pt;
-color:#FAEBD7;
-width:100%;
-*/
-
+  border-top: 1px solid #292929;
+  padding-top: .5em;
   font-size: 12pt;
 }
 a:link, #footer a:visited, #footer a:active {
-  color: #5F0000;
+  color: #5f0000;
   text-decoration: none;
 }
 a:hover {
-  color: #5F0000;
+  color: #5f0000;
   text-decoration: underline;
 }
 /* loading animation */

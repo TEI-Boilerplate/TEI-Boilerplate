@@ -343,7 +343,8 @@ border-top:2px solid @border-color;
   border: 1px solid black;
   width: 100%;
 }
-cell[role=label] {
+/* for cell or row with @role = label */
+[role=label] {
   font-weight: bold;
 }
 certainty {

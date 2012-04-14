@@ -35,6 +35,18 @@
           margin-bottom:1em;
         </rendition>
         
+        <rendition corresp="#blockquote" scheme="css" scope="before">
+          <!-- This turns off the default generated quotes
+          for block quotes. -->
+          content:"" !important;
+        </rendition>
+        
+        <rendition corresp="#blockquote" scheme="css" scope="after">
+          <!-- This turns off the default generated quotes
+          for block quotes. -->
+          content:"" !important;
+        </rendition>
+        
         <rendition xml:id="b" scheme="css">
           font-weight:bold;
         </rendition> 
@@ -125,6 +137,8 @@
         <rendition xml:id="indent" scheme="css" scope="before">
           content:"\A0\A0\A0\A0\A0\A0";
         </rendition>
+        
+
         
         <!-- font sizes -->
         
@@ -237,6 +251,7 @@
         </p>
       </div>
       <div>
+        <head>Verse inside <gi>Floating Text</gi></head>
         <floatingText xml:id="acs0000001-05-i002-content" n="Grand Chorus of Birds from Aristophanes" type="poem">
           <index corresp="acs0000001-05-i002-md.xml" indexName="text"/>
           
@@ -381,6 +396,14 @@
           </body>
           <back><div n="[notes]"/></back></floatingText>
       </div>
+      <div>
+        <head>Automatic generation of quotation marks for nested <gi>q</gi>, <gi>quote</gi>, and <gi>soCalled</gi></head>
+        <p>This paragraph contains a <quote>quotation with a nested <q><gi>q</gi></q> and a <q> <soCalled>soCalled with a q</soCalled></q></quote>
+        </p>
+          
+          
+      </div>
+      
     </body>
   </text>
 </TEI>

@@ -7,11 +7,9 @@ Contents:
 	Using it in Your Project
 	Customizing the Look
 	
-
 About TEI Boilerplate
 
 TEI Boilerplate is a lightweight solution for displaying styled TEI content directly in modern browsers. With TEI Boilerplate, plain TEI XML files can be served on the web without server-side processing or translation to HTML. This bridges the gap between the richness of TEI-encoded documents and the usability of the web.
-
 
 Rationale
 
@@ -24,11 +22,9 @@ Both of these approaches have advantages and drawbacks. While HTML is the langua
 
 TEI Boilerplate bridges the gap between these two approaches by creating an environment in which TEI XML is styled in context but features expected of the web, such as rendering images and providing usable links, are enabled. We accomplish this by making use of the built-in XSLT capabilities of browsers to embed the TEI XML within a minimal HTML5 shell document. Where possible, the original content of the TEI document is maintained and changes are made only to make possible features like links and images.
 
-
 How It Works
 
 When a TEI XML file that uses TEI Boilerplate is accessed by a browser, the browser reads a line in the file that indicates that the XML should be processed by the TEI Boilerplate XSL stylesheet. The browser then processes the TEI according to the rules of the stylesheet, which results in an HTML5 shell document stuffed with the TEI. Certain elements of the TEI are converted to HTML elements, so that links work and images are displayed. The HTML shell contains a link to the TEI Boilerplate CSS file, which tells the browser how to style the full document.
-
 
 Using it in Your Project
 
@@ -50,7 +46,6 @@ With those three things procured, we can proceed with making the project work wi
 4. Open your TEI file(s) in a text editor and add the following processing instruction above the root TEI element: <?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?>
 
 Your TEI is now ready to serve. Point a modern browser to the URL for your TEI XML file and it should now be styled and have working links and images.
-
 
 Customizing the Look
 

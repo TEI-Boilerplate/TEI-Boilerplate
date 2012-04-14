@@ -247,6 +247,70 @@
         </list>
       </div>
       <div>
+        <head>Tables</head>
+        <note>Table examples are taken, with minor modifications, from the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html">TEI P5 Guidelines</ref>.</note>
+        <table rows="2" cols="2">
+          <head rendition="#i">Report of the conduct and progress
+            of Ernest Pontifex. Upper Vth form — half
+            term ending Midsummer 1851</head>
+          <row>
+            <cell role="label">Classics</cell>
+            <cell>Idle listless and unimproving</cell>
+          </row>
+          <row>
+            <cell role="label">Mathematics</cell>
+            <cell>ditto</cell>
+          </row>
+          <row>
+            <cell role="label">Divinity</cell>
+            <cell>ditto</cell>
+          </row>
+          <row>
+            <cell role="label">Conduct in house</cell>
+            <cell>Orderly</cell>
+          </row>
+          <row>
+            <cell role="label">General conduct</cell>
+            <cell>Not satisfactory, on
+              account of his great unpunctuality and inattention to
+              duties</cell>
+          </row>
+        </table>
+        <table rows="4" cols="4">
+          <head>Poor Man's Lodgings in Norfolk (Mayhew, 1843)</head>
+          <row role="label">
+            <cell/>
+            <cell>Dossing Cribs or Lodging Houses</cell>
+            <cell>Beds</cell>
+            <cell>Needys or Nightly Lodgers</cell>
+          </row>
+          <row>
+            <cell role="label">Bury St Edmund's</cell>
+            <cell>5</cell>
+            <cell>8</cell>
+            <cell>128</cell>
+          </row>
+          <row>
+            <cell role="label">Thetford</cell>
+            <cell>3</cell>
+            <cell>6</cell>
+            <cell>36</cell>
+          </row>
+          <row>
+            <cell role="label">Attleboro'</cell>
+            <cell>3</cell>
+            <cell>5</cell>
+            <cell>20</cell>
+          </row>
+          <row>
+            <cell role="label">Wymondham</cell>
+            <cell>1</cell>
+            <cell>11</cell>
+            <cell>22</cell>
+          </row>
+        </table>
+      </div>
+      <div>
         <head><gi>choice</gi> and the <soCalled>Janus-Faced</soCalled> elements</head>
         <p><gi>choice</gi> is commonly used to group a pair of the so-called <soCalled>Janus-Faced</soCalled> elements, e.g., <gi>orig</gi> &amp; <gi>reg</gi>, <gi>abbr</gi> &amp; <gi>expan</gi>, or <gi>sic</gi> &amp; <gi>corr</gi>.</p>
         <p>The default behavior of TEI Boilerplate is to display both items in the the <gi>choice</gi>, with the second item enclosed in parentheses.</p>

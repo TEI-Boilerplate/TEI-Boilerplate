@@ -86,6 +86,17 @@
         border-bottom: 1px solid black;</rendition>
     <rendition n="block" xml:id="block" scheme="css">display: block; margin: 4em;</rendition>
     <rendition n="blockquote" xml:id="blockquote" scheme="css">display: block; margin-left:4em;</rendition>
+                <rendition corresp="#blockquote" scheme="css" scope="before">
+                    <!-- This turns off the default generated quotes
+          for block quotes. -->
+                    content:"" !important;
+                </rendition>
+                
+                <rendition corresp="#blockquote" scheme="css" scope="after">
+                    <!-- This turns off the default generated quotes
+          for block quotes. -->
+                    content:"" !important;
+                </rendition>
     <rendition n="expanded letter spacing" xml:id="expanded" scheme="css">letter-spacing: +3pt;</rendition>
     
     <!-- text-transform -->
@@ -276,13 +287,6 @@
 	    <index indexName="meta" corresp="acs0000001-01-md.xml"/>
 	    -->
 		<front>
-			<div type="spine">
-				<pb facs="acs0000001-01-002"/>
-			</div>
-			<div type="frontcover">
-				<pb facs="acs0000001-01-001"/>
-				<pb facs="acs0000001-01-003"/>
-			</div>
 			<div>
 				<pb n="[unnumbered]" facs="acs0000001-01-004"/>
 				<head rendition="#center #x-large #n">SWINBURNE'S POEMS <lb/>
@@ -2188,7 +2192,7 @@
             <epigraph xml:lang="fr" rendition="#small">
                <pb n="[10]" facs="acs0000001-01-053"/>
                 <cit rendition="#block" rend="width:30em;">
-                    <quote rendition="#block">
+                    <quote rendition="#blockquote">
                         <p rendition="#indent #justify">
                                 <s xml:id="acs_pb1_t003_s0001">Lors dit en plourant; Hélas trop
                                     malheureux homme et mauldict pescheur, oncques ne verrai-je
@@ -3453,7 +3457,7 @@
                                  <persName key="aeschylus">Æsch.</persName> Fr.
                                 <persName key="niobe">Niobe</persName>:—
                                 </bibl>
-                                <quote rendition="#nq #block #l-indent-03" rend="margin-bottom:0;padding-bottom:0;">
+                                <quote rendition="#nq #blockquote #l-indent-03" rend="margin-bottom:0;padding-bottom:0;">
                                     <lg rend="margin-top:0;margin-bottom:0;">
                                         <l>μόνος θεῶν γὰρ Θάνατος οὐ δώρων ἐρᾷ, κ.τ.λ.</l>
                                     </lg>
@@ -4393,7 +4397,7 @@
       <head rendition="#center #n  #uc"><persName key="anactoria">Anactoria</persName></head>
       <epigraph rendition="#center-block" rend="width:20em">
         <cit rendition="#block">
-          <quote xml:lang="gr" rendition="#block">
+          <quote xml:lang="gr" rendition="#blockquote">
             <lg>
               <l rendition="#l-indent-04">τίνος αὖ τὺ πειθοῖ</l>
               <l>μὰψ σαγηνεύσας φιλόταταϗ</l>
@@ -4869,7 +4873,7 @@
                 <l n="109">So long I endure, no longer; and laugh not again, neither weep.</l>
                 <l n="110">For there is no God found stronger than death; and death is a sleep.</l>
             </lg>
-            <note rendition="#small" xml:id="acs0000001-01-i011-note01" resp="#acs" rend="margin-left:4em;"><cit><quote rendition="#block #nq" xml:lang="gr"><ref rendition="#super">1</ref> ψυχάριον εἶ βαστάζον νεκρόν.</quote>
+            <note rendition="#small" xml:id="acs0000001-01-i011-note01" resp="#acs" rend="margin-left:4em;"><cit><quote rendition="#blockquote #nq" xml:lang="gr"><ref rendition="#super">1</ref> ψυχάριον εἶ βαστάζον νεκρόν.</quote>
                             <bibl rendition="#l-indent-08"><persName rendition="#small-caps">Epictetus</persName></bibl>
                         </cit>
                 </note>
@@ -5438,7 +5442,7 @@
                                     <head rendition="#center #n  #uc">A Litany</head>
                                     <epigraph rendition="#small #center-block" rend="width:28em; margin-bottom:2em;">
                                                 <cit>
-                                                  <quote xml:lang="gr" rendition="#block">
+                                                  <quote xml:lang="gr" rendition="#blockquote">
                                                   <lg rend="margin-bottom:0;">
                                                     <l>ἐν οὐρανῷ φαεννὰς</l>
                                                     <l>κρύψω παρ' ὑμὶν αὐγὰς,</l>
@@ -6819,7 +6823,7 @@
                </l>
             </lg>
             <note xml:id="acs0000001-01-i027-note01" resp="#acs">
-                    <cit><quote xml:lang="fr" rendition="#block #nq #indent"><ref>*</ref> En ce temps-là estoyt dans ce pays grand nombre de ladres et de meseaulx, ce dont le roy eut grand desplaisir, veu que Dieu dust en estre moult griefvement courroucé. Ores il advint qu'une noble damoyselle appelée Yolande de Sallières estant atteincte et touste guastée de ce vilain mal, tous ses amys et ses parens ayant devant leurs yeux la paour de Dieu la firent issir fors de leurs maisons et oncques ne voulurent recepvoir ni reconforter chose mauldicte de Dieu et à tous les hommes puante et abhominable. Ceste dame avoyt esté moult belle et gracieuse de formes, et de son corps elle estoyt large et de vie lascive. Pourtant nul des amans qui l'avoyent souventesfois accollée et baisée moult tendrement ne voulust plus héberger si laide femme et si détestable pescheresse. Ung seul clerc qui feut premièrement son lacquays et son entremetteur en matière d'amour la reçut chez luy et la récéla dans une petite cabane. Là mourut la meschinette de grande misère et de male mort: et après elle décéda ledist clerc qui pour grand amour l'avoyt six mois durant soignée, lavée, habillée et deshabillée tous les jours de ses mains propres. Mesme dist-on que ce meschant homme et mauldict clerc se remémourant de la grande beauté passée et guastée de ceste femme se délectoyt maintesfois à la baiser sur sa bouche orde et lépreuse et l'accoller doulcement de ses mains amoureuses. Aussy est-il mort de ceste mesme maladie abhominable. Cecy advint près Fontainebellant en Gastinois. Et quand ouyt le roy Philippe ceste adventure moult en estoyt esmerveillé.
+                    <cit><quote xml:lang="fr" rendition="#blockquote #nq #indent"><ref>*</ref> En ce temps-là estoyt dans ce pays grand nombre de ladres et de meseaulx, ce dont le roy eut grand desplaisir, veu que Dieu dust en estre moult griefvement courroucé. Ores il advint qu'une noble damoyselle appelée Yolande de Sallières estant atteincte et touste guastée de ce vilain mal, tous ses amys et ses parens ayant devant leurs yeux la paour de Dieu la firent issir fors de leurs maisons et oncques ne voulurent recepvoir ni reconforter chose mauldicte de Dieu et à tous les hommes puante et abhominable. Ceste dame avoyt esté moult belle et gracieuse de formes, et de son corps elle estoyt large et de vie lascive. Pourtant nul des amans qui l'avoyent souventesfois accollée et baisée moult tendrement ne voulust plus héberger si laide femme et si détestable pescheresse. Ung seul clerc qui feut premièrement son lacquays et son entremetteur en matière d'amour la reçut chez luy et la récéla dans une petite cabane. Là mourut la meschinette de grande misère et de male mort: et après elle décéda ledist clerc qui pour grand amour l'avoyt six mois durant soignée, lavée, habillée et deshabillée tous les jours de ses mains propres. Mesme dist-on que ce meschant homme et mauldict clerc se remémourant de la grande beauté passée et guastée de ceste femme se délectoyt maintesfois à la baiser sur sa bouche orde et lépreuse et l'accoller doulcement de ses mains amoureuses. Aussy est-il mort de ceste mesme maladie abhominable. Cecy advint près Fontainebellant en Gastinois. Et quand ouyt le roy Philippe ceste adventure moult en estoyt esmerveillé.
                         </quote>
                         <bibl rendition="#i #l-indent-05"><title key="grandes_chroniques_de_france">Grandes Chroniques de France</title>, <hi rendition="#n">1505.</hi>
                         </bibl>
@@ -8228,7 +8232,7 @@
                                 <l n="332" rendition="#l-indent-01">And spreads not the fatherly feast.</l>
                             <note xml:id="acs0000001-01-i037-note01" resp="#acs" rendition="#small">
                                 <cit>
-                                    <quote rendition="#block #nq" xml:lang="la">
+                                    <quote rendition="#blockquote #nq" xml:lang="la">
                                         <lg rendition="#l-indent-02">
                                             <l><ref rendition="#super">1</ref>Nam te <choice>
                                                 <orig>præcipuè</orig>

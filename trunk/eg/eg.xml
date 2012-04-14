@@ -10,7 +10,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Title</title>
+        <title>TEI Boilerplate Features</title>
       </titleStmt>
       <publicationStmt>
         <p>Publication Information</p>
@@ -31,8 +31,10 @@
           margin-left:3em;
           padding-left:1em;
           border-left: 1px solid gray;
-          margin-top:1em;
-          margin-bottom:1em;
+          margin-top:.75em;
+          margin-bottom:.75em;
+          padding-top:.75em;
+          padding-bottom:.75em;
         </rendition>
         
         <rendition corresp="#blockquote" scheme="css" scope="before">
@@ -162,25 +164,28 @@
       <div>
         <head>Nested <gi>div</gi> elements and headings</head>
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, urna eget venenatis mollis, ipsum tellus hendrerit tellus, sed vestibulum urna quam eget enim. Pellentesque odio lacus, laoreet quis commodo eu, vehicula congue purus. Aliquam urna urna, egestas eu feugiat sed, accumsan vitae dui. Pellentesque in felis sit amet ante tempus congue eu sit amet magna. Donec tincidunt magna id nunc consequat commodo. Phasellus vitae urna sapien. Nulla pellentesque suscipit suscipit. Quisque non sapien velit, in ornare massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non libero eget nunc semper euismod.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, urna eget venenatis mollis, ipsum tellus hendrerit tellus, sed vestibulum urna quam eget enim. Pellentesque odio lacus, laoreet quis commodo eu, vehicula congue purus. 
         </p>
         <div>
           <head>Nested <gi>div</gi> elements and headings</head>
           <p>
-            Vivamus rhoncus erat mi. Vestibulum sapien sapien, pulvinar id vehicula in, porta tristique ligula. Sed commodo diam sit amet dui posuere luctus. Morbi tempus sem adipiscing nisl molestie pharetra. Curabitur tellus magna, ultrices a porttitor eu, aliquam sit amet augue. Etiam tempus, odio ut posuere vestibulum, erat ipsum tincidunt ante, viverra suscipit mi eros eleifend diam. Donec at risus erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin mauris nulla, pulvinar a congue quis, imperdiet vehicula elit. Nullam porta, nulla quis aliquet rhoncus, neque dui varius massa, sit amet elementum nisi orci eget nibh. In hac habitasse platea dictumst. Donec massa nunc, aliquam eget faucibus nec, suscipit ac nibh. Nulla facilisi.
+            Vivamus rhoncus erat mi. Vestibulum sapien sapien, pulvinar id vehicula in, porta tristique ligula. Sed commodo diam sit amet dui posuere luctus. Morbi tempus sem adipiscing nisl molestie pharetra. 
           </p>
           <div>
             <head>Nested <gi>div</gi> elements and headings</head>
             <p>
-              Sed fermentum dui vel enim consectetur malesuada. Sed a mi felis. Curabitur sit amet mi augue, ac volutpat leo. Maecenas vitae condimentum orci. Morbi non quam sed neque tincidunt tempus posuere sit amet purus. Sed ornare, nibh sit amet vehicula dapibus, nisi est rhoncus orci, at tincidunt augue velit eu nisl. Integer ultrices congue ante at volutpat. Vivamus ac felis sit amet urna iaculis aliquet nec sit amet massa. Etiam cursus iaculis felis, in adipiscing erat ornare eu. Duis dui libero, imperdiet in lobortis non, ullamcorper quis risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu eros enim, eu commodo elit.
+              Sed fermentum dui vel enim consectetur malesuada. Sed a mi felis. Curabitur sit amet mi augue, ac volutpat leo. Maecenas vitae condimentum orci. Morbi non quam sed neque tincidunt tempus posuere sit amet purus.
             </p>
             <div>
               <head>Nested <gi>div</gi> elements and headings</head>
               <div>
                 <head>Nested <gi>div</gi> elements and headings</head>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, urna eget venenatis mollis, ipsum tellus hendrerit tellus, sed vestibulum urna quam eget enim. Pellentesque odio lacus, laoreet quis commodo eu, vehicula congue purus. Aliquam urna urna, egestas eu feugiat sed, accumsan vitae dui. Pellentesque in felis sit amet ante tempus congue eu sit amet magna. Donec tincidunt magna id nunc consequat commodo. Phasellus vitae urna sapien. Nulla pellentesque suscipit suscipit. Quisque non sapien velit, in ornare massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non libero eget nunc semper euismod.
-                </p>
+                <div>
+                  <head>Nested <gi>div</gi> elements and headings</head>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, urna eget venenatis mollis, ipsum tellus hendrerit tellus, sed vestibulum urna quam eget enim. Pellentesque odio lacus, laoreet quis commodo eu, vehicula congue purus. Aliquam urna urna, egestas eu feugiat sed, accumsan vitae dui.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -253,9 +258,7 @@
       <div>
         <head>Verse inside <gi>Floating Text</gi></head>
         <floatingText xml:id="acs0000001-05-i002-content" n="Grand Chorus of Birds from Aristophanes" type="poem">
-          <index corresp="acs0000001-05-i002-md.xml" indexName="text"/>
-          
-          
+         <note>From <title><ref target="http://www.swinburneproject.org/">The Algernon Charles Swinburne Project</ref>.</title></note>
           <front xml:id="front002">
             <pb n="40" facs="acs0000001-05-055"/>
             <titlePage type="full">
@@ -291,10 +294,10 @@
                 at least my main desire, in the undertaking of this brief adventure, was to renew as far
                 as possible for English ears the music of this resonant and triumphant metre, which goes
                 ringing at full gallop as of horses who <cit rendition="#block">
-                  <quote rendition="#block" rend="margin-left:5em;">
+                  <quote rendition="#blockquote" rend="margin-left:5em;">
                     <lg>
-                      <l part="F" rendition="#l-indent-06"><q next="#e171f002" rendition="#dq">dance as ’twere to the music</q></l>
-                      <l part="I"><q prev="#e170f002" rendition="#dq">Their own hoofs make.</q></l>
+                      <l part="F" rendition="#l-indent-06"><q next="#e171f002">dance as ’twere to the music</q></l>
+                      <l part="I"><q prev="#e170f002">Their own hoofs make.</q></l>
                     </lg>
                   </quote>
                 </cit> I would not seem over curious in search of an apt or inapt quotation: but nothing

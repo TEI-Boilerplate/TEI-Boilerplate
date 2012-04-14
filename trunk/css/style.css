@@ -1159,6 +1159,12 @@ q:before {
 q:after {
   content: close-quote;
 }
+q[next]:after {
+  content: "" !important;
+}
+q[prev]:before {
+  content: "" !important;
+}
 quotation {
   /* Empty Rule Set */
 }
@@ -1170,6 +1176,12 @@ quote:before {
 }
 quote:after {
   content: close-quote;
+}
+quote[next]:after {
+  content: "" !important;
+}
+quote[prev]:before {
+  content: "" !important;
 }
 /* r */
 rdg {
@@ -1374,6 +1386,12 @@ soCalled:before {
 soCalled:after {
   content: close-quote;
 }
+soCalled[next]:after {
+  content: "" !important;
+}
+soCalled[prev]:before {
+  content: "" !important;
+}
 socecStatus {
   /* Empty Set Rule */
 }
@@ -1559,6 +1577,12 @@ TEI title[level=a]:before {
 }
 TEI title[level=a]:after {
   content: close-quote;
+}
+TEI title[level=a][next]:after {
+  content: "" !important;
+}
+TEI title[level=a][prev]:before {
+  content: "" !important;
 }
 titleStmt > title {
   display: block;

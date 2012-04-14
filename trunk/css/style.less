@@ -960,12 +960,17 @@ q {
 q:before {content: open-quote;}
 q:after {content: close-quote;}
 
+q[next]:after {content: "" !important;}
+q[prev]:before {content: "" !important;}
+
 quotation {/* Empty Rule Set */}
 quote {
 	.quotes-us;
 }
 quote:before {content: open-quote;}
 quote:after {content: close-quote;}
+quote[next]:after {content: "" !important;}
+quote[prev]:before {content: "" !important;}
 
 /* r */
 rdg {/*perhaps choice */}
@@ -1076,6 +1081,8 @@ margin-top:2em;
 soCalled {.quotes-us;}
 soCalled:before {content: open-quote;}
 soCalled:after {content: close-quote;}
+soCalled[next]:after {content: "" !important;}
+soCalled[prev]:before {content: "" !important;}
 
 socecStatus {/* Empty Set Rule */}
 
@@ -1223,6 +1230,8 @@ TEI title[level=a] {
 
 TEI title[level=a]:before {content: open-quote;}
 TEI title[level=a]:after {content: close-quote;}
+TEI title[level=a][next]:after {content: "" !important;}
+TEI title[level=a][prev]:before {content: "" !important;}
 
 
 titleStmt > title {

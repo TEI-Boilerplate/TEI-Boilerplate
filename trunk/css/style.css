@@ -341,6 +341,7 @@ border-top:2px solid @border-color;
 */
 
   border: 1px solid black;
+  width: 100%;
 }
 cell[role=label] {
   font-weight: bold;
@@ -590,19 +591,20 @@ TEI head {
   font-weight: normal;
 }
 div > head {
-  font-size: 150%;
+  font-size: 170%;
+  text-indent: -0.5em;
 }
 div > div > head {
-  font-size: 140%;
+  font-size: 155%;
 }
 div > div > div > head {
-  font-size: 130%;
+  font-size: 140%;
 }
 div > div > div > div > head, list > head {
-  font-size: 120%;
+  font-size: 130%;
 }
 div > div > div > div > div > head {
-  font-size: 115%;
+  font-size: 120%;
 }
 div > div > div > div > div > div head {
   font-size: 110%;
@@ -1030,15 +1032,12 @@ pause {
   /* Empty Rule Set*/
 }
 pb {
-  /*display: block;*/
-
-  display: inline;
-  /* border: 1px solid black; */
-
+  display: block;
   width: 100%;
   text-align: right;
   color: gray;
   margin: 2em 0 2em 0;
+  font-size: 11pt;
 }
 /*
 pb:before {
@@ -1563,7 +1562,10 @@ TEI title[level=a]:after {
 }
 titleStmt > title {
   display: block;
-  font-weight: bold;
+  font-family: Arvo, sans-serif;
+  font-weight: normal;
+  font-weight: bold !important;
+  font-size: 150%;
 }
 titleStmt > editor:before {
   content: "Edited by ";

@@ -359,6 +359,7 @@ cell {
 display:table-cell;
 padding:1em 1.5em 1em 1em;
 .table-border;
+width:100%;
 }
 
 
@@ -609,23 +610,24 @@ display:block;
 }
 
 div > head {
-font-size: 150%
+font-size: 170%;
+text-indent:-.5em;
 }
 
 div > div > head {
-font-size: 140%;
+font-size: 155%;
 }
 
 div > div > div > head {
-font-size: 130%;
+font-size: 140%;
 }
 
 div > div > div > div > head, list > head {
-font-size: 120%;
+font-size: 130%;
 }
 
 div > div > div > div > div > head {
-font-size: 115%;
+font-size: 120%;
 }
 
 div > div > div > div > div > div head {
@@ -889,13 +891,12 @@ particDesc {/* Empty Rule Set */}
 pause {/* Empty Rule Set*/}
 
 pb {
-  /*display: block;*/
-  display: inline;
- /* border: 1px solid black; */
+  display: block;
   width: 100%;
   text-align: right;
   color: gray;
   margin: 2em 0 2em 0;
+  font-size:11pt;
 }
 
 /*
@@ -1225,7 +1226,9 @@ TEI title[level=a]:after {content: close-quote;}
 
 titleStmt > title {
 display:block;
-font-weight:bold;
+.headFont;
+font-weight:bold !important;
+font-size:150%;
 }
 
 titleStmt > editor:before {

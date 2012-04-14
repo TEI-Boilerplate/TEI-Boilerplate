@@ -1215,6 +1215,13 @@ timeline {}
 /* Need TEI ancestor to distinguish TEI title from HTML title */
 title {}
 TEI title {display:inline;}
+TEI title[level=a] {
+	.quotes-us;
+}
+
+TEI title[level=a]:before {content: open-quote;}
+TEI title[level=a]:after {content: close-quote;}
+
 
 titleStmt > title {
 display:block;

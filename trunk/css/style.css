@@ -1552,6 +1552,15 @@ textDesc {
 TEI title {
   display: inline;
 }
+TEI title[level=a] {
+  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+}
+TEI title[level=a]:before {
+  content: open-quote;
+}
+TEI title[level=a]:after {
+  content: close-quote;
+}
 titleStmt > title {
   display: block;
   font-weight: bold;

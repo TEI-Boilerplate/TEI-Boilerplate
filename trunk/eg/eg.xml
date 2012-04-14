@@ -398,12 +398,9 @@
       </div>
       <div>
         <head>Automatic generation of quotation marks for nested <gi>q</gi>, <gi>quote</gi>, and <gi>soCalled</gi></head>
-        <p>This paragraph contains a <quote>quotation with a nested <q><gi>q</gi></q> and a <q> <soCalled>soCalled with a q</soCalled></q></quote>
+        <p>Michael said, <q>Those so-called <soCalled>superheroes</soCalled> just screamed, <q>Avengers Assemble!</q></q>
         </p>
-          
-          
       </div>
-      
     </body>
   </text>
 </TEI>

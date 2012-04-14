@@ -214,16 +214,25 @@
 
 	<xsl:template name="rendition2style">
 		<style>
-            <xsl:for-each select="//tei:rendition[@scheme = 'css']">
-                <xsl:value-of select="concat('[rendition~=&quot;#',@xml:id,'&quot;]')"/>
-                <xsl:if test="@scope">
-                	<xsl:value-of select="concat(':',@scope)"/>
-                </xsl:if>
-               	<xsl:value-of select="concat('{ ',normalize-space(.),'}&#x000A;')"/>
-            </xsl:for-each>
+            <xsl:apply-templates select="//tei:rendition"/>
         </style>
 	</xsl:template>
-
+	
+	<xsl:template match="tei:rendition[@xml:id and @scheme = 'css']">
+		<xsl:value-of select="concat('[rendition~=&quot;#',@xml:id,'&quot;]')"/>
+		<xsl:if test="@scope">
+			<xsl:value-of select="concat(':',@scope)"/>
+		</xsl:if>
+		<xsl:value-of select="concat('{ ',normalize-space(.),'}&#x000A;')"/>
+	</xsl:template>
+	
+	<xsl:template match="tei:rendition[not(@xml:id) and @scheme = 'css' and @corresp]">
+		<xsl:value-of select="concat('[rendition~=&quot;#',substring-after(@corresp,'#'),'&quot;]')"/>
+		<xsl:if test="@scope">
+			<xsl:value-of select="concat(':',@scope)"/>
+		</xsl:if>
+		<xsl:value-of select="concat('{ ',normalize-space(.),'}&#x000A;')"/>
+	</xsl:template>
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
 			<xd:p>Template for adding footer to html document.</xd:p>

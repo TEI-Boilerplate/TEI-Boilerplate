@@ -5,17 +5,50 @@
 /* @namespace with prefix, as below, throws and error in less. */
 /* @namespace html "http://www.w3.org/1999/xhtml"; */
 /* Less variables */
-.quotes-us {
-  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+/* Standard Theme */
+.head-font {
+  font-family: Arvo, sans-serif;
+  font-weight: normal;
+}
+/* Terminal Theme */
+/*
+@body-font: Monaco, "Andale Mono", Courier, monospace;
+@background-color:black;
+@color:#00FD00;
+@link-color:#000FFF;
+@border-color:#aaa;
+.head-font {
+	font-family: Monaco, "Andale Mono", Courier, monospace;
+	font-weight: normal;
+}
+*/
+/* Sleepy Time Theme */
+/*
+@body-font: Cochin, Georgia, Serif;
+@background-color:black;
+@color:white;
+@link-color:#5f0000;
+@border-color:gray;
+.head-font {
+	font-family: Arvo, sans-serif;
+	font-weight: normal;
+}
+*/
+/* US Style Quotes */
+.quotesUS {
+  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d";
+}
+/* UK-Style Quotes */
+.quotesUK {
+  quotes: "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+}
+.quotes {
+  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d";
 }
 .block-margins {
   display: block;
   margin-top: 1em;
   margin-bottom: 1em;
-}
-.headFont {
-  font-family: Arvo, sans-serif;
-  font-weight: normal;
 }
 .box-shadow {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
@@ -44,7 +77,7 @@ border-left: 2px solid @border-color;
 border-top:2px solid @border-color;
 */
 
-  border: 1px solid black;
+  border: 1px dotted #aaaaaa;
 }
 /* Choice elements */
 choice abbr + expan:before,
@@ -340,7 +373,7 @@ border-left: 2px solid @border-color;
 border-top:2px solid @border-color;
 */
 
-  border: 1px solid black;
+  border: 1px dotted #aaaaaa;
   width: 100%;
 }
 /* for cell or row with @role = label */
@@ -1152,7 +1185,7 @@ purpose {
 }
 /* q */
 q {
-  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d";
 }
 q:before {
   content: open-quote;
@@ -1170,7 +1203,7 @@ quotation {
   /* Empty Rule Set */
 }
 quote {
-  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d";
 }
 quote:before {
   content: open-quote;
@@ -1379,7 +1412,7 @@ signed {
 
 }
 soCalled {
-  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d";
 }
 soCalled:before {
   content: open-quote;
@@ -1571,7 +1604,7 @@ TEI title {
   display: inline;
 }
 TEI title[level=a] {
-  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+  quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d";
 }
 TEI title[level=a]:before {
   content: open-quote;

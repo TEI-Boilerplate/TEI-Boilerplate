@@ -224,12 +224,13 @@
 				<xd:desc>
 					<xd:p>Javascript for the note boxes</xd:p>
 				</xd:desc>
+			</xd:doc>
 				<script src="../js/dw_event.js" type="text/javascript"/>
 				<script src="../js/dw_viewport.js" type="text/javascript"/>
 				<script src="../js/dw_tooltip.js" type="text/javascript"/>
 				<script src="../js/dw_tooltip_aux.js" type="text/javascript"/>
 				<script type="text/javascript">
-			</xd:doc><xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+			<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 				<xd:desc>
 					<xd:p> Content for the note boxes.</xd:p>
 				</xd:desc>
@@ -237,7 +238,7 @@
 			dw_Tooltip.content_vars = {
 			<xsl:for-each select="//tei:note">	<xsl:value-of select="@xml:id"/>: '<xsl:value-of select="."/>',	</xsl:for-each>
 			}
-			
+				</script>
 			<xsl:call-template name="rendition2style"/>
 			<title/>
 		</head>

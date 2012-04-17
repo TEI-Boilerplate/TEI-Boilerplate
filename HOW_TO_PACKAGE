@@ -1,0 +1,11 @@
+How to Package TEI Boilerplate
+
+1. Check out a working copy of the trunk
+2. Make a copy of the trunk
+3. Rename copy to "tei_boilerplate"
+4. Go through each folder and subfolder in tei_boilerplate and delete .svn folders
+5. Delete all examples from the eg folder, except for eg.xml
+6. Zip up the the tei_boilerplate folder
+7. Rename the zip to tei_boilerplate_version, where version is the version number, such as tei_boilerplate_1.0.0
+
+

@@ -783,22 +783,41 @@ item > list {
 	margin-top:0;
 }
 
-/* Match only lists that are children or grandchildren of 
+/* Match only lists that are descendants of 
 text. Otherwise they show up in the header. */
-text list[type = "simple"], text * list[type = "simple"] {
+text list[type=simple] {
 list-style-type:none;
 }
 
-text list[type = "bulleted"], text * list[type = "bulleted"] {
+text list[type=bulleted] {
 list-style-type:disc;
 }
 
-text list[type = "ordered"], text * list[type = "ordered"] {
-list-style-type:decimal;
+text list[type=ordered] {
+list-style-type:none;
+counter-reset: items 0;
 }
 
-text list[type = "gloss"], text * list[type = "gloss"] {
+text list[type=ordered] > item {
+display:list-item;
+margin-left:0;	
+}
+
+item > list[type=ordered] {
+margin-left:1em;
+}
+
+text list[type=ordered] > item:before {
+counter-increment:items 1;
+content: counter(items, decimal) ". ";
+}
+
+text list[type=gloss] {
 list-style-type: none;
+}
+
+item > list[type=ordered] {
+margin-left:1em;
 }
 
 listBibl {}

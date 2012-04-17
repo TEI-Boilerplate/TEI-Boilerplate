@@ -97,17 +97,6 @@
 		<xsl:attribute name="id">
 			<xsl:value-of select="."/>
 		</xsl:attribute>
-		
-		<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
-			<xd:desc>
-				<xd:p>Inserts and formats the class attribute for notese</xd:p>
-			</xd:desc>
-		</xd:doc>
-		<xsl:for-each select="//tei:note">
-			<xsl:attribute name="class">
-				<xsl:value-of select="concat('showTip ',//@xml:id)"/>
-			</xsl:attribute>
-		</xsl:for-each>
 	</xsl:template>
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
@@ -219,26 +208,6 @@
 					$.unblockUI();				
 				});
 			</script>
-			
-			<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
-				<xd:desc>
-					<xd:p>Javascript for the note boxes</xd:p>
-				</xd:desc>
-			</xd:doc>
-				<script src="../js/dw_event.js" type="text/javascript"/>
-				<script src="../js/dw_viewport.js" type="text/javascript"/>
-				<script src="../js/dw_tooltip.js" type="text/javascript"/>
-				<script src="../js/dw_tooltip_aux.js" type="text/javascript"/>
-				<script type="text/javascript">
-			<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
-				<xd:desc>
-					<xd:p> Content for the note boxes.</xd:p>
-				</xd:desc>
-			</xd:doc>
-			dw_Tooltip.content_vars = {
-			<xsl:for-each select="//tei:note">	<xsl:value-of select="@xml:id"/>: '<xsl:value-of select="."/>',	</xsl:for-each>
-			}
-				</script>
 			<xsl:call-template name="rendition2style"/>
 			<title/>
 		</head>

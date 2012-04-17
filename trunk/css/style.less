@@ -139,12 +139,7 @@ choice {
 	}
 }
 
-/* Note boxes */
-div#tipDiv {
-    color:#000; font-size:11px; line-height:1.2;
-    background-color:#E1E5F1; border:1px solid #667295; 
-    width:210px; padding:4px;
-}
+
 /* A */
 ab {
 .block-margins;
@@ -891,6 +886,22 @@ node {.hide}
 normalization {/* Empty Rule Set */}
 note {
 font-size:0px;
+}
+note:hover {
+display:block;
+margin:1.5em auto 1.5em auto;
+padding:.5em 1.5em 1.5em 1.5em;
+border:1px solid black;
+border-radius: 15px;
+width: 325px; 
+position: relative; 
+border: 1px solid #aaa;
+background: #fafafa;
+/* reset text-indent for note with <l> ancestors. */
+text-indent:0;
+font-size:85%;
+text-align:justify;
+.box-shadow;
 }
 note::before {
 content: "*";

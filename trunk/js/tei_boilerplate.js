@@ -43,3 +43,7 @@ if(document.addEventListener){
 	document.attachEvent( "onreadystatechange", init);
 	window.attachEvent( "onload", init);
 }
+
+function switchThemes(theme){
+	document.getElementById('maincss').href=theme;
+}

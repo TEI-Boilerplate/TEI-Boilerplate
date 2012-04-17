@@ -27,8 +27,9 @@
 		<html>
 			<xsl:call-template name="htmlHead"/>
 			<body>
-				<xsl:call-template name="pbToggleBox"/>
+				
 				<div id="tei_wrapper">
+					<xsl:call-template name="pbToggleBox"/>
 					<xsl:apply-templates/>
 				</div>
 				<xsl:copy-of select="$htmlFooter"/>
@@ -195,7 +196,7 @@
 		<head>
 			<meta charset="UTF-8"/>
 
-			<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+			<link id="maincss" rel="stylesheet" type="text/css" href="../css/style.css"/>
 			<link rel="stylesheet" type="text/css" href="../css/custom.css"/>
 			<script type="text/javascript" src="../js/jquery/jquery.min.js"/>
 			<script type="text/javascript" src="../js/jquery/plugins/jquery.blockUI.js"/>
@@ -251,6 +252,14 @@
 		<div id="pbToggler" style="left: 25px; top: 25px; position: fixed; font-size: small">
 			<label for="pbToggle">Hide page breaks</label>
 			<input type="checkbox" id="pbToggle" /> 
+			<div>
+				<h3>Themes:</h3>
+				<ul>
+					<li><a href="#default-theme" onclick="switchThemes('../css/style.css');">Default</a></li>
+					<li><a href="#sleepy-theme" onclick="switchThemes('../css/sleepy.css');">Sleepy Time</a></li>
+					<li><a href="#terminal_theme" onclick="switchThemes('../css/terminal.css');">Terminal</a></li>
+				</ul>
+			</div>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

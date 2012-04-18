@@ -23,7 +23,7 @@
 
 	<xsl:key name="ids" match="//*" use="@xml:id"/>
 
-	<xsl:template match="/">
+	<xsl:template match="/" name="htmlShell">
 		<html>
 			<xsl:call-template name="htmlHead"/>
 			<body>

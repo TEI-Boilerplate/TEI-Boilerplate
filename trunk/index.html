@@ -58,7 +58,11 @@ h3 {
 
 <h2>Practical Benefits</h2>
 
-<p>XSLT is far more powerful than CSS. It can manipulate data in ways that CSS cannot. XSLT can radically transform documents.  And XSLT can combine multiple data sources into a single output file or multiple output files. We at TEI Boilerplate love XSLT. But the power of XSLT comes at a cost. It is a far more complex language than CSS and it has a far steeper learning curve. Many in the the digital humanities and TEI communities have a reasonably thorough working knowledge of CSS. A much smaller number of individuals might characterize themselves as being expert in XSLT. </p>
+<p>XSLT is far more powerful than CSS. It can manipulate data in ways that CSS cannot. XSLT can radically transform documents and can combine multiple XML data sources into a single output file or multiple output files. We at TEI Boilerplate love XSLT. But the power of XSLT comes at a cost. XSLT is a far more complex language than CSS, and it has a far steeper learning curve. Many in the the digital humanities and TEI communities have a reasonably thorough working knowledge of CSS. A much smaller number of individuals might characterize themselves as being expert in XSLT. </p>
+
+<p>On the other hand, while XSLT is more powerful—more functional and capable—than CSS for manipulating XML, JavaScript is an extremely capable language for doing fancy things with XML content. Javascript, JavaScript frameworks like JQuery and EXT JS, and the major browsers provide excellent support for manipulating the DOM (Document Object Model) of the web page. With TEI Boilerplate, the TEI document becomes part of that DOM. Thus with TEI Boilerplate,  JavaScript may be used to perform more radical transformations, movements, and other manipulations of the TEI/XML content than can be achieved with CSS alone. Our examples.xml demo file includes a simple example in the "Toolbox," with a check box that hides and reveals the page breaks. The effect is achieved using JavaScript to apply CSS to the TEI <code>&lt;pb&gt;</code> elements, accessed through the DOM.</p>
+
+<p>TEI Boilerplate gives HTML5/JavaScript/CSS documents direct access to original TEI content, and it gives TEI documents direct access to the power of and support for HTML5 and JavaScript and CSS, the dominant document format, programming language, and styling language of the Web. TEI Boilerplate aims for simplicity and elegance, but it also facilitates complexity, further development, and innovation by exposing TEI content directly to capabilities of JavaScript, the many powerful JavaScript frameworks, and CSS.</p>
 
 <p>In teaching contexts, TEI Boilerplate may be a useful solution. Students and advanced scholars new to the TEI are rightly excited and enthused as they encode their first documents and experience the expressive power of TEI encoding. But too often that initial excitement and enthusiasm is dissipated when they inquire about how to publish their documents on the Web and are confronted with an unfamiliar programming language, XSLT, and other details about server side processing, transformation engines, and so on. With TEI Boilerplate, such individuals can add one line of code to their documents and achieve reasonably good display of their document in a modern Web browser. And that display may be tweaked and customized using CSS, a technology with which many are familiar.</p>
 
@@ -68,7 +72,7 @@ h3 {
 
 <p>The power of TEI lies in its the richness and expressiveness of its vocabulary. But much of that richness and expressiveness is lost in the translation to HTML. TEI Boilerplate largely preserves the integrity of the TEI document. And since the original TEI document is delivered directly to the browser, a user simply needs to perform the "Save As…" command to save the original TEI file to her desktop or mobile device.</p>
 
-<p>Scholars labor over the intricate encoding of TEI documents, but then when those documents need to be rendered in a browser, they are thrown out and replaced by a bastardized HTML surrogate. The styling and aesthetic presentation of the document is targeted not at the intricately encoded TEI document, but at the HTML surrogate. Similarly, if one wishes to manipulate document using javascript, one may manipulate the TEI directly. Scholars typically are intimately familiar with their TEI documents, they may be far less familiar with whatever HTML is derived from their TEI, especially if they have not written their own XSLT to produce the transformation.</p>
+<p>Scholars labor over the intricate encoding of TEI documents, but then when those documents need to be rendered in a browser, they are thrown out and replaced by a bastardized HTML surrogate. The styling and aesthetic presentation of the document is targeted not at the intricately encoded TEI document, but at the HTML surrogate. Similarly, if one wishes to manipulate document using JavaScript, one may manipulate the TEI directly. Scholars typically are intimately familiar with their TEI documents, they may be far less familiar with whatever HTML is derived from their TEI, especially if they have not written their own XSLT to produce the transformation.</p>
 
 <p>TEI Boilerplate keeps the TEI document front and center throughout the publication process.</p>
 
@@ -113,7 +117,6 @@ h3 {
 <li>Edit the custom.css file in the css folder. This file is included by default by the HTML shell and is meant for your customizations.</li>
 <li>Edit style.css. We do not recommend this method, as you will have to keep track of your customizations and add merge them with future versions of TEI Boilerplate.</li>
 </ol>
-
 </div>
 </body>
 </html>

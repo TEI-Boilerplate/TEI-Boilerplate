@@ -27,9 +27,8 @@
 		<html>
 			<xsl:call-template name="htmlHead"/>
 			<body>
-				
+				<xsl:call-template name="teibpToolbox"/>
 				<div id="tei_wrapper">
-					<xsl:call-template name="pbToggleBox"/>
 					<xsl:apply-templates/>
 				</div>
 				<xsl:copy-of select="$htmlFooter"/>
@@ -248,8 +247,9 @@
 		</div>
 	</xsl:variable>
 
-	<xsl:template name="pbToggleBox">
-		<div id="pbToggler" style="left: 25px; top: 25px; position: fixed; font-size: small">
+	<xsl:template name="teibpToolbox">
+		<div id="teibpToolbox">
+			<h1>Toolbox</h1>
 			<label for="pbToggle">Hide page breaks</label>
 			<input type="checkbox" id="pbToggle" /> 
 			<div>

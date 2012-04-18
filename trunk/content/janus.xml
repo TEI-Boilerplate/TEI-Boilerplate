@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/style.css"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?>
+<TEI
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:math="http://www.w3.org/1998/Math/MathML"
+  xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Title</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Publication Information</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Information about the source</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>An <choice><abbr>abbr.</abbr><expan>abbreviation</expan></choice> can be marked thus.</p>
+      <p>An <choice><expan>abbreviation</expan><abbr>abbr.</abbr></choice> can be marked thus.</p>
+      <p><choice><sic>Soemtimes</sic><corr>Sometimes</corr></choice> things get misspelled and you want to retain the original spelling.</p>
+      <p><choice><corr>Sometimes</corr><sic>Soemtimes</sic></choice> things get misspelled and you want to replace the original spelling.</p>
+      <p>Chaucer's poem begins in <choice><orig>Aprille</orig><reg>April</reg></choice>.</p>
+      <p>Chaucer's poem begins in <choice><reg>April</reg><orig>Aprille</orig></choice>.</p>
+    </body>
+  </text>
+</TEI>

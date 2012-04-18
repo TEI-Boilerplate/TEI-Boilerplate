@@ -13,6 +13,17 @@
 	</xd:doc>
 
 	<xsl:output encoding="UTF-8" method="xml" omit-xml-declaration="yes"/>
+	
+	<!-- parameters for file paths or URLs -->
+	<xsl:param name="teibpCSS" select="'../css/style.css'"/>
+	<xsl:param name="customCSS" select="'../css/custom.css'"/>
+	<xsl:param name="jqueryJS" select="'../js/jquery/jquery.min.js'"/>
+	<xsl:param name="jqueryBlockUIJS" select="'../js/jquery/plugins/jquery.blockUI.js'"/>
+	<xsl:param name="teibpJS" select="'../js/tei_boilerplate.js'"/>
+	
+	<xsl:param name="theme.default" select="'../css/style.css'"/>
+	<xsl:param name="theme.sleepytime" select="'../css/sleepy.css'"/>
+	<xsl:param name="theme.terminal" select="'../css/terminal.css'"/>
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
@@ -195,11 +206,11 @@
 		<head>
 			<meta charset="UTF-8"/>
 
-			<link id="maincss" rel="stylesheet" type="text/css" href="../css/style.css"/>
-			<link rel="stylesheet" type="text/css" href="../css/custom.css"/>
-			<script type="text/javascript" src="../js/jquery/jquery.min.js"/>
-			<script type="text/javascript" src="../js/jquery/plugins/jquery.blockUI.js"/>
-			<script type="text/javascript" src="../js/tei_boilerplate.js"/>
+			<link id="maincss" rel="stylesheet" type="text/css" href="{$teibpCSS}"/>
+			<link rel="stylesheet" type="text/css" href="{$customCSS}"/>
+			<script type="text/javascript" src="{$jqueryJS}"/>
+			<script type="text/javascript" src="{$jqueryBlockUIJS}"/>
+			<script type="text/javascript" src="{$teibpJS}"/>
 			
 			<script type="text/javascript">
 				$(document).ready(function() {
@@ -254,6 +265,7 @@
 			<input type="checkbox" id="pbToggle" /> 
 			<div>
 				<h3>Themes:</h3>
+
 				<select id="themeBox" onchange="switchThemes();">
 					<option value="style.css">Default</option>
 					<option value="sleepy.css">Sleepy Time</option>

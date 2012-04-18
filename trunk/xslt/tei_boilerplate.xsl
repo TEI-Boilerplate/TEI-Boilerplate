@@ -254,12 +254,11 @@
 			<input type="checkbox" id="pbToggle" /> 
 			<div>
 				<h3>Themes:</h3>
-				<ul>
-					<li><a href="#default-theme" onclick="switchThemes('../css/style.css');">Default</a></li>
-					<li><a href="#sleepy-theme" onclick="switchThemes('../css/sleepy.css');">Sleepy Time</a></li>
-					<li><a href="#terminal_theme" onclick="switchThemes('../css/terminal.css');">Terminal</a></li>
-				</ul>
-			</div>
+				<select id="themeBox" onchange="switchThemes();">
+					<option value="style.css">Default</option>
+					<option value="sleepy.css">Sleepy Time</option>
+					<option value="terminal.css">Terminal</option>
+				</select>			</div>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

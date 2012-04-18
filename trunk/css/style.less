@@ -15,11 +15,13 @@
 @background-color:#EBEBEB;
 @color:#292929;
 @link-color:#5f0000;
-@border-color:#aaa;
+@border-color:#AAA;
+@note-background-color:#FAFAFA;
 .head-font {
 	font-family: Arvo, sans-serif;
 	font-weight: normal;
 }
+
 
 
 /* Terminal Theme */
@@ -28,13 +30,13 @@
 @background-color:black;
 @color:#00FD00;
 @link-color:#1CC0FA;
-@border-color:#aaa;
+@border-color:#222;
+@note-background-color:#111;
 .head-font {
 	font-family: Monaco, "Andale Mono", Courier, monospace;
 	font-weight: normal;
 }
 */
-
 
 /* Sleepy Time Theme */
 /*
@@ -42,7 +44,8 @@
 @background-color:black;
 @color:white;
 @link-color:#1CC0FA;
-@border-color:gray;
+@border-color:#222;
+@note-background-color:#111;
 .head-font {
 	font-family: Arvo, sans-serif;
 	font-weight: normal;
@@ -1393,6 +1396,30 @@ text-decoration:none;
 a:hover {
 color:@link-color;
 text-decoration:underline;
+}
+
+#teibpToolbox {
+	left: 68em; 
+	top: 25px; 
+	position: fixed; 
+	font-size: 70%;
+	margin-right:1em;
+	padding:1em;
+	border-radius:15px;
+	border: 1px solid @border-color;
+	background: @note-background-color;
+	font-family: Arvo, Verdana, sans-serif;
+	text-align:justify;
+	.box-shadow;
+	width:12em;
+}
+
+#teibpToolbox h1 {
+font-weight:bold;
+font-size:115%;
+margin-top:0;
+margin-bottom:.5em;
+border-bottom:1px solid @border-color;
 }
 
 /* loading animation */

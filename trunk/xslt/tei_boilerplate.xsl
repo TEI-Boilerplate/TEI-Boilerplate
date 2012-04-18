@@ -266,10 +266,10 @@
 			<div>
 				<h3>Themes:</h3>
 
-				<select id="themeBox" onchange="switchThemes();">
-					<option value="style.css">Default</option>
-					<option value="sleepy.css">Sleepy Time</option>
-					<option value="terminal.css">Terminal</option>
+				<select id="themeBox" onchange="switchThemes(this);">
+					<option value="{$theme.default}" >Default</option>
+					<option value="{$theme.sleepytime}">Sleepy Time</option>
+					<option value="{$theme.terminal}">Terminal</option>
 				</select>			</div>
 		</div>
 	</xsl:template>

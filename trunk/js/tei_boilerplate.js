@@ -44,8 +44,6 @@ if(document.addEventListener){
 	window.attachEvent( "onload", init);
 }
 
-function switchThemes(){
-	var themeBox = document.getElementById("themeBox");
-    var selectedTheme = "../css/" + themeBox.options[themeBox.selectedIndex].value;
-	document.getElementById('maincss').href = selectedTheme;
+function switchThemes(theme){
+	document.getElementById('maincss').href=theme.options[theme.selectedIndex].value;
 }

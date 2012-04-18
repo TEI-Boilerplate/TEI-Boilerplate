@@ -100,7 +100,7 @@ display:none;
 }
 
 .surround (@before, @after){
-	.label(@before);
+	content: @before;
 	&:after{
 		content: @after;
 	}

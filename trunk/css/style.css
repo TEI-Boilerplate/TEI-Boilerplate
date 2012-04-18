@@ -16,7 +16,8 @@
 @background-color:black;
 @color:#00FD00;
 @link-color:#1CC0FA;
-@border-color:#aaa;
+@border-color:#222;
+@note-background-color:#111;
 .head-font {
 	font-family: Monaco, "Andale Mono", Courier, monospace;
 	font-weight: normal;
@@ -28,7 +29,8 @@
 @background-color:black;
 @color:white;
 @link-color:#1CC0FA;
-@border-color:gray;
+@border-color:#222;
+@note-background-color:#111;
 .head-font {
 	font-family: Arvo, sans-serif;
 	font-weight: normal;
@@ -80,13 +82,12 @@ border-top:2px solid @border-color;
   border: 1px dotted #aaaaaa;
 }
 /* Choice elements */
-choice abbr + expan:before,
-choice expan + abbr:before,
-choice sic + corr:before,
-choice corr + sic:before,
-choice orig + reg:before,
-choice reg + orig:before {
-  font-weight: bold;
+choice abbr + expan,
+choice expan + abbr,
+choice sic + corr,
+choice corr + sic,
+choice orig + reg,
+choice reg + orig {
   content: " (";
 }
 choice abbr + expan:after,
@@ -156,7 +157,8 @@ addrLine {
 address {
   /* Empty Rule Set */
 }
-address[rend~="block"], addresss[rendition~="#block"] {
+address[rend~="block"],
+addresss[rendition~="#block"] {
   display: block;
 }
 adminInfo {
@@ -256,7 +258,8 @@ back {
 bibl {
   /* Empty Rule Set */
 }
-bibl[rend~="block"], bibl[rendition~="#block"] {
+bibl[rend~="block"],
+bibl[rendition~="#block"] {
   display: block;
   padding-left: 2em;
   text-indent: -2em;
@@ -634,7 +637,8 @@ div > div > head {
 div > div > div > head {
   font-size: 140%;
 }
-div > div > div > div > head, list > head {
+div > div > div > div > head,
+list > head {
   font-size: 130%;
 }
 div > div > div > div > div > head {
@@ -1763,7 +1767,9 @@ html {
   padding-top: .5em;
   font-size: 12pt;
 }
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
   color: #5f0000;
   text-decoration: none;
 }

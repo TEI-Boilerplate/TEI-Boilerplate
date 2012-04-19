@@ -8,14 +8,13 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 		<fileDesc>
 			<titleStmt>
 				<title type="main">TEI Boilerplate</title>
-				<title type="sub">A default template for TEI P5</title>
-				<author>John A. Walsh</author>
+				<title type="sub">A template for TEI P5</title>
 			</titleStmt>
 			<publicationStmt>
 				<pubPlace>Bloomington, IN</pubPlace>
 				<publisher>Digital Culture Lab, School of Library &amp; Information Science, Indiana University</publisher>
 				<availability status="free">
-					<p>Copyright © John A. Walsh.</p>
+					<p>Copyright © 2012.</p>
 					<p>
 					<!--
 					<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">TEI Boilerplate</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="teiboilerplate.slis.indiana.edu" property="cc:attributionName" rel="cc:attributionURL">John A. Walsh</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.-->
@@ -52,194 +51,170 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 			-->
 			<!-- The loosely structured <bibl> is also an option -->
 			<!--
-			<bibl/>
+			<bibl></bibl>
 			-->
 			</sourceDesc>
 		</fileDesc>
 		<encodingDesc>
 			<tagsDecl>
-				<rendition n="mono" xml:id="mono" scheme="css">
-					font-family: Courier, monospace
+				<rendition xml:id="block" scheme="css">
+					display:block;
+				</rendition> 
+				
+				<rendition xml:id="blockquote" scheme="css">
+					display:block;
+					font-size:90%;
+					margin-left:3em;
+					padding-left:1em;
+					border-left: 1px solid gray;
+					margin-top:.75em;
+					margin-bottom:.75em;
+					padding-top:.75em;
+					padding-bottom:.75em;
 				</rendition>
-				<!-- font-size -->
-				<rendition n="italic" xml:id="i" scheme="css">
-					font-style: italic;
+				
+				<rendition corresp="#blockquote" scheme="css" scope="before">
+					<!-- This turns off the default generated quotes
+          for block quotes. -->
+					content:"" !important;
 				</rendition>
-				<rendition n="normal" xml:id="n" scheme="css">
-					font-style: normal;
+				
+				<rendition corresp="#blockquote" scheme="css" scope="after">
+					<!-- This turns off the default generated quotes
+          for block quotes. -->
+					content:"" !important;
 				</rendition>
-				<!-- font-variant -->
-				<rendition n="small caps" xml:id="small_caps" scheme="css">
-					font-variant: small-caps;
+				
+				<rendition xml:id="b" scheme="css">
+					font-weight:bold;
+				</rendition> 
+				
+				<rendition xml:id="u" scheme="css">
+					text-decoration:underline;
+				</rendition> 
+				
+				<rendition xml:id="i" scheme="css">
+					font-style:italic;
+				</rendition> 
+				
+				
+				
+				<rendition xml:id="mono" scheme="css">
+					
 				</rendition>
-				<!-- font-weight -->
-				<rendition n="bold" xml:id="b" scheme="css">
-					font-weight: bold;
+				
+				<rendition xml:id="center" scheme="css">
+					display:block;
+					text-align:center;
+					margin-left:auto;
+					margin-right:auto;
 				</rendition>
-				<!-- text-decoration -->
-				<rendition n="strike through" xml:id="strike" scheme="css">
-					text-decoration: line-through;
+				
+				<rendition xml:id="center-block" scheme="css">
+					display:block;
+					margin-left:auto;
+					margin-right:auto;
 				</rendition>
-				<rendition n="underline" xml:id="u" scheme="css">
-					text-decoration: underline;
+				
+				<rendition xml:id="l-indent-01" scheme="css">
+					padding-left:4em;
+					text-indent:-2em;
 				</rendition>
-				<rendition n="double underline" xml:id="uu" scheme="css">
-					text-decoration: underline; border-bottom: 1px solid black;
+				
+				<rendition xml:id="l-indent-02" scheme="css">
+					padding-left:6em;
+					text-indent:-2em;
 				</rendition>
-				<rendition n="block" xml:id="block" scheme="css">
-					display: block; margin: 4em;
+				
+				<rendition xml:id="l-indent-03" scheme="css">
+					padding-left:8em;
+					text-indent:-2em;
 				</rendition>
-				<rendition n="blockquote" xml:id="blockquote" scheme="css">
-					display: block; margin-left:4em;
+				
+				<rendition xml:id="l-indent-04" scheme="css">
+					padding-left:10em;
+					text-indent:-2em;
 				</rendition>
-				<!-- text-transform -->
-				<rendition n="uppercase" xml:id="upper_case" scheme="css">
-					text-transform: uppercase;
+				
+				<rendition xml:id="l-indent-05" scheme="css">
+					padding-left:12em;
+					text-indent:-2em;
 				</rendition>
-				<!-- text-align -->
-				<rendition n="align center" xml:id="center" scheme="css">
-					text-align: center;
+				
+				<rendition xml:id="l-indent-06" scheme="css">
+					padding-left:14em;
+					text-indent:-2em;
 				</rendition>
-				<rendition n="align right" xml:id="right" scheme="css">
-					text-align: right;
+				
+				<rendition xml:id="l-indent-07" scheme="css">
+					padding-left:16em;
+					text-indent:-2em;
 				</rendition>
-				<rendition n="align left" xml:id="left" scheme="css">
-					text-align: right;
+				
+				<rendition xml:id="l-indent-08" scheme="css">
+					padding-left:18em;
+					text-indent:-2em;
 				</rendition>
-				<!-- block alignment: centers a block of text, but doesn't affect the alignment of text withing the centered block.-->
-				<rendition n="center block" xml:id="center_block" scheme="css">
-					margin-left:auto; margin-right:auto; 
+				
+				<rendition xml:id="sub" scheme="css">
+					vertical-align:sub;
+					font-size:80%;
 				</rendition>
-				<!-- text-indent: hanging indents for verse-->
-				<rendition n="indent 1 level" xml:id="ti-1" scheme="css">
-					text-indent: 1em;
+				
+				<rendition xml:id="super" scheme="css">
+					vertical-align:super;
+					font-size:80%;
 				</rendition>
-				<rendition n="indent 2 levels" xml:id="ti-2" scheme="css">
-					text-indent: 2em;
+				
+				<rendition xml:id="upper-case" scheme="css">
+					text-transform:uppercase;
 				</rendition>
-				<rendition n="indent 3 levels" xml:id="ti-3" scheme="css">
-					text-indent: 3em;
+				
+				<rendition xml:id="small-caps" scheme="css">
+					font-variant:small-caps;
 				</rendition>
-				<rendition n="indent 4 levels" xml:id="ti-4" scheme="css">
-					text-indent: 4em;
+				
+				<rendition xml:id="indent" scheme="css" scope="before">
+					content:"\A0\A0\A0\A0\A0\A0";
 				</rendition>
-				<rendition n="indent 5 levels" xml:id="ti-5" scheme="css">
-					text-indent: 5em;
+				
+				
+				
+				<!-- font sizes -->
+				
+				<rendition xml:id="small" scheme="css">
+					font-size:90%;
 				</rendition>
-				<rendition n="indent 6 levels" xml:id="ti-6" scheme="css">
-					text-indent: 6em;
+				
+				<rendition xml:id="x-small" scheme="css">
+					font-size:85%;
 				</rendition>
-				<rendition n="indent 7 levels" xml:id="ti-7" scheme="css">
-					text-indent: 7em;
+				
+				<rendition xml:id="xx-small" scheme="css">
+					font-size:80%;
 				</rendition>
-				<rendition n="indent 8 levels" xml:id="ti-8" scheme="css">
-					text-indent: 8em;
+				
+				<rendition xml:id="large" scheme="css">
+					font-size:110%;
 				</rendition>
-				<rendition n="indent 9 levels" xml:id="ti-9" scheme="css">
-					text-indent: 9em;
+				
+				<rendition xml:id="x-large" scheme="css">
+					font-size:115%;
 				</rendition>
-				<!-- vertical-align -->
-				<rendition n="subscript" xml:id="sub" scheme="css">
-					vertical-align: sub;
+				
+				<rendition xml:id="xxx-large" scheme="css">
+					font-size:120%;
 				</rendition>
-				<rendition n="superscript" xml:id="super" scheme="css">
-					vertical-align: super;
-				</rendition>
-				<rendition n="hanging indent" xml:id="hang" scheme="css">
-					display:block;padding-left: 2em; text-indent: -2em; padding: 0;
-				</rendition>
-				<rendition n="inline" xml:id="inline" scheme="css">
-					display: inline
-				</rendition>
-				<rendition n="suppress" xml:id="suppress" scheme="css">
-					display: none
-				</rendition>
-				<rendition n="wrapped code / wrappped formatted text" xml:id="wrap">
-					overflow-x: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */ white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */ white-space: -pre-wrap; /* Opera 4-6 */ white-space: -o-pre-wrap; /* Opera 7 */ /* width: 99%; */ word-wrap: break-word; /* Internet Explorer 5.5+ */ 
-				</rendition>
-<!-- lists -->
-				<rendition xml:id="list-style-type_none" n="list style: none">
-					list-style-type:none;
-				</rendition>
-				<rendition xml:id="list-style-type_circle" n="list style: circle">
-					list-style-type:circle;
-				</rendition>
-				<rendition xml:id="list-style-type_disc" n="list style: disc">
-					list-style-type:disc;
-				</rendition>
-				<rendition xml:id="list-style-type_square" n="list style: square">
-					list-style-type:square;
-				</rendition>
-				<rendition xml:id="list-style-type_armenian" n="list style: armenian">
-					list-style-type:armenian;
-				</rendition>
-				<rendition xml:id="list-style-type_decimal" n="list style: decimal">
-					list-style-type:decimal;
-				</rendition>
-				<rendition xml:id="list-style-type_decimal-leading-zero" n="list style: decimal-leading-zero">
-					list-style-type:decimal-leading-zero;
-				</rendition>
-				<rendition xml:id="list-style-type_georgian" n="list style: georgian">
-					list-style-type:georgian;
-				</rendition>
-				<rendition xml:id="list-style-type_lower-alpha" n="list style: lower-alpha">
-					list-style-type:lower-alpha;
-				</rendition>
-				<rendition xml:id="list-style-type_lower-greek" n="list style: lower-greek">
-					list-style-type:lower-greek;
-				</rendition>
-				<rendition xml:id="list-style-type_lower-roman" n="list style: lower-roman">
-					list-style-type:lower-roman;
-				</rendition>
-				<rendition xml:id="list-style-type_upper-alpha" n="list style: upper-alpha">
-					list-style-type:upper-alpha;
-				</rendition>
-				<rendition xml:id="list-style-type_upper-roman" n="list style: upper-roman">
-					list-style-type:upper-roman;
-				</rendition>
-				<rendition xml:id="list" n="list" scheme="free">
-					Indicates a element such as 
-					<gi>
-						castItem
-					</gi>
-					is rendered in list form.
-				</rendition>
-<!-- 
-          none  	No marker
-          circle 	The marker is a circle
-          disc 	The marker is a filled circle. This is default
-          square 	The marker is a square
-          armenian 	The marker is traditional Armenian numbering
-          decimal 	The marker is a number
-          decimal-leading-zero 	The marker is a number padded by initial zeros (01, 02, 03, etc.)
-          georgian 	The marker is traditional Georgian numbering (an, ban, gan, etc.)
-          lower-alpha 	The marker is lower-alpha (a, b, c, d, e, etc.)
-          lower-greek 	The marker is lower-greek (alpha, beta, gamma, etc.)
-          lower-latin 	The marker is lower-latin (a, b, c, d, e, etc.)
-          lower-roman 	The marker is lower-roman (i, ii, iii, iv, v, etc.)
-          upper-alpha 	The marker is upper-alpha (A, B, C, D, E, etc.) 
-          upper-latin 	The marker is upper-latin (A, B, C, D, E, etc.)
-          upper-roman 	The marker is upper-roman (I, II, III, IV, V, etc.)
-        -->
+				
 			</tagsDecl>
 		</encodingDesc>
 	</teiHeader>
 	<text>
 		<body>
-			<p>
-				<listBibl html:role="list">
-					<bibl html:role="listItem">Test</bibl>
-				</listBibl>
-				<table html:role="grid">
-					<head>Testing head</head>
-					<row role="label" html:role="row">
-						<cell role="data" html:role="columnheader" html:aria-describedby="tryme">Test data</cell>
-					</row>
-				</table>
-				Some text here.
-				An <choice><abbr>abbr.</abbr><expan>abbreviation</expan></choice> can be marked thus.
-			</p>
+			<div>
+				<head></head>
+				<p></p>
+			</div>
 		</body>
-		<p html:id="tryme">If you hear me, this works.</p>
 	</text>
 </TEI>

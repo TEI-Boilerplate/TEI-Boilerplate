@@ -49,20 +49,26 @@
           content:"" !important;
         </rendition>
         
-        <rendition xml:id="b" scheme="css">
+        <rendition xml:id="b" n="bold" scheme="css">
           font-weight:bold;
         </rendition> 
         
-        <rendition xml:id="u" scheme="css">
+        <rendition xml:id="u" n="underline" scheme="css">
           text-decoration:underline;
         </rendition> 
         
-        <rendition xml:id="i" scheme="css">
+        <rendition xml:id="i" n="italic" scheme="css">
           font-style:italic;
         </rendition> 
         
+        <rendition xml:id="n" n="normal" scheme="css">
+          font-weight:normal;
+          text-decoration:none;
+          font-style:normal;
+        </rendition>
+        
         <rendition xml:id="mono" scheme="css">
-          
+          font-family: Monaco, courier, monospace;
         </rendition>
         
         <rendition xml:id="center" scheme="css">
@@ -137,6 +143,13 @@
         </rendition>
         
         <rendition xml:id="indent" scheme="css" scope="before">
+          <!-- One would normally use the text-indent property for indentation, 
+               but Safari has a bug which causes block elements to “re-indent”
+               whenever they are interupted by another block element. Thus, 
+               a paragraph that contains page breaks <pb/> rendered as block 
+               elements, indent after every page break. The solution here
+               works around this bug.
+          -->
           content:"\A0\A0\A0\A0\A0\A0";
         </rendition>
         
@@ -154,6 +167,18 @@
         
         <rendition xml:id="xx-small" scheme="css">
           font-size:80%;
+        </rendition>
+        
+        <rendition xml:id="large" scheme="css">
+          font-size:110%;
+        </rendition>
+        
+        <rendition xml:id="x-large" scheme="css">
+          font-size:115%;
+        </rendition>
+        
+        <rendition xml:id="xxx-large" scheme="css">
+          font-size:120%;
         </rendition>
         
       </tagsDecl>

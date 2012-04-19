@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="../css/style.css"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?>
+<?xml-stylesheet type="text/css" href="../css/teibp.css"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/teibp.xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://www.dlib.indiana.edu/lib/xml/brevier/brevier.xsd"
     xml:id="VAA8558-05">

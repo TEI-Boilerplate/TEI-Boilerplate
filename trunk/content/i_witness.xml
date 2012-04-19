@@ -1,5 +1,5 @@
-<?xml-stylesheet type="text/css" href="../css/style.css"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?>
+<?xml-stylesheet type="text/css" href="../css/teibp.css"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/teibp.xsl"?>
 <!--Change xml:id in TEI root to reflect the proper I Witness issue-->
 <TEI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 iwitness.xsd"

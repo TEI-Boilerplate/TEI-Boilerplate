@@ -1,6 +1,6 @@
 <?oxygen RNGSchema="http://www.slis.indiana.edu/faculty/jawalsh/teaching/modules/tei_xml_workshop/eg/swinburne.rnc" type="compact"?>
-<?xml-stylesheet type="text/css" href="../css/style.css"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?>
+<?xml-stylesheet type="text/css" href="../css/teibp.css"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/teibp.xsl"?>
 <!DOCTYPE TEI [
 <!ENTITY title "Advanced XML: Electronic Publishing Standards and Systems">]>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="acs0000056">

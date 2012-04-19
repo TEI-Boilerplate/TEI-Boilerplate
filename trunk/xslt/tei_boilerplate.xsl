@@ -15,13 +15,13 @@
 	<xsl:output encoding="UTF-8" method="xml" omit-xml-declaration="yes"/>
 	
 	<!-- parameters for file paths or URLs -->
-	<xsl:param name="teibpCSS" select="'../css/style.css'"/>
+	<xsl:param name="teibpCSS" select="'../css/teibp.css'"/>
 	<xsl:param name="customCSS" select="'../css/custom.css'"/>
 	<xsl:param name="jqueryJS" select="'../js/jquery/jquery.min.js'"/>
 	<xsl:param name="jqueryBlockUIJS" select="'../js/jquery/plugins/jquery.blockUI.js'"/>
-	<xsl:param name="teibpJS" select="'../js/tei_boilerplate.js'"/>
+	<xsl:param name="teibpJS" select="'../js/teibp.js'"/>
 	
-	<xsl:param name="theme.default" select="'../css/style.css'"/>
+	<xsl:param name="theme.default" select="'../css/teibp.css'"/>
 	<xsl:param name="theme.sleepytime" select="'../css/sleepy.css'"/>
 	<xsl:param name="theme.terminal" select="'../css/terminal.css'"/>
 

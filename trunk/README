@@ -43,7 +43,7 @@ With those three things procured, we can proceed with making the project work wi
 	xslt
 	images
 	js
-4. Open your TEI file(s) in a text editor and add the following processing instruction above the root TEI element: <?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?>
+4. Open your TEI file(s) in a text editor and add the following processing instruction above the root TEI element: <?xml-stylesheet type="text/xsl" href="../xslt/teibp.xsl"?>
 
 Your TEI is now ready to serve. Point a modern browser to the URL for your TEI XML file and it should now be styled and have working links and images.
 
@@ -53,4 +53,4 @@ We have tried to provide an aesthetically pleasing default stylesheet, but we un
 
 1. Create a <rendition> element with @scheme=”css” within the <tagsDecl> section of your TEI document. TEI Boilerplate will automatically convert this declaration to a HTML <style> element containing the CSS specified in the <rendition> element.
 2. Edit the custom.css file in the css folder. This file is included by default by the HTML shell is meant for your customizations.
-3. Edit style.css. We do not recommend this method, as you will have to keep track of your customizations and add merge them with future versions of TEI Boilerplate.
+3. Edit teibp.css. We do not recommend this method, as you will have to keep track of your customizations and add merge them with future versions of TEI Boilerplate.

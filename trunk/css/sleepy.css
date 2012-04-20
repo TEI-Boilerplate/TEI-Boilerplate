@@ -5,8 +5,10 @@
 /* @namespace with prefix, as below, throws and error in less. */
 /* @namespace html "http://www.w3.org/1999/xhtml"; */
 /* Less variables */
-/* Standard Theme 
-@body-font: Cochin, Georgia, Serif;
+/* Standard Theme */
+/*
+@body-font-family: Cochin, Georgia, Serif;
+@body-font-size: 14pt;
 @background-color:#EBEBEB;
 @color:#292929;
 @link-color:#5f0000;
@@ -16,16 +18,16 @@
 	font-family: Arvo, sans-serif;
 	font-weight: normal;
 }
-
 */
 /* Terminal Theme */
 /*
-@body-font: Monaco, "Andale Mono", Courier, monospace;
+@body-font-family: Monaco, "Andale Mono", Courier, monospace;
+@body-font-size: 14pt;
 @background-color:black;
 @color:#00FD00;
 @link-color:#1CC0FA;
-@border-color:#222;
-@note-background-color:#111;
+@border-color:#444444;
+@note-background-color:#252525;
 .head-font {
 	font-family: Monaco, "Andale Mono", Courier, monospace;
 	font-weight: normal;
@@ -35,6 +37,25 @@
 .head-font {
   font-family: Arvo, sans-serif;
   font-weight: normal;
+}
+.note-like {
+  display: block;
+  margin: 1.5em auto 1.5em auto;
+  padding: .5em 1.5em 1.5em 1.5em;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 325px;
+  position: relative;
+  border: 1px solid #444444;
+  background: #252525;
+  /* reset text-indent for note with <l> ancestors. */
+
+  text-indent: 0;
+  font-size: 85%;
+  text-align: justify;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 /* US Style Quotes */
 .quotesUS {
@@ -64,13 +85,13 @@
   font-family: Courier,monospace;
 }
 .page-setup {
-  margin-left: 8em;
+  margin-left: 4em;
   margin-right: 8em;
   padding: 2.5em;
   font-family: Cochin, Georgia, Serif;
   font-size: 14pt;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: black;
+  color: white;
   width: 33em;
 }
 .table-border {
@@ -79,7 +100,7 @@ border-left: 2px solid @border-color;
 border-top:2px solid @border-color;
 */
 
-  border: 1px dotted #222222;
+  border: 1px dotted #444444;
 }
 /* Choice elements */
 choice abbr + expan,
@@ -157,8 +178,7 @@ addrLine {
 address {
   /* Empty Rule Set */
 }
-address[rend~="block"],
-addresss[rendition~="#block"] {
+address[rend~="block"], addresss[rendition~="#block"] {
   display: block;
 }
 adminInfo {
@@ -258,8 +278,7 @@ back {
 bibl {
   /* Empty Rule Set */
 }
-bibl[rend~="block"],
-bibl[rendition~="#block"] {
+bibl[rend~="block"], bibl[rendition~="#block"] {
   display: block;
   padding-left: 2em;
   text-indent: -2em;
@@ -376,7 +395,7 @@ border-left: 2px solid @border-color;
 border-top:2px solid @border-color;
 */
 
-  border: 1px dotted #222222;
+  border: 1px dotted #444444;
   width: 100%;
 }
 /* for cell or row with @role = label */
@@ -548,6 +567,15 @@ fileDesc > extent {
   display: none;
 }
 /* f */
+figure {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+fileDesc {
+  display: none;
+}
 /* g */
 g {
   /* Empty Rule Set */
@@ -605,6 +633,9 @@ graph {
   /* Empty for now */
 
 }
+graphic {
+  display: none;
+}
 group {
   /* Empty Rule Set */
 }
@@ -637,8 +668,7 @@ div > div > head {
 div > div > div > head {
   font-size: 140%;
 }
-div > div > div > div > head,
-list > head {
+div > div > div > div > head, list > head {
   font-size: 130%;
 }
 div > div > div > div > div > head {
@@ -646,6 +676,28 @@ div > div > div > div > div > head {
 }
 div > div > div > div > div > div head {
   font-size: 110%;
+}
+figure > head {
+  display: block;
+  margin: 1.5em auto 1.5em auto;
+  padding: .5em 1.5em 1.5em 1.5em;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 325px;
+  position: relative;
+  border: 1px solid #444444;
+  background: #252525;
+  /* reset text-indent for note with <l> ancestors. */
+
+  text-indent: 0;
+  font-size: 85%;
+  text-align: justify;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  width: 85%;
+  font-family: Cochin, Georgia, Serif;
+  font-size: 14pt;
 }
 headItem {
   /* Empty Rule Set */
@@ -974,9 +1026,6 @@ normalization {
   /* Empty Rule Set */
 }
 note {
-  font-size: 0px;
-}
-note:hover {
   display: block;
   margin: 1.5em auto 1.5em auto;
   padding: .5em 1.5em 1.5em 1.5em;
@@ -984,8 +1033,8 @@ note:hover {
   border-radius: 15px;
   width: 325px;
   position: relative;
-  border: 1px solid #aaa;
-  background: #fafafa;
+  border: 1px solid #444444;
+  background: #252525;
   /* reset text-indent for note with <l> ancestors. */
 
   text-indent: 0;
@@ -994,12 +1043,6 @@ note:hover {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-}
-note::before {
-  content: "*";
-  font-weight: bold;
-  vertical-align: top;
-  font-size: medium;
 }
 notesStmt {
   /* do we want to box each individual <note> if they're in a <notesStmt>? */
@@ -1753,23 +1796,24 @@ html > body {
 html {
   margin: 0;
   padding: 0;
-  margin-left: 8em;
+  margin-left: 4em;
   margin-right: 8em;
   padding: 2.5em;
   font-family: Cochin, Georgia, Serif;
   font-size: 14pt;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: black;
+  color: white;
   width: 33em;
 }
+img {
+  border: 1px solid #444444;
+}
 #footer {
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid white;
   padding-top: .5em;
   font-size: 12pt;
 }
-a:link,
-a:visited,
-a:active {
+a:link, a:visited, a:active {
   color: #1cc0fa;
   text-decoration: none;
 }
@@ -1778,15 +1822,15 @@ a:hover {
   text-decoration: underline;
 }
 #teibpToolbox {
-  left: 68em;
+  left: 64em;
   top: 25px;
   position: fixed;
   font-size: 70%;
   margin-right: 1em;
   padding: 1em;
   border-radius: 15px;
-  border: 1px solid #222222;
-  background: #111111;
+  border: 1px solid #444444;
+  background: #252525;
   font-family: Arvo, Verdana, sans-serif;
   text-align: justify;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
@@ -1799,7 +1843,7 @@ a:hover {
   font-size: 115%;
   margin-top: 0;
   margin-bottom: .5em;
-  border-bottom: 1px solid #222222;
+  border-bottom: 1px solid #444444;
 }
 /* loading animation */
 #loading {

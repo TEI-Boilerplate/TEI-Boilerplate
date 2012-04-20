@@ -493,6 +493,15 @@
         <p>Michael said, <q>Those so-called <soCalled>superheroes</soCalled> just screamed, <q>Avengers Assemble!</q></q>
         </p>
       </div>
+      <div>
+        <head>Images and captions</head>
+        <p>TEI <gi>graphic</gi> elements are transformed to HTML <gi>img</gi> elements so that images may be displayed in the browser.</p>
+        <figure>
+          <head>The TEI Boilerplate Team</head>
+          <graphic url="../images/tv_new_yo_gabba_gabba.jpg"/>
+          <figDesc>A playful image of the TEI Boilerplate team.</figDesc>
+        </figure>
+      </div>
     </body>
   </text>
 </TEI>

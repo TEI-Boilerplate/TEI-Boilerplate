@@ -11,7 +11,9 @@
 /* Less variables */
 
 /* Standard Theme */
-@body-font: Cochin, Georgia, Serif;
+/*
+@body-font-family: Cochin, Georgia, Serif;
+@body-font-size: 14pt;
 @background-color:#EBEBEB;
 @color:#292929;
 @link-color:#5f0000;
@@ -21,17 +23,19 @@
 	font-family: Arvo, sans-serif;
 	font-weight: normal;
 }
+*/
 
 
 
 /* Terminal Theme */
 /*
-@body-font: Monaco, "Andale Mono", Courier, monospace;
+@body-font-family: Monaco, "Andale Mono", Courier, monospace;
+@body-font-size: 14pt;
 @background-color:black;
 @color:#00FD00;
 @link-color:#1CC0FA;
-@border-color:#222;
-@note-background-color:#111;
+@border-color:#444444;
+@note-background-color:#252525;
 .head-font {
 	font-family: Monaco, "Andale Mono", Courier, monospace;
 	font-weight: normal;
@@ -39,23 +43,41 @@
 */
 
 /* Sleepy Time Theme */
-/*
-@body-font: Cochin, Georgia, Serif;
+
+@body-font-family: Cochin, Georgia, Serif;
+@body-font-size: 14pt;
 @background-color:black;
 @color:white;
 @link-color:#1CC0FA;
-@border-color:#222;
-@note-background-color:#111;
+@border-color:#444444;
+@note-background-color:#252525;
 .head-font {
 	font-family: Arvo, sans-serif;
 	font-weight: normal;
 }
-*/
+
 
 .block(@margins: 0) {
 display:block;
 margin-top:@margins;
 margin-bottom:@margins;
+}
+
+.note-like {
+display:block;
+margin:1.5em auto 1.5em auto;
+padding:.5em 1.5em 1.5em 1.5em;
+border:1px solid black;
+border-radius: 15px;
+width: 325px; 
+position: relative; 
+border: 1px solid @border-color;
+background: @note-background-color;
+/* reset text-indent for note with <l> ancestors. */
+text-indent:0;
+font-size:85%;
+text-align:justify;
+.box-shadow;
 }
 
 /* US Style Quotes */
@@ -115,11 +137,11 @@ font-family: Courier,monospace;
 }
 
 .page-setup {
-margin-left:8em;
+margin-left:4em;
 margin-right:8em;
 padding:2.5em;
-font-family: @body-font;
-font-size:14pt;
+font-family: @body-font-family;
+font-size:@body-font-size;
 background-color:@background-color;
 color:@color;
 width:33em;
@@ -580,8 +602,14 @@ facsimile {}
 factuality {}
 faith {}
 figDesc {}
-figure {}
+figure {
+display:block;
+text-align:center;
+margin-left:auto;
+margin-right:auto;
+}
 fileDesc {
+display:none;
 }
 filiation {}
 finalRubric {}
@@ -641,7 +669,7 @@ graph {
 }
 
 graphic {
-
+display:none;
 }
 group {/* Empty Rule Set */}
 
@@ -681,6 +709,13 @@ font-size: 120%;
 
 div > div > div > div > div > div head {
 font-size: 110%;
+}
+
+figure > head {
+.note-like;
+width:85%;
+font-family:@body-font-family;
+font-size:@body-font-size;
 }
 
 headItem {/* Empty Rule Set */}
@@ -888,29 +923,10 @@ nationality {/* Empty Rule Set */}
 node {.hide}
 normalization {/* Empty Rule Set */}
 note {
-font-size:0px;
+.note-like;
 }
-note:hover {
-display:block;
-margin:1.5em auto 1.5em auto;
-padding:.5em 1.5em 1.5em 1.5em;
-border:1px solid black;
-border-radius: 15px;
-width: 325px; 
-position: relative; 
-border: 1px solid #aaa;
-background: #fafafa;
-/* reset text-indent for note with <l> ancestors. */
-text-indent:0;
-font-size:85%;
-text-align:justify;
-.box-shadow;
-}
-note::before {
-content: "*";
-font-weight: bold;
-vertical-align:top;
-font-size:medium;}
+
+
 notesStmt {/* do we want to box each individual <note> if they're in a <notesStmt>? */
 .hide;
 }
@@ -1380,6 +1396,10 @@ padding:0;
 .page-setup;
 }
 
+img {
+border:1px solid @border-color;
+}
+
 
 #footer {
 border-top: 1px solid @color;
@@ -1399,7 +1419,7 @@ text-decoration:underline;
 }
 
 #teibpToolbox {
-	left: 68em; 
+	left: 64em; 
 	top: 25px; 
 	position: fixed; 
 	font-size: 70%;
@@ -1421,6 +1441,8 @@ margin-top:0;
 margin-bottom:.5em;
 border-bottom:1px solid @border-color;
 }
+
+
 
 /* loading animation */
 #loading { 

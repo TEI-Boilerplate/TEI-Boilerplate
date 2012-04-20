@@ -70,13 +70,7 @@
 
 	<xsl:template match="*"> 
 		<xsl:element name="{local-name()}">
-			<xsl:if test="not(@xml:id)">
-				<xsl:attribute name="id">
-					<xsl:call-template name="generate-unique-id">
-						<xsl:with-param name="root" select="generate-id()"/>
-					</xsl:call-template>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:call-template name="addID"/>
 			<xsl:apply-templates select="@*|node()"/>
 		</xsl:element>
 	</xsl:template>
@@ -139,8 +133,12 @@
 		</xd:desc>
 	</xd:doc>
 	<xsl:template match="tei:figure[tei:graphic[@url]]" priority="99">
-		<xsl:variable name="figDesc" select="normalize-space(tei:figDesc)"/>
-		<img alt="{$figDesc}" src="{tei:graphic/@url}"/>
+		<xsl:copy>
+			<xsl:apply-templates select="@*"/>
+			<xsl:call-template name="addID"/>
+			<img alt="{normalize-space(tei:figDesc)}" src="{tei:graphic/@url}"/>
+			<xsl:apply-templates select="*[local-name() != 'graphic' and local-name() != 'figDesc']"/>
+		</xsl:copy>
 	</xsl:template>
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
@@ -153,15 +151,19 @@
 	</xd:doc>
 	<xsl:template match="tei:TEI" priority="99">
 		<xsl:element name="{local-name()}">
-			<xsl:if test="not(@xml:id)">
-				<xsl:attribute name="xml:id">
-					<xsl:call-template name="generate-unique-id">
-						<xsl:with-param name="root" select="generate-id()"/>
-					</xsl:call-template>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:call-template name="addID"/>
 			<xsl:apply-templates select="@*|node()"/>
 		</xsl:element>
+	</xsl:template>
+	
+	<xsl:template name="addID">
+		<xsl:if test="not(@xml:id)">
+			<xsl:attribute name="xml:id">
+				<xsl:call-template name="generate-unique-id">
+					<xsl:with-param name="root" select="generate-id()"/>
+				</xsl:call-template>
+			</xsl:attribute>
+		</xsl:if>
 	</xsl:template>
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">

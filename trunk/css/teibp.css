@@ -573,9 +573,6 @@ figure {
   margin-left: auto;
   margin-right: auto;
 }
-fileDesc {
-  display: none;
-}
 /* g */
 g {
   /* Empty Rule Set */
@@ -657,6 +654,10 @@ TEI head {
   display: block;
   font-family: Arvo, sans-serif;
   font-weight: normal;
+}
+body > head {
+  font-size: 180%;
+  text-indent: -0.5em;
 }
 div > head {
   font-size: 170%;

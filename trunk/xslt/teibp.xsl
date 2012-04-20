@@ -24,6 +24,8 @@
 	<xsl:param name="theme.default" select="'../css/teibp.css'"/>
 	<xsl:param name="theme.sleepytime" select="'../css/sleepy.css'"/>
 	<xsl:param name="theme.terminal" select="'../css/terminal.css'"/>
+	
+	<xsl:param name="teibpHome" select="'http://dcl.slis.indiana.edu/teibp/'"/>
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
@@ -252,7 +254,7 @@
 		</xd:desc>
 	</xd:doc>
 	<xsl:variable name="htmlFooter">
-		<div id="footer"> Powered by TEI Boilerplate. TEI Boilerplate is licensed under a <a
+		<div id="footer"> Powered by <a href="{$teibpHome}">TEI Boilerplate</a>. TEI Boilerplate is licensed under a <a
 				href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0
 				Unported License</a>. <a href="http://creativecommons.org/licenses/by/3.0/"><img
 					alt="Creative Commons License" style="border-width:0;"

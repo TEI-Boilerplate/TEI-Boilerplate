@@ -1681,6 +1681,9 @@ TEI title[level=a][next]:after {
 TEI title[level=a][prev]:before {
   content: "" !important;
 }
+title[level=m] {
+  font-style: italic;
+}
 titleStmt > title {
   display: block;
   font-family: Arvo, sans-serif;

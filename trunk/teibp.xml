@@ -162,8 +162,8 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 				<!-- Indentation -->
 				<rendition xml:id="hang" n="teibp:hang" scheme="css">
 					display:block;
-					padding-left:4em;
-					text-indent:-2em;
+					padding-left:2.5em;
+					text-indent:-2.5em;
 				</rendition>
 				
 				<!-- Indentation for verse lines. Results in a “hanging” indent if

@@ -11,7 +11,7 @@
 /* Less variables */
 
 /* Standard Theme */
-/*
+
 @body-font-family: Cochin, Georgia, Serif;
 @body-font-size: 14pt;
 @background-color:#EBEBEB;
@@ -23,7 +23,7 @@
 	font-family: Arvo, sans-serif;
 	font-weight: normal;
 }
-*/
+
 /* Terminal Theme */
 /*
 @body-font-family: Monaco, "Andale Mono", Courier, monospace;
@@ -40,7 +40,7 @@
 */
 
 /* Sleepy Time Theme */
-
+/*
 @body-font-family: Cochin, Georgia, Serif;
 @body-font-size: 14pt;
 @background-color:black;
@@ -52,7 +52,7 @@
 	font-family: Arvo, sans-serif;
 	font-weight: normal;
 }
-
+*/
 
 .block(@margins: 0) {
 display:block;
@@ -1316,6 +1316,10 @@ TEI title[level=a]:before {content: open-quote;}
 TEI title[level=a]:after {content: close-quote;}
 TEI title[level=a][next]:after {content: "" !important;}
 TEI title[level=a][prev]:before {content: "" !important;}
+
+title[level=m] {
+    font-style:italic;
+}
 
 
 titleStmt > title {

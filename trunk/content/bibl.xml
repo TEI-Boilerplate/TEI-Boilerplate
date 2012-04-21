@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/teibp.css"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/teibp.xsl"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:html="http://www.w3.org/1999/xhtml">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title type="main">TEI Boilerplate</title>
+				<title type="sub">A template for TEI P5</title>
+			</titleStmt>
+			<publicationStmt>
+				<pubPlace>Bloomington, IN</pubPlace>
+				<publisher>Digital Culture Lab, School of Library &amp; Information Science, Indiana University</publisher>
+				<availability status="free">
+					<p>Copyright © 2012.</p>
+					<p>
+					<!--
+					<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">TEI Boilerplate</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="teiboilerplate.slis.indiana.edu" property="cc:attributionName" rel="cc:attributionURL">John A. Walsh</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.-->
+					<ref n="license" target="http://creativecommons.org/licenses/by/3.0/"><figure rend="border-width:0;"><figDesc>Creative Commons License</figDesc><graphic url="http://i.creativecommons.org/l/by/3.0/80x15.png"/></figure></ref><lb />TEI Boilerplate by <ref target="http://www.slis.indiana.edu/faculty/jawalsh/">John A. Walsh</ref> is licensed under a <ref n="license" target="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</ref>.
+					</p>
+				</availability>
+			</publicationStmt>
+			<sourceDesc>
+			<!-- For born digital documents, use something like: -->
+                 <p>This TEI/XML document is the original source</p>
+         	<!-- For documents transcribed from another source or sources, use <biblStruct>. -->
+         	<!--
+				<biblStruct>
+					<analytic>
+						<author>
+						</author>
+						<title>
+						</title>
+					</analytic>
+					<monogr>
+						<editor>
+						</editor>
+						<title>
+						</title>
+						<imprint>
+							<pubPlace>
+							</pubPlace>
+							<publisher>
+							</publisher>
+							<date when="2011" /> 
+						</imprint>
+					</monogr>
+				</biblStruct>
+			-->
+			<!-- The loosely structured <bibl> is also an option -->
+			<!--
+			<bibl></bibl>
+			-->
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<tagsDecl>
+				<!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
+				<rendition xml:id="b" n="tiebp:bold" scheme="css">
+					font-weight:bold;
+				</rendition> 
+				
+				<rendition xml:id="i" n="tiebp:italic" scheme="css">
+					font-style:italic;
+				</rendition> 
+				
+				<rendition xml:id="u" n="tiebp:underline" scheme="css">
+					text-decoration:underline;
+				</rendition> 
+				
+				<rendition xml:id="n" n="teibp:normal" scheme="css">
+					font-weight:normal;
+					text-decoration:none;
+					font-style:normal;
+				</rendition>
+				
+				<rendition xml:id="mono" n="teibp:mono" scheme="css">
+					font-family:Monaco,Courier,monospace;
+				</rendition>
+				
+				<rendition xml:id="super" n="tiebp:super" scheme="css">
+					vertical-align:super;
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="sub" n="tiebp:sub" scheme="css">
+					vertical-align:sub;
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="lowercase" n="tiebp:lowercase" scheme="css">
+					text-transform:lowercase;
+				</rendition>
+				
+				<rendition xml:id="uppercase" n="tiebp:uppercase" scheme="css">
+					text-transform:uppercase;
+				</rendition>
+				
+				<rendition xml:id="capitalize" n="tiebp:capitalize" scheme="css">
+					text-transform:capitalize;
+				</rendition>
+				
+				<rendition xml:id="small-caps" n="tiebp:small-caps" scheme="css">
+					font-variant:small-caps;
+				</rendition>
+				
+				<!-- Blocks. -->
+				<rendition xml:id="block" n="tiebp:block" scheme="css">
+					display:block;
+				</rendition> 
+				
+				<rendition xml:id="blockquote" n="tiebp:blockquote" scheme="css">
+					display:block;
+					font-size:90%;
+					margin-left:3em;
+					padding-left:1em;
+					border-left: 1px solid gray;
+					margin-top:.75em;
+					margin-bottom:.75em;
+					padding-top:.75em;
+					padding-bottom:.75em;
+				</rendition>
+				
+				<rendition corresp="#blockquote" n="tiebp:blockquote" scheme="css" scope="before">
+					<!-- This turns off the default generated quotes for block quotes. -->
+					content:"" !important;
+				</rendition>
+				
+				<rendition corresp="#blockquote" n="tiebp:blockquote" scheme="css" scope="after">
+					<!-- This turns off the default generated quotes for block quotes. -->
+					content:"" !important;
+				</rendition>
+				
+				<!-- Alignment. -->
+				<rendition xml:id="center" n="tiebp:center" scheme="css">
+					display:block;
+					text-align:center;
+					margin-left:auto;
+					margin-right:auto;
+				</rendition>
+				
+				<rendition xml:id="left" n="teibp:left" scheme="css">
+					text-align:left;
+				</rendition>
+				
+				<rendition xml:id="right" n="teibp:right" scheme="css">
+					text-align:right;
+				</rendition>
+				
+				<rendition xml:id="justify" n="teibp:justify" scheme="css">
+					text-align:justify;
+				</rendition>
+				
+				<rendition xml:id="center-block" n="tiebp:center-block" scheme="css">
+					display:block;
+					margin-left:auto;
+					margin-right:auto;
+				</rendition>
+				
+				<!-- Indentation -->
+				<rendition xml:id="hang" n="teibp:hang" scheme="css">
+					display:block;
+					padding-left:4em;
+					text-indent:-2em;
+				</rendition>
+				
+				<!-- Indentation for verse lines. Results in a “hanging” indent if
+					the line wraps. -->
+				<rendition xml:id="l-indent-01" n="tiebp:l-indent-01" scheme="css">
+					display:block;
+					padding-left:4em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-02" n="tiebp:l-indent-02" scheme="css">
+					display:block;
+					padding-left:6em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-03" n="tiebp:l-indent-03" scheme="css">
+					display:block;
+					padding-left:8em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-04" n="tiebp:l-indent-04" scheme="css">
+					display:block;
+					padding-left:10em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-05" n="tiebp:l-indent-05" scheme="css">
+					display:block;
+					padding-left:12em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-06" n="tiebp:l-indent-06" scheme="css">
+					display:block;
+					padding-left:14em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-07" n="tiebp:l-indent-07" scheme="css">
+					display:block;
+					padding-left:16em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-08" n="tiebp:l-indent-08" scheme="css">
+					display:block;
+					padding-left:18em;
+					text-indent:-2em;
+				</rendition>
+
+				<rendition xml:id="indent" n="tiebp:indent" scheme="css" scope="before">
+					/* text-indent:4em; */
+					/* The above method of describing an indentation for, say, a paragraph is preferred.
+					   The method being used is in response to a bug in some browsers whereby a block
+					   element, like a paragraph, is erroneously re-indented after interruption by another 
+					   block element (like a list, which is valid inside a paragraph). */
+					content:"\A0\A0\A0\A0\A0\A0";
+				</rendition>
+				
+				<!-- font sizes -->
+				
+				<rendition xml:id="small" n="tiebp:small" scheme="css">
+					font-size:90%;
+				</rendition>
+				
+				<rendition xml:id="x-small" n="tiebp:x-small" scheme="css">
+					font-size:85%;
+				</rendition>
+				
+				<rendition xml:id="xx-small" n="tiebp:xx-small" scheme="css">
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="large" n="tiebp:large" scheme="css">
+					font-size:110%;
+				</rendition>
+				
+				<rendition xml:id="x-large" n="tiebp:x-large" scheme="css">
+					font-size:115%;
+				</rendition>
+				
+				<rendition xml:id="xxx-large" n="tiebp:xxx-large" scheme="css">
+					font-size:120%;
+				</rendition>
+				
+			</tagsDecl>
+		</encodingDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div xml:id="works_cited">
+				<index indexName="nav"/>
+				<head rendition="#center #styled">Works Cited</head>
+				<listBibl>
+					<bibl rendition="#hang" xml:id="adams1918">Adams, Henry. <title>The Education of Henry Adams: An Autobiography</title>. Boston: Houghton Mifflin, 1918.</bibl> 
+					<bibl rendition="#hang" xml:id="arnold">Arnold, Matthew. “To Francis Turner Palgrave.” 9 Oct. 1867. Letter <ref target="http://rotunda.upress.virginia.edu/arnold/display.xqy?letter=V3P176D1">V3P176D1</ref> of <title><ref target="http://rotunda.upress.virginia.edu/arnold/">The Letters of Matthew Arnold: A Digital Edition</ref></title>. Charlottesville: U of Virginia P, 2006.</bibl>
+					<bibl rendition="#hang">Rev. of <title>Atalanta in Calydon</title>, by Algernon Charles Swinburne. <title>Saturday Review of Politics, Literature, Science and Art</title> <date when="1865-05-06">6 May 1865</date>: 540-42.</bibl>
+					<bibl rendition="#hang" xml:id="eliot1920"><author>Eliot, T.S.</author> <title level="a">Swinburne as Critic.</title> <title>The Sacred Wood: Essays on Poetry and Criticism</title>. London: Methuen, <date when="1920">1920</date>. 17-23.</bibl>
+					<bibl rendition="#hang" xml:id="gosse1917">Gosse, Edmund. <title>The Life of Algernon Charles Swinburne.</title>. New York: Macmillan, 1917.</bibl>
+					<bibl rendition="#hang" xml:id="mcgann2004">McGann, Jerome. “<title rendition="#n">Swinburne's Radical Artifice; Or, the Comedian as A. C.</title>” <title>Modernism/Modernity</title>  11.2 (2004):  205-218.</bibl>
+					<bibl rendition="#hang" xml:id="queenmother1861c">Rev. of <title>The Queen-Mother and Rosamond</title>, by Algernon Charles Swinburne. <title>The Spectator</title> <date when="1861-01-12">12 Jan. 1861</date>: 42.</bibl>
+					<bibl rendition="#hang" xml:id="queenmother1861b">Rev. of <title>The Queen-Mother and Rosamond</title>, by Algernon Charles Swinburne. <title>John Bull</title> <date when="1861-04-06">6 Apr. 1861</date>: 219.</bibl>
+					<bibl rendition="#hang" xml:id="queenmother1861a">Rev. of <title>The Queen-Mother and Rosamond</title>, by Algernon Charles Swinburne. <title>The Athenaeum</title> <date when="1861-05-04">4 May 1861</date>: 595.</bibl>
+					<bibl rendition="#hang" xml:id="rooksby1997">Rooksby, Rikky. <title>A. C. Swinburne: A Poet’s Life</title>. Brookfield, VT: Scolar Press, 1997.</bibl>
+					<bibl rendition="#hang">Ruskin, John. “To Charles Eliot Norton.” 28 Jan. 1866. <title>Letters of John Ruskin to Charles Eliot Norton.</title> Ed. Charles Eliot Norton. Vol. 1. Boston: Houghton Mifflin, 1905. 156-57.</bibl>
+					<bibl rendition="#hang" xml:id="sos1880">Rev. of <title>Songs of the Springtides</title>, by Algernon Charles Swinburne. <title>Saturday Review of Politics, Literature, Science and Art</title> <date when="1880-05-29">29 May 1880</date>: 698-99.</bibl>
+					<bibl rendition="#hang" xml:id="swinburne1867"><author>Swinburne, Algernon Charles</author>. <title level="a">Mr. Arnold's <title>New Poems</title>.</title> <title>Fortnightly Review</title> <date when="1867-10-01">1 Oct. 1867</date>: 414-445.</bibl>
+				</listBibl>
+			</div>
+		</body>
+	</text>
+</TEI>

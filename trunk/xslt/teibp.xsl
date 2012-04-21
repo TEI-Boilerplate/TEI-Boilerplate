@@ -14,18 +14,26 @@
 
 	<xsl:output encoding="UTF-8" method="xml" omit-xml-declaration="yes"/>
 	
-	<!-- parameters for file paths or URLs -->
-	<xsl:param name="teibpCSS" select="'../css/teibp.css'"/>
-	<xsl:param name="customCSS" select="'../css/custom.css'"/>
-	<xsl:param name="jqueryJS" select="'../js/jquery/jquery.min.js'"/>
-	<xsl:param name="jqueryBlockUIJS" select="'../js/jquery/plugins/jquery.blockUI.js'"/>
-	<xsl:param name="teibpJS" select="'../js/teibp.js'"/>
-	
-	<xsl:param name="theme.default" select="'../css/teibp.css'"/>
-	<xsl:param name="theme.sleepytime" select="'../css/sleepy.css'"/>
-	<xsl:param name="theme.terminal" select="'../css/terminal.css'"/>
-	
 	<xsl:param name="teibpHome" select="'http://dcl.slis.indiana.edu/teibp/'"/>
+	
+	<!-- parameters for file paths or URLs -->
+	<!-- modify filePrefix to point to files on your own server, 
+		or to specify a relatie path, e.g.:
+		<xsl:param name="filePrefix" select="'..'"/>
+	-->
+	
+	<xsl:param name="filePrefix" select="'http://dcl.slis.indiana.edu/teibp'"/>
+	
+	<xsl:param name="teibpCSS" select="concat($filePrefix,'/css/teibp.css')"/>
+	<xsl:param name="customCSS" select="concat($filePrefix,'/css/custom.css')"/>
+	<xsl:param name="jqueryJS" select="concat($filePrefix,'/js/jquery/jquery.min.js')"/>
+	<xsl:param name="jqueryBlockUIJS" select="concat($filePrefix,'/js/jquery/plugins/jquery.blockUI.js')"/>
+	<xsl:param name="teibpJS" select="concat($filePrefix,'/js/teibp.js')"/>
+	<xsl:param name="theme.default" select="concat($filePrefix,'/css/teibp.css')"/>
+	<xsl:param name="theme.sleepytime" select="concat($filePrefix,'/css/sleepy.css')"/>
+	<xsl:param name="theme.terminal" select="concat($filePrefix,'/css/terminal.css')"/>
+	
+	
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>

@@ -57,11 +57,61 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 		</fileDesc>
 		<encodingDesc>
 			<tagsDecl>
-				<rendition xml:id="block" scheme="css">
+				<!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
+				<rendition xml:id="b" n="tiebp:bold" scheme="css">
+					font-weight:bold;
+				</rendition> 
+				
+				<rendition xml:id="i" n="tiebp:italic" scheme="css">
+					font-style:italic;
+				</rendition> 
+				
+				<rendition xml:id="u" n="tiebp:underline" scheme="css">
+					text-decoration:underline;
+				</rendition> 
+				
+				<rendition xml:id="n" n="teibp:normal" scheme="css">
+					font-weight:normal;
+					text-decoration:none;
+					font-style:normal;
+				</rendition>
+				
+				<rendition xml:id="mono" n="teibp:mono" scheme="css">
+					font-family:Monaco,Courier,monospace;
+				</rendition>
+				
+				<rendition xml:id="super" n="tiebp:super" scheme="css">
+					vertical-align:super;
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="sub" n="tiebp:sub" scheme="css">
+					vertical-align:sub;
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="lowercase" n="tiebp:lowercase" scheme="css">
+					text-transform:lowercase;
+				</rendition>
+				
+				<rendition xml:id="uppercase" n="tiebp:uppercase" scheme="css">
+					text-transform:uppercase;
+				</rendition>
+				
+				<rendition xml:id="capitalize" n="tiebp:capitalize" scheme="css">
+					text-transform:capitalize;
+				</rendition>
+				
+				<rendition xml:id="small-caps" n="tiebp:small-caps" scheme="css">
+					font-variant:small-caps;
+				</rendition>
+				
+				<!-- Blocks. -->
+				<rendition xml:id="block" n="tiebp:block" scheme="css">
 					display:block;
 				</rendition> 
 				
-				<rendition xml:id="blockquote" scheme="css">
+				<rendition xml:id="blockquote" n="tiebp:blockquote" scheme="css">
 					display:block;
 					font-size:90%;
 					margin-left:3em;
@@ -73,141 +123,131 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 					padding-bottom:.75em;
 				</rendition>
 				
-				<rendition corresp="#blockquote" scheme="css" scope="before">
-					<!-- This turns off the default generated quotes
-          for block quotes. -->
+				<rendition corresp="#blockquote" n="tiebp:blockquote" scheme="css" scope="before">
+					<!-- This turns off the default generated quotes for block quotes. -->
 					content:"" !important;
 				</rendition>
 				
-				<rendition corresp="#blockquote" scheme="css" scope="after">
-					<!-- This turns off the default generated quotes
-          for block quotes. -->
+				<rendition corresp="#blockquote" n="tiebp:blockquote" scheme="css" scope="after">
+					<!-- This turns off the default generated quotes for block quotes. -->
 					content:"" !important;
 				</rendition>
 				
-				<rendition xml:id="b" scheme="css">
-					font-weight:bold;
-				</rendition> 
-				
-				<rendition xml:id="u" scheme="css">
-					text-decoration:underline;
-				</rendition> 
-				
-				<rendition xml:id="i" scheme="css">
-					font-style:italic;
-				</rendition> 
-				
-				
-				
-				<rendition xml:id="mono" scheme="css">
-					
-				</rendition>
-				
-				<rendition xml:id="center" scheme="css">
+				<!-- Alignment. -->
+				<rendition xml:id="center" n="tiebp:center" scheme="css">
 					display:block;
 					text-align:center;
 					margin-left:auto;
 					margin-right:auto;
 				</rendition>
 				
-				<rendition xml:id="center-block" scheme="css">
+				<rendition xml:id="left" n="teibp:left" scheme="css">
+					text-align:left;
+				</rendition>
+				
+				<rendition xml:id="right" n="teibp:right" scheme="css">
+					text-align:right;
+				</rendition>
+				
+				<rendition xml:id="justify" n="teibp:justify" scheme="css">
+					text-align:justify;
+				</rendition>
+				
+				<rendition xml:id="center-block" n="tiebp:center-block" scheme="css">
 					display:block;
 					margin-left:auto;
 					margin-right:auto;
 				</rendition>
 				
-				<rendition xml:id="l-indent-01" scheme="css">
+				<!-- Indentation -->
+				<rendition xml:id="hang" n="teibp:hang" scheme="css">
+					display:block;
 					padding-left:4em;
 					text-indent:-2em;
 				</rendition>
 				
-				<rendition xml:id="l-indent-02" scheme="css">
+				<!-- Indentation for verse lines. Results in a “hanging” indent if
+					the line wraps. -->
+				<rendition xml:id="l-indent-01" n="tiebp:l-indent-01" scheme="css">
+					display:block;
+					padding-left:4em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-02" n="tiebp:l-indent-02" scheme="css">
+					display:block;
 					padding-left:6em;
 					text-indent:-2em;
 				</rendition>
 				
-				<rendition xml:id="l-indent-03" scheme="css">
+				<rendition xml:id="l-indent-03" n="tiebp:l-indent-03" scheme="css">
+					display:block;
 					padding-left:8em;
 					text-indent:-2em;
 				</rendition>
 				
-				<rendition xml:id="l-indent-04" scheme="css">
+				<rendition xml:id="l-indent-04" n="tiebp:l-indent-04" scheme="css">
+					display:block;
 					padding-left:10em;
 					text-indent:-2em;
 				</rendition>
 				
-				<rendition xml:id="l-indent-05" scheme="css">
+				<rendition xml:id="l-indent-05" n="tiebp:l-indent-05" scheme="css">
+					display:block;
 					padding-left:12em;
 					text-indent:-2em;
 				</rendition>
 				
-				<rendition xml:id="l-indent-06" scheme="css">
+				<rendition xml:id="l-indent-06" n="tiebp:l-indent-06" scheme="css">
+					display:block;
 					padding-left:14em;
 					text-indent:-2em;
 				</rendition>
 				
-				<rendition xml:id="l-indent-07" scheme="css">
+				<rendition xml:id="l-indent-07" n="tiebp:l-indent-07" scheme="css">
+					display:block;
 					padding-left:16em;
 					text-indent:-2em;
 				</rendition>
 				
-				<rendition xml:id="l-indent-08" scheme="css">
+				<rendition xml:id="l-indent-08" n="tiebp:l-indent-08" scheme="css">
+					display:block;
 					padding-left:18em;
 					text-indent:-2em;
 				</rendition>
 				
-				<rendition xml:id="sub" scheme="css">
-					vertical-align:sub;
-					font-size:80%;
-				</rendition>
-				
-				<rendition xml:id="super" scheme="css">
-					vertical-align:super;
-					font-size:80%;
-				</rendition>
-				
-				<rendition xml:id="upper-case" scheme="css">
-					text-transform:uppercase;
-				</rendition>
-				
-				<rendition xml:id="small-caps" scheme="css">
-					font-variant:small-caps;
-				</rendition>
-				
-				<rendition xml:id="indent" scheme="css" scope="before">
+				<rendition xml:id="indent" n="tiebp:indent" scheme="css" scope="before">
 					/* text-indent:4em; */
 					/* The above method of describing an indentation for, say, a paragraph is preferred.
-					   The method being used is in response to a bug in some browsers whereby a block
-					   element, like a paragraph, is erroneously re-indented after interruption by another 
-					   block element (like a list, which is valid inside a paragraph). */
+					The method being used is in response to a bug in some browsers whereby a block
+					element, like a paragraph, is erroneously re-indented after interruption by another 
+					block element (like a list, which is valid inside a paragraph). */
 					content:"\A0\A0\A0\A0\A0\A0";
 				</rendition>
 				
-				
-				
 				<!-- font sizes -->
 				
-				<rendition xml:id="small" scheme="css">
+				<rendition xml:id="small" n="tiebp:small" scheme="css">
 					font-size:90%;
 				</rendition>
 				
-				<rendition xml:id="x-small" scheme="css">
+				<rendition xml:id="x-small" n="tiebp:x-small" scheme="css">
 					font-size:85%;
 				</rendition>
 				
-				<rendition xml:id="xx-small" scheme="css">
+				<rendition xml:id="xx-small" n="tiebp:xx-small" scheme="css">
 					font-size:80%;
 				</rendition>
 				
-				<rendition xml:id="large" scheme="css">
+				<rendition xml:id="large" n="tiebp:large" scheme="css">
 					font-size:110%;
 				</rendition>
 				
-				<rendition xml:id="x-large" scheme="css">
+				<rendition xml:id="x-large" n="tiebp:x-large" scheme="css">
 					font-size:115%;
 				</rendition>
 				
-				<rendition xml:id="xxx-large" scheme="css">
+				<rendition xml:id="xxx-large" n="tiebp:xxx-large" scheme="css">
 					font-size:120%;
 				</rendition>
 				

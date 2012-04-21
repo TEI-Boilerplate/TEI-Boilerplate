@@ -175,6 +175,11 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 				</rendition>
 				
 				<rendition xml:id="indent" scheme="css" scope="before">
+					/* text-indent:4em; */
+					/* The above method of describing an indentation for, say, a paragraph is preferred.
+					   The method being used is in response to a bug in some browsers whereby a block
+					   element, like a paragraph, is erroneously re-indented after interruption by another 
+					   block element (like a list, which is valid inside a paragraph). */
 					content:"\A0\A0\A0\A0\A0\A0";
 				</rendition>
 				

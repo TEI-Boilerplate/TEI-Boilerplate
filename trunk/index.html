@@ -14,7 +14,7 @@
   font-size: 14pt;
   background-color: #ebebeb;
   color: #292929;
-  width: 33em;}
+  width: 36em;}
   
   h1, h2, h3, h4, h5, h6 {
   font-family: Arvo, sans-serif;
@@ -32,10 +32,23 @@ h3 {
 pre {
   font-size: 70%;
   border: dashed 1px #808080;
-  padding: 5px;
+  padding: 1em;
   border-radius: 5px;
 }
 	</style>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31051795-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 <body>
 <div id="banner">
@@ -115,11 +128,12 @@ pre {
 <li>images</li>
 <li>js</li>
 </ul></li>
-<li>Open your TEI file(s) in a text editor and add the following processing instruction above the root TEI element:</li>
-</ol>
+<li><p>Open your TEI file(s) in a text editor and add the following processing instruction above the root TEI element:</p>
 
-<p>&lt;?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?&gt;
-&lt;?xml-stylesheet type="text/css" href="../css/style.css"?&gt;</p>
+<pre><code>&lt;?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?&gt;
+&lt;?xml-stylesheet type="text/css" href="../css/style.css"?&gt;
+</code></pre></li>
+</ol>
 
 <p>Your TEI is now ready to serve. Point a modern browser to the URL for your TEI XML file and it should now be styled and have working links and images.</p>
 
@@ -128,9 +142,9 @@ pre {
 <p>We have tried to provide an aesthetically pleasing default stylesheet, but we understand that this won’t fit everyone’s needs. There are three ways to customize the CSS for your project:</p>
 
 <ol>
-<li>Create a &lt;rendition&gt; element with @scheme=”css” within the &lt;tagsDecl&gt; section of your TEI document. TEI Boilerplate will automatically convert this declaration to a HTML &lt;style&gt; element containing the CSS specified in the &lt;rendition&gt; element.</li>
+<li>Create a <code>&lt;rendition&gt;</code> element with <code>@scheme="css"</code> within the<code>&lt;tagsDecl&gt;</code> section of your TEI document. TEI Boilerplate will automatically convert this declaration to a HTML <code>&lt;style&gt;</code> element containing the CSS specified in the <code>&lt;rendition&gt;</code> element.</li>
 <li>Edit the custom.css file in the css folder. This file is included by default by the HTML shell and is meant for your customizations.</li>
-<li>Edit style.css. We do not recommend this method, as you will have to keep track of your customizations and add merge them with future versions of TEI Boilerplate.</li>
+<li>Edit style.css. We do not recommend this method, as you will have to keep track of your customizations and merge them with future versions of TEI Boilerplate.</li>
 </ol>
 </div>
 

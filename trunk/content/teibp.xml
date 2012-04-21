@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="css/teibp.css"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet type="text/xsl" href="xslt/teibp.xsl"?>
+<?xml-stylesheet type="text/css" href="../css/teibp.css"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/teibp.xsl"?>
 <TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" 
 xmlns:html="http://www.w3.org/1999/xhtml">
 	<teiHeader>
@@ -257,8 +257,8 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 	<text>
 		<body>
 			<div>
-				<head></head>
-				<p></p>
+				<head>What is this?</head>
+				<p>This file (<ref target="http://dcl.slis.indiana.edu/teibp/content/teibp.xml">teibp.xml</ref>) is a simple TEI P5 template that includes a set of generally useful <gi>rendition</gi> styles for use with <ref target="http://dcl.slis.indiana.edu/teibp/">TEI Boilerplate</ref>.</p>
 			</div>
 		</body>
 	</text>

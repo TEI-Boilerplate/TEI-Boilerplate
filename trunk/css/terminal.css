@@ -85,8 +85,8 @@
   font-family: Courier,monospace;
 }
 .page-setup {
-  margin-left: 4em;
-  margin-right: 8em;
+  margin-left: 2em;
+  margin-right: 4em;
   padding: 2.5em;
   font-family: Monaco, "Andale Mono", Courier, monospace;
   font-size: 14pt;
@@ -1800,8 +1800,8 @@ html > body {
 html {
   margin: 0;
   padding: 0;
-  margin-left: 4em;
-  margin-right: 8em;
+  margin-left: 2em;
+  margin-right: 4em;
   padding: 2.5em;
   font-family: Monaco, "Andale Mono", Courier, monospace;
   font-size: 14pt;
@@ -1826,7 +1826,7 @@ a:hover {
   text-decoration: underline;
 }
 #teibpToolbox {
-  left: 64em;
+  left: 56em;
   top: 25px;
   position: fixed;
   font-size: 70%;

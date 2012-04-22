@@ -108,55 +108,58 @@ pre {
 
 <h1>Using it in Your Project</h1>
 
-<p>We have designed TEI Boilerplate to be easy to add to your existing TEI files. You will need three things:</p>
+<p>Download the <a href="http://sourceforge.net/projects/teiboilerplate/files/">TEI Boilerplate files</a>, and host the <code>teibp</code> directory on a Web server.</p>
 
-<ol>
-<li>Space on a web server </li>
-<li>Your TEI file(s)</li>
-<li>TEI Boilerplate</li>
-</ol>
+<p>The simplest way to use TEI Boilerplate (TEIBP) is simply to add your TEI files to the <code>teibp/content</code> directory of TEI Boilerplate and include the following xml-stylesheet processing instructions at the top of your TEI documents, after the XML declaration and before the root <code>&lt;TEI&gt;</code> element:</p>
 
-<p>With those three things procured, we can proceed with making the project work with TEI Boilerplate:</p>
+<pre><code>    &lt;?xml-stylesheet type="../xslt/teibp.xsl"?&gt;
+    &lt;?xml-stylesheet type="../css/teibp.css"?&gt;
+</code></pre>
 
-<ol>
-<li>Place a copy of your TEI file(s) in the space on your web server. For the purposes of this documentation, we’ll assume you put it in the root folder of the web space. If you don’t have any TEI handy, just move in the eg folder along with the folders in step 3.</li>
-<li>Expand the TEI Boilerplate zip file</li>
-<li>Copy the following folders from the TEI Boilerplate folder (the one you just unzipped) to the same place you put your TEI file(s): 
+<p>You may then access your TEI files from a modern browser and see the resulting styled document.</p>
+
+<h1>TEI Boilerplate and CSS</h1>
+
+<p>TEI Boilerplate makes extensive use of CSS to generate styled documents in the browser. The CSS is drawn from three possible sources:</p>
+
 <ul>
-<li>css</li>
-<li>xslt</li>
-<li>images</li>
-<li>js</li>
-</ul></li>
-<li><p>Open your TEI file(s) in a text editor and add the following processing instruction above the root TEI element:</p>
-
-<pre><code>&lt;?xml-stylesheet type="text/xsl" href="../xslt/tei_boilerplate.xsl"?&gt;
-&lt;?xml-stylesheet type="text/css" href="../css/style.css"?&gt;
-</code></pre></li>
-</ol>
-
-<p>Your TEI is now ready to serve. Point a modern browser to the URL for your TEI XML file and it should now be styled and have working links and images.</p>
+<li>External css stylesheets: <a href="http://dcl.slis.indiana.edu/teibp/css/teibp.css">teibp.css</a> includes default styles for the HTML shell and TEI document. <code>custom.css</code> is an empty stylesheet provided as a placeholder for user styles.</li>
+<li><code>&lt;rendition&gt;</code> elements with <code>@scheme="css"</code> from within individual TEI documents are used to generate CSS declarations understood by the browser.</li>
+<li>The global <code>@rend</code> attribute may be used to include inline CSS in TEI documents. The contents of <code>@rend</code> are copied to <code>@style</code> which is understood by the browser.</li>
+</ul>
 
 <h1>Customizing the Look</h1>
 
-<p>We have tried to provide an aesthetically pleasing default stylesheet, but we understand that this won’t fit everyone’s needs. There are three ways to customize the CSS for your project:</p>
+<p>TEI Boilerplate includes a default “theme” and some alternative themes. These are provided mostly as an illustration of TEI Boilerplate's capabilities. Users may modify these supplied themes in the following ways:</p>
 
 <ol>
-<li>Create a <code>&lt;rendition&gt;</code> element with <code>@scheme="css"</code> within the<code>&lt;tagsDecl&gt;</code> section of your TEI document. TEI Boilerplate will automatically convert this declaration to a HTML <code>&lt;style&gt;</code> element containing the CSS specified in the <code>&lt;rendition&gt;</code> element.</li>
-<li>Edit the custom.css file in the css folder. This file is included by default by the HTML shell and is meant for your customizations.</li>
-<li>Edit style.css. We do not recommend this method, as you will have to keep track of your customizations an merge them with future versions of TEI Boilerplate.</li>
+<li>By supplying <code>&lt;rendition&gt;</code> elements with <code>@scheme="css"</code> within the<code>&lt;tagsDecl&gt;</code> section of your TEI document. TEI Boilerplate will automatically convert the <code>&lt;rendition&gt;</code> elements into CSS declarations  in a <code>&lt;style&gt;</code> element of the HTML5 shell that surrounds the TEI document after the simple XSLT transformation. TEI elements that use the <code>@rendition</code> attribute to point to <code>&lt;rendition&gt;</code> styles will be styled accordingly. This mechanism is similar to using HTML's <code>@class</code> to point to CSS classes. See the <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD57">TEI Guidelines</a> for more details on <code>&lt;rendition&gt;</code> and <code>@rendition</code>. The TEI Boilerplate <a href="http://dcl.slis.indiana.edu/teibp/content/teibp.xml">TEI template</a> (<a href="http://dcl.slis.indiana.edu/teibp/content/teibp.xml">teibp.xml</a>) also includes examples.</li>
+<li>By adding custom CSS to the <code>custom.css</code> file located in the <code>teibp/css</code> directory. he HTML shell created by TEI Boilerplate includes a link to the custom.css file. This file is empty by default. You may add user styles to this file.</li>
+<li>It is possible, but not recommended, to edit teibp.css directly. This approach would require merging modifications with future releases of TEI Boilerplate.</li>
 </ol>
 
 <h1>The TEI Boilerplate Template</h1>
 
-<p>An important component of TEI Boilerplate is a “boilerplate” <a href="http://dcl.slis.indiana.edu/teibp/content/teibp.xml">TEI template</a> (<a href="http://dcl.slis.indiana.edu/teibp/content/teibp.xml">teibp.xml</a>), a simple TEI file, with some XML comments about where one might typically put basic information (e.g., title, author, bibliographic details of any source material). The most important features of the TEI Boilerplate template are:</p>
+<p>An important component of TEI Boilerplate is a “boilerplate” <a href="http://dcl.slis.indiana.edu/teibp/content/teibp.xml">TEI template</a> (<a href="http://dcl.slis.indiana.edu/teibp/content/teibp.xml">teibp.xml</a>), a very simple TEI file, with some XML comments about where one might typically put basic information (e.g., title, author, bibliographic details of any source material). The most important features of the TEI Boilerplate template are:</p>
 
 <ul>
-<li>links to the hosted versions of the TEI Boilerplate XSLT and CSS files.</li>
-<li>A pre-defined set of <code>&lt;rendition&gt;</code> elements with generally useful styles for describing a source document or for use in a born-digital TEI document. For instance, the template includes styles for bold, italicized, underlined, and “normal” text; for left-aligned, right-aligned, centered, and fully justified text; for indentation of verse lines, block quotes; and so on. </li>
+<li>the <code>xml-stylesheet</code> processing instructions with links the TEI Boilerplate XSLT and CSS files,</li>
+<li>a pre-defined set of <code>&lt;rendition&gt;</code> elements with generally useful styles for describing a source document or for use in a born-digital TEI document. For instance, the template includes styles for bold, italicized, underlined, and “normal” text; for left-aligned, right-aligned, centered, and fully justified text; for indentation of verse lines, block quotes; and so on. </li>
 </ul>
 
-<p>Users of TEI Boilerplate may choose to use the styles provided in the template, and add to, modify, or replace them. As explained above, <code>&lt;rendition&gt;</code> elements with <code>@scheme="css"</code> are transformed to CSS declarations in a <code>&lt;style&gt;</code> element of the HTML5 shell that surrounds the TEI document after the simple XSLT transformation.</p>
+<p>Users of TEI Boilerplate may choose to use the styles provided in the template, and add to, modify, or replace them. As explained above, <code>&lt;rendition&gt;</code> elements, along with <code>@rendition</code> and <code>@rend</code> are all used by TEI Boilerplate to produced styled documents in the browser. Thus, TEI authors may achieve substantial results by using these standard TEI features, without the need to edit any of the TEI Boilerplate code.</p>
+
+<h1>People</h1>
+
+<p>The TEI Boilerplate team is:</p>
+
+<ul>
+<li><a href="http://www.slis.indiana.edu/faculty/jawalsh/">John Walsh</a>, Indiana University</li>
+<li>Grant Simpson, Indiana University</li>
+<li>Saeed Moaddeli, Indiana University</li>
+</ul>
+
+<p>Please send general feedback to John Walsh at <a href="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</a>. Bug reports and feature requests may be submitted through SoureForge: <a href="https://sourceforge.net/p/teiboilerplate/tickets/">https://sourceforge.net/p/teiboilerplate/tickets/</a>.</p>
 </div>
 
 <div id="footer"> Powered by <a href="http://dcl.slis.indiana.edu/teibp/">TEI Boilerplate</a>. TEI Boilerplate is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0

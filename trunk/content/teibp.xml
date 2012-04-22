@@ -251,6 +251,16 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 					font-size:120%;
 				</rendition>
 				
+				<rendition xml:id="bracket" n="teibp:bracket" scheme="css"/>
+				
+				<rendition corresp="#bracket" n="tiebp:bracket" scheme="css" scope="before">
+					content:"&lt;";
+				</rendition>
+				
+				<rendition corresp="#bracket" n="tiebp:bracket" scheme="css" scope="after">
+					content:">";
+				</rendition>
+				
 			</tagsDecl>
 		</encodingDesc>
 	</teiHeader>

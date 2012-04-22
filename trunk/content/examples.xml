@@ -215,6 +215,16 @@
           font-size:120%;
         </rendition>
         
+        <rendition xml:id="bracket" n="teibp:bracket" scheme="css"/>
+        
+        <rendition corresp="#bracket" n="tiebp:bracket" scheme="css" scope="before">
+          content:"&lt;";
+        </rendition>
+        
+        <rendition corresp="#bracket" n="tiebp:bracket" scheme="css" scope="after">
+          content:">";
+        </rendition>
+        
       </tagsDecl>
     </encodingDesc>
   </teiHeader>
@@ -536,7 +546,10 @@
             <bibl rendition="#hang">Rev. of <title level="m">Atalanta in Calydon</title>, by Algernon Charles Swinburne. <title level="m">Saturday Review of Politics, Literature, Science and Art</title> <date when="1865-05-06">6 May 1865</date>: 540-42.</bibl>
             <bibl rendition="#hang" xml:id="eliot1920"><author>Eliot, T.S.</author> <title level="a">Swinburne as Critic.</title> <title level="m">The Sacred Wood: Essays on Poetry and Criticism</title>. London: Methuen, <date when="1920">1920</date>. 17-23.</bibl>
             <bibl rendition="#hang" xml:id="gosse1917">Gosse, Edmund. <title level="m">The Life of Algernon Charles Swinburne.</title>. New York: Macmillan, 1917.</bibl>
+            <bibl rendition="#hang" xml:id="lamb1835a">Lamb, Charles. <ref target="http://openlibrary.org/books/OL19367516M/Specimens_of_English_dramatic_poets"><title level="m">Specimens of English Dramatic Poets, Who Lived about the Time of Shakespeare.</title> Vol. 1.</ref> London: Moxon, 1849.</bibl>
+            <bibl rendition="#hang" xml:id="lamb1835b">Lamb, Charles. <ref target="http://openlibrary.org/books/OL24358091M/Specimens_of_English_dramatic_poets_who_lived_about_the_time_of_Shakespeare"><title level="m">Specimens of English Dramatic Poets, Who Lived about the Time of Shakespeare.</title> Vol. 2.</ref> London: Moxon, 1835.</bibl>
             <bibl rendition="#hang" xml:id="queenmother1861b">Rev. of <title level="m">The Queen-Mother and Rosamond</title>, by Algernon Charles Swinburne. <title level="m">John Bull</title> <date when="1861-04-06">6 Apr. 1861</date>: 219.</bibl>
+            <bibl rendition="#hang" xml:id="walsh2012"><ref target="http://swinburneproject.org/">The Algernon Charles Swinburne Project</ref>. Ed. John A. Walsh. Vers. 3.0 (March 2012). Digital Culture Lab, School of Library and Information Science, Indiana U. 14 April 2012. <ptr rendition="#bracket" target="http://www.swinburnearchive.org/"/>.</bibl>
           </listBibl>
         </div>
       </div>

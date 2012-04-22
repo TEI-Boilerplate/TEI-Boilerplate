@@ -116,6 +116,16 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
+	
+	<xsl:template name="rendition">
+		<xsl:if test="@rendition">
+			<xsl:attribute name="rendition">
+				<xsl:value-of select="@rendition"/>
+			</xsl:attribute>
+		</xsl:if>
+	</xsl:template>
+	
+	
 
 	<xsl:template match="@xml:id">
 		<xsl:attribute name="xml:id">
@@ -133,6 +143,7 @@
 	</xd:doc>
 	<xsl:template match="tei:ref[@target]" priority="99">
 		<a href="{@target}">
+			<xsl:call-template name="rendition"/>
 			<xsl:apply-templates/>
 		</a>
 	</xsl:template>
@@ -144,6 +155,7 @@
 	</xd:doc>
 	<xsl:template match="tei:ptr[@target]" priority="99">
 		<a href="{@target}">
+			<xsl:call-template name="rendition"/>
 			<xsl:value-of select="normalize-space(@target)"/>
 		</a>
 	</xsl:template>

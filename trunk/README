@@ -1,56 +1,223 @@
-TEI Boilerplate
+#About TEI Boilerplate
+TEI Boilerplate is a lightweight solution for publishing styled
+[TEI](http://www.tei-c.org/) ([Text Encoding Initiative](http://www.tei-c.org/))
+P5 content directly in modern browsers. With TEI Boilerplate, TEI XML files can
+be served directly to the web without server-side processing or translation to
+HTML. Our [“TEI Boilerplate Demo”](http://dcl.slis.indiana.edu/teibp/content/demo.xml) document illustrates many TEI features as displayed by TEI Boilerplate.
 
-Contents:
-	About TEI Boilerplate
-	Rationale
-	How It Works
-	Using it in Your Project
-	Customizing the Look
-	
-About TEI Boilerplate
+#Browser Compatibility
+TEI Boilerplate requires a robust, modern browser to do its work. It is
+compatible with current versions of Firefox, Chrome, Safari, and Internet
+Explorer (IE 9). Some browsers may not allow XSLT processing on files opened
+from a file system. For best luck, you'll want to serve files through a web
+server. If you have problems with TEI Boilerplate with a modern browser, please
+let us know by filing a bug report at
+<https://sourceforge.net/p/teiboilerplate/tickets/>.  
 
-TEI Boilerplate is a lightweight solution for displaying styled TEI content directly in modern browsers. With TEI Boilerplate, plain TEI XML files can be served on the web without server-side processing or translation to HTML. This bridges the gap between the richness of TEI-encoded documents and the usability of the web.
-
-Rationale
-
-TEI is a language designed primarily to express the content of documents. Projects that use TEI are responsible for developing their own methods of augmenting or converting it to a presentation-ready state. Two potential paths to reach this goal are:
+#Rationale
+TEI is a language designed primarily to express the content of documents.
+Projects that use TEI are responsible for developing their own methods of
+augmenting or converting it to a presentation-ready state for the web. Two
+potential paths to reach this goal are:
 
 * Converting the TEI to HTML and CSS via XSLT
 * Attaching a CSS stylesheet directly to the TEI XML
 
-Both of these approaches have advantages and drawbacks. While HTML is the language of the web and, as such, is well supported by user agents, its descriptive capability is much less than TEI. This means that much of the data that project teams spend valuable time encoding is not available within the context of the HTML document. However, the browser, understands HTML very well and knows, for example, when to initiate retrieval of a document based on certain user events, such as clicking a link. The second option, CSS-styled TEI allows for all of the TEI data to be displayed and styled in context. However, just because the browser can display the XML, it doesn’t mean that it knows what any of the markup is supposed to do. Links within the TEI document, for example, will not be clickable. They will be assumed to be merely content to be displayed.
+Both of these approaches have advantages and drawbacks. While HTML is the
+language of the web and, as such, is well supported browsers, its descriptive
+capabilities are much less expressive than TEI. This means that much of the data
+that project teams spend valuable time encoding is not always available within
+the context of the HTML document. However, the browser understands HTML very
+well and knows, for example, when to initiate retrieval of a document based on
+certain user events, such as clicking a link. The second option, CSS-styled TEI
+allows for all of the TEI data to be delivered directly to the browser. However,
+while the browser may apply CSS to format and style a TEI document, the browser
+does not understand the semantics of TEI. For instance, the browser does not
+understand that TEI's `<ptr>` and `<ref>` elements are linking elements.  
 
-TEI Boilerplate bridges the gap between these two approaches by creating an environment in which TEI XML is styled in context but features expected of the web, such as rendering images and providing usable links, are enabled. We accomplish this by making use of the built-in XSLT capabilities of browsers to embed the TEI XML within a minimal HTML5 shell document. Where possible, the original content of the TEI document is maintained and changes are made only to make possible features like links and images.
+TEI Boilerplate bridges the gap between these two approaches by creating an
+environment in which TEI XML delivered directly to browser, and styled by CSS,
+but features expected of web documents, such clickable links and display of
+linked images. We accomplish this by making use of the built-in XSLT (1.0)
+capabilities of browsers to embed the TEI XML within a minimal HTML5 shell
+document. The TEI XML document is embedded, with minimal modifications, within
+this HTML5 shell. To enable, for instance, working links and display of figures
+and images, a small number of TEI elements are transformed. 
 
-How It Works
+TEI Boilerplate is not intended to be a replacement for the many excellent XSLT
+solutions for publishing and displaying TEI/XML on the web. It is intended to be
+a _simple and lightweight_ alternative to more complex XSLT solutions. There are
+both practical and theoretical advantages to this lightweight approach.
 
-When a TEI XML file that uses TEI Boilerplate is accessed by a browser, the browser reads a line in the file that indicates that the XML should be processed by the TEI Boilerplate XSL stylesheet. The browser then processes the TEI according to the rules of the stylesheet, which results in an HTML5 shell document stuffed with the TEI. Certain elements of the TEI are converted to HTML elements, so that links work and images are displayed. The HTML shell contains a link to the TEI Boilerplate CSS file, which tells the browser how to style the full document.
+##Practical Benefits
+XSLT is far more powerful than CSS. It can manipulate data in ways that CSS
+cannot. XSLT can radically transform documents and can combine multiple XML data
+sources into a single output file or multiple output files. We at TEI
+Boilerplate love XSLT, but the power of XSLT comes at a cost. XSLT is a far more
+complex language than CSS, and it has a far steeper learning curve. There are
+relatively few expert XSLT programmers compared to the numbers of expert Web
+developers with extensive knowledge of HTML/CSS/JavaScript. 
 
-Using it in Your Project
+On the other hand, JavaScript is an extremely capable language for doing fancy
+things with XML content. Javascript, JavaScript frameworks like JQuery and EXT
+JS, and the major browsers provide excellent support for manipulating the DOM
+(Document Object Model) of the web page. With TEI Boilerplate, the TEI document
+becomes part of the DOM. and JavaScript may then be used to perform more complex
+transformations, movements, and other manipulations of the TEI/XML content than
+can be achieved with CSS alone. Our [“TEI Boilerplate
+Demo”](http://dcl.slis.indiana.edu/teibp/content/demo.xml) document includes a
+simple example in the "Toolbox," with a check box that uses JavaScript to hide
+and reveal the page breaks in a portion of the demo document. 
 
-We have designed TEI Boilerplate to be easy to add to your existing TEI files. You will need three things:
+TEI Boilerplate gives HTML5/JavaScript/CSS documents direct access to original
+TEI content, and it gives TEI documents direct access to the substantial
+capabilities of HTML, JavaScript, and CSS, the dominant document format,
+programming language, and styling language of the web. TEI Boilerplate aims for
+simplicity and elegance, but it also facilitates complexity and innovation by
+exposing TEI content directly to capabilities of JavaScript, the many powerful
+JavaScript frameworks, and CSS. By embedding the TEI document in an HTML5 shell,
+the TEI document may take advantage of a host of web technologies and vice
+versa. 
 
-1. Space on a web server
-2. Your TEI file(s)
-3. TEI Boilerplate
+In teaching contexts, TEI Boilerplate may be a useful solution. Students and 
+scholars new to the TEI are rightly excited and enthused as they encode their
+first documents and experience the expressive power of TEI encoding. But too
+often that initial excitement and enthusiasm is dissipated when they inquire
+publishing their documents on the web and are confronted with sometimes
+overwhelming details about an unfamiliar programming language, XSLT, and other
+information about server side processing, transformation engines, and so on.
+With TEI Boilerplate, such individuals simply add a couple lines of code to
+their documents to allow modern browsers to produce formatted output of their
+TEI content. And that display may be further tweaked and customized using CSS.
 
-With those three things procured, we can proceed with making the project work with TEI Boilerplate:
+###TEI Boilerplate and Omeka
 
-1. Place a copy of your TEI file(s) in the space on your web server. For the purposes of this documentation, we’ll assume you put it in the root folder of the web space. If you don’t have any TEI handy, just move in the eg folder along with the folders in step 3.
-2. Expand the TEI Boilerplate zip file
-3. Copy the following folders from the TEI Boilerplate folder (the one you just unzipped) to the same place you put your TEI file(s):
-	css
-	xslt
-	images
-	js
-4. Open your TEI file(s) in a text editor and add the following processing instruction above the root TEI element: <?xml-stylesheet type="text/xsl" href="../xslt/teibp.xsl"?>
+TEI Boilerplate is a simple solution for delivering TEI/XML documents through
+[Omeka](http://www.omeka.org). No additional software or plugins are necessary.
+One can simply simply host the TEI Boilerplate XSLT, JavaScript, and CSS files
+on a server (or as items in Omeka) and change any links to point to those online
+files.
 
-Your TEI is now ready to serve. Point a modern browser to the URL for your TEI XML file and it should now be styled and have working links and images.
+##Theoretical Advantages
+The power of TEI lies in its the richness and expressiveness of its vocabulary.
+But much of that richness and expressiveness is lost in the translation to HTML.
+TEI Boilerplate largely preserves the integrity of the TEI document. Since the
+original TEI document is delivered directly to the browser, the source TEI can
+be easily accessed and saved to the desktop or mobile device.
 
-Customizing the Look
+Scholars labor over the intricate encoding of TEI documents, but then when those
+documents need to be rendered in a browser, they are thrown out and replaced by
+far less expressive HTML surrogates. Furthermore, the presentation of the
+document is targeted at the HTML surrogate rather than the intricately encoded
+TEI document. By exposing the TEI directly to the browser, if one wishes to
+manipulate the document using JavaScript, one may manipulate the TEI directly.
+Scholars are likely to be intimately familiar with their TEI documents, and
+their engagement with and understanding of these documents may benefit when the
+formatting and processing is targeted at the TEI itself, rather than an HTML
+surrogate.
 
-We have tried to provide an aesthetically pleasing default stylesheet, but we understand that this won’t fit everyone’s needs. There are three ways to customize the CSS for your project:
+TEI Boilerplate respects the integrity of the TEI document, and keeps the TEI
+document central throughout the publication process.
 
-1. Create a <rendition> element with @scheme=”css” within the <tagsDecl> section of your TEI document. TEI Boilerplate will automatically convert this declaration to a HTML <style> element containing the CSS specified in the <rendition> element.
-2. Edit the custom.css file in the css folder. This file is included by default by the HTML shell is meant for your customizations.
-3. Edit teibp.css. We do not recommend this method, as you will have to keep track of your customizations and add merge them with future versions of TEI Boilerplate.
+#How It Works
+When a TEI XML file that uses TEI Boilerplate is accessed by a browser, the
+browser reads a line (the `xml-stylesheet` processing instruction) in the file
+that indicates that the XML should be processed by the TEI Boilerplate XSL
+stylesheet. The browser then processes the TEI according to the rules of the
+stylesheet, which results in an HTML5 shell document stuffed with the TEI. A
+small number elements and attributes (e.g. `<ptr>`, `<ref>`, `<figure>`, and
+`@rend`) of the TEI are converted to HTML elements, so that links work and
+images are displayed. The HTML shell contains a link to the TEI Boilerplate CSS
+file, which tells the browser how to style the full document.
+
+#Using it in Your Project
+
+Download the [TEI Boilerplate
+files](http://sourceforge.net/projects/teiboilerplate/files/), and host the
+`teibp` directory on a web server.
+
+The simplest way to use TEI Boilerplate (TEIBP) is simply to add your TEI files
+to the `teibp/content` directory of TEI Boilerplate and include the following
+xml-stylesheet processing instructions at the top of your TEI documents, after
+the XML declaration and before the root `<TEI>` element:
+
+        <?xml-stylesheet type="teibp.xsl"?>
+        <?xml-stylesheet type="../css/teibp.css"?>
+
+You may then access your TEI files from a modern browser and see the resulting
+styled document.
+
+
+#TEI Boilerplate and CSS
+TEI Boilerplate makes extensive use of CSS to generate styled documents in the
+browser. The CSS is drawn from three possible sources:
+
+* External css stylesheets:
+[teibp.css](http://dcl.slis.indiana.edu/teibp/css/teibp.css) includes default
+styles for the HTML shell and TEI document. `custom.css` is an empty stylesheet
+provided as a placeholder for user styles.
+* `<rendition>` elements with `@scheme="css"` from within individual TEI
+documents are used to generate CSS declarations understood by the browser.
+* The global `@rend` attribute may be used to include inline CSS in TEI
+documents. The contents of `@rend` are copied to `@style` which is understood by
+the browser.
+
+#Customizing the Look
+TEI Boilerplate includes a default “theme” and some alternative themes. These
+are provided mostly as an illustration of TEI Boilerplate's capabilities. Users
+may modify these supplied themes in the following ways:
+
+1. By supplying `<rendition>` elements with `@scheme="css"` within
+the`<tagsDecl>` section of your TEI document. TEI Boilerplate will automatically
+convert the `<rendition>` elements into CSS declarations  in a `<style>` element
+of the HTML5 shell that surrounds the TEI document after the simple XSLT
+transformation. TEI elements that use the `@rendition` attribute to point to
+`<rendition>` styles will be styled accordingly. This mechanism is similar to
+using HTML's `@class` to point to CSS classes. See the [TEI
+Guidelines](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD57)
+for more details on `<rendition>` and `@rendition`. The TEI Boilerplate [TEI
+template](http://dcl.slis.indiana.edu/teibp/content/teibp.xml)
+([teibp.xml](http://dcl.slis.indiana.edu/teibp/content/teibp.xml)) also includes
+examples.
+2. By adding custom CSS to the `custom.css` file located in the `teibp/css`
+directory. he HTML shell created by TEI Boilerplate includes a link to the
+custom.css file. This file is empty by default. You may add user styles to this
+file.
+3. It is possible, but not recommended, to edit teibp.css directly. This
+approach would require merging modifications with future releases of TEI
+Boilerplate.
+
+#The TEI Boilerplate Template
+An important component of TEI Boilerplate is a “boilerplate” [TEI
+template](http://dcl.slis.indiana.edu/teibp/content/teibp.xml)
+([teibp.xml](http://dcl.slis.indiana.edu/teibp/content/teibp.xml)), a very
+simple TEI file, with some XML comments about where one might typically put
+basic information (e.g., title, author, bibliographic details of any source
+material). The most important features of the TEI Boilerplate template are:
+
+* the `xml-stylesheet` processing instructions with links the TEI Boilerplate
+XSLT and CSS files,
+* a pre-defined set of `<rendition>` elements with generally useful styles for
+describing a source document or for use in a born-digital TEI document. For
+instance, the template includes styles for bold, italicized, underlined, and
+“normal” text; for left-aligned, right-aligned, centered, and fully justified
+text; for indentation of verse lines, block quotes; and so on. 
+
+Users of TEI Boilerplate may choose to use the styles provided in the template,
+and add to, modify, or replace them. As explained above, `<rendition>` elements,
+along with `@rendition` and `@rend` are all used by TEI Boilerplate to produced
+styled documents in the browser. Thus, TEI authors may achieve substantial
+results by using these standard TEI features, without the need to edit any of
+the TEI Boilerplate code.
+
+#People
+The TEI Boilerplate team is:
+
+* [John Walsh](http://www.slis.indiana.edu/faculty/jawalsh/), Indiana University
+* Grant Simpson, Indiana University
+* Saeed Moaddeli, Indiana University
+
+Please send general feedback to John Walsh at <a
+href="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</a>. Bug reports and
+feature requests may be submitted through SourceForge:
+<https://sourceforge.net/p/teiboilerplate/tickets/>.

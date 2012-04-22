@@ -103,12 +103,12 @@ border-top:2px solid @border-color;
   border: 1px dotted #444444;
 }
 /* Choice elements */
-choice abbr + expan,
-choice expan + abbr,
-choice sic + corr,
-choice corr + sic,
-choice orig + reg,
-choice reg + orig {
+choice abbr + expan:before,
+choice expan + abbr:before,
+choice sic + corr:before,
+choice corr + sic:before,
+choice orig + reg:before,
+choice reg + orig:before {
   content: " (";
 }
 choice abbr + expan:after,

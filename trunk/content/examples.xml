@@ -395,7 +395,7 @@
               </docTitle>
             </titlePage>
             <pb n="42" facs="acs0000001-05-057"/>
-            <div xml:id="preface002" rendition="#small #justify" rend="width:30em;" type="preface">
+            <div xml:id="preface002" rendition="#small #justify #center-block" rend="width:30em;" type="preface">
               <p> I <hi rendition="#sc">was</hi> allured into the audacity of this experiment by
                 consideration of a fact which hitherto does not seem to have been taken into consideration
                 by any translator of the half divine humourist in whose incomparable genius the highest

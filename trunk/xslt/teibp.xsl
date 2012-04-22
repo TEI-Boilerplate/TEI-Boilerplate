@@ -15,14 +15,16 @@
 	<xsl:output encoding="UTF-8" method="xml" omit-xml-declaration="yes"/>
 	
 	<xsl:param name="teibpHome" select="'http://dcl.slis.indiana.edu/teibp/'"/>
+	<xsl:param name="inlineCSS" select="true()"/>
+	<xsl:param name="includeToolbox" select="true()"/>
 	
 	<!-- parameters for file paths or URLs -->
 	<!-- modify filePrefix to point to files on your own server, 
 		or to specify a relatie path, e.g.:
-		<xsl:param name="filePrefix" select="'..'"/>
+		<xsl:param name="filePrefix" select="'http://dcl.slis.indiana.edu/teibp'"/>
+		
 	-->
-	
-	<xsl:param name="filePrefix" select="'http://dcl.slis.indiana.edu/teibp'"/>
+	<xsl:param name="filePrefix" select="'..'"/>
 	
 	<xsl:param name="teibpCSS" select="concat($filePrefix,'/css/teibp.css')"/>
 	<xsl:param name="customCSS" select="concat($filePrefix,'/css/custom.css')"/>
@@ -48,7 +50,9 @@
 		<html>
 			<xsl:call-template name="htmlHead"/>
 			<body>
-				<xsl:call-template name="teibpToolbox"/>
+				<xsl:if test="$includeToolbox = true()">
+					<xsl:call-template name="teibpToolbox"/>
+				</xsl:if>
 				<div id="tei_wrapper">
 					<xsl:apply-templates/>
 				</div>
@@ -99,9 +103,18 @@
 		</xd:desc>
 	</xd:doc>
 	<xsl:template match="@rend">
-		<xsl:attribute name="style">
-			<xsl:value-of select="."/>
-		</xsl:attribute>
+		<xsl:choose>
+			<xsl:when test="$inlineCSS = true()">
+				<xsl:attribute name="style">
+					<xsl:value-of select="."/>
+				</xsl:attribute>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:copy>
+					<xsl:apply-templates select="@*|node()"/>
+				</xsl:copy>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<xsl:template match="@xml:id">

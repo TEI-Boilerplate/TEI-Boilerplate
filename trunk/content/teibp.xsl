@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
 	xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT"
-	xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="xsl ixsl tei xd #default">
+	xmlns:eg="http://www.tei-c.org/ns/Examples"
+	xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="xsl ixsl tei xd eg #default">
 	<xd:doc  scope="stylesheet">
 		<xd:desc>
 			<xd:p><xd:b>Created on:</xd:b> Nov 17, 2011</xd:p>
@@ -60,7 +61,7 @@
 			</body>
 		</html>
 	</xsl:template>
-
+	
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
 			<xd:p>Basic copy template, copies all nodes from source XML tree to output
@@ -192,7 +193,7 @@
 	</xsl:template>
 	
 	<xsl:template name="addID">
-		<xsl:if test="not(@xml:id)">
+		<xsl:if test="not(@xml:id) and not(ancestor::eg:egXML)">
 			<xsl:attribute name="xml:id">
 				<xsl:call-template name="generate-unique-id">
 					<xsl:with-param name="root" select="generate-id()"/>
@@ -310,4 +311,21 @@
 				</select>			</div>
 		</div>
 	</xsl:template>
+	
+
+	<xsl:template match="eg:egXML">
+		<xsl:element name="{local-name()}">
+			<xsl:call-template name="addID"/>
+			<xsl:apply-templates select="@*"/>
+<xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
+<xsl:apply-templates/>
+<xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
+		</xsl:element>
+	</xsl:template>
+	
+	<xsl:template match="eg:egXML//comment()">
+		<xsl:comment><xsl:value-of select="."/></xsl:comment>
+	</xsl:template>
+
+	
 </xsl:stylesheet>

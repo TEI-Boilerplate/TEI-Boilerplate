@@ -281,7 +281,7 @@ xmlns:html="http://www.w3.org/1999/xhtml">
     <body>
       <div>
         <p>
-        The TEI Boilerplate template is pre-populated with a number of rendition styles for use in describing styles encountered in source documents or expressing style information in born-digital TEI documents.
+          The <ref target="../content/teibp.xml">TEI Boilerplate Template</ref> (<ref target="../content/teibp.xml">teibp.xml</ref>) is pre-populated with a number of rendition styles for use in describing styles encountered in source documents or expressing style information in born-digital TEI documents.
         </p>
         <p>
         The following <gi>tagsDecl</gi> element is included in the <gi>teiHeader</gi> of the TEI Boilerplate template:

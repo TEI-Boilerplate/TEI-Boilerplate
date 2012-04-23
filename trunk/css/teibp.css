@@ -5,39 +5,6 @@
 /* @namespace with prefix, as below, throws and error in less. */
 /* @namespace html "http://www.w3.org/1999/xhtml"; */
 /* Less variables */
-/* Standard Theme */
-.head-font {
-  font-family: Arvo, sans-serif;
-  font-weight: normal;
-}
-/* Terminal Theme */
-/*
-@body-font-family: Monaco, "Andale Mono", Courier, monospace;
-@body-font-size: 14pt;
-@background-color:black;
-@color:#00FD00;
-@link-color:#1CC0FA;
-@border-color:#444444;
-@note-background-color:#252525;
-.head-font {
-	font-family: Monaco, "Andale Mono", Courier, monospace;
-	font-weight: normal;
-}
-*/
-/* Sleepy Time Theme */
-/*
-@body-font-family: Cochin, Georgia, Serif;
-@body-font-size: 14pt;
-@background-color:black;
-@color:white;
-@link-color:#1CC0FA;
-@border-color:#444444;
-@note-background-color:#252525;
-.head-font {
-	font-family: Arvo, sans-serif;
-	font-weight: normal;
-}
-*/
 .note-like {
   display: block;
   margin: 1.5em auto 1.5em auto;
@@ -1510,7 +1477,7 @@ space:before {
   font-weight: bold;
   content: "";
 }
-span {
+TEI span {
   display: none;
 }
 spanGrp {
@@ -1858,4 +1825,8 @@ a:hover {
   width: 100%;
   height: 100%;
   background-image: url("../images/transparentbg.png");
+}
+.head-font {
+  font-family: Arvo, sans-serif;
+  font-weight: normal;
 }

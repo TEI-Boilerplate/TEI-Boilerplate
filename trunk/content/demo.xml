@@ -554,6 +554,43 @@
         </div>
       </div>
       <div>
+        <head>Code in <gi>egXML</gi></head>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<div xml:id="div00013" type="dedication" rendition="#x-small">
+  <pb n="84" facs="acs0000001-05-099"/>
+  <head rendition="#center #uppercase">To Walter Theodore Watts</head>
+  <epigraph>
+    <cit rendition="#center">
+      <quote>
+        <l rendition="#inline">“We are what suns and winds and waters make us.”</l></quote>
+      <bibl rendition="#small-caps">—Landor.</bibl>
+    </cit>
+  </epigraph>
+  <lg rendition="#i" rend="margin-left:7em;" type="sonnet">
+    <lg rendition="#sublg" type="octet">
+      <l n="1"><hi rendition="#small-caps">Sea</hi>, wind, and sun, with light and sound and
+        breath</l>
+      <l n="2" rendition="#l-indent-01">The spirit of man fulfilling—these create</l>
+      <l n="3" rendition="#l-indent-01">That joy wherewith man's life grown passionate</l>
+      <l n="4">Gains heart to hear and sense to read and faith</l>
+      <l n="5">To know the secret word our Mother saith</l>
+      <l n="6" rendition="#l-indent-01">In silence, and to see, though doubt wax great,</l>
+      <l n="7" rendition="#l-indent-01">Death as the shadow cast by life on fate,</l>
+      <l n="8">Passing, whose shade we call the shadow of death.</l>
+    </lg>
+    <lg rendition="#sublg" type="sextet" rend="margin-top:1.5em;">
+      <l n="9">Brother, to whom our Mother as to me</l>
+      <l n="10" rendition="#l-indent-01">Is dearer than all dreams of days undone,</l>
+      <l n="11">This song I give you of the sovereign three</l>
+      <l n="12" rendition="#l-indent-01">That are as life and sleep and death are, one:</l>
+      <l n="13">A song the sea-wind gave me from the sea,</l>
+      <l n="14" rendition="#l-indent-01">Where nought of man's endures before the sun.</l>
+    </lg>
+  </lg>
+</div>
+        </egXML>
+      </div>
+      <div>
         <head>Images and captions</head>
         <p>TEI <gi>graphic</gi> elements are transformed to HTML <gi>img</gi> elements so that images may be displayed in the browser.</p>
         <figure>

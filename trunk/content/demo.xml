@@ -97,6 +97,20 @@
           content:"" !important;
         </rendition>
         
+        <rendition xml:id="codeblock" n="teibp:codeblock" scheme="css">
+          display: block;
+          font-size: 80%;
+          margin-left: 1em;
+          padding-left: 1em;
+          border-left: 1px solid gray;
+          margin-top: .75em;
+          margin-bottom: .75em;
+          padding-top: .75em;
+          padding-bottom: .75em;
+          font-family:Monaco,Courier,monospace;
+          white-space:pre;
+        </rendition>
+        
         <!-- Alignment. -->
         <rendition xml:id="center" n="tiebp:center" scheme="css">
           display:block;

@@ -16,9 +16,7 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 				<availability status="free">
 					<p>Copyright © 2012.</p>
 					<p>
-					<!--
-					<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">TEI Boilerplate</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="teiboilerplate.slis.indiana.edu" property="cc:attributionName" rel="cc:attributionURL">John A. Walsh</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.-->
-					<ref n="license" target="http://creativecommons.org/licenses/by/3.0/"><figure rend="border-width:0;"><figDesc>Creative Commons License</figDesc><graphic url="http://i.creativecommons.org/l/by/3.0/80x15.png"/></figure></ref><lb />TEI Boilerplate by <ref target="http://www.slis.indiana.edu/faculty/jawalsh/">John A. Walsh</ref> is licensed under a <ref n="license" target="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</ref>.
+					<ref n="license" target="http://creativecommons.org/licenses/by/3.0/"><figure rend="border-width:0;"><figDesc>Creative Commons License</figDesc><graphic url="http://i.creativecommons.org/l/by/3.0/80x15.png"/></figure></ref><lb />TEI Boilerplate is licensed under a <ref n="license" target="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</ref>.
 					</p>
 				</availability>
 			</publicationStmt>
@@ -131,6 +129,20 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 				<rendition corresp="#blockquote" n="tiebp:blockquote" scheme="css" scope="after">
 					<!-- This turns off the default generated quotes for block quotes. -->
 					content:"" !important;
+				</rendition>
+				
+				<rendition xml:id="codeblock" n="teibp:codeblock" scheme="css">
+					display: block;
+					font-size: 80%;
+					margin-left: 1em;
+					padding-left: 1em;
+					border-left: 1px solid gray;
+					margin-top: .75em;
+					margin-bottom: .75em;
+					padding-top: .75em;
+					padding-bottom: .75em;
+					font-family:Monaco,Courier,monospace;
+					white-space:pre;
 				</rendition>
 				
 				<!-- Alignment. -->

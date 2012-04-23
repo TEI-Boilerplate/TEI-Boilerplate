@@ -122,7 +122,17 @@ xmlns:html="http://www.w3.org/1999/xhtml">
   padding-top:.75em;
   padding-bottom:.75em;
 </rendition>
-      	
+
+<rendition corresp="#blockquote" n="tiebp:blockquote" scheme="css" scope="before">
+  <!-- This turns off the default generated quotes for block quotes. -->
+  content:"" !important;
+</rendition>
+
+<rendition corresp="#blockquote" n="tiebp:blockquote" scheme="css" scope="after">
+  <!-- This turns off the default generated quotes for block quotes. -->
+  content:"" !important;
+</rendition>
+        
 <rendition xml:id="codeblock" n="teibp:codeblock" scheme="css">
   display: block;
   font-size: 80%;
@@ -135,16 +145,6 @@ xmlns:html="http://www.w3.org/1999/xhtml">
   padding-bottom: .75em;
   font-family:Monaco,Courier,monospace;
   white-space:pre;
-</rendition>
-
-<rendition corresp="#blockquote" n="tiebp:blockquote" scheme="css" scope="before">
-  <!-- This turns off the default generated quotes for block quotes. -->
-  content:"" !important;
-</rendition>
-
-<rendition corresp="#blockquote" n="tiebp:blockquote" scheme="css" scope="after">
-  <!-- This turns off the default generated quotes for block quotes. -->
-  content:"" !important;
 </rendition>
 
 <!-- Alignment. -->
@@ -363,6 +363,20 @@ xmlns:html="http://www.w3.org/1999/xhtml">
     content:"" !important;
   </rendition>
   
+  <rendition xml:id="codeblock" n="teibp:codeblock" scheme="css">
+    display: block;
+    font-size: 80%;
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 1px solid gray;
+    margin-top: .75em;
+    margin-bottom: .75em;
+    padding-top: .75em;
+    padding-bottom: .75em;
+    font-family:Monaco,Courier,monospace;
+    white-space:pre;
+  </rendition>
+  
   <!-- Alignment. -->
   <rendition xml:id="center" n="tiebp:center" scheme="css">
     display:block;
@@ -567,6 +581,20 @@ content: "" !important;
 
 [rendition~="#blockquote"]:after {
 content: "" !important;
+}
+
+[rendition~="#codeblock"] {
+display: block;
+font-size: 80%;
+margin-left: 1em;
+padding-left: 1em;
+border-left: 1px solid gray;
+margin-top: .75em;
+margin-bottom: .75em;
+padding-top: .75em;
+padding-bottom: .75em;
+font-family: Monaco,Courier,monospace;
+white-space: pre;
 }
 
 [rendition~="#center"] {

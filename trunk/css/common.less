@@ -10,6 +10,9 @@
 
 /* Less variables */
 
+
+
+
 .block(@margins: 0) {
 display:block;
 margin-top:@margins;
@@ -88,7 +91,7 @@ display:none;
 }
 
 .mono {
-font-family: Courier,monospace;
+font-family: Monaco,Courier,monospace;
 }
 
 .page-setup {
@@ -239,7 +242,7 @@ display:block;
 }  
 
 att {
-font-family: "Andale Mono", "Courier", "Courier New", monospace;
+	.mono;
 } 
 
 att:before {
@@ -520,7 +523,19 @@ editor {}
 editorialDecl {}
 education {}
 eg {}
-egXML {}
+egXML {
+		display: block;
+		font-size: 80%;
+		margin-left: 1em;
+		padding-left: 1em;
+		border-left: 1px solid @border-color;
+		margin-top: .75em;
+		margin-bottom: .75em;
+		padding-top: .75em;
+		padding-bottom: .75em;
+		font-family:monospace;
+		white-space:pre;
+}
 elementRef {}
 elementSpec {}
 email {}
@@ -1365,6 +1380,7 @@ border:1px solid @border-color;
 
 
 #footer {
+margin-top:1em;
 border-top: 1px solid @color;
 padding-top:.5em;
 font-size:12pt;
@@ -1403,6 +1419,31 @@ font-size:115%;
 margin-top:0;
 margin-bottom:.5em;
 border-bottom:1px solid @border-color;
+}
+
+pre.codeblock {
+	display:block;
+  font-size:80%;
+  margin-left:3em;
+  padding-left:1em;
+  border-left: 1px solid gray;
+  margin-top:.75em;
+  margin-bottom:.75em;
+  padding-top:.75em;
+  padding-bottom:.75em;
+  /*    overflow-x: auto; */ /*overflow-x:auto was adding veritical scrollbar ???*/
+/* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+    white-space: pre-wrap;
+/* css-3 */
+    white-space: -moz-pre-wrap !important;
+/* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+/* Opera 4-6 */
+    white-space: -o-pre-wrap;
+/* Opera 7 */
+/* width: 99%; */
+    word-wrap: break-word;
+/* Internet Explorer 5.5+ */
 }
 
 

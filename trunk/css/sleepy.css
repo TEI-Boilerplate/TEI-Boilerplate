@@ -49,7 +49,7 @@
   display: none;
 }
 .mono {
-  font-family: Courier,monospace;
+  font-family: Monaco,Courier,monospace;
 }
 .page-setup {
   margin-left: 2em;
@@ -203,7 +203,7 @@ argument {
   display: block;
 }
 att {
-  font-family: "Andale Mono", "Courier", "Courier New", monospace;
+  font-family: Monaco,Courier,monospace;
 }
 att:before {
   content: "@";
@@ -424,7 +424,7 @@ closer {
   /* Empty Rule Set */
 }
 code {
-  font-family: Courier,monospace;
+  font-family: Monaco,Courier,monospace;
 }
 /* jawalsh:
 For things like collation, condition, etc. that can have text or paragraphs as 
@@ -522,6 +522,19 @@ date[when]:empty:before {
   content: attr(when);
 }
 /* e */
+egXML {
+  display: block;
+  font-size: 80%;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid #444444;
+  margin-top: .75em;
+  margin-bottom: .75em;
+  padding-top: .75em;
+  padding-bottom: .75em;
+  font-family: monospace;
+  white-space: pre;
+}
 encodingDesc {
   display: none;
 }
@@ -570,7 +583,7 @@ geogName {
   /* Empty Rule Set */
 }
 gi {
-  font-family: Courier,monospace;
+  font-family: Monaco,Courier,monospace;
 }
 gi:before {
   content: "<";
@@ -703,7 +716,7 @@ iType {
   /* Empty Rule Set */
 }
 ident {
-  font-family: Courier,monospace;
+  font-family: Monaco,Courier,monospace;
 }
 idno {
   /* Empty Rule Set */
@@ -1780,6 +1793,7 @@ img {
   border: 1px solid #444444;
 }
 #footer {
+  margin-top: 1em;
   border-top: 1px solid white;
   padding-top: .5em;
   font-size: 12pt;
@@ -1815,6 +1829,39 @@ a:hover {
   margin-top: 0;
   margin-bottom: .5em;
   border-bottom: 1px solid #444444;
+}
+pre.codeblock {
+  display: block;
+  font-size: 80%;
+  margin-left: 3em;
+  padding-left: 1em;
+  border-left: 1px solid gray;
+  margin-top: .75em;
+  margin-bottom: .75em;
+  padding-top: .75em;
+  padding-bottom: .75em;
+  /*    overflow-x: auto; */
+  /*overflow-x:auto was adding veritical scrollbar ???*/
+
+  /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+
+  white-space: pre-wrap;
+  /* css-3 */
+
+  white-space: -moz-pre-wrap !important;
+  /* Mozilla, since 1999 */
+
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+
+  /* width: 99%; */
+
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+
 }
 /* loading animation */
 #loading {

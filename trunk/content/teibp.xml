@@ -280,7 +280,7 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 		<body>
 			<div>
 				<head>What is this?</head>
-				<p>This file (<ref target="http://dcl.slis.indiana.edu/teibp/content/teibp.xml">teibp.xml</ref>) is a simple TEI P5 template that includes a set of generally useful <gi>rendition</gi> styles for use with <ref target="http://dcl.slis.indiana.edu/teibp/">TEI Boilerplate</ref>.</p>
+				<p>This file (<ref target="http://dcl.slis.indiana.edu/teibp/content/teibp.xml">teibp.xml</ref>) is a simple TEI P5 template that includes a set of generally useful <ref target="teibpstyles.xml"><gi>rendition</gi> styles</ref> for use with <ref target="http://dcl.slis.indiana.edu/teibp/">TEI Boilerplate</ref>. These styles are documented in: <ref target="teibpstyles.xml">Styles available in the TEI Boilerplate Template</ref>.</p>
 			</div>
 		</body>
 	</text>

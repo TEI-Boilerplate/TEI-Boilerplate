@@ -18,6 +18,7 @@
 	<xsl:param name="teibpHome" select="'http://dcl.slis.indiana.edu/teibp/'"/>
 	<xsl:param name="inlineCSS" select="true()"/>
 	<xsl:param name="includeToolbox" select="true()"/>
+	<xsl:param name="includeAnalytics" select="true()"/>
 	
 	<!-- parameters for file paths or URLs -->
 	<!-- modify filePrefix to point to files on your own server, 
@@ -257,7 +258,10 @@
 				});
 			</script>
 			<xsl:call-template name="rendition2style"/>
-			<title/>
+			<title><!-- don't leave empty. --></title>
+			<xsl:if test="$includeAnalytics = true()">
+				<xsl:call-template name="analytics"/>
+			</xsl:if>
 		</head>
 	</xsl:template>
 
@@ -310,6 +314,20 @@
 					<option value="{$theme.terminal}">Terminal</option>
 				</select>			</div>
 		</div>
+	</xsl:template>
+	
+	<xsl:template name="analytics">
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-31051795-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
 	</xsl:template>
 	
 

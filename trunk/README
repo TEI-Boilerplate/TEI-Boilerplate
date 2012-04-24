@@ -149,8 +149,8 @@ to the `teibp/content` directory of TEI Boilerplate and include the following
 xml-stylesheet processing instructions at the top of your TEI documents, after
 the XML declaration and before the root `<TEI>` element:
 
-        <?xml-stylesheet type="teibp.xsl"?>
-        <?xml-stylesheet type="../css/teibp.css"?>
+        <?xml-stylesheet type="text/xsl" href="teibp.xsl"?>
+        <?xml-stylesheet type="text/css" href="../css/teibp.css"?>
 
 You may then access your TEI files from a modern browser and see the resulting
 styled document.
@@ -230,7 +230,6 @@ The TEI Boilerplate team is:
 * [Grant Simpson](http://grantsimpson.name/), Indiana University
 * Saeed Moaddeli, Indiana University
 
-Please send general feedback to John Walsh at <a
-href="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</a>. Bug reports and
+Please send general feedback to John Walsh at <a href="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</a>. Bug reports and
 feature requests may be submitted through SourceForge:
 <https://sourceforge.net/p/teiboilerplate/tickets/>.

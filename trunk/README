@@ -163,7 +163,7 @@ browser. The CSS is drawn from three possible sources:
 * External css stylesheets: 
     * [`teibp.css`](http://dcl.slis.indiana.edu/teibp/css/teibp.css) includes
 default styles for the HTML shell and TEI document. 
-    * [`custom.css`](http://dcl.slis.indiana.edu/teibp/css/teibp.css) is an
+    * [`custom.css`](http://dcl.slis.indiana.edu/teibp/css/custom.css) is an
 empty stylesheet provided as a placeholder for user styles.
 * `<rendition>` elements with `@scheme="css"`  within the TEI document are used
 to generate CSS declarations understood by the browser.

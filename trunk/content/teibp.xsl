@@ -6,9 +6,10 @@
 	xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" 
 	xmlns:exsl="http://exslt.org/common"
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	extension-element-prefixes="exsl msxsl"
 	xmlns="http://www.w3.org/1999/xhtml" 
-	exclude-result-prefixes="xsl tei xd eg #default">
+	exclude-result-prefixes="xsl tei xd eg fn #default">
 	<xd:doc  scope="stylesheet">
 		<xd:desc>
 			<xd:p><xd:b>Created on:</xd:b> Nov 17, 2011</xd:p>
@@ -137,9 +138,14 @@
 	
 
 	<xsl:template match="@xml:id">
+		<!-- @xml:id is copied to @id, which browsers can use
+			for internal links.
+		-->
+		<!--
 		<xsl:attribute name="xml:id">
 			<xsl:value-of select="."/>
 		</xsl:attribute>
+		-->
 		<xsl:attribute name="id">
 			<xsl:value-of select="."/>
 		</xsl:attribute>
@@ -202,7 +208,7 @@
 	
 	<xsl:template name="addID">
 		<xsl:if test="not(@xml:id) and not(ancestor::eg:egXML)">
-			<xsl:attribute name="xml:id">
+			<xsl:attribute name="id">
 				<xsl:call-template name="generate-unique-id">
 					<xsl:with-param name="root" select="generate-id()"/>
 				</xsl:call-template>
@@ -340,10 +346,11 @@
 
 	<xsl:template match="eg:egXML">
 		<xsl:element name="{local-name()}">
+			<xsl:apply-templates select="@*"/>
 			<xsl:call-template name="addID"/>
 			<xsl:call-template name="xml-to-string">
 				<xsl:with-param name="node-set">
-					<xsl:copy-of select="node()|@*"/>
+					<xsl:copy-of select="node()"/>
 				</xsl:with-param>
 			</xsl:call-template>
 		</xsl:element>

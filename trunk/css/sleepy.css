@@ -1833,6 +1833,22 @@ a:hover {
   margin-bottom: .5em;
   border-bottom: 1px solid #444444;
 }
+/* xml-serialization */
+.eg-element {
+  color: #0165c8;
+}
+.eg-comment {
+  color: gray;
+}
+.eg-att, .eg-nsdecl {
+  color: #f58650;
+}
+.eg-attvalue, .eg-ns {
+  color: #993300;
+}
+.eg-text {
+  color: white;
+}
 /* loading animation */
 #loading {
   display: none;

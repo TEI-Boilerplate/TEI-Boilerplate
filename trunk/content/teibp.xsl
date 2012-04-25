@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
-	xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT"
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
 	xmlns:eg="http://www.tei-c.org/ns/Examples"
-	xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="xsl ixsl tei xd eg #default">
+	xmlns:tei="http://www.tei-c.org/ns/1.0" 
+	xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" 
+	xmlns:exsl="http://exslt.org/common"
+	xmlns:msxsl="urn:schemas-microsoft-com:xslt"
+	extension-element-prefixes="exsl msxsl"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	exclude-result-prefixes="xsl tei xd eg #default">
 	<xd:doc  scope="stylesheet">
 		<xd:desc>
 			<xd:p><xd:b>Created on:</xd:b> Nov 17, 2011</xd:p>
@@ -12,6 +18,7 @@
 				html/browser environment.</xd:p>
 		</xd:desc>
 	</xd:doc>
+	<xsl:include href="xml-to-string.xsl"/>
 
 	<xsl:output encoding="UTF-8" method="xml" omit-xml-declaration="yes"/>
 	
@@ -48,7 +55,7 @@
 
 	<xsl:key name="ids" match="//*" use="@xml:id"/>
 
-	<xsl:template match="/" name="htmlShell">
+	<xsl:template match="/" name="htmlShell" priority="99">
 		<html>
 			<xsl:call-template name="htmlHead"/>
 			<body>
@@ -334,10 +341,11 @@
 	<xsl:template match="eg:egXML">
 		<xsl:element name="{local-name()}">
 			<xsl:call-template name="addID"/>
-			<xsl:apply-templates select="@*"/>
-<xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
-<xsl:apply-templates/>
-<xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
+			<xsl:call-template name="xml-to-string">
+				<xsl:with-param name="node-set">
+					<xsl:copy-of select="node()|@*"/>
+				</xsl:with-param>
+			</xsl:call-template>
 		</xsl:element>
 	</xsl:template>
 	

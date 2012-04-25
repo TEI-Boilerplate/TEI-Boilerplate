@@ -1,0 +1,26 @@
+Change Log
+==========
+
+#1.0:   
+
+* Initial Release
+
+#1.0.1: 
+
+* Fixed error in documentation (xsl-stylesheet processing instructions
+  were incorrect.
+       
+#1.0.2: 
+
+* Now importing xml-to-string.xsl and using these routines to transform
+  code in the TEI egXML element. This should affect only a small number
+  of users who may be using TEI for technical documentation. Firefox 
+  does not support the @disable-output-escaping attribute, so the 
+  previous way we were handling egXML will not work in Firefox. 
+  
+* Added CSS styles for syntax highlighting of XML code in egXML. This
+  was made possible by the new routines for transforming egXML 
+  content.
+  
+* Other cosmetic tweeks to CSS.
+    

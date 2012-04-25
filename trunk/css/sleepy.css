@@ -49,7 +49,7 @@
   display: none;
 }
 .mono {
-  font-family: Monaco,Courier,monospace;
+  font-family: Courier,monospace;
 }
 .page-setup {
   margin-left: 2em;
@@ -203,7 +203,7 @@ argument {
   display: block;
 }
 att {
-  font-family: Monaco,Courier,monospace;
+  font-family: Courier,monospace;
 }
 att:before {
   content: "@";
@@ -424,7 +424,7 @@ closer {
   /* Empty Rule Set */
 }
 code {
-  font-family: Monaco,Courier,monospace;
+  font-family: Courier,monospace;
 }
 /* jawalsh:
 For things like collation, condition, etc. that can have text or paragraphs as 
@@ -583,7 +583,7 @@ geogName {
   /* Empty Rule Set */
 }
 gi {
-  font-family: Monaco,Courier,monospace;
+  font-family: Courier,monospace;
 }
 gi:before {
   content: "<";
@@ -716,7 +716,7 @@ iType {
   /* Empty Rule Set */
 }
 ident {
-  font-family: Monaco,Courier,monospace;
+  font-family: Courier,monospace;
 }
 idno {
   /* Empty Rule Set */
@@ -1832,55 +1832,6 @@ a:hover {
   margin-top: 0;
   margin-bottom: .5em;
   border-bottom: 1px solid #444444;
-}
-pre.codeblock {
-  display: block;
-  font-size: 80%;
-  margin-left: 3em;
-  padding-left: 1em;
-  border-left: 1px solid gray;
-  margin-top: .75em;
-  margin-bottom: .75em;
-  padding-top: .75em;
-  padding-bottom: .75em;
-  /*    overflow-x: auto; */
-  /*overflow-x:auto was adding veritical scrollbar ???*/
-
-  /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
-
-  white-space: pre-wrap;
-  /* css-3 */
-
-  white-space: -moz-pre-wrap !important;
-  /* Mozilla, since 1999 */
-
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-
-  /* width: 99%; */
-
-  word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
-
-}
-/* xml-serialization */
-.eg-element {
-  color: #0165c8;
-}
-.eg-comment {
-  color: gray;
-}
-.eg-att, .eg-nsdecl {
-  color: #f58650;
-}
-.eg-attvalue, .eg-ns {
-  color: #993300;
-}
-.eg-text {
-  color: white;
 }
 /* loading animation */
 #loading {

@@ -13,7 +13,7 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 				<pubPlace>Bloomington, IN</pubPlace>
 				<publisher>Digital Culture Lab, School of Library &amp; Information Science, Indiana University</publisher>
 				<availability status="free">
-					<p>Copyright © 2012.</p>
+					<p>Copyright © 2012. TEI Boilerplate</p>
 					<p>
 					<ref n="license" target="http://creativecommons.org/licenses/by/3.0/"><figure rend="border-width:0;"><figDesc>Creative Commons License</figDesc><graphic url="http://i.creativecommons.org/l/by/3.0/80x15.png"/></figure></ref><lb />TEI Boilerplate is licensed under a <ref n="license" target="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</ref>.
 					</p>
@@ -142,6 +142,12 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 					padding-bottom: .75em;
 					font-family:Monaco,Courier,monospace;
 					white-space:pre;
+				</rendition>
+				
+				<!-- Inline -->
+				
+				<rendition xml:id="inline" n="teibp:inline" scheme="css">
+					display:inline;
 				</rendition>
 				
 				<!-- Alignment. -->

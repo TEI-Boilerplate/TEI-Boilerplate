@@ -279,7 +279,7 @@
 	</xsl:template>
 
 	<xsl:template name="rendition2style">
-		<style>
+		<style type="text/css">
             <xsl:apply-templates select="//tei:rendition" mode="rendition2style"/>
         </style>
 	</xsl:template>

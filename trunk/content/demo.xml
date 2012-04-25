@@ -12,10 +12,17 @@
         <title>TEI Boilerplate Examples &amp; Features</title>
       </titleStmt>
       <publicationStmt>
-        <p>Publication Information</p>
+        <pubPlace>Bloomington, IN</pubPlace>
+        <publisher>Digital Culture Lab, School of Library &amp; Information Science, Indiana University</publisher>
+        <availability status="free">
+          <p>Copyright © 2012. TEI Boilerplate</p>
+          <p>
+            <ref n="license" target="http://creativecommons.org/licenses/by/3.0/"><figure rend="border-width:0;"><figDesc>Creative Commons License</figDesc><graphic url="http://i.creativecommons.org/l/by/3.0/80x15.png"/></figure></ref><lb />TEI Boilerplate is licensed under a <ref n="license" target="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</ref>.
+          </p>
+        </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Information about the source</p>
+        <p>This TEI/XML document is the original source</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -108,6 +115,12 @@
           padding-bottom: .75em;
           font-family:Monaco,Courier,monospace;
           white-space:pre;
+        </rendition>
+        
+        <!-- Inline -->
+        
+        <rendition xml:id="inline" n="teibp:inline" scheme="css">
+          display:inline;
         </rendition>
         
         <!-- Alignment. -->
@@ -568,36 +581,44 @@
       </div>
       <div>
         <head>Code in <gi>egXML</gi></head>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="width:50em;">
 <div xml:id="div00013" type="dedication" rendition="#x-small">
   <pb n="84" facs="acs0000001-05-099"/>
-  <head rendition="#center #uppercase">To Walter Theodore Watts</head>
+  <head rendition="#center-block #uppercase">To Walter Theodore Watts</head>
   <epigraph>
-    <cit rendition="#center">
+    <cit rendition="#center-block #blockquote">
       <quote>
-        <l rendition="#inline">“We are what suns and winds and waters make us.”</l></quote>
+        <l rendition="#inline">“We are what suns and winds and waters make us.”</l>
+      </quote>
       <bibl rendition="#small-caps">—Landor.</bibl>
     </cit>
   </epigraph>
   <lg rendition="#i" rend="margin-left:7em;" type="sonnet">
     <lg rendition="#sublg" type="octet">
-      <l n="1"><hi rendition="#small-caps">Sea</hi>, wind, and sun, with light and sound and
-        breath</l>
-      <l n="2" rendition="#l-indent-01">The spirit of man fulfilling—these create</l>
-      <l n="3" rendition="#l-indent-01">That joy wherewith man's life grown passionate</l>
+      <l n="1"><hi rendition="#small-caps">Sea</hi>, wind, and sun, with light 
+        and sound and breath</l>
+      <l n="2" rendition="#l-indent-01">The spirit of man fulfilling—these
+        create</l>
+      <l n="3" rendition="#l-indent-01">That joy wherewith man's life grown 
+        passionate</l>
       <l n="4">Gains heart to hear and sense to read and faith</l>
       <l n="5">To know the secret word our Mother saith</l>
-      <l n="6" rendition="#l-indent-01">In silence, and to see, though doubt wax great,</l>
-      <l n="7" rendition="#l-indent-01">Death as the shadow cast by life on fate,</l>
+      <l n="6" rendition="#l-indent-01">In silence, and to see, though doubt 
+        wax great,</l>
+      <l n="7" rendition="#l-indent-01">Death as the shadow cast by life
+        on fate,</l>
       <l n="8">Passing, whose shade we call the shadow of death.</l>
     </lg>
     <lg rendition="#sublg" type="sextet" rend="margin-top:1.5em;">
       <l n="9">Brother, to whom our Mother as to me</l>
-      <l n="10" rendition="#l-indent-01">Is dearer than all dreams of days undone,</l>
+      <l n="10" rendition="#l-indent-01">Is dearer than all dreams of days 
+        undone,</l>
       <l n="11">This song I give you of the sovereign three</l>
-      <l n="12" rendition="#l-indent-01">That are as life and sleep and death are, one:</l>
+      <l n="12" rendition="#l-indent-01">That are as life and sleep and death 
+        are, one:</l>
       <l n="13">A song the sea-wind gave me from the sea,</l>
-      <l n="14" rendition="#l-indent-01">Where nought of man's endures before the sun.</l>
+      <l n="14" rendition="#l-indent-01">Where nought of man's endures before 
+        the sun.</l>
     </lg>
   </lg>
 </div>

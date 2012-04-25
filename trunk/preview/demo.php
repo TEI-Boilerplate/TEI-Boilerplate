@@ -60,9 +60,7 @@ pre {
 </div>
   <div id="content" style="height:500px"><h1>TEI Boilerplate Preview Tool</h1>
 	<form enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
-    	<!-- MAX_FILE_SIZE must precede the file input field -->
-    	<input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-    	<!-- Name of input element determines name in $_FILES array -->
+    	<input type="hidden" name="MAX_FILE_SIZE" value="105000" />
     	Upload a valid TEI file to preview: <input name="userfile" type="file" />
     	<input type="submit" name="submit" value="upload" />
 	</form>
@@ -85,21 +83,22 @@ if (isset($_POST['submit'])) {
 	$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
 	if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-    	echo "Your dicument is successfully uploaded.\n";
-	} else {
-    	echo "There was an error in the upload process. Try again later.\n";
-	}	
-
-	$teibpcmd = "
+    	echo "Your document is successfully uploaded.\n";
+		$teibpcmd = "
 	<?xml-stylesheet type=\"text/xsl\" href=\"teibp.xsl\"?>
 	<TEI";
 
-	$filetext = file_get_contents($uploadfile);
-	$pattern = "/<TEI\b/";
-	$file_bp = preg_replace($pattern,$teibpcmd,$filetext,1);
-	file_put_contents($uploadfile, $file_bp);
+		$filetext = file_get_contents($uploadfile);
+		$pattern = "/<TEI\b/";
+		$file_bp = preg_replace($pattern,$teibpcmd,$filetext,1);
+		file_put_contents($uploadfile, $file_bp);
 
-	echo "<a href=\"".$uploadfile."\">Preview your TEI document here.</a>";
+		echo "<a href=\"".$uploadfile."\">Preview your TEI document here.</a>";
+	} else {
+    	echo "There was an error in the upload process. Make sure your ducument is less than 100KB and try again.\n";
+	}	
+
+	
 }
 ?>
 

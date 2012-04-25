@@ -1165,6 +1165,10 @@ TEI span {
 .hide;
 }
 
+TEI egXML span {
+display:inline;
+}
+
 spanGrp {/* NOT SURE, look back on */}
 speaker {
 font-weight:bold; 
@@ -1444,6 +1448,23 @@ pre.codeblock {
 /* width: 99%; */
     word-wrap: break-word;
 /* Internet Explorer 5.5+ */
+}
+
+/* xml-serialization */
+.eg-element {
+    color:rgb(1,101,200);
+}
+.eg-comment {
+    color:gray;
+}
+.eg-att, .eg-nsdecl {
+    color:rgb(245,134,80);
+}
+.eg-attvalue, .eg-ns {
+    color:rgb(153,51,0);
+}
+.eg-text {
+    color:black;
 }
 
 

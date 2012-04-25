@@ -1493,6 +1493,9 @@ space:before {
 TEI span {
   display: none;
 }
+TEI egXML span {
+  display: inline;
+}
 spanGrp {
   /* NOT SURE, look back on */
 }
@@ -1862,6 +1865,22 @@ pre.codeblock {
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */
 
+}
+/* xml-serialization */
+.eg-element {
+  color: #0165c8;
+}
+.eg-comment {
+  color: gray;
+}
+.eg-att, .eg-nsdecl {
+  color: #f58650;
+}
+.eg-attvalue, .eg-ns {
+  color: #993300;
+}
+.eg-text {
+  color: black;
 }
 /* loading animation */
 #loading {

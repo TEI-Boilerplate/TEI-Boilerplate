@@ -1,5 +1,10 @@
 How to Package TEI Boilerplate
 
+Scripted
+Run package.sh version
+(where version = 1.0.0 or something like that)
+
+Manually
 1. Check out a working copy of the trunk
 2. Make a copy of the trunk
 3. Rename copy to "teibp"

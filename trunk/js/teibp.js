@@ -1,24 +1,9 @@
-function getPageBreaks(){
-	return document.getElementsByTagName('pb');
-}
-
 function clearPageBreaks(){
-	var pageBreaks = getPageBreaks();
-	for(pageBreak in pageBreaks){
-		pageBreaks[pageBreak].textContent = '';
-	}
+	$("pb").css("display","none");
 }
 
 function addPageBreaks(){
-	var pageBreaks = getPageBreaks();
-	for(pageBreak in pageBreaks){
-		if(null != pageBreaks[pageBreak].attributes.getNamedItem('n')
-			&& undefined != pageBreaks[pageBreak].attributes.getNamedItem('n')){
-			pageBreaks[pageBreak].textContent = "page: " 
-				+ pageBreaks[pageBreak].attributes.getNamedItem('n').value
-				+ "";
-		}else{pageBreaks[pageBreak].textContent = "page"}
-	}
+	$("pb").css("display","block");	
 }
 
 function init(){

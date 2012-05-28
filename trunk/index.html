@@ -82,15 +82,13 @@ browser, please let us know by filing a bug report at
 
 <h1>Rationale</h1>
 
-<p>TEI is a language designed primarily to express the content of documents.
-Projects that use TEI are responsible for developing their own methods of
-augmenting or converting it to a presentation-ready state for the web. Two
+<p>TEI is an XML-based language for describing and analyzing literary texts and other documents of interest to humanities scholars. Although TEI provides mechanisms for describing the design, presentational, and material features of the source document, projects and individual scholars that use TEI are responsible for developing their own methods or implementing existing solutions for converting the TEI to a presentation-ready state for the web or print. Two
 potential paths to reach this goal are:</p>
 
 <ul>
 <li>Transforming TEI to HTML using XSLT. The output HTML is typically styled with
 CSS.</li>
-<li>Attaching a CSS stylesheet directly to the TEI XML.</li>
+<li>Styling the TEI directly with CSS by referencing a CSS stylesheet from within the TEI document.</li>
 </ul>
 
 <p>Both of these approaches have advantages and disadvantages. While HTML is the
@@ -151,21 +149,18 @@ many powerful JavaScript frameworks, and CSS. </p>
 <p>In teaching contexts, TEI Boilerplate may be a useful solution. Students and 
 scholars new to TEI are rightly excited and enthused as they encode their first
 documents and experience the expressive power of TEI encoding. But too often
-that initial excitement and enthusiasm dissipates when new TEI users inquire
+that initial excitement and enthusiasm dissipate when new TEI users inquire
 about publishing their documents on the web and are confronted with sometimes
 overwhelming details about an unfamiliar programming language, XSLT, and other
-information about server side processing, transformation engines, and so on.
+information about server-side processing and transformation engines.
 With TEI Boilerplate, users can simply add a single line of code to their
-documents to allow modern browsers to produce formatted output of their TEI
-content. And that display may be further tweaked and customized using CSS.</p>
+documents to instruct modern browsers to produce formatted output of their TEI
+content. And that default TEI Boilerplate output may be further tweaked and customized using CSS. </p>
 
 <h3>TEI Boilerplate and Omeka</h3>
 
 <p>TEI Boilerplate is a simple solution for delivering TEI documents through
-<a href="http://www.omeka.org">Omeka</a>. No additional software or plugins are necessary.
-One can simply simply host the TEI Boilerplate XSLT, JavaScript, and CSS files
-on a server (or as items in Omeka) and change any links to point to those online
-files. </p>
+<a href="http://www.omeka.org">Omeka</a>. No additional software or plugins are necessary. One can simply simply host the TEI Boilerplate XSLT, JavaScript, and CSS files on a server alongside Omeka and change a parameter in the TEI Boilerplate XSLT file to point to that server.</p>
 
 <p>Note: Some browsers apply the “same origin” security policy to XSLT stylesheets,
 which prohibits the use of XSLT from a different domain than the input document.

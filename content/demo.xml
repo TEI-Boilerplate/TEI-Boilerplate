@@ -17,7 +17,7 @@
         <availability status="free">
           <p>Copyright © 2012. TEI Boilerplate</p>
           <p>
-            <ref n="license" target="http://creativecommons.org/licenses/by/3.0/"><figure rend="border-width:0;"><figDesc>Creative Commons License</figDesc><graphic url="http://i.creativecommons.org/l/by/3.0/80x15.png"/></figure></ref><lb />TEI Boilerplate is licensed under a <ref n="license" target="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</ref>.
+            <ref n="license" target="http://creativecommons.org/licenses/by/3.0/"><figure style="border-width:0;"><figDesc>Creative Commons License</figDesc><graphic url="http://i.creativecommons.org/l/by/3.0/80x15.png"/></figure></ref><lb />TEI Boilerplate is licensed under a <ref n="license" target="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</ref>.
           </p>
         </availability>
       </publicationStmt>
@@ -415,7 +415,7 @@
         </p>
       </div>
       <div>
-        <head>Verse inside <gi>Floating Text</gi></head>
+        <head>Verse inside <gi>floatingText</gi></head>
         <floatingText xml:id="acs0000001-05-i002-content" n="Grand Chorus of Birds from Aristophanes" type="poem">
          <note>From <title><ref target="http://www.swinburneproject.org/">The Algernon Charles Swinburne Project</ref>.</title></note>
           <front xml:id="front002">
@@ -431,7 +431,7 @@
               </docTitle>
             </titlePage>
             <pb n="42" facs="acs0000001-05-057"/>
-            <div xml:id="preface002" rendition="#small #justify #center-block" rend="width:30em;" type="preface">
+            <div xml:id="preface002" rendition="#small #justify #center-block" style="width:30em;" type="preface">
               <p> I <hi rendition="#sc">was</hi> allured into the audacity of this experiment by
                 consideration of a fact which hitherto does not seem to have been taken into consideration
                 by any translator of the half divine humourist in whose incomparable genius the highest
@@ -453,7 +453,7 @@
                 at least my main desire, in the undertaking of this brief adventure, was to renew as far
                 as possible for English ears the music of this resonant and triumphant metre, which goes
                 ringing at full gallop as of horses who <cit rendition="#block">
-                  <quote rendition="#blockquote" rend="margin-left:5em;">
+                  <quote rendition="#blockquote" style="margin-left:5em;">
                     <lg>
                       <l part="F" rendition="#l-indent-06"><q next="#e171f002">dance as ’twere to the music</q></l>
                       <l part="I"><q prev="#e170f002">Their own hoofs make.</q></l>
@@ -581,7 +581,7 @@
       </div>
       <div>
         <head>Code in <gi>egXML</gi></head>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="width:50em;">
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" style="width:50em;">
 <div xml:id="div00013" type="dedication" rendition="#x-small">
   <pb n="84" facs="acs0000001-05-099"/>
   <head rendition="#center-block #uppercase">To Walter Theodore Watts</head>
@@ -593,7 +593,7 @@
       <bibl rendition="#small-caps">—Landor.</bibl>
     </cit>
   </epigraph>
-  <lg rendition="#i" rend="margin-left:7em;" type="sonnet">
+  <lg rendition="#i" style="margin-left:7em;" type="sonnet">
     <lg rendition="#sublg" type="octet">
       <l n="1"><hi rendition="#small-caps">Sea</hi>, wind, and sun, with light 
         and sound and breath</l>
@@ -609,7 +609,7 @@
         on fate,</l>
       <l n="8">Passing, whose shade we call the shadow of death.</l>
     </lg>
-    <lg rendition="#sublg" type="sextet" rend="margin-top:1.5em;">
+    <lg rendition="#sublg" type="sextet" style="margin-top:1.5em;">
       <l n="9">Brother, to whom our Mother as to me</l>
       <l n="10" rendition="#l-indent-01">Is dearer than all dreams of days 
         undone,</l>

@@ -145,7 +145,8 @@ addrLine {
 address {
   /* Empty Rule Set */
 }
-address[rend~="block"], addresss[rendition~="#block"] {
+address[rend~="block"],
+addresss[rendition~="#block"] {
   display: block;
 }
 adminInfo {
@@ -245,7 +246,8 @@ back {
 bibl {
   /* Empty Rule Set */
 }
-bibl[rend~="block"], bibl[rendition~="#block"] {
+bibl[rend~="block"],
+bibl[rendition~="#block"] {
   display: block;
   padding-left: 2em;
   text-indent: -2em;
@@ -649,7 +651,8 @@ div > div > head {
 div > div > div > head {
   font-size: 140%;
 }
-div > div > div > div > head, list > head {
+div > div > div > div > head,
+list > head {
   font-size: 130%;
 }
 div > div > div > div > div > head {
@@ -1119,11 +1122,6 @@ pb {
 pb:before {
   content: "page:\a0" attr(n);
 }
-/*
-pb:before {
-	content: "[page:\a0" attr(n) "]";
-}
-*/
 pc {
   /* Empty Rule Set */
 }
@@ -1798,13 +1796,15 @@ html {
 img {
   border: 1px solid #aaaaaa;
 }
-#footer {
+footer {
   margin-top: 1em;
   border-top: 1px solid #292929;
   padding-top: .5em;
   font-size: 12pt;
 }
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
   color: #5f0000;
   text-decoration: none;
 }
@@ -1843,10 +1843,12 @@ a:hover {
 .eg-comment {
   color: gray;
 }
-.eg-att, .eg-nsdecl {
+.eg-att,
+.eg-nsdecl {
   color: #f58650;
 }
-.eg-attvalue, .eg-ns {
+.eg-attvalue,
+.eg-ns {
   color: #993300;
 }
 .eg-text {

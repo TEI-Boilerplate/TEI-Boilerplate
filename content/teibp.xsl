@@ -176,7 +176,7 @@
 	</xsl:template>
 
 
-	<!-- need something else for images with captions -->
+	
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
 			<xd:p>Transforms TEI figure element to html img element.</xd:p>
@@ -186,10 +186,23 @@
 		<xsl:copy>
 			<xsl:apply-templates select="@*"/>
 			<xsl:call-template name="addID"/>
+			<figure>
 			<img alt="{normalize-space(tei:figDesc)}" src="{tei:graphic/@url}"/>
 			<xsl:apply-templates select="*[local-name() != 'graphic' and local-name() != 'figDesc']"/>
+			</figure>
 		</xsl:copy>
 	</xsl:template>
+	
+	<!--
+	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+		<xd:desc>
+			<xd:p>Transforms TEI figure/head to HTML figcaption</xd:p>
+		</xd:desc>
+	</xd:doc>
+	<xsl:template match="tei:figure/tei:head">
+		<figcaption><xsl:apply-templates/></figcaption>
+	</xsl:template>
+	-->
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>

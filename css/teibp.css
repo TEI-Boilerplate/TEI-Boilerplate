@@ -120,9 +120,11 @@ actor {
 /* Could add other [place=] variations */
 add {
   vertical-align: super;
+  font-size: 90%;
 }
 add[place=below] {
   vertical-align: sub;
+  font-size: 90%;
 }
 addName {
   /* Empty Rule Set */

@@ -1799,6 +1799,7 @@ img {
   border: 1px solid #aaaaaa;
 }
 footer {
+  clear:both;
   margin-top: 1em;
   border-top: 1px solid #292929;
   padding-top: .5em;

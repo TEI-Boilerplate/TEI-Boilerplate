@@ -3,12 +3,13 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
 	xmlns:eg="http://www.tei-c.org/ns/Examples"
 	xmlns:tei="http://www.tei-c.org/ns/1.0" 
-	xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" 
+	xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
 	xmlns:exsl="http://exslt.org/common"
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	extension-element-prefixes="exsl msxsl"
 	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
 	exclude-result-prefixes="xsl tei xd eg fn #default">
 	<xd:doc  scope="stylesheet">
 		<xd:desc>
@@ -17,6 +18,9 @@
 			<xd:p>TEI Boilerplate stylesheet: Copies TEI document, with a very few modifications
 				into an html shell, which provides access to javascript and other features from the
 				html/browser environment.</xd:p>
+		  <xd:p>modified 2012-05-07 by Syd</xd:p>
+			<xd:p>Modified significantly 2012-08-23 by Syd Bauman: re-work how rendition -> style is
+			handled so that TEI defaults via <tei:gi>tagUsage</tei:gi> works, too.</xd:p>
 		</xd:desc>
 	</xd:doc>
 	<xsl:include href="xml-to-string.xsl"/>
@@ -24,21 +28,12 @@
 	<xsl:output encoding="UTF-8" method="xml" omit-xml-declaration="yes"/>
 	
 	<xsl:param name="teibpHome" select="'http://dcl.slis.indiana.edu/teibp/'"/>
-	<xsl:param name="inlineCSS" select="true()"/>
 	<xsl:param name="includeToolbox" select="true()"/>
 	<xsl:param name="includeAnalytics" select="true()"/>
-	<xsl:param name="displayPageBreaks" select="true()"/>
-	
-	<!-- special characters -->
-	<xsl:param name="quot"><text>"</text></xsl:param>
-	
-	<!-- interface text -->
-	<xsl:param name="pbNote"><text>page: </text></xsl:param>
-	<xsl:param name="altTextPbFacs"><text>view page image(s)</text></xsl:param>
 	
 	<!-- parameters for file paths or URLs -->
 	<!-- modify filePrefix to point to files on your own server, 
-		or to specify a relatie path, e.g.:
+		or to specify a relative path, e.g.:
 		<xsl:param name="filePrefix" select="'http://dcl.slis.indiana.edu/teibp'"/>
 		
 	-->
@@ -53,15 +48,15 @@
 	<xsl:param name="theme.sleepytime" select="concat($filePrefix,'/css/sleepy.css')"/>
 	<xsl:param name="theme.terminal" select="concat($filePrefix,'/css/terminal.css')"/>
 	
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+
+  <xsl:key name="ids" match="//*" use="@xml:id"/>
+  
+  <xd:doc>
 		<xd:desc>
 			<xd:p>Match document root and create and html5 wrapper for the TEI document, which is
 				copied, with some modification, into the HTML document.</xd:p>
 		</xd:desc>
 	</xd:doc>
-
-	<xsl:key name="ids" match="//*" use="@xml:id"/>
-
 	<xsl:template match="/" name="htmlShell" priority="99">
 		<html>
 			<xsl:call-template name="htmlHead"/>
@@ -77,87 +72,79 @@
 		</html>
 	</xsl:template>
 	
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+	<xd:doc>
 		<xd:desc>
-			<xd:p>Basic copy template, copies all nodes from source XML tree to output
+			<xd:p>Basic copy template, copies all attribute nodes from source XML tree to output
 				document.</xd:p>
 		</xd:desc>
 	</xd:doc>
-	
 	<xsl:template match="@*">
-		<!-- copy select elements -->
-		<xsl:copy>
-			<xsl:apply-templates select="@*|node()"/>
-		</xsl:copy>
+	  <xsl:copy/>
 	</xsl:template>
 
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+	<xd:doc>
 		<xd:desc>
-			<xd:p>Template for elements, which adds an @xml:id to every element. Existing @xml:id
-				attributes are retained unchanged.</xd:p>
+			<xd:p>Template for elements, which handles style and adds an @xml:id to every element.
+			  Existing @xml:id attributes are retained unchanged.</xd:p>
 		</xd:desc>
 	</xd:doc>
-
 	<xsl:template match="*"> 
 		<xsl:element name="{local-name()}">
 			<xsl:call-template name="addID"/>
-			<xsl:apply-templates select="@*|node()"/>
+		  <xsl:call-template name="rendition"/>
+		  <xsl:apply-templates select="@*[not( starts-with(local-name(.),'rend') ) and not( name(.)='html:style' )]|node()"/>
 		</xsl:element>
 	</xsl:template>
 
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+	<xd:doc>
 		<xd:desc>
 			<xd:p>Template to omit processing instructions from output.</xd:p>
 		</xd:desc>
 	</xd:doc>
 	<xsl:template match="processing-instruction()" priority="10"/>
 
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+	<xd:doc>
 		<xd:desc>
-			<xd:p>Template moves value of @rend into an html @style attribute. Stylesheet assumes
-				CSS is used in @rend to describe renditions, i.e., styles.</xd:p>
+			<xd:p>Template to generate output style based on TEI default rendition via <tei:gi>tagUsage</tei:gi>,
+			  TEI rendition via <tei:att>rendition</tei:att>, TEI rendition via <tei:att>rend</tei:att>, and HTML
+			  style information via <tei:att>style</tei:att>.</xd:p>
 		</xd:desc>
 	</xd:doc>
-	<xsl:template match="@rend">
-		<xsl:choose>
-			<xsl:when test="$inlineCSS = true()">
-				<xsl:attribute name="style">
-					<xsl:value-of select="."/>
-				</xsl:attribute>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:copy>
-					<xsl:apply-templates select="@*|node()"/>
-				</xsl:copy>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template>
-	
 	<xsl:template name="rendition">
-		<xsl:if test="@rendition">
-			<xsl:attribute name="rendition">
-				<xsl:value-of select="@rendition"/>
-			</xsl:attribute>
-		</xsl:if>
+	  <xsl:variable name="style">
+	    <xsl:value-of select="
+	      ancestor::tei:TEI/tei:teiHeader/tei:encodingDesc/tei:tagsDecl/tei:rendition
+	      [
+	        concat('#',@xml:id)
+	        =
+	        ancestor::tei:TEI/tei:teiHeader/tei:encodingDesc/tei:tagsDecl/tei:namespace[@name='http://www.tei-c.org/ns/1.0']//tei:tagUsage[ @gi = local-name( current() ) ]/@render
+	      and
+	        @scheme = 'css'
+	      and
+	        not( @scope )
+	      ]"/>
+	    <xsl:value-of select="key('ids', substring-after( @rendition,'#') )"/>
+	    <xsl:value-of select="@rend"/>
+	    <xsl:value-of select="@html:style"/>
+	  </xsl:variable>
+	  <xsl:if test="contains($style,':')">
+	    <xsl:attribute name="style">
+	      <xsl:value-of select="$style"/>
+	    </xsl:attribute>  
+	  </xsl:if>
 	</xsl:template>
-	
-	
 
-	<xsl:template match="@xml:id">
-		<!-- @xml:id is copied to @id, which browsers can use
-			for internal links.
-		-->
-		<!--
-		<xsl:attribute name="xml:id">
-			<xsl:value-of select="."/>
-		</xsl:attribute>
-		-->
+  <xd:doc>
+    <xd:desc>@xml:id is copied to @id, which browsers can use
+      for internal links.</xd:desc>
+  </xd:doc>
+  <xsl:template match="@xml:id">
 		<xsl:attribute name="id">
 			<xsl:value-of select="."/>
 		</xsl:attribute>
 	</xsl:template>
 
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+	<xd:doc>
 		<xd:desc>
 			<xd:p>Transforms TEI ref element to html a (link) element.</xd:p>
 		</xd:desc>
@@ -169,7 +156,7 @@
 		</a>
 	</xsl:template>
 
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+	<xd:doc>
 		<xd:desc>
 			<xd:p>Transforms TEI ptr element to html a (link) element.</xd:p>
 		</xd:desc>
@@ -181,9 +168,8 @@
 		</a>
 	</xsl:template>
 
-
 	<!-- need something else for images with captions -->
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+	<xd:doc>
 		<xd:desc>
 			<xd:p>Transforms TEI figure element to html img element.</xd:p>
 		</xd:desc>
@@ -192,25 +178,12 @@
 		<xsl:copy>
 			<xsl:apply-templates select="@*"/>
 			<xsl:call-template name="addID"/>
-			<figure>
 			<img alt="{normalize-space(tei:figDesc)}" src="{tei:graphic/@url}"/>
 			<xsl:apply-templates select="*[local-name() != 'graphic' and local-name() != 'figDesc']"/>
-			</figure>
 		</xsl:copy>
 	</xsl:template>
-	
-	<!--
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
-		<xd:desc>
-			<xd:p>Transforms TEI figure/head to HTML figcaption</xd:p>
-		</xd:desc>
-	</xd:doc>
-	<xsl:template match="tei:figure/tei:head">
-		<figcaption><xsl:apply-templates/></figcaption>
-	</xsl:template>
-	-->
 
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+	<xd:doc>
 		<xd:desc>
 			<xd:p>Adds some javascript just before end of root tei element. Javascript sets the
 				/html/head/title element to an appropriate title selected from the TEI document.
@@ -224,8 +197,15 @@
 			<xsl:apply-templates select="@*|node()"/>
 		</xsl:element>
 	</xsl:template>
-	
-	<xsl:template name="addID">
+
+  <xd:doc>
+    <xd:desc>
+      <xd:p>Template to add a unique <tei:att>id</tei:att> attribute,
+      <xd:b>unless</xd:b> there already is an <tei:att>xml:id</tei:att> <xd:b>or</xd:b>
+      we are inside an <tei:gi>eg:egXML</tei:gi>.</xd:p>
+    </xd:desc>
+  </xd:doc>
+  <xsl:template name="addID">
 		<xsl:if test="not(@xml:id) and not(ancestor::eg:egXML)">
 			<xsl:attribute name="id">
 				<xsl:call-template name="generate-unique-id">
@@ -235,7 +215,7 @@
 		</xsl:if>
 	</xsl:template>
 
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+	<xd:doc>
 		<xd:desc>
 			<xd:p>The generate-id() function does not guarantee the generated id will not conflict
 				with existing ids in the document. This template checks for conflicts and appends a
@@ -252,11 +232,6 @@
 		<xsl:variable name="id" select="concat($root,$suffix)"/>
 		<xsl:choose>
 			<xsl:when test="key('ids',$id)">
-				<!--
-				<xsl:message>
-					<xsl:value-of select="concat('Found duplicate id: ',$id)"/>
-				</xsl:message>
-				-->
 				<xsl:call-template name="generate-unique-id">
 					<xsl:with-param name="root" select="$root"/>
 					<xsl:with-param name="suffix" select="concat($suffix,'f')"/>
@@ -268,7 +243,7 @@
 		</xsl:choose>
 	</xsl:template>
 
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+	<xd:doc>
 		<xd:desc>
 			<xd:p>Template for adding /html/head content.</xd:p>
 		</xd:desc>
@@ -276,7 +251,6 @@
 	<xsl:template name="htmlHead">
 		<head>
 			<meta charset="UTF-8"/>
-
 			<link id="maincss" rel="stylesheet" type="text/css" href="{$teibpCSS}"/>
 			<link rel="stylesheet" type="text/css" href="{$customCSS}"/>
 			<script type="text/javascript" src="{$jqueryJS}"/>
@@ -285,7 +259,7 @@
 			<script type="text/javascript">
 				$(document).ready(function() {
 					$("html > head > title").text($("TEI > teiHeader > fileDesc > titleStmt > title:first").text());
-					$.unblockUI();	
+					$.unblockUI();				
 				});
 			</script>
 			<xsl:call-template name="rendition2style"/>
@@ -296,13 +270,13 @@
 		</head>
 	</xsl:template>
 
-	<xsl:template name="rendition2style">
-		<style type="text/css">
-            <xsl:apply-templates select="//tei:rendition" mode="rendition2style"/>
-        </style>
-	</xsl:template>
-	
-	<xsl:template match="tei:rendition[@xml:id and @scheme = 'css']" mode="rendition2style">
+  <xsl:template name="rendition2style">
+    <style type="text/css">
+      <xsl:apply-templates select="//tei:rendition" mode="rendition2style"/>
+    </style>
+  </xsl:template>
+  
+  <xsl:template match="tei:rendition[@xml:id and @scheme = 'css']" mode="rendition2style">
 		<xsl:value-of select="concat('[rendition~=&quot;#',@xml:id,'&quot;]')"/>
 		<xsl:if test="@scope">
 			<xsl:value-of select="concat(':',@scope)"/>
@@ -317,18 +291,19 @@
 		</xsl:if>
 		<xsl:value-of select="concat('{ ',normalize-space(.),'}&#x000A;')"/>
 	</xsl:template>
-	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+  
+	<xd:doc>
 		<xd:desc>
 			<xd:p>Template for adding footer to html document.</xd:p>
 		</xd:desc>
 	</xd:doc>
 	<xsl:variable name="htmlFooter">
-		<footer> Powered by <a href="{$teibpHome}">TEI Boilerplate</a>. TEI Boilerplate is licensed under a <a
+		<div id="footer"> Powered by <a href="{$teibpHome}">TEI Boilerplate</a>. TEI Boilerplate is licensed under a <a
 				href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0
 				Unported License</a>. <a href="http://creativecommons.org/licenses/by/3.0/"><img
 					alt="Creative Commons License" style="border-width:0;"
 					src="http://i.creativecommons.org/l/by/3.0/80x15.png"/></a>
-		</footer>
+		</div>
 	</xsl:variable>
 
 	<xsl:template name="teibpToolbox">
@@ -359,49 +334,7 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 		</script>
-	</xsl:template>
-	
-	<xsl:template name="pb-handler">
-		<xsl:param name="pn"/>
-		<xsl:param name="page-id"/>
-		
-		<span class="-teibp-pageNum">
-			<!-- <xsl:call-template name="atts"/> -->
-			<span class="-teibp-pbNote"><xsl:value-of select="$pbNote"/></span>
-			<xsl:value-of select="@n"/>
-			<xsl:text> </xsl:text>
-		</span>
-			<span class="-teibp-pbFacs">
-				<a class="gallery-facs" rel="prettyPhoto[gallery1]">
-					<xsl:attribute name="href">
-						<xsl:value-of select="@facs"/>
-					</xsl:attribute>
-					<img  alt="{$altTextPbFacs}" class="-teibp-thumbnail">
-						<xsl:attribute name="src">
-							<xsl:value-of select="@facs"/>
-						</xsl:attribute>
-					</img>
-				</a>
-			</span>
-
-	</xsl:template>
-	
-	<xsl:template match="tei:pb[@facs]">
-		<xsl:param name="pn">
-			<xsl:number count="//tei:pb" level="any"/>    
-		</xsl:param>
-		<xsl:if test="$displayPageBreaks = true()">
-					<span class="-teibp-pb">
-						<xsl:call-template name="pb-handler">
-							<xsl:with-param name="pn" select="$pn"/>
-							<xsl:with-param name="page-id" select="@facs"/>
-						</xsl:call-template>
-					</span>
-		</xsl:if>
-	</xsl:template>
-	
-	
-	
+	</xsl:template>	
 
 	<xsl:template match="eg:egXML">
 		<xsl:element name="{local-name()}">
@@ -418,6 +351,5 @@
 	<xsl:template match="eg:egXML//comment()">
 		<xsl:comment><xsl:value-of select="."/></xsl:comment>
 	</xsl:template>
-
 	
 </xsl:stylesheet>

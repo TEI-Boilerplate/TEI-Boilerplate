@@ -58,6 +58,16 @@ quotes: "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" 
 	.block(1em)
 }
 
+/* teibp classes */
+
+.-teibp-thumbnail {
+max-height: 60px;
+}
+
+.-teibp-pb {
+	.pb;
+}
+
 
 
 .box-shadow {
@@ -260,6 +270,7 @@ attRef {/* Empty Rule Set */}
 author {/* Empty Rule Set */} 
 titleStmt > author {
 display:block;
+.head-font;
 margin-bottom:1em;
 }
 
@@ -951,6 +962,10 @@ particDesc {/* Empty Rule Set */}
 pause {/* Empty Rule Set*/}
 
 pb {
+  .pb;
+}
+
+.pb {
   display: block;
   width: 100%;
   text-align: right;
@@ -1162,7 +1177,8 @@ space {
 }
 
 TEI span {
-.hide;
+/* jawalsh: why were we hiding this? */
+/* .hide; */
 }
 
 TEI egXML span {

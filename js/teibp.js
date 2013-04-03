@@ -45,7 +45,7 @@ function showFacs(num, url, id) {
 	facsWindow.document.write($('#customcss')[0].outerHTML)
 	facsWindow.document.write("<script type='text/javascript' src='../js/jquery/jquery.min.js'></script>")
 	facsWindow.document.write("<script type='text/javascript' src='../js/jquery/plugins/jquery.scrollTo-1.4.3.1-min.js'></script>")
-	facsWindow.document.write("<script type='text/javascript' src='../js/teibp.js'/>")
+	facsWindow.document.write("<script type='text/javascript' src='../js/teibp.js'></script>")
 	facsWindow.document.write("<script type='text/javascript'>")
 	facsWindow.document.write("$(document).ready(function() {")
 	facsWindow.document.write("$('.facsImage').scrollTo($('#" + id + "'))")

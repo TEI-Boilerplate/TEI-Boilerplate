@@ -1,9 +1,12 @@
 function clearPageBreaks(){
 	$("pb").css("display","none");
+	$(".-teibp-pb").css("display","none");
 }
 
 function addPageBreaks(){
 	$("pb").css("display","block");	
+	$(".-teibp-pb").css("display","block");
+
 }
 
 function init(){
@@ -29,6 +32,39 @@ if(document.addEventListener){
 	window.attachEvent( "onload", init);
 }
 
-function switchThemes(theme){
+function switchThemes(theme) {
 	document.getElementById('maincss').href=theme.options[theme.selectedIndex].value;
+}
+
+function showFacs(num, url, id) {
+	facsWindow = window.open ("about:blank")
+	facsWindow.document.write("<html>")
+	facsWindow.document.write("<head>")
+	facsWindow.document.write("<title>TEI Boilerplate Facsimile Viewer</title>")
+	facsWindow.document.write($('#maincss')[0].outerHTML)
+	facsWindow.document.write($('#customcss')[0].outerHTML)
+	facsWindow.document.write("<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css' />")
+	facsWindow.document.write("<script type='text/javascript' src='../js/jquery/jquery.min.js'></script>")
+	facsWindow.document.write("<script type='text/javascript' src='http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css'></script>")
+	
+	facsWindow.document.write("<script type='text/javascript' src='../js/jquery/plugins/jquery.scrollTo-1.4.3.1-min.js'></script>")
+	facsWindow.document.write("<script type='text/javascript'>")
+	facsWindow.document.write("$(document).ready(function() {")
+	//facsWindow.document.write("$('.facsImage').resizable()")
+	facsWindow.document.write("$('.facsImage').scrollTo($('#" + id + "'))")
+	facsWindow.document.write("$('footer').resizable()")
+	facsWindow.document.write("})")
+	facsWindow.document.write("</script>")
+	facsWindow.document.write("</head>")
+	facsWindow.document.write("<body>")
+	facsWindow.document.write($("teiHeader")[0].outerHTML)
+	facsWindow.document.write("<div class='facsImage'>")
+	$(".-teibp-thumbnail").each(function() {
+		facsWindow.document.write("<img id='" + $(this).parent().parent().parent().attr('id') + "' src='" + $(this).attr('src') + "' alt='facsimile page image'/>")
+	})
+	facsWindow.document.write("</div>")
+	facsWindow.document.write($("footer")[0].outerHTML)
+	facsWindow.document.write("</body>")
+	facsWindow.document.write("</html>")
+	facsWindow.document.close()
 }

@@ -29,8 +29,11 @@
 	<xsl:param name="includeAnalytics" select="true()"/>
 	<xsl:param name="displayPageBreaks" select="true()"/>
 	
+	
+	
 	<!-- special characters -->
 	<xsl:param name="quot"><text>"</text></xsl:param>
+	<xsl:param name="apos"><text>'</text></xsl:param>
 	
 	<!-- interface text -->
 	<xsl:param name="pbNote"><text>page: </text></xsl:param>
@@ -226,11 +229,18 @@
 	</xsl:template>
 	
 	<xsl:template name="addID">
-		<xsl:if test="not(@xml:id) and not(ancestor::eg:egXML)">
+		<xsl:if test="not(ancestor::eg:egXML)">
 			<xsl:attribute name="id">
+				<xsl:choose>
+				<xsl:when test="@xml:id">
+					<xsl:value-of select="@xml:id"/>
+				</xsl:when>
+				<xsl:otherwise>
 				<xsl:call-template name="generate-unique-id">
 					<xsl:with-param name="root" select="generate-id()"/>
 				</xsl:call-template>
+				</xsl:otherwise>
+				</xsl:choose>
 			</xsl:attribute>
 		</xsl:if>
 	</xsl:template>
@@ -278,7 +288,7 @@
 			<meta charset="UTF-8"/>
 
 			<link id="maincss" rel="stylesheet" type="text/css" href="{$teibpCSS}"/>
-			<link rel="stylesheet" type="text/css" href="{$customCSS}"/>
+			<link id="customcss" rel="stylesheet" type="text/css" href="{$customCSS}"/>
 			<script type="text/javascript" src="{$jqueryJS}"/>
 			<script type="text/javascript" src="{$jqueryBlockUIJS}"/>
 			<script type="text/javascript" src="{$teibpJS}"/>
@@ -362,8 +372,9 @@
 	</xsl:template>
 	
 	<xsl:template name="pb-handler">
-		<xsl:param name="pn"/>
-		<xsl:param name="page-id"/>
+		<xsl:param name="n"/>
+		<xsl:param name="facs"/>
+		<xsl:param name="id"/>
 		
 		<span class="-teibp-pageNum">
 			<!-- <xsl:call-template name="atts"/> -->
@@ -373,8 +384,8 @@
 		</span>
 			<span class="-teibp-pbFacs">
 				<a class="gallery-facs" rel="prettyPhoto[gallery1]">
-					<xsl:attribute name="href">
-						<xsl:value-of select="@facs"/>
+					<xsl:attribute name="onclick">
+						<xsl:value-of select="concat('showFacs(',$apos,$n,$apos,',',$apos,$facs,$apos,',',$apos,$id,$apos,')')"/>
 					</xsl:attribute>
 					<img  alt="{$altTextPbFacs}" class="-teibp-thumbnail">
 						<xsl:attribute name="src">
@@ -390,14 +401,32 @@
 		<xsl:param name="pn">
 			<xsl:number count="//tei:pb" level="any"/>    
 		</xsl:param>
-		<xsl:if test="$displayPageBreaks = true()">
+		<xsl:choose>
+		<xsl:when test="$displayPageBreaks = true()">
 					<span class="-teibp-pb">
+						<xsl:call-template name="addID"/>
 						<xsl:call-template name="pb-handler">
-							<xsl:with-param name="pn" select="$pn"/>
-							<xsl:with-param name="page-id" select="@facs"/>
+							<xsl:with-param name="n" select="@n"/>
+							<xsl:with-param name="facs" select="@facs"/>
+							<xsl:with-param name="id">
+								<xsl:choose>
+								<xsl:when test="@xml:id">
+									<xsl:value-of select="@xml:id"/>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="generate-id()"/>
+								</xsl:otherwise>
+								</xsl:choose>
+							</xsl:with-param>
 						</xsl:call-template>
 					</span>
-		</xsl:if>
+		</xsl:when>
+			<xsl:otherwise>
+				<xsl:copy>
+					<xsl:apply-templates select="@*|node()"/>
+				</xsl:copy>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 	
 	

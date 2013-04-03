@@ -43,7 +43,6 @@ function showFacs(num, url, id) {
 	facsWindow.document.write("<title>TEI Boilerplate Facsimile Viewer</title>")
 	facsWindow.document.write($('#maincss')[0].outerHTML)
 	facsWindow.document.write($('#customcss')[0].outerHTML)
-	facsWindow.document.write("<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css' />")
 	facsWindow.document.write("<script type='text/javascript' src='../js/jquery/jquery.min.js'></script>")
 	facsWindow.document.write("<script type='text/javascript' src='../js/jquery/plugins/jquery.scrollTo-1.4.3.1-min.js'></script>")
 	facsWindow.document.write("<script type='text/javascript'>")

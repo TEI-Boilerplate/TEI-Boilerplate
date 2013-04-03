@@ -419,9 +419,8 @@
         <floatingText xml:id="acs0000001-05-i002-content" n="Grand Chorus of Birds from Aristophanes" type="poem">
          <note>From <title><ref target="http://www.swinburneproject.org/">The Algernon Charles Swinburne Project</ref>.</title></note>
           <front xml:id="front002">
-            <pb n="40" facs="http://purl.dlib.indiana.edu/iudl/swinburne/large/acs0000001-05-055"/>
             <titlePage type="full">
-              <pb n="41" facs="http://purl.dlib.indiana.edu/iudl/swinburne/large/acs0000001-05-056"/>
+              <pb n="41" facs="../images/birds_41.jpg"/>
               <docTitle>
                 <titlePart rendition="#center #uc" type="main">Grand Chorus of Birds <lb/><hi rendition="#small">from</hi>
                   <lb/><persName key="aristophanes">Aristophanes</persName></titlePart>
@@ -430,7 +429,7 @@
                   metre</titlePart>
               </docTitle>
             </titlePage>
-            <pb n="42" facs="http://purl.dlib.indiana.edu/iudl/swinburne/large/acs0000001-05-057"/>
+            <pb n="42" facs="../images/birds_42.jpg"/>
             <div xml:id="preface002" rendition="#small #justify #center-block" style="width:30em;" type="preface">
               <p> I <hi rendition="#sc">was</hi> allured into the audacity of this experiment by
                 consideration of a fact which hitherto does not seem to have been taken into consideration
@@ -463,7 +462,7 @@
                 can be fitter than a verse of <persName key="shakespeare">Shakespeare's</persName> to praise at once and to describe the most
                 typical verse of <persName key="aristophanes">Aristophanes</persName>. </p>
             </div>
-            <pb n="43" facs="http://purl.dlib.indiana.edu/iudl/swinburne/large/acs0000001-05-058"/>
+            <pb n="43" facs="../images/birds_43.jpg"/>
           </front>
           <body>
             <head rendition="#center">THE BIRDS
@@ -497,7 +496,7 @@
               <l n="11">First thing first-born of the black-plumed Night was a wind-egg hatched in her
                 bosom,</l>
               <l n="12">Whence timely with seasons revolving again sweet Love burst out as a blossom,</l>
-              <pb n="44" facs="http://purl.dlib.indiana.edu/iudl/swinburne/large/acs0000001-05-059"/>
+              <pb n="44" facs="../images/birds_44.jpg"/>
               <l n="13">Gold wings glittering forth of his back, like whirlwinds gustily turning.</l>
               <l n="14">He, after his wedlock with Chaos, whose wings are of darkness, in hell
                 broad-burning,</l>
@@ -531,7 +530,7 @@
               <l n="28">And then weave cloak for <persName key="orestes">Orestes</persName> the thief, lest he strip men of theirs if it
                 freezes.</l>
               <l n="29">And again thereafter the kite reappearing announces a change in the breezes,</l>
-              <pb n="45" facs="http://purl.dlib.indiana.edu/iudl/swinburne/large/acs0000001-05-060"/>
+              <pb n="45" facs="../images/birds_45.jpg"/>
               <l n="30">And that here is the season for shearing your sheep of their spring wool. Then
                 does the swallow</l>
               <l n="31">Give you notice to sell your greatcoat, and provide something light for the heat

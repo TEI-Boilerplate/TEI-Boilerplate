@@ -289,9 +289,9 @@
 
 			<link id="maincss" rel="stylesheet" type="text/css" href="{$teibpCSS}"/>
 			<link id="customcss" rel="stylesheet" type="text/css" href="{$customCSS}"/>
-			<script type="text/javascript" src="{$jqueryJS}"/>
-			<script type="text/javascript" src="{$jqueryBlockUIJS}"/>
-			<script type="text/javascript" src="{$teibpJS}"/>
+			<script type="text/javascript" src="{$jqueryJS}"></script>
+			<script type="text/javascript" src="{$jqueryBlockUIJS}"></script>
+			<script type="text/javascript" src="{$teibpJS}"></script>
 			<script type="text/javascript">
 				$(document).ready(function() {
 					$("html > head > title").text($("TEI > teiHeader > fileDesc > titleStmt > title:first").text());

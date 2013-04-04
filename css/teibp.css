@@ -1892,12 +1892,18 @@ a:hover {
   background-image: url("../images/transparentbg.png");
 }
 /* facsViewer */
+#resizable {
+  background-color: #ebebeb;
+  width: 550px;
+  height: 700px;
+  overflow: hidden;
+  padding: 0 1em .25em 0;
+}
 div.facsImage {
-  max-width: 550px;
-  max-height: 700px;
+  width: 100%;
+  height: 98%;
   overflow-y: scroll;
   border: 1px solid black;
-  padding: 0 .5em;
 }
 div.facsImage img {
   max-width: 98% !important;

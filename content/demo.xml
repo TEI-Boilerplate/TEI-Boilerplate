@@ -416,6 +416,7 @@
       </div>
       <div>
         <head>Verse inside <gi>floatingText</gi></head>
+        <head style="font-size:12pt">and facsimile page images<lb/> <code>&lt;pb facs="../images/page01.jpg"/></code></head>
         <floatingText xml:id="acs0000001-05-i002-content" n="Grand Chorus of Birds from Aristophanes" type="poem">
          <note>From <title><ref target="http://www.swinburneproject.org/">The Algernon Charles Swinburne Project</ref>.</title></note>
           <front xml:id="front002">

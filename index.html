@@ -10,7 +10,7 @@
 	margin-left: 4em;
   margin-right: 8em;
   padding: 2.5em;
-  font-family: Cochin, Georgia, Serif;
+  font-family:"Gentium Book Basic", Cochin, Georgia, Serif;
   font-size: 14pt;
   background-color: #ebebeb;
   color: #292929;
@@ -40,6 +40,8 @@ pre {
 	padding-left:2em;
 	text-indent:-2em;
 }
+
+p {text-align:left;}
 	</style>
 	<script type="text/javascript">
 
@@ -60,11 +62,10 @@ pre {
 <div id="banner">
 <img src="images/teibp_logo.png" alt="TEI Boilerplate Logo" style="border:0;" />
 <hr style="margin-bottom:.15em;" />
-<div style="float:right"><a href="content/demo.xml">demo</a> | <a href="content/teibp.xml">template</a> | <a href="content/teibpstyles.xml">template styles</a> | <a href="http://sourceforge.net/projects/teiboilerplate/files/">download</a></div>
+<div style="float:right"><a href="content/demo.xml">demo</a> | <a href="content/teibp.xml">template</a> | <a href="content/teibpstyles.xml">template styles</a> | <a href="http://github.com/GrantLS/TEI-Boilerplate">download</a></div>
 </div>
 </div>
-  <div id="content">
-  <h1 id="aboutteiboilerplate">About TEI Boilerplate</h1>
+  <div id="content"><h1 id="aboutteiboilerplate">About TEI Boilerplate</h1>
 
 <p><a href="http://teiboilerplate.org/">TEI Boilerplate</a> (<a href="http://teiboilerplate.org/">http://teiboilerplate.org/</a>) is a lightweight solution for publishing styled <a href="http://www.tei-c.org/">TEI</a> (<a href="http://www.tei-c.org/">Text Encoding Initiative</a>) P5 content directly in modern browsers. With TEI Boilerplate, TEI XML files can be served directly to the web without server-side processing or translation to HTML. Our <a href="http://dcl.slis.indiana.edu/teibp/content/demo.xml">TEI Boilerplate Demo</a> illustrates many TEI features rendered by TEI Boilerplate.</p>
 
@@ -74,7 +75,7 @@ pre {
 
 <p><em>Note:</em> For security reasons, some browsers (e.g., Chrome) will not process the XSLT transformation when the TEI document is opened from the local file system. Chrome does work fine when the TEI files are delivered through a Web server, including <code>localhost</code>. </p>
 
-<p>If you have problems with TEI Boilerplate with a modern browser, please let us know by filing a bug report at <a href="https://sourceforge.net/p/teiboilerplate/tickets/">https://sourceforge.net/p/teiboilerplate/tickets/</a>. </p>
+<p>If you have problems with TEI Boilerplate with a modern browser, please let us know by filing a bug report or feature request at <a href="http://github.com/GrantLS/TEI-Boilerplate/issues">http://github.com/GrantLS/TEI-Boilerplate/issues</a>.</p>
 
 <h1 id="introduction">Introduction</h1>
 
@@ -121,13 +122,25 @@ pre {
 
 <h1 id="usingitinyourproject">Using it in Your Project</h1>
 
-<p>Download the <a href="http://sourceforge.net/projects/teiboilerplate/files/">TEI Boilerplate files</a>, and host the <code>teibp</code> directory on a web server.</p>
+<p>Download the <a href="http://github.com/GrantLS/TEI-Boilerplate">TEI Boilerplate files</a>, and host the <code>teibp</code> directory on a web server.</p>
 
 <p>The simplest way to use TEI Boilerplate (TEIBP) is simply to add your TEI files to the <code>teibp/content</code> directory of TEI Boilerplate and include the following xml-stylesheet processing instruction at the top of your TEI documents, after the XML declaration and before the root <code>&lt;TEI&gt;</code> element:</p>
 
-<p>&lt;?xml-stylesheet type=&#8220;text/xsl&#8221; href=&#8220;teibp.xsl&#8221;?&gt;</p>
+<pre><code>&lt;?xml-stylesheet type=&quot;text/xsl&quot; href=&quot;teibp.xsl&quot;?&gt;
+</code></pre>
 
 <p>You may then access your TEI files from a modern browser and see the resulting styled document.</p>
+
+<h2 id="facsimilepageimages">Facsimile Page Images</h2>
+
+<p>TEI Boilerplate has (since version 1.1) a simple built-in page viewer for facsimile page images. The page viewer looks for <code>@facs</code> attributes on page break <code>&lt;pb/&gt;</code> tags, e.g.:</p>
+
+<pre><code>&lt;pb n=&quot;42&quot; facs=&quot;../images/page057.jpg&quot;/&gt;
+</code></pre>
+
+<p>Of course, the path to the image file must be correct, relative to the TEI file. </p>
+
+<p><em>Known Issue: In WebKit-based browsers, e.g., Safari and Chrome, if the <code>@facs</code> links are to a remote server (e.g., <code>&lt;pb n=&quot;42&quot; facs=&quot;http://www.example.com/images/page057.jpg&quot;&gt;</code>), the facsimile page viewer will always open at the first page of the document, rather than scrolling correctly to the page selected in the transcription. We expect to solve this problem, but haven&#8217;t figured it out yet.</em></p>
 
 <h1 id="teiboilerplateandcss">TEI Boilerplate and CSS</h1>
 
@@ -166,7 +179,7 @@ pre {
 
 <h1 id="downloads">Downloads</h1>
 
-<p>Download the latest release of TEI Boilerplate from <a href="http://sourceforge.net/projects/teiboilerplate/files/">SourceForge</a>: <a href="http://sourceforge.net/projects/teiboilerplate/files/">http://sourceforge.net/projects/teiboilerplate/files/</a>.</p>
+<p>Download the latest release of TEI Boilerplate from <a href="http://github.com/GrantLS/TEI-Boilerplate">GitHub</a>: <a href="http://github.com/GrantLS/TEI-Boilerplate">http://github.com/GrantLS/TEI-Boilerplate</a>.</p>
 
 <h1 id="people">People</h1>
 
@@ -178,7 +191,7 @@ pre {
 <li>Saeed Moaddeli, Indiana University</li>
 </ul>
 
-<p>Please send general feedback to John Walsh at <a href="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</a>. Bug reports and feature requests may be submitted through SourceForge: <a href="https://sourceforge.net/p/teiboilerplate/tickets/">https://sourceforge.net/p/teiboilerplate/tickets/</a>.</p>
+<p>Please send general feedback to John Walsh at <a href="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</a>. Bug reports and feature requests may be submitted through <a href="http://github.com/GrantLS/TEI-Boilerplate/issues">GitHub</a>: <a href="http://github.com/GrantLS/TEI-Boilerplate/issues">http://github.com/GrantLS/TEI-Boilerplate/issues</a>.</p>
 
 <h1 id="references">References</h1>
 
@@ -188,9 +201,7 @@ pre {
 
 <p>Omeka (2012). Omeka: Serious web publishing. Retrieved from http://omeka.org/about/</p>
 
-<p>Rahtz, S. (2006). Storage, retrieval, and rendering. In L. Burnard, K. O’Brien O’Keeffe, &amp; J. Unsworth (Eds.), <em>Electronic textual editing</em> (pp. 310–333). New York, NY: Modern Language Association of America.</p>
-
-  </div>
+<p>Rahtz, S. (2006). Storage, retrieval, and rendering. In L. Burnard, K. O’Brien O’Keeffe, &amp; J. Unsworth (Eds.), <em>Electronic textual editing</em> (pp. 310–333). New York, NY: Modern Language Association of America.</p></div>
 
 <div id="footer"> Powered by <a href="http://dcl.slis.indiana.edu/teibp/">TEI Boilerplate</a>. TEI Boilerplate is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0
 				Unported License</a>. <a href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a></div>

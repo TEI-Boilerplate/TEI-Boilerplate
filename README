@@ -8,7 +8,7 @@ TEI Boilerplate requires a robust, modern browser to do its work. It is compatib
 
 *Note:* For security reasons, some browsers (e.g., Chrome) will not process the XSLT transformation when the TEI document is opened from the local file system. Chrome does work fine when the TEI files are delivered through a Web server, including `localhost`. 
 
-If you have problems with TEI Boilerplate with a modern browser, please let us know by filing a bug report at <https://sourceforge.net/p/teiboilerplate/tickets/>.  
+If you have problems with TEI Boilerplate with a modern browser, please let us know by filing a bug report or feature request at <http://github.com/GrantLS/TEI-Boilerplate/issues>.
 
 #Introduction
 
@@ -53,14 +53,23 @@ When a TEI document using TEI Boilerplate is accessed by a browser, the browser 
 
 #Using it in Your Project
 
-Download the [TEI Boilerplate files](http://sourceforge.net/projects/teiboilerplate/files/), and host the `teibp` directory on a web server.
+Download the [TEI Boilerplate files](http://github.com/GrantLS/TEI-Boilerplate), and host the `teibp` directory on a web server.
 
 The simplest way to use TEI Boilerplate (TEIBP) is simply to add your TEI files to the `teibp/content` directory of TEI Boilerplate and include the following xml-stylesheet processing instruction at the top of your TEI documents, after the XML declaration and before the root `<TEI>` element:
 
-<?xml-stylesheet type="text/xsl" href="teibp.xsl"?>
+    <?xml-stylesheet type="text/xsl" href="teibp.xsl"?>
 
 You may then access your TEI files from a modern browser and see the resulting styled document.
 
+## Facsimile Page Images ##
+
+TEI Boilerplate has (since version 1.1) a simple built-in page viewer for facsimile page images. The page viewer looks for `@facs` attributes on page break `<pb/>` tags, e.g.:
+
+    <pb n="42" facs="../images/page057.jpg"/>
+
+Of course, the path to the image file must be correct, relative to the TEI file. 
+
+_Known Issue: In WebKit-based browsers, e.g., Safari and Chrome, if the `@facs` links are to a remote server (e.g., `<pb n="42" facs="http://www.example.com/images/page057.jpg">`), the facsimile page viewer will always open at the first page of the document, rather than scrolling correctly to the page selected in the transcription. We expect to solve this problem, but haven't figured it out yet._
 
 #TEI Boilerplate and CSS
 
@@ -90,7 +99,7 @@ Users of TEI Boilerplate may choose to use the styles provided in the template, 
 
 #Downloads
 
-Download the latest release of TEI Boilerplate from [GitHub](https://github.com/GrantLS/TEI-Boilerplate): <https://github.com/GrantLS/TEI-Boilerplate>.
+Download the latest release of TEI Boilerplate from [GitHub](http://github.com/GrantLS/TEI-Boilerplate): <http://github.com/GrantLS/TEI-Boilerplate>.
 
 #People
 
@@ -100,7 +109,7 @@ The TEI Boilerplate team is:
 * [Grant Simpson](http://grantsimpson.name/), Indiana University
 * Saeed Moaddeli, Indiana University
 
-Please send general feedback to John Walsh at <a href="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</a>. Bug reports and feature requests may be submitted through SourceForge: <https://sourceforge.net/p/teiboilerplate/tickets/>.
+Please send general feedback to John Walsh at <a href="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</a>. Bug reports and feature requests may be submitted through [GitHub](http://github.com/GrantLS/TEI-Boilerplate/issues): <http://github.com/GrantLS/TEI-Boilerplate/issues>.
 
 #References
 

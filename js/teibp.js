@@ -44,6 +44,7 @@ function showFacs(num, url, id) {
 	facsWindow.document.write($('#maincss')[0].outerHTML)
 	facsWindow.document.write($('#customcss')[0].outerHTML)
 	facsWindow.document.write("<link rel='stylesheet' href='../js/jquery-ui/themes/base/jquery.ui.all.css'>")
+	facsWindow.document.write($('style')[0].outerHTML)
 	facsWindow.document.write("<script type='text/javascript' src='../js/jquery/jquery.min.js'></script>")
 	facsWindow.document.write("<script type='text/javascript' src='../js/jquery-ui/ui/jquery-ui.js'></script>")
 	facsWindow.document.write("<script type='text/javascript' src='../js/jquery/plugins/jquery.scrollTo-1.4.3.1-min.js'></script>")

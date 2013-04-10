@@ -57,6 +57,10 @@ function showFacs(num, url, id) {
 	facsWindow.document.write("</head>")
 	facsWindow.document.write("<body>")
 	facsWindow.document.write($("teiHeader")[0].outerHTML)
+	//facsWindow.document.write("<teiHeader>" + $("teiHeader")[0].html() + "</teiHeader>")
+	//facsWindow.document.write($('<teiHeader>').append($('teiHeader').clone()).html();)
+	
+	//facsWindow.document.write($("teiHeader")[0].outerHTML)
 	facsWindow.document.write("<div id='resizable'>")
 	facsWindow.document.write("<div class='facsImage'>")
 	$(".-teibp-thumbnail").each(function() {

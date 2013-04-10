@@ -107,6 +107,19 @@
 			<xsl:apply-templates select="@*|node()"/>
 		</xsl:element>
 	</xsl:template>
+	
+	
+	<xd:doc>
+		<xd:desc>
+			<xd:p>A hack because JavaScript was doing weird things with &lt;title>, probably due to confusion with HTML title. There is no TEI namespace in the TEI Boilerplate output because JavaScript, or at least JQuery, cannot manipulate the TEI elements/attributes if they are in the TEI namespace, so the TEI namespace is stripped from the output. As far as I know, &lt;title> elsewhere does not cause any problems, but we may need to extend this to other occurrences of &lt;title> outside the Header.</xd:p>
+		</xd:desc>
+	</xd:doc>
+	<xsl:template match="tei:teiHeader//tei:title">
+		<tei-title>
+			<xsl:call-template name="addID"/>
+			<xsl:apply-templates select="@*|node()"/>
+		</tei-title>
+	</xsl:template>
 
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
@@ -212,7 +225,7 @@
 		<figcaption><xsl:apply-templates/></figcaption>
 	</xsl:template>
 	-->
-
+    <!--
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
 			<xd:p>Adds some javascript just before end of root tei element. Javascript sets the
@@ -221,12 +234,15 @@
 				javascript, using JQuery, to manipulate the DOM containing both html and TEI.</xd:p>
 		</xd:desc>
 	</xd:doc>
+	
+	
 	<xsl:template match="tei:TEI" priority="99">
 		<xsl:element name="{local-name()}">
 			<xsl:call-template name="addID"/>
 			<xsl:apply-templates select="@*|node()"/>
 		</xsl:element>
 	</xsl:template>
+	-->
 	
 	<xsl:template name="addID">
 		<xsl:if test="not(ancestor::eg:egXML)">
@@ -360,7 +376,8 @@
 	<xsl:template name="analytics">
 		<script type="text/javascript">
 		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-31051795-1']);
+		  //include analytics account below.
+		  _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
 		  _gaq.push(['_trackPageview']);
 		
 		  (function() {

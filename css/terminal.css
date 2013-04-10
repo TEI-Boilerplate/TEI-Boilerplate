@@ -1696,7 +1696,9 @@ TEI title[level=a][prev]:before {
 title[level=m] {
   font-style: italic;
 }
-titleStmt > title {
+/* We transformed teiHeader//title to tei.title  */
+/* as a hack to solve a JavaScript/jQuery issue. */
+titleStmt > tei-title {
   display: block;
   font-family: Monaco, "Andale Mono", Courier, monospace;
   font-weight: normal;

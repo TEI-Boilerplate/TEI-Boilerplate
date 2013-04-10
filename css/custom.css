@@ -1,1 +1,35 @@
 /* Place project-specific CSS here */
+
+html {width:44em;}
+
+lg[type = 'sonnet']:before {
+display:block;
+clear:both;
+font-weight:bold;
+content: attr(n) " (sonnet)";
+}
+
+lg[type = 'dblhemi'] {
+height:24pt;
+display:block;
+clear:both;
+}
+
+lg[type = 'dblhemi'] l:first-of-type {
+float:left;
+width: 18em;
+}
+
+lg[type = 'dblhemi'] l:last-of-type {
+float:right;
+width: 18em;
+}
+
+choice reg {display:none}
+
+subst add {color:gray;
+vertical-align:baseline;}
+
+#teibpToolbox {
+left:70em;
+}

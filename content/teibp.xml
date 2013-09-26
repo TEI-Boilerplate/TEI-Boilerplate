@@ -53,7 +53,7 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 			</sourceDesc>
 		</fileDesc>
 		<encodingDesc>
-			<tagsDecl>
+			<tagsDecl>	
 				<!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
 				<rendition xml:id="b" n="tiebp:bold" scheme="css">
 					font-weight:bold;
@@ -107,7 +107,11 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 				<rendition xml:id="block" n="tiebp:block" scheme="css">
 					display:block;
 				</rendition> 
-				
+				<rendition xml:id="block-margins" n="teibp:block-margins" scheme="css">
+					display:block;
+					margin-top:1em;
+					margin-bottom:1em;
+				</rendition>
 				<rendition xml:id="blockquote" n="tiebp:blockquote" scheme="css">
 					display:block;
 					font-size:90%;
@@ -277,7 +281,6 @@ xmlns:html="http://www.w3.org/1999/xhtml">
 				<rendition corresp="#bracket" n="tiebp:bracket" scheme="css" scope="after">
 					content:">";
 				</rendition>
-				
 			</tagsDecl>
 		</encodingDesc>
 	</teiHeader>

@@ -97,7 +97,7 @@
         Existing @xml:id attributes are retained unchanged.</xd:p>
     </xd:desc>
   </xd:doc>
-  <xsl:template match="*"> 
+  <xsl:template match="*" name="teibp-default">
     <xsl:element name="{local-name()}">
       <xsl:apply-templates select="@*"/>
       <xsl:call-template name="addID"/>

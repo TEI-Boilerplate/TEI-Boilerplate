@@ -59,7 +59,7 @@ function showFacs(num, url, id) {
 	facsWindow.document.write("$('.facsImage').scrollTo($('#" + id + "'))")
 	facsWindow.document.write("})")
 	facsWindow.document.write("</script>")
-	facsWindow.document.write("<script>	$(function() {$( '#resizable' ).resizable();});</script>")
+	facsWindow.document.write("<script type='text/javascript'>	$(function() {$( '#resizable' ).resizable();});</script>")
 	facsWindow.document.write("</head>")
 	facsWindow.document.write("<body>")
 	facsWindow.document.write($("teiHeader")[0].outerHTML)

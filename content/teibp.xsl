@@ -291,7 +291,7 @@
 	</xsl:template>
 
 	<xsl:template name="rendition2style">
-		<style type="text/css">
+		<style id="teibp-rendition-css" type="text/css">
             <xsl:apply-templates select="//tei:rendition" mode="rendition2style"/>
         </style>
 	</xsl:template>
@@ -436,7 +436,8 @@
 	<!-- tag usage support -->
 	
 	<xsl:template name="tagUsage2style">
-		<style type="text/css" id="tagusage-css">
+	<xsl:if test="//tei:namespace[@name ='http://www.tei-c.org/ns/1.0']/tei:tagUsage">
+		<style type="text/css" id="teibp-tagusage-css">
 			<xsl:for-each select="//tei:namespace[@name ='http://www.tei-c.org/ns/1.0']/tei:tagUsage">
 				<xsl:value-of select="concat('&#x000a;',@gi,' { ')"/>
 					<xsl:call-template name="tokenize">
@@ -445,6 +446,7 @@
 				<xsl:value-of select="'}&#x000a;'"/>
 			</xsl:for-each>
 		</style>
+	</xsl:if>
 	</xsl:template>
 	
 	<xsl:template name="tokenize">

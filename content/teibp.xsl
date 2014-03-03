@@ -314,6 +314,7 @@
 					$.unblockUI();	
 				});
 			</script>
+		  <xsl:call-template name="tagUsage2style"/>
 			<xsl:call-template name="rendition2style"/>
 			<title><!-- don't leave empty. --></title>
 			<xsl:if test="$includeAnalytics = true()">
@@ -327,6 +328,48 @@
             <xsl:apply-templates select="//tei:rendition" mode="rendition2style"/>
         </style>
 	</xsl:template>
+  
+  <!-- tag usage support -->
+  
+  <xsl:template name="tagUsage2style">
+    <style type="text/css" id="tagusage-css">
+      <xsl:for-each select="//tei:namespace[@name ='http://www.tei-c.org/ns/1.0']/tei:tagUsage">
+        <xsl:value-of select="concat('&#x000a;',@gi,' { ')"/>
+        <xsl:call-template name="tokenize">
+          <xsl:with-param name="string" select="@render" />
+        </xsl:call-template>
+        <xsl:value-of select="'}&#x000a;'"/>
+      </xsl:for-each>
+    </style>
+  </xsl:template>
+  
+  <xsl:template name="tokenize">
+    <xsl:param name="string" />
+    <xsl:param name="delimiter" select="' '" />
+    <xsl:choose>
+      <xsl:when test="$delimiter and contains($string, $delimiter)">
+        <xsl:call-template name="grab-css">
+          <xsl:with-param name="rendition-id" select="substring-after(substring-before($string, $delimiter),'#')" />
+        </xsl:call-template>
+        <xsl:text> </xsl:text>
+        <xsl:call-template name="tokenize">
+          <xsl:with-param name="string" 
+            select="substring-after($string, $delimiter)" />
+          <xsl:with-param name="delimiter" select="$delimiter" /> 
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="grab-css">
+          <xsl:with-param name="rendition-id" select="substring-after($string,'#')"/>
+        </xsl:call-template>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template name="grab-css">
+    <xsl:param name="rendition-id"/>
+    <xsl:value-of select="normalize-space(key('ids',$rendition-id)/text())"/>
+  </xsl:template>
 	
 	<xsl:template match="tei:rendition[@xml:id and @scheme = 'css']" mode="rendition2style">
 		<xsl:value-of select="concat('[rendition~=&quot;#',@xml:id,'&quot;]')"/>

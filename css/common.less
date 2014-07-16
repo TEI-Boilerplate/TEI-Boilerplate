@@ -821,12 +821,14 @@ list-style-type:disc;
 
 text list[type=ordered] {
 list-style-type:none;
-counter-reset: items 0;
+counter-reset:items 0;
 }
 
 text list[type=ordered] > item {
 display:list-item;
 margin-left:0;	
+list-style-type:none;
+counter-increment:items;
 }
 
 item > list[type=ordered] {
@@ -834,7 +836,6 @@ margin-left:1em;
 }
 
 text list[type=ordered] > item:before {
-counter-increment:items;
 content: counter(items, decimal) ". ";
 }
 

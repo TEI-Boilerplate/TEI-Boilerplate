@@ -1,0 +1,29 @@
+{
+  "name": "TEI-Boilerplate",
+  "version": "1.1.0",
+  "description": "Lightweight solution for publishing styled TEI in modern browsers",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.8.10",
+    "gulp-usemin": "~0.3.8",
+    "gulp-less": "~1.3.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GrantLS/TEI-Boilerplate.git"
+  },
+  "keywords": [
+    "TEI",
+    "TEIBP"
+  ],
+  "author": "John Walsh and Grant Simpson",
+  "license": "CC",
+  "bugs": {
+    "url": "https://github.com/GrantLS/TEI-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/GrantLS/TEI-Boilerplate"
+}

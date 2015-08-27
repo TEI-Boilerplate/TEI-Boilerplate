@@ -475,7 +475,8 @@
 		</xsl:param>
 		<xsl:choose>
 		<xsl:when test="$displayPageBreaks = true()">
-					<span class="-teibp-pb">
+		    <!-- add @lang="en" to ensure correct ltr rendering -->
+					<span class="-teibp-pb" lang="en">
 						<xsl:call-template name="addID"/>
 						<xsl:call-template name="pb-handler">
 							<xsl:with-param name="n" select="@n"/>
@@ -519,6 +520,34 @@
 	<xsl:template match="eg:egXML//comment()">
 		<xsl:comment><xsl:value-of select="."/></xsl:comment>
 	</xsl:template>
+    
+    <!-- support for rtl-languages such as Arabic -->
+    <!-- template to add the HTML @lang attribute based on the containing element -->
+    <xsl:template name="templHtmlAttrLang">
+        <xsl:param name="pInput"/>
+        <xsl:choose>
+            <xsl:when test="$pInput/@xml:lang">
+                <xsl:attribute name="lang">
+                    <xsl:value-of select="$pInput/@xml:lang"/>
+                </xsl:attribute>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:attribute name="lang">
+                    <xsl:value-of select="ancestor::node()[@xml:lang!=''][1]/@xml:lang"/>
+                </xsl:attribute>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- add the @lang attribute to the <body> -->
+    <xsl:template match="tei:body">
+        <xsl:copy>
+            <xsl:call-template name="templHtmlAttrLang">
+                <xsl:with-param name="pInput" select="."/>
+            </xsl:call-template>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
+    </xsl:template>
 
 	
 </xsl:stylesheet>

@@ -434,6 +434,19 @@
 		<xsl:param name="n"/>
 		<xsl:param name="facs"/>
 		<xsl:param name="id"/>
+	    <!-- dealing with pointers instead of full URLs in @facs -->
+	    <xsl:variable name="vFacs">
+	        <xsl:choose>
+	            <xsl:when test="starts-with($facs,'#')">
+	                <xsl:variable name="vFacsID" select="substring-after($facs,'#')"/>
+	                <xsl:variable name="vMimeType" select="'image/jpeg'"/>
+	                <xsl:value-of select="ancestor::tei:TEI/tei:facsimile/tei:surface[@xml:id=$vFacsID]/tei:graphic[@mimeType=$vMimeType][1]/@url"/>
+	            </xsl:when>
+	            <xsl:otherwise>
+	                <xsl:value-of select="$facs"/>
+	            </xsl:otherwise>
+	        </xsl:choose>
+	    </xsl:variable>
 		
 		<span class="-teibp-pageNum">
 			<!-- <xsl:call-template name="atts"/> -->
@@ -444,11 +457,11 @@
 			<span class="-teibp-pbFacs">
 				<a class="gallery-facs" rel="prettyPhoto[gallery1]">
 					<xsl:attribute name="onclick">
-						<xsl:value-of select="concat('showFacs(',$apos,$n,$apos,',',$apos,$facs,$apos,',',$apos,$id,$apos,')')"/>
+						<xsl:value-of select="concat('showFacs(',$apos,$n,$apos,',',$apos,$vFacs,$apos,',',$apos,$id,$apos,')')"/>
 					</xsl:attribute>
 					<img  alt="{$altTextPbFacs}" class="-teibp-thumbnail">
 						<xsl:attribute name="src">
-							<xsl:value-of select="@facs"/>
+							<xsl:value-of select="$vFacs"/>
 						</xsl:attribute>
 					</img>
 				</a>

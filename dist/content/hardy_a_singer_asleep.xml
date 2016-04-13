@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/xsl" href="teibp.xsl"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:svg="http://www.w3.org/2000/svg"
+	xmlns:math="http://www.w3.org/1998/Math/MathML"
+	xmlns="http://www.tei-c.org/ns/1.0"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title type="main">A Singer Asleep</title>
+				<author>Thomas Hardy</author>
+				<editor><persName xml:id="jawalsh"><ref target="http://ils.indiana.edu/faculty/jawalsh/">John A. Walsh</ref></persName>, <affiliation><orgName><ref target="http://www.iub.edu/">Indiana University</ref></orgName></affiliation></editor>
+			</titleStmt>
+			<publicationStmt>
+				<pubPlace>Bloomington, IN</pubPlace>
+				<publisher>Digital Culture Lab, School of
+					Library &amp; Information Science,
+					Indiana University</publisher>
+				<availability status="free">
+					<p>Copyright © 2012. TEI Boilerplate</p>
+					<p>
+						<ref n="license"
+							target="http://creativecommons.org/licenses/by/3.0/"
+							><figure
+							rend="border-width:0;">
+							<figDesc>Creative Commons
+							License</figDesc>
+							<graphic
+							url="http://i.creativecommons.org/l/by/3.0/80x15.png"
+							/>
+							</figure></ref><lb/>TEI
+						Boilerplate is licensed under a <ref
+							n="license"
+							target="http://creativecommons.org/licenses/by/3.0/"
+							>Creative Commons Attribution
+							3.0 Unported License</ref>. </p>
+				</availability>
+			</publicationStmt>
+			<sourceDesc>
+				<!-- For born digital documents, use something like: -->
+				<p>This TEI/XML document is the original
+					source</p>
+				<!-- For documents transcribed from another source or sources, use <biblStruct>. -->
+				<!--
+				<biblStruct>
+					<analytic>
+						<author>
+						</author>
+						<title>
+						</title>
+					</analytic>
+					<monogr>
+						<editor>
+						</editor>
+						<title>
+						</title>
+						<imprint>
+							<pubPlace>
+							</pubPlace>
+							<publisher>
+							</publisher>
+							<date when="2011" /> 
+						</imprint>
+					</monogr>
+				</biblStruct>
+			-->
+				<!-- The loosely structured <bibl> is also an option -->
+				<!--
+			<bibl></bibl>
+			-->
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<tagsDecl>
+				<!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
+				<rendition xml:id="b" n="tiebp:bold"
+					scheme="css"> font-weight:bold; </rendition>
+
+				<rendition xml:id="i" n="tiebp:italic"
+					scheme="css"> font-style:italic; </rendition>
+
+				<rendition xml:id="u" n="tiebp:underline"
+					scheme="css"> text-decoration:underline; </rendition>
+
+				<rendition xml:id="n" n="teibp:normal"
+					scheme="css"> font-weight:normal;
+					text-decoration:none; font-style:normal; </rendition>
+
+				<rendition xml:id="mono" n="teibp:mono"
+					scheme="css">
+					font-family:Monaco,Courier,monospace; </rendition>
+
+				<rendition xml:id="super" n="tiebp:super"
+					scheme="css"> vertical-align:super;
+					font-size:80%; </rendition>
+
+				<rendition xml:id="sub" n="tiebp:sub"
+					scheme="css"> vertical-align:sub;
+					font-size:80%; </rendition>
+
+				<rendition xml:id="lowercase"
+					n="tiebp:lowercase" scheme="css">
+					text-transform:lowercase; </rendition>
+
+				<rendition xml:id="uppercase"
+					n="tiebp:uppercase" scheme="css">
+					text-transform:uppercase; </rendition>
+
+				<rendition xml:id="capitalize"
+					n="tiebp:capitalize" scheme="css">
+					text-transform:capitalize; </rendition>
+
+				<rendition xml:id="small-caps"
+					n="tiebp:small-caps" scheme="css">
+					font-variant:small-caps; </rendition>
+
+				<!-- Blocks. -->
+				<rendition xml:id="block" n="tiebp:block"
+					scheme="css"> display:block; </rendition>
+
+				<rendition xml:id="blockquote"
+					n="tiebp:blockquote" scheme="css">
+					display:block; font-size:90%;
+					margin-left:3em; padding-left:1em;
+					border-left: 1px solid gray;
+					margin-top:.75em; margin-bottom:.75em;
+					padding-top:.75em; padding-bottom:.75em; </rendition>
+
+				<rendition corresp="#blockquote"
+					n="tiebp:blockquote" scheme="css"
+					scope="before">
+					<!-- This turns off the default generated quotes for block quotes. -->
+					content:"" !important; </rendition>
+
+				<rendition corresp="#blockquote"
+					n="tiebp:blockquote" scheme="css"
+					scope="after">
+					<!-- This turns off the default generated quotes for block quotes. -->
+					content:"" !important; </rendition>
+
+				<rendition xml:id="codeblock"
+					n="teibp:codeblock" scheme="css">
+					display: block; font-size: 80%;
+					margin-left: 1em; padding-left: 1em;
+					border-left: 1px solid gray; margin-top:
+					.75em; margin-bottom: .75em;
+					padding-top: .75em; padding-bottom:
+					.75em;
+					font-family:Monaco,Courier,monospace;
+					white-space:pre; </rendition>
+
+				<!-- Inline -->
+
+				<rendition xml:id="inline" n="teibp:inline"
+					scheme="css"> display:inline; </rendition>
+
+				<!-- Alignment. -->
+				<rendition xml:id="center" n="tiebp:center"
+					scheme="css"> display:block;
+					text-align:center; margin-left:auto;
+					margin-right:auto; </rendition>
+
+				<rendition xml:id="left" n="teibp:left"
+					scheme="css"> text-align:left; </rendition>
+
+				<rendition xml:id="right" n="teibp:right"
+					scheme="css"> text-align:right; </rendition>
+
+				<rendition xml:id="justify"
+					n="teibp:justify" scheme="css">
+					text-align:justify; </rendition>
+
+				<rendition xml:id="center-block"
+					n="tiebp:center-block" scheme="css">
+					display:block; margin-left:auto;
+					margin-right:auto; </rendition>
+
+				<!-- Indentation -->
+				<rendition xml:id="hang" n="teibp:hang"
+					scheme="css"> display:block;
+					padding-left:2.5em; text-indent:-2.5em; </rendition>
+
+				<!-- Indentation for verse lines. Results in a “hanging” indent if
+					the line wraps. -->
+				<rendition xml:id="l-indent-01"
+					n="tiebp:l-indent-01" scheme="css">
+					display:block; padding-left:4em;
+					text-indent:-2em; </rendition>
+
+				<rendition xml:id="l-indent-02"
+					n="tiebp:l-indent-02" scheme="css">
+					display:block; padding-left:6em;
+					text-indent:-2em; </rendition>
+
+				<rendition xml:id="l-indent-03"
+					n="tiebp:l-indent-03" scheme="css">
+					display:block; padding-left:8em;
+					text-indent:-2em; </rendition>
+
+				<rendition xml:id="l-indent-04"
+					n="tiebp:l-indent-04" scheme="css">
+					display:block; padding-left:10em;
+					text-indent:-2em; </rendition>
+
+				<rendition xml:id="l-indent-05"
+					n="tiebp:l-indent-05" scheme="css">
+					display:block; padding-left:12em;
+					text-indent:-2em; </rendition>
+
+				<rendition xml:id="l-indent-06"
+					n="tiebp:l-indent-06" scheme="css">
+					display:block; padding-left:14em;
+					text-indent:-2em; </rendition>
+
+				<rendition xml:id="l-indent-07"
+					n="tiebp:l-indent-07" scheme="css">
+					display:block; padding-left:16em;
+					text-indent:-2em; </rendition>
+
+				<rendition xml:id="l-indent-08"
+					n="tiebp:l-indent-08" scheme="css">
+					display:block; padding-left:18em;
+					text-indent:-2em; </rendition>
+
+				<rendition xml:id="indent" n="tiebp:indent"
+					scheme="css" scope="before"> /*
+					text-indent:4em; */ /* The above method
+					of describing an indentation for, say, a
+					paragraph is preferred. The method being
+					used is in response to a bug in some
+					browsers whereby a block element, like a
+					paragraph, is erroneously re-indented
+					after interruption by another block
+					element (like a list, which is valid
+					inside a paragraph). */
+					content:"\A0\A0\A0\A0\A0\A0"; </rendition>
+
+				<!-- font sizes -->
+
+				<rendition xml:id="small" n="tiebp:small"
+					scheme="css"> font-size:90%; </rendition>
+
+				<rendition xml:id="x-small"
+					n="tiebp:x-small" scheme="css">
+					font-size:85%; </rendition>
+
+				<rendition xml:id="xx-small"
+					n="tiebp:xx-small" scheme="css">
+					font-size:80%; </rendition>
+
+				<rendition xml:id="large" n="tiebp:large"
+					scheme="css"> font-size:110%; </rendition>
+
+				<rendition xml:id="x-large"
+					n="tiebp:x-large" scheme="css">
+					font-size:115%; </rendition>
+
+				<rendition xml:id="xxx-large"
+					n="tiebp:xxx-large" scheme="css">
+					font-size:120%; </rendition>
+
+				<rendition xml:id="bracket"
+					n="teibp:bracket" scheme="css"/>
+
+				<rendition corresp="#bracket"
+					n="tiebp:bracket" scheme="css"
+					scope="before"> content:"&lt;"; </rendition>
+
+				<rendition corresp="#bracket"
+					n="tiebp:bracket" scheme="css"
+					scope="after"> content:">"; </rendition>
+
+			</tagsDecl>
+		</encodingDesc>
+	</teiHeader>
+	<text style="width:23em;">
+		<body>
+			<pb n="42" facs="../images/satiresofcircums00harduoft_0058.jpg"/>
+			<div>
+				<head rendition="#uppercase #center" style="font-size:14pt;">A Singer Asleep</head>
+				<head rendition="#center" style="font-size:14pt;">(<persName rendition="#i">Algernon Charles Swinburne</persName>, <date from="1837" to="1909">1837-1909</date>)</head>
+				<lg>
+					<head rendition="#center">I</head>
+					<l><hi rendition="#small-caps">In</hi> this fair niche above the
+						unslumbering sea,</l>
+					<l>That sentrys up and down all night,
+						all day,</l>
+					<l>From cove to promontory, from ness to
+						bay,</l>
+					<l>The Fates have fitly bidden that he
+						should be</l>
+					<l rendition="#l-indent-02">Pillowed eternally.</l>
+				</lg>
+				<lg>
+					<head rendition="#center">II</head>
+					<l>—It was as though a garland of red
+						roses</l>
+					<l>Had fallen about the hood of some
+						smug nun</l>
+					<l>When irresponsibly dropped as from
+						the sun,</l>
+					<l>In fulth of numbers freaked with
+						musical closes,</l>
+					<l>Upon Victoria's formal middle
+						time</l>
+					<l rendition="#l-indent-02">His leaves of rhythm and rhyme.</l>
+				</lg>
+				<lg>
+					<head rendition="#center">III</head>
+					<l>O that far morning of a summer
+						day</l>
+					<l>When, down a terraced street whose
+						pavements lay</l>
+					<pb n="43" facs="../images/satiresofcircums00harduoft_0059.jpg"/>
+					<l>Glassing the sunshine into my bent
+						eyes,</l>
+					<l>I walked and read with a quick glad
+						surprise</l>
+					<l rendition="#l-indent-02">New words, in classic guise,—</l>
+				</lg>
+				<lg>
+					<head rendition="#center">IV</head>
+					<l>The passionate pages of his earlier
+						years,</l>
+					<l>Fraught with hot sighs, sad
+						laughters, kisses, tears;</l>
+					<l>Fresh-fluted notes, yet from a
+						minstrel who</l>
+					<l>Blew them not naively, but as one who
+						knew</l>
+					<l rendition="#l-indent-02">Full well why thus he blew.</l>
+				</lg>
+				<lg>
+					<head rendition="#center">V</head>
+					<l>I still can hear the brabble and the
+						roar</l>
+					<l>At those thy tunes, O still one, now
+						passed through</l>
+					<l>That fitful fire of tongues then
+						entered new!</l>
+					<l>Their power is spent like spindrift
+						on this shore;</l>
+					<l rendition="#l-indent-02">Thine swells yet more and more.</l>
+				</lg>
+				<lg>
+					<head rendition="#center">VI</head>
+					<l>—His singing-mistress verily was no
+						other</l>
+					<l>Than she the Lesbian, she the
+						music-mother</l>
+					<l>Of all the tribe that feel in
+						melodies;</l>
+					<l>Who leapt, love-anguished, from the
+						Leucadian steep</l>
+					<l>Into the rambling world-encircling
+						deep</l>
+					<l rendition="#l-indent-02">Which hides her where none sees.</l>
+				</lg>
+				<pb n="44" facs="../images/satiresofcircums00harduoft_0060.jpg"/>
+				<lg>
+					<head rendition="#center">VII</head>
+					<l>And one can hold in thought that
+						nightly here</l>
+					<l>His phantom may draw down to the
+						water’s brim,</l>
+					<l>And hers come up to meet it, as a
+						dim</l>
+					<l>Lone shine upon the heaving
+						hydrosphere,</l>
+					<l>And mariners wonder as they traverse
+						near,</l>
+					<l rendition="#l-indent-02">Unknowing of her and him.</l>
+				</lg>
+				<lg>
+					<head rendition="#center">VIII</head>
+					<l>One dreams him sighing to her
+						spectral form:</l>
+					<l>“O teacher, where lies hid thy
+						burning line;</l>
+					<l>Where are those songs, O poetess
+						divine</l>
+					<l>Whose very arts are love
+						incarnadine?”</l>
+					<l>And her smile back: “Disciple true
+						and warm,</l>
+					<l rendition="#l-indent-02">Sufficient now are thine.” …</l>
+				</lg>
+				<lg>
+					<head rendition="#center">IX</head>
+					<l>So here, beneath the waking
+						constellations,</l>
+					<l>Where the waves peal their
+						everlasting strains,</l>
+					<l>And their dull subterrene
+						reverberations</l>
+					<l>Shake him when storms make mountains
+						of their plains—</l>
+					<l>Him once their peer in sad
+						improvisations,</l>
+					<l>And deft as wind to cleave their
+						frothy manes—</l>
+					<l>I leave him, while the daylight gleam
+						declines</l>
+					<l rendition="#l-indent-02">Upon the capes and chines.</l>
+				</lg>
+				<dateline rendition="#small #small-caps"
+					>Bonchurch, 1910.</dateline>
+			</div>
+		</body>
+	</text>
+</TEI>

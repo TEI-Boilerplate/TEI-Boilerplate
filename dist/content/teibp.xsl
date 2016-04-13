@@ -47,7 +47,6 @@
 	<xsl:param name="filePrefix" select="'..'"/>
 	
 	<xsl:param name="teibpCSS" select="concat($filePrefix,'/css/teibp.css')"/>
-	<xsl:param name="teibpLESS" select="concat($filePrefix,'/css/teibp.less')"/>
 	<xsl:param name="customCSS" select="concat($filePrefix,'/css/custom.css')"/>
 	<xsl:param name="teibpJS" select="concat($filePrefix,'/js/teibp.js')"/>
 	<xsl:param name="lessJS" select="concat($filePrefix,'/js/build-support/less.min.js')"/>
@@ -76,7 +75,6 @@
 				</div>
 				<xsl:copy-of select="$htmlFooter"/>
 				<script type="text/javascript" src="{$teibpJS}"></script>
-				<script id="lessjs" src="{$lessJS}"></script>
 			</body>
 		</html>
 	</xsl:template>
@@ -301,11 +299,12 @@
 	<xsl:template name="htmlHead">
 		<head>
 			<meta charset="UTF-8"/>
-			
-			<!--<link id="maincss" rel="stylesheet" type="text/css" href="{$teibpCSS}"/>-->
-			<link id="mainless" rel="stylesheet/less" type="text/css" href="{$teibpLESS}"/>
+
+			<script src="{$lessJS}"></script>
+			<link id="maincss" rel="stylesheet" type="text/css" href="{$teibpCSS}"/>
 			<link id="customcss" rel="stylesheet" type="text/css" href="{$customCSS}"/>
-			
+			<!--<script type="text/javascript" src="{$jqueryJS}"></script>-->
+			<!--<script type="text/javascript" src="{$jqueryBlockUIJS}"></script>-->
 			<xsl:call-template name="tagUsage2style"/>
 			<xsl:call-template name="rendition2style"/>
 			<title><!-- don't leave empty. --></title>

@@ -1,0 +1,11 @@
+/* Place project-specific CSS here */
+/* render Arabic as rtl */
+
+[lang="ar"]{
+    direction:rtl;
+    text-align:right;
+}
+[lang="en"]{
+    direction:ltr;
+    text-align:left;
+}

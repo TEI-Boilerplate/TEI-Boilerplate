@@ -1,6 +1,6 @@
-@import url('http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Gentium+Book+Basic:400,400italic,700,700italic');
 /* imports */
 /* @import url("shell.css"); */
+@import url('http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Gentium+Book+Basic:400,400italic,700,700italic');
 /* namespaces */
 /* @namespace "http://www.tei-c.org/ns/1.0"; */
 /* @namespace with prefix, as below, throws and error in less. */
@@ -14,8 +14,8 @@
   border-radius: 15px;
   width: 325px;
   position: relative;
-  border: 1px solid #aaaaaa;
-  background: #fafafa;
+  border: 1px solid #AAA;
+  background: #FAFAFA;
   /* reset text-indent for note with <l> ancestors. */
   text-indent: 0;
   font-size: 85%;
@@ -99,7 +99,7 @@
   padding: 2.5em;
   font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
   font-size: 14pt;
-  background-color: #ebebeb;
+  background-color: #EBEBEB;
   color: #292929;
   width: 33em;
 }
@@ -108,7 +108,7 @@
 border-left: 2px solid @border-color;
 border-top:2px solid @border-color;
 */
-  border: 1px dotted #aaaaaa;
+  border: 1px dotted #AAA;
 }
 /* Choice elements */
 choice abbr + expan:before,
@@ -408,7 +408,7 @@ cell {
 border-left: 2px solid @border-color;
 border-top:2px solid @border-color;
 */
-  border: 1px dotted #aaaaaa;
+  border: 1px dotted #AAA;
   width: 100%;
 }
 /* for cell or row with @role = label */
@@ -573,7 +573,7 @@ egXML {
   font-size: 80%;
   margin-left: 1em;
   padding-left: 1em;
-  border-left: 1px solid #aaaaaa;
+  border-left: 1px solid #AAA;
   margin-top: .75em;
   margin-bottom: .75em;
   padding-top: .75em;
@@ -711,8 +711,8 @@ figure > head {
   border-radius: 15px;
   width: 325px;
   position: relative;
-  border: 1px solid #aaaaaa;
-  background: #fafafa;
+  border: 1px solid #AAA;
+  background: #FAFAFA;
   /* reset text-indent for note with <l> ancestors. */
   text-indent: 0;
   font-size: 85%;
@@ -838,6 +838,14 @@ lacunaEnd {
 }
 lacunaStart {
   /* Empty Rule Set */
+}
+[lang="ar"] {
+  direction: rtl;
+  text-align: right;
+}
+[lang="en"] {
+  direction: ltr;
+  text-align: left;
 }
 lang {
   /* Empty Rule Set */
@@ -1058,8 +1066,8 @@ note {
   border-radius: 15px;
   width: 325px;
   position: relative;
-  border: 1px solid #aaaaaa;
-  background: #fafafa;
+  border: 1px solid #AAA;
+  background: #FAFAFA;
   /* reset text-indent for note with <l> ancestors. */
   text-indent: 0;
   font-size: 85%;
@@ -1832,12 +1840,12 @@ html {
   padding: 2.5em;
   font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
   font-size: 14pt;
-  background-color: #ebebeb;
+  background-color: #EBEBEB;
   color: #292929;
   width: 33em;
 }
 img {
-  border: 1px solid #aaaaaa;
+  border: 1px solid #AAA;
 }
 footer {
   margin-top: 1em;
@@ -1863,8 +1871,8 @@ a:hover {
   margin-right: 1em;
   padding: 1em;
   border-radius: 15px;
-  border: 1px solid #aaaaaa;
-  background: #fafafa;
+  border: 1px solid #AAA;
+  background: #FAFAFA;
   font-family: Arvo, Verdana, sans-serif;
   text-align: justify;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
@@ -1877,7 +1885,7 @@ a:hover {
   font-size: 115%;
   margin-top: 0;
   margin-bottom: .5em;
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #AAA;
 }
 /* xml-serialization */
 .eg-element {
@@ -1909,7 +1917,7 @@ a:hover {
 }
 /* facsViewer */
 #resizable {
-  background-color: #ebebeb;
+  background-color: #EBEBEB;
   width: 550px;
   height: 700px;
   overflow: hidden;

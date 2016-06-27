@@ -1,6 +1,6 @@
-@import url('http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Gentium+Book+Basic:400,400italic,700,700italic');
 /* imports */
 /* @import url("shell.css"); */
+@import url('http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Gentium+Book+Basic:400,400italic,700,700italic');
 /* namespaces */
 /* @namespace "http://www.tei-c.org/ns/1.0"; */
 /* @namespace with prefix, as below, throws and error in less. */
@@ -99,8 +99,8 @@
   padding: 2.5em;
   font-family: Cochin, Georgia, Serif;
   font-size: 14pt;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: black;
+  color: white;
   width: 33em;
 }
 .table-border {
@@ -838,6 +838,14 @@ lacunaEnd {
 }
 lacunaStart {
   /* Empty Rule Set */
+}
+[lang="ar"] {
+  direction: rtl;
+  text-align: right;
+}
+[lang="en"] {
+  direction: ltr;
+  text-align: left;
 }
 lang {
   /* Empty Rule Set */
@@ -1832,8 +1840,8 @@ html {
   padding: 2.5em;
   font-family: Cochin, Georgia, Serif;
   font-size: 14pt;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: black;
+  color: white;
   width: 33em;
 }
 img {
@@ -1841,18 +1849,18 @@ img {
 }
 footer {
   margin-top: 1em;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid white;
   padding-top: .5em;
   font-size: 12pt;
 }
 a:link,
 a:visited,
 a:active {
-  color: #1cc0fa;
+  color: #1CC0FA;
   text-decoration: none;
 }
 a:hover {
-  color: #1cc0fa;
+  color: #1CC0FA;
   text-decoration: underline;
 }
 #teibpToolbox {
@@ -1895,7 +1903,7 @@ a:hover {
   color: #993300;
 }
 .eg-text {
-  color: #ffffff;
+  color: white;
 }
 /* loading animation */
 #loading {
@@ -1909,7 +1917,7 @@ a:hover {
 }
 /* facsViewer */
 #resizable {
-  background-color: #000000;
+  background-color: black;
   width: 550px;
   height: 700px;
   overflow: hidden;

@@ -303,8 +303,7 @@
 			<script src="{$lessJS}"></script>
 			<link id="maincss" rel="stylesheet" type="text/css" href="{$teibpCSS}"/>
 			<link id="customcss" rel="stylesheet" type="text/css" href="{$customCSS}"/>
-			<!--<script type="text/javascript" src="{$jqueryJS}"></script>-->
-			<!--<script type="text/javascript" src="{$jqueryBlockUIJS}"></script>-->
+
 			<xsl:call-template name="tagUsage2style"/>
 			<xsl:call-template name="rendition2style"/>
 			<title><!-- don't leave empty. --></title>

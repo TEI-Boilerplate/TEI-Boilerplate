@@ -4,9 +4,9 @@
 
 #Browser Compatibility
 
-TEI Boilerplate requires a robust, modern browser to do its work. It is compatible with current versions of Firefox, Chrome, Safari, and Internet Explorer (IE 9).
+TEI Boilerplate requires a robust, modern browser to do its work. It is compatible with current versions of Firefox, Chrome, Safari, and Internet Explorer.
 
-*Note:* For security reasons, some browsers (e.g., Chrome) will not process the XSLT transformation when the TEI document is opened from the local file system. Chrome does work fine when the TEI files are delivered through a Web server, including `localhost`. 
+*Note:* For security reasons, some browsers (e.g., Chrome) will not process the XSLT transformation when the TEI document is opened from the local file system. Chrome does work fine when the TEI files are delivered through a Web server, including `localhost`.
 
 If you have problems with TEI Boilerplate with a modern browser, please let us know by filing a bug report or feature request at <http://github.com/GrantLS/TEI-Boilerplate/issues>.
 
@@ -23,7 +23,7 @@ TEI Boilerplate bridges the gap between these two approaches by making use of th
 
 TEI Boilerplate is not intended to be a replacement for the many excellent XSLT solutions for publishing and displaying TEI/XML on the web. It is intended to be a _simple and lightweight_ alternative to more complex XSLT solutions. There are both practical and theoretical advantages to this lightweight approach.
 
-##Practical Benefits 
+##Practical Benefits
 
 XSLT is far more powerful than CSS and can manipulate XML documents in ways that CSS cannot. XSLT can radically transform documents and can combine multiple XML data sources into a single output file or multiple output files. But the power of XSLT comes at a cost. XSLT is a far more complex language than CSS and has a far steeper learning curve. There are relatively few expert XSLT programmers compared to the numbers of expert Web developers with extensive knowledge of HTML/CSS/JavaScript.
 
@@ -47,15 +47,15 @@ Scholars labor over the intricate encoding of TEI documents, encoding that may r
 
 TEI Boilerplate respects the integrity of the TEI document, and keeps the TEI document central throughout the publication process. TEI Boilerplate takes advantage of the separation of form and content inherent in XML, XSLT, CSS frameworks. However, like Liu (2004), Galey (2010), and others, the authors of TEI Boilerplate view that separation with suspicion. TEI Boilerplate attempts to weaken that separation of form and content in the typical TEI-to-web design and delivery model by largely removing the HTML layer, exposing the TEI-encoded text directly to the browser, and providing scholars with more immediate access to the readings, models, and analysis embedded in the TEI-encoded document.
 
-#How It Works 
+#How It Works
 
 When a TEI document using TEI Boilerplate is accessed by a browser, the browser reads a line (the `xml-stylesheet` processing instruction) in the file that indicates that the XML should be processed by the TEI Boilerplate XSLT stylesheet. The browser then processes the TEI according to the rules of the stylesheet, which results in an HTML5 shell document within which the TEI document is embedded. A very small number of TEI elements and attributes (e.g. `<ptr>`, `<ref>`, `<figure>`, and `@rend`) are converted to their closest HTML equivalents to enable features such as clickable links, display of images, and support for inline CSS. The HTML shell contains a link to the TEI Boilerplate CSS file, which tells the browser how to style the full document.
 
 #Using it in Your Project
 
-Download the [TEI Boilerplate files](http://github.com/GrantLS/TEI-Boilerplate), and host the `teibp` directory on a web server.
+Download the [TEI Boilerplate files](http://github.com/GrantLS/TEI-Boilerplate), and host the `dist` directory on a web server.
 
-The simplest way to use TEI Boilerplate (TEIBP) is simply to add your TEI files to the `teibp/content` directory of TEI Boilerplate and include the following xml-stylesheet processing instruction at the top of your TEI documents, after the XML declaration and before the root `<TEI>` element:
+The simplest way to use TEI Boilerplate (TEIBP) is simply to add your TEI files to the `dist/content` directory of TEI Boilerplate and include the following xml-stylesheet processing instruction at the top of your TEI documents, after the XML declaration and before the root `<TEI>` element:
 
     <?xml-stylesheet type="text/xsl" href="teibp.xsl"?>
 
@@ -67,7 +67,7 @@ TEI Boilerplate has (since version 1.1) a simple built-in page viewer for facsim
 
     <pb n="42" facs="../images/page057.jpg"/>
 
-Of course, the path to the image file must be correct, relative to the TEI file. 
+Of course, the path to the image file must be correct, relative to the TEI file.
 
 _Known Issue: In WebKit-based browsers, e.g., Safari and Chrome, if the `@facs` links are to a remote server (e.g., `<pb n="42" facs="http://www.example.com/images/page057.jpg">`), the facsimile page viewer will always open at the first page of the document, rather than scrolling correctly to the page selected in the transcription. We expect to solve this problem, but haven't figured it out yet._
 
@@ -75,8 +75,8 @@ _Known Issue: In WebKit-based browsers, e.g., Safari and Chrome, if the `@facs` 
 
 TEI Boilerplate makes extensive use of CSS to generate styled documents in the browser. The CSS is drawn from three possible sources:
 
-* External css stylesheets: 
-    * [`teibp.css`](http://dcl.slis.indiana.edu/teibp/css/teibp.css) includes default styles for the HTML shell and TEI document. 
+* External css stylesheets:
+    * [`teibp.css`](http://dcl.slis.indiana.edu/teibp/css/teibp.css) includes default styles for the HTML shell and TEI document.
     * [`custom.css`](http://dcl.slis.indiana.edu/teibp/css/custom.css) is an empty stylesheet provided as a placeholder for user styles.
 * `<rendition>` elements with `@scheme="css"`  within the TEI document are used to generate CSS declarations understood by the browser.
 * The global `@rend` attribute may be used to include inline CSS in TEI documents. The contents of `@rend` are copied to `@style`, which is understood by the browser.

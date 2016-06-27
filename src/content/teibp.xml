@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/xsl" href="teibp.xsl"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:html="http://www.w3.org/1999/xhtml">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title type="main">TEI Boilerplate</title>
+				<title type="sub">A template for TEI P5</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Digital Culture Lab, School of Library &amp; Information Science, Indiana University</publisher>
+			  <pubPlace>Bloomington, IN</pubPlace>
+				<availability status="free">
+					<p>Copyright © 2012. TEI Boilerplate</p>
+					<p>
+					<ref n="license" target="http://creativecommons.org/licenses/by/3.0/"><figure rend="border-width:0;"><figDesc>Creative Commons License</figDesc><graphic url="http://i.creativecommons.org/l/by/3.0/80x15.png"/></figure></ref><lb />TEI Boilerplate is licensed under a <ref n="license" target="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</ref>.
+					</p>
+				</availability>
+			</publicationStmt>
+			<sourceDesc>
+			<!-- For born digital documents, use something like: -->
+                 <p>This TEI/XML document is the original source</p>
+         	<!-- For documents transcribed from another source or sources, use <biblStruct>. -->
+         	<!--
+				<biblStruct>
+					<analytic>
+						<author>
+						</author>
+						<title>
+						</title>
+					</analytic>
+					<monogr>
+						<editor>
+						</editor>
+						<title>
+						</title>
+						<imprint>
+							<pubPlace>
+							</pubPlace>
+							<publisher>
+							</publisher>
+							<date when="2011" /> 
+						</imprint>
+					</monogr>
+				</biblStruct>
+			-->
+			<!-- The loosely structured <bibl> is also an option -->
+			<!--
+			<bibl></bibl>
+			-->
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<tagsDecl>	
+				<!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
+			  <rendition xml:id="blue" scheme="css">
+			    color:blue;
+			  </rendition>
+				<rendition xml:id="b" n="teibp:bold" scheme="css">
+					font-weight:bold;
+				</rendition> 
+				
+				<rendition xml:id="i" n="teibp:italic" scheme="css">
+					font-style:italic;
+				</rendition> 
+				
+				<rendition xml:id="u" n="teibp:underline" scheme="css">
+					text-decoration:underline;
+				</rendition> 
+				
+				<rendition xml:id="n" n="teibp:normal" scheme="css">
+					font-weight:normal;
+					text-decoration:none;
+					font-style:normal;
+				</rendition>
+				
+				<rendition xml:id="mono" n="teibp:mono" scheme="css">
+					font-family:Monaco,Courier,monospace;
+				</rendition>
+				
+				<rendition xml:id="super" n="teibp:super" scheme="css">
+					vertical-align:super;
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="sub" n="teibp:sub" scheme="css">
+					vertical-align:sub;
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="lowercase" n="teibp:lowercase" scheme="css">
+					text-transform:lowercase;
+				</rendition>
+				
+				<rendition xml:id="uppercase" n="teibp:uppercase" scheme="css">
+					text-transform:uppercase;
+				</rendition>
+				
+				<rendition xml:id="capitalize" n="teibp:capitalize" scheme="css">
+					text-transform:capitalize;
+				</rendition>
+				
+				<rendition xml:id="small-caps" n="teibp:small-caps" scheme="css">
+					font-variant:small-caps;
+				</rendition>
+				
+				<!-- Blocks. -->
+				<rendition xml:id="block" n="teibp:block" scheme="css">
+					display:block;
+				</rendition> 
+				<rendition xml:id="block-margins" n="teibp:block-margins" scheme="css">
+					display:block;
+					margin-top:1em;
+					margin-bottom:1em;
+				</rendition>
+				<rendition xml:id="blockquote" n="teibp:blockquote" scheme="css">
+					display:block;
+					font-size:90%;
+					margin-left:3em;
+					padding-left:1em;
+					border-left: 1px solid gray;
+					margin-top:.75em;
+					margin-bottom:.75em;
+					padding-top:.75em;
+					padding-bottom:.75em;
+				</rendition>
+				
+				<rendition corresp="#blockquote" n="teibp:blockquote" scheme="css" scope="before">
+					<!-- This turns off the default generated quotes for block quotes. -->
+					content:"" !important;
+				</rendition>
+				
+				<rendition corresp="#blockquote" n="teibp:blockquote" scheme="css" scope="after">
+					<!-- This turns off the default generated quotes for block quotes. -->
+					content:"" !important;
+				</rendition>
+				
+				<rendition xml:id="codeblock" n="teibp:codeblock" scheme="css">
+					display: block;
+					font-size: 80%;
+					margin-left: 1em;
+					padding-left: 1em;
+					border-left: 1px solid gray;
+					margin-top: .75em;
+					margin-bottom: .75em;
+					padding-top: .75em;
+					padding-bottom: .75em;
+					font-family:Monaco,Courier,monospace;
+					white-space:pre;
+				</rendition>
+				
+				<!-- Inline -->
+				
+				<rendition xml:id="inline" n="teibp:inline" scheme="css">
+					display:inline;
+				</rendition>
+				
+				<!-- Alignment. -->
+				<rendition xml:id="center" n="teibp:center" scheme="css">
+					display:block;
+					text-align:center;
+					margin-left:auto;
+					margin-right:auto;
+				</rendition>
+				
+				<rendition xml:id="left" n="teibp:left" scheme="css">
+					text-align:left;
+				</rendition>
+				
+				<rendition xml:id="right" n="teibp:right" scheme="css">
+					text-align:right;
+				</rendition>
+				
+				<rendition xml:id="justify" n="teibp:justify" scheme="css">
+					text-align:justify;
+				</rendition>
+				
+				<rendition xml:id="center-block" n="teibp:center-block" scheme="css">
+					display:block;
+					margin-left:auto;
+					margin-right:auto;
+				</rendition>
+				
+				<!-- Indentation -->
+				<rendition xml:id="hang" n="teibp:hang" scheme="css">
+					display:block;
+					padding-left:2.5em;
+					text-indent:-2.5em;
+				</rendition>
+				
+				<!-- Indentation for verse lines. Results in a “hanging” indent if
+					the line wraps. -->
+				<rendition xml:id="l-indent-01" n="teibp:l-indent-01" scheme="css">
+					display:block;
+					padding-left:4em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-02" n="teibp:l-indent-02" scheme="css">
+					display:block;
+					padding-left:6em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-03" n="teibp:l-indent-03" scheme="css">
+					display:block;
+					padding-left:8em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-04" n="teibp:l-indent-04" scheme="css">
+					display:block;
+					padding-left:10em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-05" n="teibp:l-indent-05" scheme="css">
+					display:block;
+					padding-left:12em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-06" n="teibp:l-indent-06" scheme="css">
+					display:block;
+					padding-left:14em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-07" n="teibp:l-indent-07" scheme="css">
+					display:block;
+					padding-left:16em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-08" n="teibp:l-indent-08" scheme="css">
+					display:block;
+					padding-left:18em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="indent" n="teibp:indent" scheme="css" scope="before">
+					/* text-indent:4em; */
+					/* The above method of describing an indentation for, say, a paragraph is preferred.
+					The method being used is in response to a bug in some browsers whereby a block
+					element, like a paragraph, is erroneously re-indented after interruption by another 
+					block element (like a list, which is valid inside a paragraph). */
+					content:"\A0\A0\A0\A0\A0\A0";
+				</rendition>
+				
+				<!-- font sizes -->
+				
+				<rendition xml:id="small" n="teibp:small" scheme="css">
+					font-size:90%;
+				</rendition>
+				
+				<rendition xml:id="x-small" n="teibp:x-small" scheme="css">
+					font-size:85%;
+				</rendition>
+				
+				<rendition xml:id="xx-small" n="teibp:xx-small" scheme="css">
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="large" n="teibp:large" scheme="css">
+					font-size:110%;
+				</rendition>
+				
+				<rendition xml:id="x-large" n="teibp:x-large" scheme="css">
+					font-size:115%;
+				</rendition>
+				
+				<rendition xml:id="xxx-large" n="teibp:xxx-large" scheme="css">
+					font-size:120%;
+				</rendition>
+				
+				<rendition xml:id="bracket" n="teibp:bracket" scheme="css"/>
+				
+				<rendition corresp="#bracket" n="teibp:bracket" scheme="css" scope="before">
+					content:"&lt;";
+				</rendition>
+				
+				<rendition corresp="#bracket" n="teibp:bracket" scheme="css" scope="after">
+					content:">";
+				</rendition>
+			</tagsDecl>
+		</encodingDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div>
+				<head>What is this?</head>
+				<p rendition="#b #i">This file (<ref target="http://dcl.slis.indiana.edu/teibp/content/teibp.xml">teibp.xml</ref>) is a simple TEI P5 template that includes a set of generally useful <ref target="teibpstyles.xml"><gi>rendition</gi> styles</ref> for use with <ref target="http://dcl.slis.indiana.edu/teibp/">TEI Boilerplate</ref>. These styles are documented in: <ref target="teibpstyles.xml">Styles available in the TEI Boilerplate Template</ref>.</p>
+			</div>
+		</body>
+	</text>
+</TEI>

@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/xsl" href="teibp.xsl"?>
+<TEI
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:math="http://www.w3.org/1998/Math/MathML"
+  xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>TEI Boilerplate Examples &amp; Features</title>
+      </titleStmt>
+      <publicationStmt>
+        <pubPlace>Bloomington, IN</pubPlace>
+        <publisher>Digital Culture Lab, School of Library &amp; Information Science, Indiana University</publisher>
+        <availability status="free">
+          <p>Copyright © 2012. TEI Boilerplate</p>
+          <p>
+            <ref n="license" target="http://creativecommons.org/licenses/by/3.0/"><figure style="border-width:0;"><figDesc>Creative Commons License</figDesc><graphic url="http://i.creativecommons.org/l/by/3.0/80x15.png"/></figure></ref><lb />TEI Boilerplate is licensed under a <ref n="license" target="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</ref>.
+          </p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>This TEI/XML document is the original source</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <tagsDecl>
+        <!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
+        <rendition xml:id="b" n="tiebp:bold" scheme="css">
+          font-weight:bold;
+        </rendition> 
+        
+        <rendition xml:id="i" n="tiebp:italic" scheme="css">
+          font-style:italic;
+        </rendition> 
+        
+        <rendition xml:id="u" n="tiebp:underline" scheme="css">
+          text-decoration:underline;
+        </rendition> 
+        
+        <rendition xml:id="n" n="teibp:normal" scheme="css">
+          font-weight:normal;
+          text-decoration:none;
+          font-style:normal;
+        </rendition>
+        
+        <rendition xml:id="mono" n="teibp:mono" scheme="css">
+          font-family:Monaco,Courier,monospace;
+        </rendition>
+        
+        <rendition xml:id="super" n="tiebp:super" scheme="css">
+          vertical-align:super;
+          font-size:80%;
+        </rendition>
+        
+        <rendition xml:id="sub" n="tiebp:sub" scheme="css">
+          vertical-align:sub;
+          font-size:80%;
+        </rendition>
+        
+        <rendition xml:id="lowercase" n="tiebp:lowercase" scheme="css">
+          text-transform:lowercase;
+        </rendition>
+        
+        <rendition xml:id="uppercase" n="tiebp:uppercase" scheme="css">
+          text-transform:uppercase;
+        </rendition>
+        
+        <rendition xml:id="capitalize" n="tiebp:capitalize" scheme="css">
+          text-transform:capitalize;
+        </rendition>
+        
+        <rendition xml:id="small-caps" n="tiebp:small-caps" scheme="css">
+          font-variant:small-caps;
+        </rendition>
+        
+        <!-- Blocks. -->
+        <rendition xml:id="block" n="tiebp:block" scheme="css">
+          display:block;
+        </rendition> 
+        
+        <rendition xml:id="blockquote" n="tiebp:blockquote" scheme="css">
+          display:block;
+          font-size:90%;
+          margin-left:3em;
+          padding-left:1em;
+          border-left: 1px solid gray;
+          margin-top:.75em;
+          margin-bottom:.75em;
+          padding-top:.75em;
+          padding-bottom:.75em;
+        </rendition>
+        
+        <rendition corresp="#blockquote" n="tiebp:blockquote" scheme="css" scope="before">
+          <!-- This turns off the default generated quotes for block quotes. -->
+          content:"" !important;
+        </rendition>
+        
+        <rendition corresp="#blockquote" n="tiebp:blockquote" scheme="css" scope="after">
+          <!-- This turns off the default generated quotes for block quotes. -->
+          content:"" !important;
+        </rendition>
+        
+        <rendition xml:id="codeblock" n="teibp:codeblock" scheme="css">
+          display: block;
+          font-size: 80%;
+          margin-left: 1em;
+          padding-left: 1em;
+          border-left: 1px solid gray;
+          margin-top: .75em;
+          margin-bottom: .75em;
+          padding-top: .75em;
+          padding-bottom: .75em;
+          font-family:Monaco,Courier,monospace;
+          white-space:pre;
+        </rendition>
+        
+        <!-- Inline -->
+        
+        <rendition xml:id="inline" n="teibp:inline" scheme="css">
+          display:inline;
+        </rendition>
+        
+        <!-- Alignment. -->
+        <rendition xml:id="center" n="tiebp:center" scheme="css">
+          display:block;
+          text-align:center;
+          margin-left:auto;
+          margin-right:auto;
+        </rendition>
+        
+        <rendition xml:id="left" n="teibp:left" scheme="css">
+          text-align:left;
+        </rendition>
+        
+        <rendition xml:id="right" n="teibp:right" scheme="css">
+          text-align:right;
+        </rendition>
+        
+        <rendition xml:id="justify" n="teibp:justify" scheme="css">
+          text-align:justify;
+        </rendition>
+        
+        <rendition xml:id="center-block" n="tiebp:center-block" scheme="css">
+          display:block;
+          margin-left:auto;
+          margin-right:auto;
+        </rendition>
+        
+        <!-- Indentation -->
+        <rendition xml:id="hang" n="teibp:hang" scheme="css">
+          display:block;
+          padding-left:2.5em;
+          text-indent:-2.5em;
+        </rendition>
+        
+        <!-- Indentation for verse lines. Results in a “hanging” indent if
+					the line wraps. -->
+        <rendition xml:id="l-indent-01" n="tiebp:l-indent-01" scheme="css">
+          display:block;
+          padding-left:4em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-02" n="tiebp:l-indent-02" scheme="css">
+          display:block;
+          padding-left:6em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-03" n="tiebp:l-indent-03" scheme="css">
+          display:block;
+          padding-left:8em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-04" n="tiebp:l-indent-04" scheme="css">
+          display:block;
+          padding-left:10em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-05" n="tiebp:l-indent-05" scheme="css">
+          display:block;
+          padding-left:12em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-06" n="tiebp:l-indent-06" scheme="css">
+          display:block;
+          padding-left:14em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-07" n="tiebp:l-indent-07" scheme="css">
+          display:block;
+          padding-left:16em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="l-indent-08" n="tiebp:l-indent-08" scheme="css">
+          display:block;
+          padding-left:18em;
+          text-indent:-2em;
+        </rendition>
+        
+        <rendition xml:id="indent" n="tiebp:indent" scheme="css" scope="before">
+          /* text-indent:4em; */
+          /* The above method of describing an indentation for, say, a paragraph is preferred.
+          The method being used is in response to a bug in some browsers whereby a block
+          element, like a paragraph, is erroneously re-indented after interruption by another 
+          block element (like a list, which is valid inside a paragraph). */
+          content:"\A0\A0\A0\A0\A0\A0";
+        </rendition>
+        
+        <!-- font sizes -->
+        
+        <rendition xml:id="small" n="tiebp:small" scheme="css">
+          font-size:90%;
+        </rendition>
+        
+        <rendition xml:id="x-small" n="tiebp:x-small" scheme="css">
+          font-size:85%;
+        </rendition>
+        
+        <rendition xml:id="xx-small" n="tiebp:xx-small" scheme="css">
+          font-size:80%;
+        </rendition>
+        
+        <rendition xml:id="large" n="tiebp:large" scheme="css">
+          font-size:110%;
+        </rendition>
+        
+        <rendition xml:id="x-large" n="tiebp:x-large" scheme="css">
+          font-size:115%;
+        </rendition>
+        
+        <rendition xml:id="xxx-large" n="tiebp:xxx-large" scheme="css">
+          font-size:120%;
+        </rendition>
+        
+        <rendition xml:id="bracket" n="teibp:bracket" scheme="css"/>
+        
+        <rendition corresp="#bracket" n="tiebp:bracket" scheme="css" scope="before">
+          content:"&lt;";
+        </rendition>
+        
+        <rendition corresp="#bracket" n="tiebp:bracket" scheme="css" scope="after">
+          content:">";
+        </rendition>
+        
+      </tagsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div>
+        <head>Nested <gi>div</gi> elements and headings</head>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, urna eget venenatis mollis, ipsum tellus hendrerit tellus, sed vestibulum urna quam eget enim. Pellentesque odio lacus, laoreet quis commodo eu, vehicula congue purus. 
+        </p>
+        <div>
+          <head>Nested <gi>div</gi> elements and headings</head>
+          <p>
+            Vivamus rhoncus erat mi. Vestibulum sapien sapien, pulvinar id vehicula in, porta tristique ligula. Sed commodo diam sit amet dui posuere luctus. Morbi tempus sem adipiscing nisl molestie pharetra. 
+          </p>
+          <div>
+            <head>Nested <gi>div</gi> elements and headings</head>
+            <p>
+              Sed fermentum dui vel enim consectetur malesuada. Sed a mi felis. Curabitur sit amet mi augue, ac volutpat leo. Maecenas vitae condimentum orci. Morbi non quam sed neque tincidunt tempus posuere sit amet purus.
+            </p>
+            <div>
+              <head>Nested <gi>div</gi> elements and headings</head>
+              <div>
+                <head>Nested <gi>div</gi> elements and headings</head>
+                <div>
+                  <head>Nested <gi>div</gi> elements and headings</head>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, urna eget venenatis mollis, ipsum tellus hendrerit tellus, sed vestibulum urna quam eget enim. Pellentesque odio lacus, laoreet quis commodo eu, vehicula congue purus. Aliquam urna urna, egestas eu feugiat sed, accumsan vitae dui.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <head>Lists</head>
+        <list>
+          <head><soCalled>Untyped</soCalled> or bulleted</head>
+          <item>John</item>
+          <item>George</item>
+          <item>Paul</item>
+          <item>Ringo</item>
+        </list>
+        <list type="ordered">
+          <head>ordered</head>
+          <item>John</item>
+          <item>George</item>
+          <item>Paul</item>
+          <item>Ringo</item>
+        </list>
+        <list type="simple">
+          <head>simple</head>
+          <item>John</item>
+          <item>George</item>
+          <item>Paul</item>
+          <item>Ringo</item>
+        </list>
+        <list type="gloss">
+          <head>gloss</head>
+          <label>rhythm guitar</label>
+          <item>John</item>
+          <label>lead guitar</label>
+          <item>George</item>
+          <label>bass</label>
+          <item>Paul</item>
+          <label>drums</label>
+          <item>Ringo</item>
+        </list>
+        <list>
+          <head>Nested</head>
+          <item>The Beatles
+            <list>
+              <item>John</item>
+              <item>George</item>
+              <item>Paul</item>
+              <item>Ringo</item>
+            </list>
+          </item>
+          <item>The Stones
+            <list>
+              <item>Mick</item>
+              <item>Keith</item>
+              <item>Brian</item>
+              <item>Charlie</item>
+              <item>Bill</item>
+            </list>
+          </item>
+        </list>
+      </div>
+      <div>
+        <head>Tables</head>
+        <note>Table examples are taken, with minor modifications, from the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html">TEI P5 Guidelines</ref>.</note>
+        <table rows="2" cols="2">
+          <head rendition="#i">Report of the conduct and progress
+            of Ernest Pontifex. Upper Vth form — half
+            term ending Midsummer 1851</head>
+          <row>
+            <cell role="label">Classics</cell>
+            <cell>Idle listless and unimproving</cell>
+          </row>
+          <row>
+            <cell role="label">Mathematics</cell>
+            <cell>ditto</cell>
+          </row>
+          <row>
+            <cell role="label">Divinity</cell>
+            <cell>ditto</cell>
+          </row>
+          <row>
+            <cell role="label">Conduct in house</cell>
+            <cell>Orderly</cell>
+          </row>
+          <row>
+            <cell role="label">General conduct</cell>
+            <cell>Not satisfactory, on
+              account of his great unpunctuality and inattention to
+              duties</cell>
+          </row>
+        </table>
+        <table rows="4" cols="4">
+          <head>Poor Man's Lodgings in Norfolk (Mayhew, 1843)</head>
+          <row role="label">
+            <cell/>
+            <cell>Dossing Cribs or Lodging Houses</cell>
+            <cell>Beds</cell>
+            <cell>Needys or Nightly Lodgers</cell>
+          </row>
+          <row>
+            <cell role="label">Bury St Edmund's</cell>
+            <cell>5</cell>
+            <cell>8</cell>
+            <cell>128</cell>
+          </row>
+          <row>
+            <cell role="label">Thetford</cell>
+            <cell>3</cell>
+            <cell>6</cell>
+            <cell>36</cell>
+          </row>
+          <row>
+            <cell role="label">Attleboro'</cell>
+            <cell>3</cell>
+            <cell>5</cell>
+            <cell>20</cell>
+          </row>
+          <row>
+            <cell role="label">Wymondham</cell>
+            <cell>1</cell>
+            <cell>11</cell>
+            <cell>22</cell>
+          </row>
+        </table>
+      </div>
+      <div>
+        <head><gi>choice</gi> and the <soCalled>Janus-Faced</soCalled> elements</head>
+        <p><gi>choice</gi> is commonly used to group a pair of the so-called <soCalled>Janus-Faced</soCalled> elements, e.g., <gi>orig</gi> &amp; <gi>reg</gi>, <gi>abbr</gi> &amp; <gi>expan</gi>, or <gi>sic</gi> &amp; <gi>corr</gi>.</p>
+        <p>The default behavior of TEI Boilerplate is to display both items in the the <gi>choice</gi>, with the second item enclosed in parentheses.</p>
+        <p>For instance:
+          <quote rendition="#blockquote">
+            The <title><choice><abbr>TEI</abbr><expan>Text Encoding Initiative</expan></choice> Guidelines</title> may be used to encode a wide <choice><sic>vareity</sic><corr>variety</corr></choice> of document types and genres.</quote>
+        </p>
+      </div>
+      <div>
+        <head>Verse inside <gi>floatingText</gi></head>
+        <head style="font-size:12pt">and facsimile page images<lb/> <code>&lt;pb facs="../images/page01.jpg"/></code></head>
+        <floatingText xml:id="acs0000001-05-i002-content" n="Grand Chorus of Birds from Aristophanes" type="poem">
+         <note>From <title><ref target="http://www.swinburneproject.org/">The Algernon Charles Swinburne Project</ref>.</title></note>
+          <front xml:id="front002">
+            <titlePage type="full">
+              <pb n="41" facs="../images/birds_41.jpg"/>
+              <docTitle>
+                <titlePart rendition="#center #uc" type="main">Grand Chorus of Birds <lb/><hi rendition="#small">from</hi>
+                  <lb/><persName key="aristophanes">Aristophanes</persName></titlePart>
+                <lb/>
+                <titlePart rendition="#center #small #i" type="sub">Attempted in English verse after the original
+                  metre</titlePart>
+              </docTitle>
+            </titlePage>
+            <pb n="42" facs="../images/birds_42.jpg"/>
+            <div xml:id="preface002" rendition="#small #justify #center-block" style="width:30em;" type="preface">
+              <p> I <hi rendition="#sc">was</hi> allured into the audacity of this experiment by
+                consideration of a fact which hitherto does not seem to have been taken into consideration
+                by any translator of the half divine humourist in whose incomparable genius the highest
+                qualities of Rabelais were fused and harmonized with the supremest gifts of <persName key="shelley">Shelley</persName>:
+                namely, that his marvellous metrical invention of the anapæstic heptameter was almost
+                exactly reproducible in a language to which all variations and combinations of anapæstic, 
+                iambic, or trochaic metre are as natural and pliable as all dactylic and spondaic forms of
+                verse are unnatural and abhorrent. As it happens, this highest central interlude of a most
+                adorable masterpiece is as easy to detach from its dramatic setting, and even from its
+                lyrical context, as it was easy to give line for line of it in English. In two metrical
+                points only does my version vary from the verbal pattern of the original. I have of course
+                added rhymes, and double rhymes, as necessary makeweights for the imperfection of an
+                otherwise inadequate language; and equally of course I have not attempted the impossible
+                and undesirable task of reproducing the rare exceptional effect of a line overcharged on
+                purpose with a preponderance of heavy-footed spondees: and this for the obvious reason
+                that even if such a line—which I doubt—could be exactly represented, foot by foot and
+                pause for pause, in English, this English line would no more be a verse in any proper
+                sense of the word than is the line I am writing at this moment. And my main intention, or
+                at least my main desire, in the undertaking of this brief adventure, was to renew as far
+                as possible for English ears the music of this resonant and triumphant metre, which goes
+                ringing at full gallop as of horses who <cit rendition="#block">
+                  <quote rendition="#blockquote" style="margin-left:5em;">
+                    <lg>
+                      <l part="F" rendition="#l-indent-06"><q next="#e171f002">dance as ’twere to the music</q></l>
+                      <l part="I"><q prev="#e170f002">Their own hoofs make.</q></l>
+                    </lg>
+                  </quote>
+                </cit> I would not seem over curious in search of an apt or inapt quotation: but nothing
+                can be fitter than a verse of <persName key="shakespeare">Shakespeare's</persName> to praise at once and to describe the most
+                typical verse of <persName key="aristophanes">Aristophanes</persName>. </p>
+            </div>
+            <pb n="43" facs="../images/birds_43.jpg"/>
+          </front>
+          <body>
+            <head rendition="#center">THE BIRDS
+              <lb/>
+              <cit rendition="#small">
+                <bibl><biblScope type="ll">(685-723)</biblScope></bibl>
+              </cit>
+            </head>
+            <lg>
+              <l n="1">Come on then, ye dwellers by nature in darkness, and like to the leaves'
+                generations,</l>
+              <l n="2">That are little of might, that are moulded of mire, unenduring and shadowlike
+                nations,</l>
+              <l n="3">Poor plumeless ephemerals, comfortless mortals, as visions of creatures fast
+                fleeing,</l>
+              <l n="4">Lift up your mind unto us that are deathless, and dateless the date of our
+                being:</l>
+              <l n="5">Us, children of heaven, us, ageless for aye, us, all of whose thoughts are
+                eternal;</l>
+              <l n="6">That ye may from henceforth, having heard of us all things aright as to matters
+                supernal,</l>
+              <l n="7">Of the being of birds and beginning of gods, and of streams, and the dark beyond
+                reaching,</l>
+              <l n="8">Truthfully knowing aright, in my name bid <persName key="prodicus">Prodicus</persName> pack with his preaching.</l>
+            </lg>
+            <lg>
+              <l n="9">It was Chaos and Night at the first, and the blackness of darkness, and hell's
+                broad border,</l>
+              <l n="10">Earth was not, nor air, neither heaven; when in depths of the womb of the dark
+                without order</l>
+              <l n="11">First thing first-born of the black-plumed Night was a wind-egg hatched in her
+                bosom,</l>
+              <l n="12">Whence timely with seasons revolving again sweet Love burst out as a blossom,</l>
+              <pb n="44" facs="../images/birds_44.jpg"/>
+              <l n="13">Gold wings glittering forth of his back, like whirlwinds gustily turning.</l>
+              <l n="14">He, after his wedlock with Chaos, whose wings are of darkness, in hell
+                broad-burning,</l>
+              <l n="15">For his nestlings begat him the race of us first, and upraised us to light
+                new-lighted.</l>
+              <l n="16">And before this was not the race of the gods, until all things by Love were
+                united;</l>
+              <l n="17">And of kind united with kind in communion of nature the sky and the sea are</l>
+              <l n="18">Brought forth, and the earth, and the race of the gods everlasting and blest. So
+                that we are</l>
+              <l n="19">Far away the most ancient of all things blest. And that we are of Love's
+                generation</l>
+              <l n="20">There are manifest manifold signs. We have wings, and with us have the Loves
+                habitation;</l>
+              <l n="21">And manifold fair young folk that forswore love once, ere the bloom of them
+                ended,</l>
+              <l n="22">Have the men that pursued and desired them subdued, by the help of us only
+                befriended,</l>
+              <l n="23">With such baits as a quail, a flamingo, a goose, or a cock's comb staring and
+                splendid.</l>
+            </lg>
+            <lg>
+              <l n="24">All best good things that befall men come from us birds, as is plain to all
+                reason:</l>
+              <l n="25">For first we proclaim and make known to them spring, and the winter and autumn in
+                season;</l>
+              <l n="26">Bid sow, when the crane starts clanging for <placeName><bloc key="africa">Afric</bloc></placeName>, in shrill-voiced emigrant
+                number,</l>
+              <l n="27">And calls to the pilot to hang up his rudder again for the season, and
+                slumber;</l>
+              <l n="28">And then weave cloak for <persName key="orestes">Orestes</persName> the thief, lest he strip men of theirs if it
+                freezes.</l>
+              <l n="29">And again thereafter the kite reappearing announces a change in the breezes,</l>
+              <pb n="45" facs="../images/birds_45.jpg"/>
+              <l n="30">And that here is the season for shearing your sheep of their spring wool. Then
+                does the swallow</l>
+              <l n="31">Give you notice to sell your greatcoat, and provide something light for the heat
+                that's to follow.</l>
+              <l n="32">Thus are we as <persName key="ammon">Ammon</persName> or <rs key="delphic_oracle">
+                <placeName key="delphi"><settlement type="town">Delphi</settlement></placeName></rs> unto you, 
+                <persName key="dodona">Dodona</persName>, nay, <persName key="apollo">Phoebus Apollo</persName>.</l>
+              <l n="33"> For, as first ye come all to get auguries of birds, even such is in all things
+                your carriage,</l>
+              <l n="34">Be the matter a matter of trade, or of earning your bread, or of any one's
+                marriage.</l>
+              <l n="35">And all things ye lay to the charge of a bird that belong to discerning
+                prediction:</l>
+              <l n="36">Winged fame is a bird, as you reckon: you sneeze, and the sign's as a bird for
+                conviction:</l>
+              <l n="37">All tokens are <q>birds</q> with you—sounds too, and lackeys, and donkeys. Then
+                must it not follow</l>
+              <l n="38">That we <hi rendition="#sc">are</hi> to you all as the manifest godhead that speaks in prophetic
+                <persName key="apollo">Apollo</persName>?</l>
+            </lg>
+            <signed rendition="#indent #small #i">
+              <date when="1880-10-19">October <hi rendition="#n">19, 1880</hi>.</date>
+            </signed>
+          </body>
+          <back><div n="[notes]"/></back></floatingText>
+      </div>
+      <div>
+        <head>Automatic generation of quotation marks for nested <gi>q</gi>, <gi>quote</gi>, and <gi>soCalled</gi></head>
+        <p>Michael said, <q>Those so-called <soCalled>superheroes</soCalled> just screamed, <q>Avengers Assemble!</q></q>
+        </p>
+      </div>
+      <div>
+        <head>Bibliography</head>
+        <div xml:id="works_cited">
+          <listBibl>
+            <bibl rendition="#hang" xml:id="adams1918">Adams, Henry. <title level="m">The Education of Henry Adams: An Autobiography</title>. Boston: Houghton Mifflin, 1918.</bibl> 
+            <bibl rendition="#hang" xml:id="arnold">Arnold, Matthew. “To Francis Turner Palgrave.” 9 Oct. 1867. Letter <ref target="http://rotunda.upress.virginia.edu/arnold/display.xqy?letter=V3P176D1">V3P176D1</ref> of <title level="m"><ref target="http://rotunda.upress.virginia.edu/arnold/">The Letters of Matthew Arnold: A Digital Edition</ref></title>. Charlottesville: U of Virginia P, 2006.</bibl>
+            <bibl rendition="#hang">Rev. of <title level="m">Atalanta in Calydon</title>, by Algernon Charles Swinburne. <title level="m">Saturday Review of Politics, Literature, Science and Art</title> <date when="1865-05-06">6 May 1865</date>: 540-42.</bibl>
+            <bibl rendition="#hang" xml:id="eliot1920"><author>Eliot, T.S.</author> <title level="a">Swinburne as Critic.</title> <title level="m">The Sacred Wood: Essays on Poetry and Criticism</title>. London: Methuen, <date when="1920">1920</date>. 17-23.</bibl>
+            <bibl rendition="#hang" xml:id="gosse1917">Gosse, Edmund. <title level="m">The Life of Algernon Charles Swinburne.</title>. New York: Macmillan, 1917.</bibl>
+            <bibl rendition="#hang" xml:id="lamb1835a">Lamb, Charles. <ref target="http://openlibrary.org/books/OL19367516M/Specimens_of_English_dramatic_poets"><title level="m">Specimens of English Dramatic Poets, Who Lived about the Time of Shakespeare.</title> Vol. 1.</ref> London: Moxon, 1849.</bibl>
+            <bibl rendition="#hang" xml:id="lamb1835b">Lamb, Charles. <ref target="http://openlibrary.org/books/OL24358091M/Specimens_of_English_dramatic_poets_who_lived_about_the_time_of_Shakespeare"><title level="m">Specimens of English Dramatic Poets, Who Lived about the Time of Shakespeare.</title> Vol. 2.</ref> London: Moxon, 1835.</bibl>
+            <bibl rendition="#hang" xml:id="queenmother1861b">Rev. of <title level="m">The Queen-Mother and Rosamond</title>, by Algernon Charles Swinburne. <title level="m">John Bull</title> <date when="1861-04-06">6 Apr. 1861</date>: 219.</bibl>
+            <bibl rendition="#hang" xml:id="walsh2012"><ref target="http://swinburneproject.org/">The Algernon Charles Swinburne Project</ref>. Ed. John A. Walsh. Vers. 3.0 (March 2012). Digital Culture Lab, School of Library and Information Science, Indiana U. 14 April 2012. <ptr rendition="#bracket" target="http://www.swinburnearchive.org/"/>.</bibl>
+          </listBibl>
+        </div>
+      </div>
+      <div>
+        <head>Code in <gi>egXML</gi></head>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" style="width:50em;">
+<div xml:id="div00013" type="dedication" rendition="#x-small">
+  <pb n="84" facs="http://purl.dlib.indiana.edu/iudl/swinburne/large/acs0000001-05-099"/>
+  <head rendition="#center-block #uppercase">To Walter Theodore Watts</head>
+  <epigraph>
+    <cit rendition="#center-block #blockquote">
+      <quote>
+        <l rendition="#inline">“We are what suns and winds and waters make us.”</l>
+      </quote>
+      <bibl rendition="#small-caps">—Landor.</bibl>
+    </cit>
+  </epigraph>
+  <lg rendition="#i" style="margin-left:7em;" type="sonnet">
+    <lg rendition="#sublg" type="octet">
+      <l n="1"><hi rendition="#small-caps">Sea</hi>, wind, and sun, with light 
+        and sound and breath</l>
+      <l n="2" rendition="#l-indent-01">The spirit of man fulfilling—these
+        create</l>
+      <l n="3" rendition="#l-indent-01">That joy wherewith man's life grown 
+        passionate</l>
+      <l n="4">Gains heart to hear and sense to read and faith</l>
+      <l n="5">To know the secret word our Mother saith</l>
+      <l n="6" rendition="#l-indent-01">In silence, and to see, though doubt 
+        wax great,</l>
+      <l n="7" rendition="#l-indent-01">Death as the shadow cast by life
+        on fate,</l>
+      <l n="8">Passing, whose shade we call the shadow of death.</l>
+    </lg>
+    <lg rendition="#sublg" type="sextet" style="margin-top:1.5em;">
+      <l n="9">Brother, to whom our Mother as to me</l>
+      <l n="10" rendition="#l-indent-01">Is dearer than all dreams of days 
+        undone,</l>
+      <l n="11">This song I give you of the sovereign three</l>
+      <l n="12" rendition="#l-indent-01">That are as life and sleep and death 
+        are, one:</l>
+      <l n="13">A song the sea-wind gave me from the sea,</l>
+      <l n="14" rendition="#l-indent-01">Where nought of man's endures before 
+        the sun.</l>
+    </lg>
+  </lg>
+</div>
+        </egXML>
+      </div>
+      <div>
+        <head>Images and captions</head>
+        <p>TEI <gi>graphic</gi> elements are transformed to HTML <gi>img</gi> elements so that images may be displayed in the browser.</p>
+        <figure>
+          <head>The TEI Boilerplate Team</head>
+          <graphic url="../images/tv_new_yo_gabba_gabba.jpg"/>
+          <figDesc>A playful image of the TEI Boilerplate team.</figDesc>
+        </figure>
+      </div>
+    </body>
+  </text>
+</TEI>

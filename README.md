@@ -8,7 +8,7 @@ TEI Boilerplate requires a robust, modern browser to do its work. It is compatib
 
 *Note:* For security reasons, some browsers (e.g., Chrome) will not process the XSLT transformation when the TEI document is opened from the local file system. Chrome does work fine when the TEI files are delivered through a Web server, including `localhost`.
 
-If you have problems with TEI Boilerplate with a modern browser, please let us know by filing a bug report or feature request at <http://github.com/GrantLS/TEI-Boilerplate/issues>.
+If you have problems with TEI Boilerplate with a modern browser, please let us know by filing a bug report or feature request at <http://github.com/TEI-Boilerplate/TEI-Boilerplate/issues>.
 
 # Introduction
 
@@ -53,7 +53,7 @@ When a TEI document using TEI Boilerplate is accessed by a browser, the browser 
 
 # Using it in Your Project
 
-Download the [TEI Boilerplate files](http://github.com/GrantLS/TEI-Boilerplate), and host the `dist` directory on a web server.
+Download the [TEI Boilerplate files](http://github.com/TEI-Boilerplate/TEI-Boilerplate), and host the `dist` directory on a web server.
 
 The simplest way to use TEI Boilerplate (TEIBP) is simply to add your TEI files to the `dist/content` directory of TEI Boilerplate and include the following xml-stylesheet processing instruction at the top of your TEI documents, after the XML declaration and before the root `<TEI>` element:
 
@@ -99,7 +99,7 @@ Users of TEI Boilerplate may choose to use the styles provided in the template, 
 
 # Downloads
 
-Download the latest release of TEI Boilerplate from [GitHub](http://github.com/GrantLS/TEI-Boilerplate): <http://github.com/GrantLS/TEI-Boilerplate>.
+Download the latest release of TEI Boilerplate from [GitHub](http://github.com/TEI-Boilerplate/TEI-Boilerplate): <http://github.com/GrantLS/TEI-Boilerplate>.
 
 # People
 
@@ -109,7 +109,7 @@ The TEI Boilerplate team is:
 * [Grant Simpson](http://grantsimpson.name/), Indiana University
 * Saeed Moaddeli, Indiana University
 
-Please send general feedback to John Walsh at <a href="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</a>. Bug reports and feature requests may be submitted through [GitHub](http://github.com/GrantLS/TEI-Boilerplate/issues): <http://github.com/GrantLS/TEI-Boilerplate/issues>.
+Please send general feedback to John Walsh at <a href="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</a>. Bug reports and feature requests may be submitted through [GitHub](http://github.com/GrantLS/TEI-Boilerplate/issues): <http://github.com/TEI-Boilerplate/TEI-Boilerplate/issues>.
 
 # References
 

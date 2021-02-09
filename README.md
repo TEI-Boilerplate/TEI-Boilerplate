@@ -99,7 +99,7 @@ Users of TEI Boilerplate may choose to use the styles provided in the template, 
 
 # Downloads
 
-Download the latest release of TEI Boilerplate from [GitHub](http://github.com/TEI-Boilerplate/TEI-Boilerplate): <http://github.com/GrantLS/TEI-Boilerplate>.
+Download the latest release of TEI Boilerplate from [GitHub](http://github.com/TEI-Boilerplate/TEI-Boilerplate): <http://github.com/TEI-Boilerplate/TEI-Boilerplate>.
 
 # People
 
@@ -109,7 +109,7 @@ The TEI Boilerplate team is:
 * [Grant Simpson](http://grantsimpson.name/), Indiana University
 * Saeed Moaddeli, Indiana University
 
-Please send general feedback to John Walsh at <a href="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</a>. Bug reports and feature requests may be submitted through [GitHub](http://github.com/GrantLS/TEI-Boilerplate/issues): <http://github.com/TEI-Boilerplate/TEI-Boilerplate/issues>.
+Please send general feedback to John Walsh at <a href="mailto:jawalsh@indiana.edu">jawalsh@indiana.edu</a>. Bug reports and feature requests may be submitted through [GitHub](http://github.com/TEI-Boilerplate/TEI-Boilerplate/issues): <http://github.com/TEI-Boilerplate/TEI-Boilerplate/issues>.
 
 # References
 

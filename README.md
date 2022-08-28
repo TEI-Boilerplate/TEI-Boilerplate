@@ -4,7 +4,7 @@
 
 # Browser Compatibility
 
-TEI Boilerplate requires a robust, modern browser to do its work. It is compatible with current versions of Firefox, Chrome, Safari, and Internet Explorer.
+TEI Boilerplate requires a robust, modern browser to do its work. It is compatible with current versions of Firefox, Chrome, Safari, and Edge.
 
 *Note:* For security reasons, some browsers (e.g., Chrome) will not process the XSLT transformation when the TEI document is opened from the local file system. Chrome does work fine when the TEI files are delivered through a Web server, including `localhost`.
 
@@ -53,9 +53,9 @@ When a TEI document using TEI Boilerplate is accessed by a browser, the browser 
 
 # Using it in Your Project
 
-Download the [TEI Boilerplate files](http://github.com/TEI-Boilerplate/TEI-Boilerplate), and host the `dist` directory on a web server.
+Download the [TEI Boilerplate files](http://github.com/TEI-Boilerplate/TEI-Boilerplate), and host the `src` directory on a web server.
 
-The simplest way to use TEI Boilerplate (TEIBP) is simply to add your TEI files to the `dist/content` directory of TEI Boilerplate and include the following xml-stylesheet processing instruction at the top of your TEI documents, after the XML declaration and before the root `<TEI>` element:
+The simplest way to use TEI Boilerplate (TEIBP) is simply to add your TEI files to the `src/content` directory of TEI Boilerplate and include the following xml-stylesheet processing instruction at the top of your TEI documents, after the XML declaration and before the root `<TEI>` element:
 
     <?xml-stylesheet type="text/xsl" href="teibp.xsl"?>
 
